@@ -21,6 +21,8 @@ import asyncio
 from collections.abc import Awaitable, Callable
 from typing import TypeVar
 
+import httpx
+
 # TypeVar 是"类型占位符"：fn 返回什么类型，with_retry 就返回什么类型。
 # 不写它也能跑，但写了之后编辑器才知道返回值的类型。
 T = TypeVar("T")
@@ -123,7 +125,18 @@ async def with_retry(
         但**最后一次失败后不要睡**——反正要抛异常了，睡了纯浪费。
         判断条件形如：if attempt < attempts - 1:
     """
-    raise NotImplementedError("照着 retry_simple 抄一份，然后做 A、B、C 三处改动")
+    last_error: Exception | None = None  # 记住最后一次的错误，最后要塞进 RetryExhausted
+    for attempt in range(attempts):
+        try:
+            async with asyncio.timeout(timeout):
+                return await fn()
+        except retry_on as error:
+            print(f"  第 {attempt + 1} 次失败: {error!r}")
+            if attempt < attempts - 1:
+                await asyncio.sleep(backoff * (2**attempt))
+            last_error = error
+    assert last_error is not None
+    raise RetryExhausted(attempts, last_error)
 
 
 # ─────────────────── 第 3 段：独立完成，照着上面的模式写 ───────────────────
@@ -155,7 +168,43 @@ async def fetch_all(
 
     这个函数没有测试覆盖，跑 __main__ 自己看输出对不对。
     """
-    raise NotImplementedError
+    # 第 1 步（已给）：开一个 HTTP 客户端。
+    #   async with 和文件的 with open(...) 是一回事：用完自动关掉连接池。
+    async with httpx.AsyncClient() as client:
+        # 第 2 步（已给）：只抓一个 url 的内部函数。
+        #   写在 fetch_all 内部是为了直接用到外面的 client 和 timeout——这叫闭包。
+        async def fetch_one(url: str) -> str:
+            response = await client.get(url, timeout=timeout)
+            response.raise_for_status()  # 4xx/5xx 抛异常，否则 500 也会被当成"成功"
+            return response.text
+
+        # 第 3 步（轮到你）：把每个 fetch_one(url) 包进 with_retry，凑成一个任务列表。
+        #
+        #   卡点在这：with_retry 要的是"不收参数的 async 函数"，而 fetch_one 收 url。
+        #   所以要先把 url 固定进去，两种写法都行：
+        #       functools.partial(fetch_one, url)
+        #       lambda u=url: fetch_one(u)
+        #
+        #   ⚠️ 不能写 lambda: fetch_one(url)。lambda 记住的是**变量 url 本身**，
+        #      不是当时的值；循环结束后 url 停在最后一个，所有 lambda 都会去抓同一个地址。
+        #      这个坑叫 late binding，写错了不报错但结果全错，是最难查的那种 bug。
+        #
+        #   另外：httpx 的连接失败抛 httpx.ConnectError，超时抛 httpx.TimeoutException，
+        #      都不是内置的 ConnectionError / TimeoutError，所以 with_retry 默认的
+        #      retry_on 拦不住它们。要重试就得显式传：
+        #      retry_on=(httpx.ConnectError, httpx.TimeoutException)
+        tasks = [
+            with_retry(
+                lambda u=url: fetch_one(u),
+                timeout=timeout,
+                retry_on=(httpx.ConnectError, httpx.TimeoutException),
+            )
+            for url in urls
+        ]
+
+        # 第 4 步（轮到你）：并发跑完，让失败的位置返回异常对象而不是炸掉整批。
+        #   提示：ex1 学的 gather，这次多加一个参数 return_exceptions=True。
+        return await asyncio.gather(*tasks, return_exceptions=True)
 
 
 async def main() -> None:

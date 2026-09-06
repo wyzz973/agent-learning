@@ -50,6 +50,7 @@ class WeatherQuery(BaseModel):
     location: Location = Field(description="要查询的地点")
     unit: Literal["celsius", "fahrenheit"] = Field(default="celsius", description="温度单位")
     # 轮到你：在这里加 days 字段
+    days: int = Field(default=1, ge=1, le=7, description="要查询未来几天")
 
 
 # ─────────────────────────── 第 1 段：示范，已写完 ───────────────────────────
@@ -104,7 +105,7 @@ def describe_required_fields(schema: dict[str, Any]) -> list[str]:
     Returns:
         必填字段名列表。全部字段都有默认值时返回空列表。
     """
-    raise NotImplementedError
+    return schema.get("required", [])
 
 
 if __name__ == "__main__":

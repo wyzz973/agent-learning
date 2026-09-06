@@ -18,6 +18,8 @@
 from __future__ import annotations
 
 import os
+from calendar import error
+from dataclasses import fields
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -81,7 +83,11 @@ def load_settings(env_file: Path | None = None) -> Settings:
     #
     #   缺 DEFAULT_MODEL 时 pydantic 自己会抛错，且信息里带字段名——
     #   测试要求异常信息里出现 "DEFAULT_MODEL"，所以想想大小写怎么处理。
-    raise NotImplementedError("把这一行换成第 2 步的实现")
+    field = ["default_model", "max_agent_iterations", "llm_timeout_seconds", "langsmith_tracing"]
+    values = {name: os.environ.get(name.upper()) for name in field if name.upper() in os.environ}
+    if "DEFAULT_MODEL" not in os.environ:
+        raise ValueError("缺少环境变量 DEFAULT_MODEL,请在 .env 里设置,形如 deepseek:deepseek-chat")
+    return Settings(**values)
 
 
 # ─────────────────── 第 3 段：独立完成，最简单的一个 ───────────────────
@@ -107,7 +113,13 @@ def resolve_model(settings: Settings) -> tuple[str, str]:
         ValueError: default_model 不是恰好一个冒号分隔的两段。
             异常信息里要带上原始值，否则排查时看不出是哪个配置写错了。
     """
-    raise NotImplementedError
+    try:
+        provider, model = settings.default_model.split(":")
+    except ValueError as e:
+        raise ValueError(
+            f"default_model 不是恰好一个冒号分隔的两段:,{settings.default_model!r}"
+        ) from e
+    return provider, model
 
 
 if __name__ == "__main__":

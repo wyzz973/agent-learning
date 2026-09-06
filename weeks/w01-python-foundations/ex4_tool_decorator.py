@@ -81,13 +81,13 @@ def tool(fn: Callable[..., Any]) -> Callable[..., Any]:
     #   fn.__doc__ 是整个 docstring，可能是多行，也可能是 None。
     #   要点：按换行切开取第一段，去掉首尾空白，None 时给空字符串。
     #   提示：(fn.__doc__ or "").strip().splitlines() 想想这串东西返回什么
-    description = ""  # TODO 换成真正的取值
+    description = (fn.__doc__ or "").strip().splitlines()[0]
 
     # 第 3 步（轮到你）：把元数据挂到函数上，键是 name / description / parameters。
     #   写法就是普通赋值：fn.__tool__ = {...}
     #   name 取 fn.__name__。
     #   （类型检查器会抱怨给函数挂属性，本周不用管，weeks/ 不跑 mypy）
-    # TODO 在这里挂 __tool__
+    fn.__tool__ = {"name": fn.__name__, "description": description, "parameters": parameters}
 
     return fn  # 原样还回去，函数行为完全不变
 
@@ -112,7 +112,11 @@ def collect_tools(namespace: dict[str, Any]) -> list[dict[str, Any]]:
     Returns:
         每个被 @tool 标记过的函数的元数据字典组成的列表。一个都没有时返回空列表。
     """
-    raise NotImplementedError
+    tools = []
+    for v in namespace.values():
+        if hasattr(v, "__tool__"):
+            tools.append(v.__tool__)
+    return tools
 
 
 @tool

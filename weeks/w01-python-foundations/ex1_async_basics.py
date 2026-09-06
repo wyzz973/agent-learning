@@ -83,7 +83,6 @@ async def run_concurrent(values: list[int]) -> list[int]:
     #   gather 收的是"多个位置参数"，不是一个列表，所以要用 * 把列表展开。
     #   形状大概是：return await asyncio.gather(*某个东西)
     #   gather 保证返回顺序 = 传入顺序，不是谁先跑完谁在前。
-    # raise NotImplementedError("把这一行删掉，换成第 2 步的实现")
     return await asyncio.gather(*coroutines)
 
 
@@ -112,7 +111,6 @@ async def run_concurrent_limited(values: list[int], limit: int) -> list[int]:
 
     验证：test_exercises.py 里的测试会数你同时最多跑了几个。
     """
-    # raise NotImplementedError
     semaphore = asyncio.Semaphore(limit)
 
     async def run_one(x: int) -> int:
@@ -123,16 +121,38 @@ async def run_concurrent_limited(values: list[int], limit: int) -> list[int]:
 
 
 async def main() -> None:
-    values = list(range(8))
+    """手动跑一遍看耗时差异。测试断言不了"快多少"，得自己看。"""
+    # range(80) 是个"惰性"的数字序列，list() 把它摊成真正的列表 [0, 1, ..., 79]。
+    values = list(range(80))
 
+    # ─── 关键概念：调用 async 函数 ≠ 执行它 ───
+    #
+    # 下面这三行 run_sequential(values) 看着像"调用"，但**一个都还没开始跑**。
+    # 调用普通函数会立刻执行并返回结果；调用 async 函数只会返回一个"协程对象"。
+    # 把它想成一张写好的待办卡片：任务写清楚了，但没人动手。
+    #
+    # 所以这个列表里装的是三张卡片，配上各自的名字。
     for name, coro in [
         ("串行", run_sequential(values)),
         ("并发", run_concurrent(values)),
-        ("并发限流 3", run_concurrent_limited(values, 3)),
+        ("并发限流 3", run_concurrent_limited(values, 100)),
     ]:
+        # for 后面写两个变量名，是"元组解包"：每轮把 ("串行", 卡片) 这个二元组
+        # 拆开，左边给 name，右边给 coro。等价于写 for item in [...] 再 item[0]、item[1]。
+
+        # 事件循环自带一个单调时钟。用它而不是 time.time()，因为它不会被系统改时间影响。
         start = asyncio.get_running_loop().time()
+
+        # ─── 这一行才是真正开跑 ───
+        # await 做两件事：把卡片交给事件循环去执行，然后停在这里等结果。
+        # 没有 await，卡片永远躺着不动；Python 退出时还会警告 "was never awaited"。
         result = await coro
+
         elapsed = asyncio.get_running_loop().time() - start
+
+        # f-string 里冒号后面是格式说明：
+        #   {name:12}    左对齐补空格到 12 字符宽，让几行输出对齐
+        #   {elapsed:.3f} 小数点后保留 3 位
         print(f"{name:12} 耗时 {elapsed:.3f}s  结果 {result}")
 
 
