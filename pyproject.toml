@@ -1,0 +1,42 @@
+[project]
+name = "agent-learning"
+version = "0.1.0"
+description = "Agent 开发学习仓库"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=1.0",
+    "langgraph>=1.0",
+    "langsmith>=0.4",
+    "python-dotenv>=1.0",
+    "pydantic>=2.0",
+    "httpx>=0.27",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.6",
+    "mypy>=1.11",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+# E,F 基础；I 导入排序；UP 语法现代化；B 常见 bug；ASYNC 异步误用
+select = ["E", "F", "I", "UP", "B", "ASYNC"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests", "weeks"]
+
+[tool.mypy]
+python_version = "3.11"
+# weeks/ 是一次性练习，允许粗糙；src/ 是沉淀，必须严格
+files = ["src", "scripts"]
+strict = true
+
+[tool.uv]
+package = false
