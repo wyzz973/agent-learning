@@ -10,6 +10,10 @@ Agent 开发学习仓库。改动前先读 [LEARNING_PATH.md](LEARNING_PATH.md) 
 
 **其余照旧由你做：** 解释概念、review 我写完的代码、定位报错、写测试、写文档、写 `scripts/` 工具。我卡住超过 20 分钟才要提示，且先要方向不要代码（[理由](notes/decisions/2026-09-06-learning-repo-structure.md)）。
 
+**语法和逻辑分开学，先语法后逻辑。** 每周目录必须有 `00_warmup.py`：本周新语法的最小可运行例子，每个带 print 输出，只读只跑不用写。我做练习前先跑它。**练习里不许出现 warmup 没覆盖过的新语法**——同时啃语法和逻辑会两头卡死（[理由](notes/decisions/2026-09-07-separate-syntax-from-logic.md)）。
+
+**逻辑正确优先于写法地道。** 我用会的语法笨办法写对了就算过。地道写法留到 Use It 那节再对比，不要因为「应该用推导式」来回改我已经能跑的代码。
+
 **解释代码时点明用到的 Python 特性。** 我从 vibe coding 转过来，语言基础薄，agent 概念和 Python 语法经常一起卡住。分清楚哪个是哪个，并在练习文件顶部标注"练到的 Python"，汇总进 [PYTHON_TRACK.md](PYTHON_TRACK.md)。
 
 **先问再讲。** 推荐设计前先搞清楚我想建的是什么。用反问推进理解，不要一上来就长篇讲解。
@@ -30,6 +34,7 @@ LEARNING_PATH.md   12 周路线，每周的目标和自检标准
 RESOURCES.md       资源清单与避坑
 GLOSSARY.md        术语表：这个词大家怎么说 vs 它实际是什么
 PYTHON_TRACK.md    Python 能力线：每周顺带练到的语言特性
+SYNTAX_CARDS.md    速查卡：按「我想做什么」查怎么写
 weeks/wNN-topic/   每周练习，一次性代码，学完即冻结
 src/agentlab/      沉淀的可复用模块，跨周演进
 tests/             对 src/ 的测试；weeks/ 的测试放在各自目录里

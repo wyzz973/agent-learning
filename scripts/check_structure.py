@@ -54,6 +54,9 @@ def check_weeks() -> list[str]:
         if not (d / "README.md").is_file():
             problems.append(f"{rel}: 缺 README.md（用 templates/week-readme.md）")
 
+        if not (d / "00_warmup.py").is_file():
+            problems.append(f"{rel}: 缺 00_warmup.py（本周新语法的最小可运行例子）")
+
         py = [p for p in d.rglob("*.py") if not p.name.startswith("test_")]
         if not py:
             problems.append(f"{rel}: 没有可运行的 .py 练习文件")

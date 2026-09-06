@@ -18,7 +18,18 @@
 | 第 2 段 | 「轮到你」+ `TODO` | 结构给好了，填掉 TODO 那几行 |
 | 第 3 段 | 只有签名和思路 | 照着第 1、2 段的模式自己写 |
 
-**第一天的具体动作**，照着敲就行：
+**动手之前先做语法热身**——本周的新写法在这里一次看全，只跑不写，约 15 分钟：
+
+```sh
+uv run python weeks/w01-python-foundations/00_warmup.py
+```
+
+十个小节：调用 vs await、gather、Semaphore、异常、忘记 return 会怎样、装饰器、
+推导式与解包、lambda 的坑、强制关键字参数、类型注解怎么读。
+**练习里不会出现这里没讲过的语法。** 写代码时卡住就回来查对应小节，
+或者查 [SYNTAX_CARDS.md](../../SYNTAX_CARDS.md)（按「我想做什么」查）。
+
+**然后是每天的具体动作**，照着敲就行：
 
 ```sh
 # 1. 先看一眼现在有多少红的（这是任务清单，不是失败）
@@ -35,6 +46,8 @@ uv run python weeks/w01-python-foundations/ex1_async_basics.py
 # 5. 现在做第 2 段的 TODO，只让一个测试变绿：
 uv run pytest weeks/w01-python-foundations -q -k concurrent_preserves
 ```
+
+**用你会的语法笨办法写对，就算过。** 地道写法留到下面 Use It 那节再对比，不要卡在「应该怎么写才优雅」上。
 
 **一次只攻一个测试。** `-k 关键词` 只跑名字匹配的那条。绿了再下一条，不要想着一口气写完。
 
@@ -65,6 +78,7 @@ uv run pytest weeks/w01-python-foundations -q   # 27 条全绿
 
 | 文件 | 练什么 | 和 agent 开发的关系 |
 |---|---|---|
+| `00_warmup.py` | 本周全部新语法的最小例子 | 先跑它，只读不写 |
 | `ex1_async_basics.py` | `async/await`、`gather`、并发 vs 串行 | agent 一轮里可能要并行调 5 个工具，串行就是 5 倍延迟 |
 | `ex2_retry.py` | 超时、指数退避重试、异常分类 | LLM API 超时和限流是常态不是异常；没有护栏的 agent 会挂 |
 | `ex3_tool_schema.py` | pydantic → JSON Schema | 这段 JSON 就是工具定义传给模型的东西，模型只看得到它 |
