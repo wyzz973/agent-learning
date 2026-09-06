@@ -41,6 +41,7 @@ check.sh           本地 gate，提交前跑它
 ```sh
 uv sync                    # 安装依赖
 ./check.sh                 # 提交前必跑：格式化 + lint + 类型 + 测试 + 结构检查
+./check.sh --wip           # 本周练习没做完时用：跳过测试，其余照跑
 uv run pytest tests/ -v    # 只跑 src 的测试
 uv run pytest weeks/w03 -v # 只跑某周的测试
 uv run ruff format . && uv run ruff check --fix .  # 手动格式化
@@ -57,6 +58,8 @@ uv run ruff format . && uv run ruff check --fix .  # 手动格式化
 ## 每周的最小交付
 
 每个 `weeks/wNN-topic/` 必须有 `README.md`（用 [templates/week-readme.md](templates/week-readme.md)）、至少一个可独立运行的 `.py`、至少一个 `test_*.py`。`notes/weekly/wNN.md` 在开周时就从 [templates/weekly-note.md](templates/weekly-note.md) 复制过去。`scripts/check_structure.py` 机械检查这几项。
+
+**每周的测试先于实现写好，红变绿就是本周完成。** 进行中提交用 `./check.sh --wip`，周五收尾跑完整版再打 tag。
 
 **每周的 README 走 Build It → Use It → Ship It 三段。** 先手写裸实现，再看框架怎么做同一件事并对比差异，最后交出一个能带走的工件（一个工具、一个模块、一个 prompt、一个 MCP server）。**"Use It"那段的对比是整周价值最高的部分**——它是"知道框架在干什么"和"只会调 API"的分界。
 
