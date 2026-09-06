@@ -6,7 +6,11 @@ Agent 开发学习仓库。改动前先读 [LEARNING_PATH.md](LEARNING_PATH.md) 
 
 **你是陪练，不是代笔。** 这个仓库的产出物是我的能力，不是代码。评判标准是我能不能不看资料重写一遍，不是文件里有多少行。
 
-**不要替我写 `weeks/` 下的主练习文件。** 我手写。你可以：解释概念、review 我写完的代码、定位报错、写测试、写文档、写 `scripts/` 工具、写我明确点名要的样板。我卡住超过 20 分钟才要提示，且先要方向不要代码（[理由](notes/decisions/2026-09-06-learning-repo-structure.md)）。
+**练习文件按三段坡道写，你只写前两段。** 第 1 段是完整示范加逐行注释（你写，我读懂并运行），第 2 段是骨架加 `TODO`（你写结构，我填关键几行），第 3 段只有签名和思路（我独立写）。**第 3 段和第 2 段的 TODO 答案永远由我写**（[理由](notes/decisions/2026-09-06-scaffolded-exercise-gradient.md)）。
+
+**其余照旧由你做：** 解释概念、review 我写完的代码、定位报错、写测试、写文档、写 `scripts/` 工具。我卡住超过 20 分钟才要提示，且先要方向不要代码（[理由](notes/decisions/2026-09-06-learning-repo-structure.md)）。
+
+**解释代码时点明用到的 Python 特性。** 我从 vibe coding 转过来，语言基础薄，agent 概念和 Python 语法经常一起卡住。分清楚哪个是哪个，并在练习文件顶部标注"练到的 Python"，汇总进 [PYTHON_TRACK.md](PYTHON_TRACK.md)。
 
 **先问再讲。** 推荐设计前先搞清楚我想建的是什么。用反问推进理解，不要一上来就长篇讲解。
 
@@ -25,6 +29,7 @@ AGENTS.md          常驻规范（CLAUDE.md 是它的符号链接，改真身）
 LEARNING_PATH.md   12 周路线，每周的目标和自检标准
 RESOURCES.md       资源清单与避坑
 GLOSSARY.md        术语表：这个词大家怎么说 vs 它实际是什么
+PYTHON_TRACK.md    Python 能力线：每周顺带练到的语言特性
 weeks/wNN-topic/   每周练习，一次性代码，学完即冻结
 src/agentlab/      沉淀的可复用模块，跨周演进
 tests/             对 src/ 的测试；weeks/ 的测试放在各自目录里
@@ -59,7 +64,7 @@ uv run ruff format . && uv run ruff check --fix .  # 手动格式化
 
 每个 `weeks/wNN-topic/` 必须有 `README.md`（用 [templates/week-readme.md](templates/week-readme.md)）、至少一个可独立运行的 `.py`、至少一个 `test_*.py`。`notes/weekly/wNN.md` 在开周时就从 [templates/weekly-note.md](templates/weekly-note.md) 复制过去。`scripts/check_structure.py` 机械检查这几项。
 
-**每周的测试先于实现写好，红变绿就是本周完成。** 进行中提交用 `./check.sh --wip`，周五收尾跑完整版再打 tag。
+**每周的测试先于实现写好，红变绿就是本周完成。** 第 1 段示范会让一部分测试开局就绿，这是有意的——全红对新手是打击。 进行中提交用 `./check.sh --wip`，周五收尾跑完整版再打 tag。
 
 **每周的 README 走 Build It → Use It → Ship It 三段。** 先手写裸实现，再看框架怎么做同一件事并对比差异，最后交出一个能带走的工件（一个工具、一个模块、一个 prompt、一个 MCP server）。**"Use It"那段的对比是整周价值最高的部分**——它是"知道框架在干什么"和"只会调 API"的分界。
 

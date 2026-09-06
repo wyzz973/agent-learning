@@ -8,15 +8,47 @@
 
 这周不碰任何 agent 框架。**这五样不熟，后面每一周都会卡在语言本身而不是 agent 概念上。**
 
-## 怎么用这个目录
+## 不知道从哪下手？按这个来
 
-五个练习文件的函数体都是 `NotImplementedError`，由我填。`test_exercises.py` 已经写好，**它就是本周的规格说明**：
+每个练习文件都是**三段坡道**，从上往下难度递增：
+
+| 段 | 标记 | 你要做什么 |
+|---|---|---|
+| 第 1 段 | 「已实现，先读懂」 | 只读和跑，别改。能用自己的话说出每行在干什么 |
+| 第 2 段 | 「轮到你」+ `TODO` | 结构给好了，填掉 TODO 那几行 |
+| 第 3 段 | 只有签名和思路 | 照着第 1、2 段的模式自己写 |
+
+**第一天的具体动作**，照着敲就行：
 
 ```sh
-uv run pytest weeks/w01-python-foundations -v   # 现在全红，这是任务清单
+# 1. 先看一眼现在有多少红的（这是任务清单，不是失败）
+uv run pytest weeks/w01-python-foundations -q
+
+# 2. 打开 ex1_async_basics.py，只读第 1 段的 run_sequential，读到懂为止
+
+# 3. 直接跑这个文件，看它打印什么（第 2、3 段没实现会报错，正常）
+uv run python weeks/w01-python-foundations/ex1_async_basics.py
+
+# 4. 改一下第 1 段：把 slow_double 的 delay 改成 0.5，再跑，看耗时怎么变
+#    改坏了就 git checkout weeks/w01-python-foundations/ex1_async_basics.py 还原
+
+# 5. 现在做第 2 段的 TODO，只让一个测试变绿：
+uv run pytest weeks/w01-python-foundations -q -k concurrent_preserves
 ```
 
-红变绿就是本周完成。看不懂某条测试在要求什么，那条测试的名字和断言就是提示。
+**一次只攻一个测试。** `-k 关键词` 只跑名字匹配的那条。绿了再下一条，不要想着一口气写完。
+
+报错看不懂？**traceback 从下往上读**：最后一行是错误类型和原因，倒数第二段是出错的代码行。中间那一大堆通常不用管。
+
+## 完成标准
+
+```sh
+uv run pytest weeks/w01-python-foundations -q   # 27 条全绿
+```
+
+进行中提交用 `./check.sh --wip`（跳过测试），周五全绿了再跑完整的 `./check.sh` 并打 tag。
+
+同时练到的 Python 特性见 [PYTHON_TRACK.md](../../PYTHON_TRACK.md)。
 
 ## 自检标准
 
@@ -28,6 +60,8 @@ uv run pytest weeks/w01-python-foundations -v   # 现在全红，这是任务清
 - [ ] 写出一个带指数退避的异步重试包装，并说明为什么超时必须和重试分开设置
 
 ## Build It — 手写版
+
+每个文件的第 1 段我已写完，你从第 2 段开始动手。
 
 | 文件 | 练什么 | 和 agent 开发的关系 |
 |---|---|---|

@@ -28,6 +28,11 @@ target-version = "py311"
 # E,F 基础；I 导入排序；UP 语法现代化；B 常见 bug；ASYNC 异步误用
 select = ["E", "F", "I", "UP", "B", "ASYNC"]
 
+[tool.ruff.lint.per-file-ignores]
+# 填空式练习里，已给出的前半段代码在未实现的后半段用到它之前必然"未使用"。
+# 只在 weeks/ 放宽，src/ 仍然严格。
+"weeks/*" = ["F401", "F841"]
+
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests", "weeks"]
