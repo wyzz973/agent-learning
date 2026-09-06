@@ -47,6 +47,17 @@ def load_settings(env_file: Path | None = None) -> Settings:
     """读 .env 并构造 Settings，缺必填项就抛异常。
 
     要求：已存在的环境变量优先于 .env 文件里的值（所以 override=False）。
+
+    Args:
+        env_file: .env 文件路径。传 None 时 load_dotenv 会从当前目录
+            往上找最近的 .env——测试里传临时文件，正常运行传 None。
+
+    Returns:
+        校验通过的 Settings 实例。
+
+    Raises:
+        pydantic.ValidationError: 缺 DEFAULT_MODEL，或某个值转不成声明的类型
+            （比如 MAX_AGENT_ITERATIONS 写成了 "abc"）。
     """
     # 第 1 步（已给）：把 .env 文件里的键值读进 os.environ。
     #   override=False 表示：如果某个变量已经在环境里了，不要用文件里的覆盖它。
@@ -85,6 +96,16 @@ def resolve_model(settings: Settings) -> tuple[str, str]:
     异常信息里要带上原始值，方便排查。
 
     提示：字符串的 .split(":") 返回一个列表，看看它的长度是不是 2。
+
+    Args:
+        settings: 已加载的配置，只用到它的 default_model 字段。
+
+    Returns:
+        (provider, model) 两元组，例如 ("deepseek", "deepseek-chat")。
+
+    Raises:
+        ValueError: default_model 不是恰好一个冒号分隔的两段。
+            异常信息里要带上原始值，否则排查时看不出是哪个配置写错了。
     """
     raise NotImplementedError
 

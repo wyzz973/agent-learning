@@ -31,6 +31,10 @@ class RetryExhausted(Exception):
 
     自定义异常类的最小写法：继承 Exception，在 __init__ 里存下需要的信息。
     存 last_error 是为了让上层能看到"到底是什么错"，而不只是"重试失败了"。
+
+    Args:
+        attempts: 总共试了几次。
+        last_error: 最后一次失败的原始异常，排查时真正有用的那个。
     """
 
     def __init__(self, attempts: int, last_error: Exception) -> None:
@@ -49,6 +53,17 @@ async def retry_simple(fn: Callable[[], Awaitable[T]], attempts: int = 3) -> T:
 
     参数 fn 的类型 `Callable[[], Awaitable[T]]` 读作：
     一个不收参数、调用后返回一个可 await 之物的函数。也就是一个 async 函数。
+
+    Args:
+        fn: 要调用的 async 函数，不接收参数。需要传参时在外面用
+            lambda 或 functools.partial 包一层，把参数固定住。
+        attempts: 最多尝试几次（含第一次），默认 3。
+
+    Returns:
+        fn 成功时的返回值，类型由 fn 决定。
+
+    Raises:
+        RetryExhausted: attempts 次全部失败。
     """
     last_error: Exception | None = None  # 记住最后一次的错误，最后要塞进 RetryExhausted
 
@@ -76,6 +91,23 @@ async def with_retry(
     retry_on: tuple[type[Exception], ...] = (TimeoutError, ConnectionError),
 ) -> T:
     """retry_simple 加上超时、指数退避、可配置的重试异常类型。
+
+    Args:
+        fn: 要调用的 async 函数，不接收参数。
+        attempts: 最多尝试几次（含第一次），默认 3。
+        timeout: **单次**尝试的超时秒数，不是总时长。attempts=3 且
+            timeout=5 时最坏要等 15 秒加上退避时间。
+        backoff: 退避基数秒数。第 attempt 次失败后睡 backoff * (2 ** attempt) 秒，
+            所以 0.1 会得到 0.1、0.2、0.4 这样的间隔。传 0 表示不等待，测试用它加速。
+        retry_on: 哪些异常类型值得重试，默认网络超时和连接错误。
+            不在这个元组里的异常直接向上抛——参数错误和认证失败重试多少次都不会好。
+
+    Returns:
+        fn 成功时的返回值。
+
+    Raises:
+        RetryExhausted: attempts 次全部失败，last_error 是最后一次的异常。
+        Exception: retry_on 之外的任何异常，原样抛出且不重试。
 
     在 retry_simple 的基础上改三个地方，测试会逐条验证：
 
@@ -106,6 +138,14 @@ async def fetch_all(
 
     失败的位置放 Exception 对象而不是抛出——**一个 URL 挂了不该拖垮整批**。
     这正是 agent 处理工具失败的方式：把错误当结果返回，让上层决定怎么办。
+
+    Args:
+        urls: 要抓取的地址列表。
+        timeout: 单次请求的超时秒数，会原样转交给 with_retry。
+
+    Returns:
+        和 urls 等长、顺序一一对应的列表。成功的位置是响应正文字符串，
+        失败的位置是异常对象本身——**调用方要用 isinstance 区分这两种情况**。
 
     思路：
       1. `async with httpx.AsyncClient() as client:` 开一个客户端。

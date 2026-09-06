@@ -29,6 +29,13 @@ def log_calls(fn: Callable[..., Any]) -> Callable[..., Any]:
     """【已实现，先读懂】一个最小的装饰器：调用前后打印一行。
 
     读三遍这个函数，装饰器就通了。
+
+    Args:
+        fn: 被装饰的函数。`Callable[..., Any]` 里的 `...` 表示"参数任意"，
+            因为装饰器要能套在任何函数上。
+
+    Returns:
+        一个替身函数。以后别人调原函数名，实际调到的是这个替身。
     """
 
     # wrapper 是"替身"：以后别人调 add，实际调到的是这个 wrapper。
@@ -53,6 +60,13 @@ def tool(fn: Callable[..., Any]) -> Callable[..., Any]:
     和 log_calls 不同：这次**不需要替身**。我们不改变函数的行为，
     只是给函数对象挂一个 __tool__ 属性，然后原样还回去。
     Python 里函数也是对象，可以随便挂属性——这就是全部机关。
+
+    Args:
+        fn: 被装饰的函数。它的名字、docstring 首行、参数类型注解
+            会被抽出来变成模型看到的工具定义。
+
+    Returns:
+        原函数本身，不是替身。行为完全不变，只是多了 __tool__ 属性。
     """
     # 第 1 步（已给）：从函数签名里读出参数名和类型名。
     #   inspect.signature(fn).parameters 是个有序字典：参数名 -> 参数对象。
@@ -90,6 +104,13 @@ def collect_tools(namespace: dict[str, Any]) -> list[dict[str, Any]]:
       namespace 是个普通字典（比如 vars(某模块)），键是名字，值是各种对象。
       遍历它的值，挑出那些身上有 __tool__ 属性的，把 __tool__ 收集起来。
       提示：hasattr(obj, "__tool__") 判断有没有；getattr(obj, "__tool__") 取值。
+
+    Args:
+        namespace: 名字到对象的字典。模块级用 globals()，
+            对某个模块用 vars(那个模块)。里面绝大多数东西不是工具，要筛。
+
+    Returns:
+        每个被 @tool 标记过的函数的元数据字典组成的列表。一个都没有时返回空列表。
     """
     raise NotImplementedError
 
@@ -99,19 +120,41 @@ def add(a: int, b: int) -> int:
     """把两个整数相加。
 
     第二行开始的内容不进 description，只取第一行。
+
+    Args:
+        a: 第一个加数。
+        b: 第二个加数。
+
+    Returns:
+        两数之和。
     """
     return a + b
 
 
 @tool
 def search(query: str, limit: int = 5) -> list[str]:
-    """按关键词搜索，返回最多 limit 条结果。"""
+    """按关键词搜索，返回最多 limit 条结果。
+
+    Args:
+        query: 搜索关键词。
+        limit: 最多返回几条，默认 5。
+
+    Returns:
+        结果字符串列表。
+    """
     return [f"{query}-{i}" for i in range(limit)]
 
 
 @log_calls
 def demo_logged(x: int) -> int:
-    """用来演示第 1 段那个装饰器的效果。"""
+    """用来演示第 1 段那个装饰器的效果。
+
+    Args:
+        x: 任意整数，加一后返回。
+
+    Returns:
+        x + 1。
+    """
     return x + 1
 
 

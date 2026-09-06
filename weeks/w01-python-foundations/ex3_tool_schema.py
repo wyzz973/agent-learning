@@ -62,6 +62,17 @@ def build_tool_schema(model: type[BaseModel], name: str, description: str) -> di
 
     参数 `model: type[BaseModel]` 读作：model 是一个类本身，不是类的实例。
     所以调用时传 WeatherQuery，不是 WeatherQuery()。
+
+    Args:
+        model: pydantic 模型类本身（传 WeatherQuery，不是 WeatherQuery()）。
+            它的字段定义会被翻译成模型看到的参数列表。
+        name: 工具名，模型在 tool_call 里回给你的就是这个字符串。
+        description: 工具用途的一句话说明。**模型靠它决定要不要调这个工具**，
+            写得含糊模型就不会用，或者在不该用的时候用。
+
+    Returns:
+        含 name、description、input_schema 三个键的字典，
+        形状与各家模型厂商的工具定义一致。
     """
     return {
         "name": name,
@@ -85,6 +96,13 @@ def describe_required_fields(schema: dict[str, Any]) -> list[str]:
 
     提示：schema 是个普通 dict，用 .get(键名, 默认值) 取值比 [键名] 安全，
     因为全部字段都有默认值时，那个键可能根本不存在。
+
+    Args:
+        schema: JSON Schema 字典，即 build_tool_schema 返回值里的 input_schema
+            那一层，不是整个返回值。
+
+    Returns:
+        必填字段名列表。全部字段都有默认值时返回空列表。
     """
     raise NotImplementedError
 

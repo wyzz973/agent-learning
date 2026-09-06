@@ -24,6 +24,13 @@ async def slow_double(x: int, delay: float = 0.1) -> int:
 
     `async def` 定义的叫协程函数。调用它不会立刻执行，
     只会得到一个"协程对象"——必须 await 它，或者交给 gather，才真的跑。
+
+    Args:
+        x: 要翻倍的整数。
+        delay: 假装网络往返的秒数，默认 0.1。调大它能更明显看出串行和并发的差距。
+
+    Returns:
+        x 的两倍。
     """
     await asyncio.sleep(delay)
     return x * 2
@@ -37,6 +44,12 @@ async def run_sequential(values: list[int]) -> list[int]:
 
     【已实现，先读懂】这是后面两个函数的模板。
     总耗时 ≈ len(values) × delay，因为大家排队。
+
+    Args:
+        values: 待处理的整数列表。
+
+    Returns:
+        每个元素翻倍后的列表，顺序与 values 一致。
     """
     results: list[int] = []  # 准备一个空列表装结果
 
@@ -54,6 +67,13 @@ async def run_concurrent(values: list[int]) -> list[int]:
     """用 asyncio.gather 并发跑，返回顺序必须和 values 一致。
 
     总耗时 ≈ 一个 delay，和 len(values) 几乎无关——因为大家同时在跑。
+
+    Args:
+        values: 待处理的整数列表。
+
+    Returns:
+        每个元素翻倍后的列表。顺序必须与 values 一致，
+        而不是谁先跑完谁在前——gather 已经保证了这一点。
     """
     # 第 1 步（已给）：把每个 x 变成一个协程对象，装进列表。
     #   注意这里没有 await，所以此刻一个都还没开始跑。
@@ -63,7 +83,8 @@ async def run_concurrent(values: list[int]) -> list[int]:
     #   gather 收的是"多个位置参数"，不是一个列表，所以要用 * 把列表展开。
     #   形状大概是：return await asyncio.gather(*某个东西)
     #   gather 保证返回顺序 = 传入顺序，不是谁先跑完谁在前。
-    raise NotImplementedError("把这一行删掉，换成第 2 步的实现")
+    # raise NotImplementedError("把这一行删掉，换成第 2 步的实现")
+    return await asyncio.gather(*coroutines)
 
 
 # ─────────────────── 第 3 段：独立完成，照着上面的模式写 ───────────────────
@@ -74,6 +95,14 @@ async def run_concurrent_limited(values: list[int], limit: int) -> list[int]:
 
     为什么需要：模型厂商有速率限制，无限并发会被 429 拒绝。
 
+    Args:
+        values: 待处理的整数列表。
+        limit: 同时最多允许几个任务在执行。传 1 就退化成串行，
+            传 len(values) 就等于完全并发——写完拿这两个极端值验证一下。
+
+    Returns:
+        每个元素翻倍后的列表，顺序与 values 一致。
+
     思路（不给代码，自己组装）：
       1. 建一个 asyncio.Semaphore(limit)。它像一个只有 limit 把钥匙的柜子。
       2. 写一个内部的 async 函数，比如叫 run_one(x)，里面：
@@ -83,7 +112,14 @@ async def run_concurrent_limited(values: list[int], limit: int) -> list[int]:
 
     验证：test_exercises.py 里的测试会数你同时最多跑了几个。
     """
-    raise NotImplementedError
+    # raise NotImplementedError
+    semaphore = asyncio.Semaphore(limit)
+
+    async def run_one(x: int) -> int:
+        async with semaphore:
+            return await slow_double(x)
+
+    return await asyncio.gather(*(run_one(x) for x in values))
 
 
 async def main() -> None:

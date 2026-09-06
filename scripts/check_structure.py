@@ -10,6 +10,7 @@ Exits non-zero with a Chinese report listing every violation found.
 
 from __future__ import annotations
 
+import ast
 import re
 import sys
 from pathlib import Path
@@ -25,6 +26,11 @@ LINK_SCAN_SKIP = {"templates", ".git", ".venv", "node_modules"}
 
 
 def week_dirs() -> list[Path]:
+    """Locate the week directories.
+
+    Returns:
+        Week directories sorted by name, empty when weeks/ does not exist yet.
+    """
     weeks = ROOT / "weeks"
     if not weeks.is_dir():
         return []
@@ -32,7 +38,11 @@ def week_dirs() -> list[Path]:
 
 
 def check_weeks() -> list[str]:
-    """Every week directory is named wNN-topic and carries README, code, and a test."""
+    """Every week directory is named wNN-topic and carries README, code, and a test.
+
+    Returns:
+        One line per violation; empty when every week directory is complete.
+    """
     problems: list[str] = []
     for d in week_dirs():
         rel = d.relative_to(ROOT)
@@ -61,7 +71,11 @@ def check_weeks() -> list[str]:
 
 
 def check_links() -> list[str]:
-    """Relative markdown links resolve to real files."""
+    """Relative markdown links resolve to real files.
+
+    Returns:
+        One line per dead link, naming the source file and the target.
+    """
     problems: list[str] = []
     for md in ROOT.rglob("*.md"):
         # CLAUDE.md symlinks AGENTS.md; scanning both double-reports every link.
@@ -80,8 +94,88 @@ def check_links() -> list[str]:
     return problems
 
 
+def _documented_functions(path: Path) -> list[str]:
+    """Report functions whose docstring omits Args or Returns coverage.
+
+    Args:
+        path: Absolute path to the Python file to inspect. Reported locations are
+            shortened to repository-relative form when the file lives under ROOT.
+
+    Returns:
+        One line per violation, prefixed with file, line, and function name.
+    """
+    problems: list[str] = []
+    tree = ast.parse(path.read_text(encoding="utf-8"))
+    shown = path.relative_to(ROOT) if path.is_relative_to(ROOT) else path
+
+    # Only module-level and class-level definitions; a nested helper is local detail.
+    definitions: list[ast.FunctionDef | ast.AsyncFunctionDef] = []
+    for node in tree.body:
+        if isinstance(node, ast.FunctionDef | ast.AsyncFunctionDef):
+            definitions.append(node)
+        elif isinstance(node, ast.ClassDef):
+            definitions.extend(
+                child
+                for child in node.body
+                if isinstance(child, ast.FunctionDef | ast.AsyncFunctionDef)
+            )
+
+    for fn in definitions:
+        # A constructor documents its parameters on the class, per the class docstring.
+        if fn.name.startswith("_"):
+            continue
+        if fn.name == "main":
+            continue
+
+        args = fn.args
+        names = [a.arg for a in args.posonlyargs + args.args + args.kwonlyargs]
+        names = [n for n in names if n not in {"self", "cls"}]
+        doc = ast.get_docstring(fn) or ""
+        where = f"{shown}:{fn.lineno} {fn.name}"
+
+        if not doc:
+            problems.append(f"{where}: 没有 docstring")
+            continue
+        if names and "Args:" not in doc:
+            problems.append(f"{where}: 有参数 {names} 但 docstring 缺 Args 段")
+
+        returns_value = fn.returns is not None and not (
+            isinstance(fn.returns, ast.Constant) and fn.returns.value is None
+        )
+        if returns_value and "Returns:" not in doc and "Yields:" not in doc:
+            problems.append(f"{where}: 有返回值但 docstring 缺 Returns 段")
+
+    return problems
+
+
+def check_docstrings() -> list[str]:
+    """Functions document their parameters and return values.
+
+    A tool's docstring is the prompt the model reads, so parameter meaning is
+    functional code here, not documentation polish. Test files are exempt:
+    their names carry the description.
+
+    Returns:
+        One line per undocumented parameter list or return value.
+    """
+    problems: list[str] = []
+    for directory in ("src", "weeks", "scripts"):
+        root = ROOT / directory
+        if not root.is_dir():
+            continue
+        for py in sorted(root.rglob("*.py")):
+            if py.name.startswith("test_"):
+                continue
+            problems.extend(_documented_functions(py))
+    return problems
+
+
 def check_secrets() -> list[str]:
-    """.env stays out of git and .env.example documents the required variables."""
+    """.env stays out of git and .env.example documents the required variables.
+
+    Returns:
+        One line per secret-hygiene violation.
+    """
     problems: list[str] = []
     gitignore = ROOT / ".gitignore"
     if not gitignore.is_file():
@@ -105,6 +199,7 @@ def main() -> int:
     checks = {
         "周目录": check_weeks,
         "文档链接": check_links,
+        "参数说明": check_docstrings,
         "密钥卫生": check_secrets,
     }
     failed = False

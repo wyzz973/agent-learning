@@ -113,7 +113,8 @@ uv run ruff format . && uv run ruff check --fix .  # 手动格式化
 - **Python 3.11+，全部类型注解。** `ruff` 管格式和 lint，配置在 `pyproject.toml`，不手动争论风格。
 - **所有 LLM 调用用 async。** 这是 agent 开发的默认形态，从第一周就习惯。
 - **配置从 `.env` 读，密钥永不进 git。** `.env.example` 记录需要哪些变量，不含真值。
-- **工具函数的 docstring 就是给模型的 prompt。** 写清参数含义、边界、失败时返回什么——这不是文档洁癖，是功能代码。
+- **每个函数的 docstring 写全 `Args:` / `Returns:` / `Raises:`**（Google 风格）。参数说明写"这个值是什么、边界在哪、传错会怎样"，不是重复参数名。构造函数的参数说明写在类的 docstring 上。`scripts/check_structure.py` 机械检查 `src/`、`weeks/`、`scripts/`，私有函数、嵌套函数、`main` 和测试文件豁免。
+- **工具函数的 docstring 就是给模型的 prompt。** 模型只看得到它——参数描述含糊，模型就填错参数。所以上一条对工具函数不是文档洁癖，是功能代码。
 - **LLM 调用必须有超时和最大轮次上限。** 无限循环的 agent 会烧钱，第一次就把护栏写进去。
 - **异常不吞。** `except` 要么处理要么重抛；空 `except` 必须一行注释说明吞的是什么、为什么安全。
 - **工具执行失败返回错误信息给模型，不抛异常中断 agent。** 让模型自己重试——这是 agent 和普通程序最大的行为差异。
