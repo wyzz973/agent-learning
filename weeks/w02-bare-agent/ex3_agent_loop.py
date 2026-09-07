@@ -29,6 +29,7 @@ from typing import Protocol, TypedDict
 
 from ex1_messages import Conversation, ToolCall
 from ex2_tool_registry import ToolRegistry
+from langsmith import traceable
 
 
 class LLMResponse(TypedDict):
@@ -100,6 +101,7 @@ class FakeLLM:
         return self.script.pop(0)
 
 
+@traceable
 async def run_once(llm: LLM, conversation: Conversation, registry: ToolRegistry) -> LLMResponse:
     """只跟模型交互一轮，不处理工具。
 
@@ -135,6 +137,7 @@ class Agent:
 
     # ────────────────────── 第 2 段：填空，把 TODO 换成代码 ──────────────────────
 
+    @traceable
     async def run(self, conversation: Conversation, user_input: str) -> str:
         """跑完一整轮对话，返回模型的最终答案。
 
@@ -156,8 +159,8 @@ class Agent:
             # 第 4 步（轮到你）：如果模型没有要求调工具，说明它给出最终答案了，
             #   直接返回 response["content"]。content 可能是 None，用 or "" 兜底。
             #   提示：判断 if not response["tool_calls"]:
-            # TODO 在这里判断并返回
-
+            if not response["tool_calls"]:
+                return response["content"] or ""
             # 第 5 步（轮到你）：模型要调工具。遍历 response["tool_calls"]，
             #   对每一个：
             #     用 self.registry.call(工具名, 参数) 执行，拿到结果字符串
@@ -165,14 +168,16 @@ class Agent:
             #   注意 registry.call 不会抛异常，失败也是返回一段字符串，直接记进去就行——
             #   **让模型自己看到错误并重试**，这是 agent 和普通程序最大的差异。
             # TODO 在这里执行工具并记录结果
-
+            for tool_call in response["tool_calls"]:
+                result = self.registry.call(tool_call["name"], tool_call["arguments"])
+                conversation.add_tool_result(tool_call["id"], result)
             # 循环回到第 3 步，模型会看到工具结果，然后决定下一步
 
         # 第 6 步（第 3 段，独立完成）：能走到这里说明 for 跑完了都没 return，
         #   也就是撞上了轮次上限。返回一句说明，**信息里要带上 max_iterations 的值**。
         #   为什么不抛异常：调用方拿到一句话比拿到一个崩溃更有用，
         #   而且这是可预期的正常结果，不是程序出错。
-        raise NotImplementedError("把这一行换成撞上限时的返回值")
+        return f"达到了轮次上限：{self.max_iterations}"
 
 
 if __name__ == "__main__":

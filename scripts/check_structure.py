@@ -61,8 +61,16 @@ def check_weeks() -> list[str]:
         if not py:
             problems.append(f"{rel}: 没有可运行的 .py 练习文件")
 
-        if not list(d.rglob("test_*.py")):
+        tests = list(d.rglob("test_*.py"))
+        if not tests:
             problems.append(f"{rel}: 没有 test_*.py，至少断言一件事")
+        else:
+            # pytest 用文件名当模块名，两周同名会在收集阶段直接冲突。
+            misnamed = [t.name for t in tests if not t.name.startswith(f"test_w{m.group(1)}")]
+            if misnamed:
+                problems.append(
+                    f"{rel}: 测试文件名要以 test_w{m.group(1)} 开头，否则与其他周冲突：{misnamed}"
+                )
 
         note = ROOT / "notes" / "weekly" / f"w{m.group(1)}.md"
         if not note.is_file():

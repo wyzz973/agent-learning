@@ -109,7 +109,7 @@ async def run_concurrent_limited(values: list[int], limit: int) -> list[int]:
          拿不到钥匙的会在这里排队等，拿到的才往下走。
       3. 像第 2 段那样，把所有 run_one(x) 交给 gather。
 
-    验证：test_exercises.py 里的测试会数你同时最多跑了几个。
+    验证：test_wNN.py 里的测试会数你同时最多跑了几个。
     """
     semaphore = asyncio.Semaphore(limit)
 

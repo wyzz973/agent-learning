@@ -92,8 +92,8 @@ class Conversation:
         #   有些模型厂商的接口会报错或行为异常。**没有的东西就别放。**
         #   提示：字典加键就是 message["tool_calls"] = ...
         #   注意 None 和空列表 [] 都算"没有"。
-        # TODO 在这里补上判断和赋值
-
+        if tool_calls is not None and len(tool_calls) > 0:
+            message["tool_calls"] = tool_calls
         self.messages.append(message)
 
     # ─────────────────── 第 3 段：独立完成，照着上面的模式写 ───────────────────
@@ -111,7 +111,8 @@ class Conversation:
         思路：和 add_user 一样简单，只是 role 换成 "tool"，
         并且多带一个 tool_call_id 键。
         """
-        raise NotImplementedError
+        message: Message = {"role": "tool", "tool_call_id": tool_call_id, "content": result}
+        self.messages.append(message)
 
     def to_api_format(self) -> list[dict[str, Any]]:
         """导出成能直接发给模型接口的格式。
@@ -123,7 +124,7 @@ class Conversation:
         调用方 append 一下就污染了你的历史（warmup 第 5 节那个坑）。
         列表复制用 .copy() 或 list(...)。
         """
-        raise NotImplementedError
+        return self.messages.copy()
 
     def last_assistant_content(self) -> str | None:
         """取最后一条 assistant 消息的文本内容。
@@ -136,7 +137,10 @@ class Conversation:
         思路：倒着遍历 self.messages，找到第一条 role 是 assistant 的就返回它的 content。
         倒着遍历用 reversed(列表)。
         """
-        raise NotImplementedError
+        for message in reversed(self.messages):
+            if message["role"] == "assistant":
+                return message["content"]
+        return None
 
 
 if __name__ == "__main__":

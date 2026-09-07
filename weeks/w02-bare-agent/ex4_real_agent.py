@@ -21,6 +21,7 @@
 from __future__ import annotations
 
 import asyncio
+import json
 import os
 from typing import Any
 
@@ -29,6 +30,15 @@ from dotenv import load_dotenv
 from ex1_messages import Conversation
 from ex2_tool_registry import ToolRegistry, calculator, get_weather
 from ex3_agent_loop import Agent, LLMResponse
+from langsmith import traceable
+
+# 必须在模块层加载：@traceable 在导入这个模块时就生效，
+# 那一刻它要读 LANGSMITH_* 环境变量。放在函数体里就太晚了。
+load_dotenv()
+
+# 设 DEBUG_WIRE=1 就打印每一轮完整的请求体和响应体。
+# 平时关着，调 API 出问题时打开——它显示的是真正发出去/收回来的 JSON。
+_DEBUG_WIRE = os.environ.get("DEBUG_WIRE") == "1"
 
 
 class OpenAICompatLLM:
@@ -70,13 +80,34 @@ class OpenAICompatLLM:
         Returns:
             可以直接 json 化发出去的请求体。
         """
-        payload: dict[str, Any] = {"model": self.model, "messages": messages}
+        payload: dict[str, Any] = {
+            "model": self.model,
+            "messages": [self._to_wire_message(message) for message in messages],
+        }
         if tools:
             payload["tools"] = [{"type": "function", "function": t} for t in tools]
         return payload
 
+    def _to_wire_message(self, m: dict[str, Any]) -> dict[str, Any]:
+        """把内部格式的消息转成厂商要的格式。"""
+        calls = m.get("tool_calls")
+        if not calls:
+            return m  # 没有工具调用的消息原样发
+        return {
+            **m,
+            "tool_calls": [
+                {
+                    "id": c["id"],
+                    "type": "function",
+                    "function": {"name": c["name"], "arguments": c["arguments"]},
+                }
+                for c in calls
+            ],
+        }
+
     # ─────────────────── 第 2 段：填空 ───────────────────
 
+    @traceable(run_type="llm")
     async def complete(
         self, messages: list[dict[str, Any]], tools: list[dict[str, Any]]
     ) -> LLMResponse:
@@ -93,14 +124,26 @@ class OpenAICompatLLM:
             httpx.HTTPStatusError: 接口返回 4xx/5xx。
         """
         # 第 1 步（已给）：发请求。
+        payload = self._build_payload(messages, tools)
+        if _DEBUG_WIRE:
+            print("\n──── 请求 ────")
+            print(json.dumps(payload, indent=2, ensure_ascii=False))
+
         async with httpx.AsyncClient(timeout=60.0) as client:
             response = await client.post(
                 f"{self.base_url}/chat/completions",
                 headers={"Authorization": f"Bearer {self.api_key}"},
-                json=self._build_payload(messages, tools),
+                json=payload,
             )
+            if response.status_code >= 400:
+                # raise_for_status 只说状态码，丢掉了服务器写明的原因。
+                raise RuntimeError(f"HTTP {response.status_code}: {response.text}")
             response.raise_for_status()
             data = response.json()
+
+        if _DEBUG_WIRE:
+            print("──── 响应 ────")
+            print(json.dumps(data, indent=2, ensure_ascii=False))
 
         # 第 2 步（轮到你）：从嵌套的响应里挖出 content 和 tool_calls。
         #
@@ -117,10 +160,26 @@ class OpenAICompatLLM:
         #   用 .get(...) or [] 兜底，别用 [] 直接取。
         #
         #   返回形如：{"content": ..., "tool_calls": [...]}
-        raise NotImplementedError("把这一行换成第 2 步的解析和返回")
+        message = data["choices"][0]["message"]
+        content = message.get("content")
+        raw_calls = message.get("tool_calls") or []
+        tool_calls = [
+            {
+                "id": c["id"],
+                "name": c["function"].get("name"),
+                "arguments": c["function"].get("arguments"),
+            }
+            for c in raw_calls
+        ]
+
+        return {
+            "content": content,
+            "tool_calls": tool_calls,
+        }
 
 
 # ─────────────────── 第 3 段：独立完成 ───────────────────
+
 
 # 让 LangSmith 记录这个 agent 的每一步。
 #
@@ -133,8 +192,7 @@ class OpenAICompatLLM:
 #
 # 跑完去 smith.langchain.com 看，能一层层点开每一轮的输入输出。
 # 上周你写的 @tool 就是同一个机制——装饰器在函数外面包一层，做点额外的事。
-
-
+@traceable
 async def chat(question: str) -> str:
     """问一个问题，跑完整个 agent 循环。
 
@@ -147,8 +205,6 @@ async def chat(question: str) -> str:
     Raises:
         ValueError: 缺少必要的环境变量。
     """
-    load_dotenv()
-
     api_key = os.environ.get("DEEPSEEK_API_KEY") or os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
         raise ValueError("缺少 DEEPSEEK_API_KEY，请在 .env 里设置")
@@ -156,7 +212,7 @@ async def chat(question: str) -> str:
     llm = OpenAICompatLLM(
         api_key=api_key,
         model=os.environ.get("DEFAULT_MODEL", "deepseek:deepseek-chat").split(":")[-1],
-        base_url=os.environ.get("LLM_BASE_URL", "https://api.deepseek.com/v1"),
+        base_url=os.environ.get("LLM_BASE_URL", "https://api.deepseek.com"),
     )
 
     registry = ToolRegistry()

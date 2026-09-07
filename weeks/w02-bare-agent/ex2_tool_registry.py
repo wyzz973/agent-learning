@@ -22,6 +22,8 @@ import json
 from collections.abc import Callable
 from typing import Any
 
+from langsmith import traceable
+
 # 类型注解到 JSON Schema 类型名的对照。模型认的是右边这些词。
 _JSON_TYPES = {int: "integer", float: "number", str: "string", bool: "boolean"}
 
@@ -91,10 +93,11 @@ class ToolRegistry:
         提示：self._tools.values() 拿到所有函数，每个函数身上有 __tool__。
         上周 collect_tools 你写过一模一样的逻辑，这次可以用列表推导式一行写完。
         """
-        raise NotImplementedError("一行列表推导式")
+        return [v.__tool__ for v in self._tools.values()]
 
     # ─────────────────── 第 3 段：独立完成，本周最重要的一个 ───────────────────
 
+    @traceable
     def call(self, name: str, arguments_json: str) -> str:
         """执行一个工具，把结果转成字符串返回。
 
@@ -122,7 +125,19 @@ class ToolRegistry:
         提示：把工具函数取出来之后，用 fn(**参数字典) 调用它。
         ** 解包在上周 warmup 第 7 节见过。
         """
-        raise NotImplementedError
+        if name not in self._tools:
+            return f"没有这个工具,可用的工具有:{self._tools}"
+        try:
+            json_data = json.loads(arguments_json)
+        except json.decoder.JSONDecodeError:
+            return f"{arguments_json},不是合法 json"
+
+        try:
+            tool_result = self._tools[name](**json_data)
+        except Exception as e:
+            return f"工具执行异常:{e}"
+
+        return str(tool_result)
 
 
 # ─────────────────────────── 几个用来练手的工具 ───────────────────────────
