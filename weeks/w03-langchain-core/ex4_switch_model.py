@@ -76,7 +76,7 @@ def make_model(model_id: str | None = None) -> Any:
     if not model_id:
         raise ValueError("没有指定模型：传 model_id 参数，或在 .env 里设 DEFAULT_MODEL")
 
-    parse_model_id(model_id)  # 格式不对就在这里炸，比连上厂商之后再炸好
+    model_provider, model = parse_model_id(model_id)  # 格式不对就在这里炸，比连上厂商之后再炸好
 
     # 第 2 步（轮到你）：调 init_chat_model 造出模型并返回。
     #   最简形式：init_chat_model(model_id)
@@ -85,7 +85,9 @@ def make_model(model_id: str | None = None) -> Any:
     #   （其他厂商传 None 也无妨，SDK 会用各自的默认地址）
     #   还可以传 temperature=0，让输出更稳定——调试期建议这么做。
     # TODO 在这里创建并返回模型
-    raise NotImplementedError
+    base_url = os.environ.get("LLM_BASE_URL")
+
+    return init_chat_model(model, model_provider=model_provider, base_url=base_url, temperature=0)
 
 
 # ─────────────────── 第 3 段：独立完成 ───────────────────
@@ -112,7 +114,10 @@ async def ask(question: str, model_id: str | None = None) -> str:
       注意是 ainvoke 不是 invoke —— 这个函数是 async 的。
       LangChain 的每个方法基本都有 a 开头的异步版本。
     """
-    raise NotImplementedError
+    model = make_model(model_id)
+    agent = create_agent(model=model, tools=[get_weather, search_notes])
+    result = await agent.ainvoke({"messages": [HumanMessage(question)]})
+    return result["messages"][-1].text
 
 
 if __name__ == "__main__":

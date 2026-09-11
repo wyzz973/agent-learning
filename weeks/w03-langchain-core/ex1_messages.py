@@ -20,6 +20,7 @@ w02 你用字典表示消息，LangChain 用类。对应关系：
 
 from __future__ import annotations
 
+import json
 from typing import Any
 
 from langchain.messages import AIMessage, AnyMessage, HumanMessage, SystemMessage, ToolMessage
@@ -112,7 +113,30 @@ def from_dicts(raw: list[dict[str, Any]]) -> list[AnyMessage]:
       LangChain 要的是 {"name","args","id","type"}（args 是字典）。
       所以要转格式，arguments 用 json.loads 解析。
     """
-    raise NotImplementedError
+    messages: list[AnyMessage] = []
+    for m in raw:
+        match m["role"]:
+            case "system":
+                messages.append(SystemMessage(m["content"]))
+            case "user":
+                messages.append(HumanMessage(m["content"]))
+            case "assistant":
+                calls = [
+                    {
+                        "name": c["name"],
+                        "args": json.loads(c["arguments"]),
+                        "id": c["id"],
+                        "type": "tool_call",
+                    }
+                    for c in m.get("tool_calls", [])
+                ]
+                messages.append(AIMessage(m.get("content") or "", tool_calls=calls))
+            case "tool":
+                messages.append(ToolMessage(m["content"], tool_call_id=m["tool_call_id"]))
+            case other:
+                raise ValueError(f"不认识的 role: {other!r}")
+
+    return messages
 
 
 if __name__ == "__main__":

@@ -116,7 +116,7 @@ def run_agent(agent: Any, question: str) -> str:
     #   提示：列表取最后一个元素用 [-1]。
     #   这和你 w02 写的 last_assistant_content 是同一个动作，但简单得多——
     #   因为 create_agent 保证最后一条一定是模型的最终回复。
-    raise NotImplementedError("把这一行换成第 2 步的取值")
+    return result["messages"][-1].text
 
 
 # ─────────────────── 第 3 段：独立完成（两个函数）───────────────────
@@ -153,7 +153,10 @@ def build_resilient_agent(tools: list[BaseTool], model: Any) -> Any:
       想想 w01 学的那条：错误信息要能让**模型**自己修好。
       光说"失败了"模型只能瞎猜，带上原因它下一轮就能改对。
     """
-    raise NotImplementedError
+    from langchain.agents.middleware import ToolErrorMiddleware
+
+    middleware = [ToolErrorMiddleware(on_error=lambda error, request: f"工具执行失败：{error}")]
+    return create_agent(model=model, tools=tools, middleware=middleware)
 
 
 def trace_of(result: dict[str, Any]) -> list[str]:
@@ -181,7 +184,20 @@ def trace_of(result: dict[str, Any]) -> list[str]:
       AIMessage 带 tool_calls 时要显示调了什么工具、参数是什么；
       不带的时候显示它说的话。
     """
-    raise NotImplementedError
+    trace = []
+    for m in result["messages"]:
+        if m.type == "human":
+            trace.append(f"human: {m.text}")
+        if m.type == "ai":
+            if m.tool_calls:
+                for call in m.tool_calls:
+                    trace.append(f"ai->{call['name']}({call['args']})")
+            else:
+                trace.append(f"ai: {m.text}")
+        if m.type == "tool":
+            trace.append(f"tool: {m.text}")
+
+    return trace
 
 
 if __name__ == "__main__":

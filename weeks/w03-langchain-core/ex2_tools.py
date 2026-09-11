@@ -92,7 +92,7 @@ def calculator(expression: str, precision: int = 2) -> str:
     try:
         value = eval(expression)
     except Exception as error:
-        raise ValueError(f"表达式计算错误：: {expression!r}") from error
+        raise ValueError(f"表达式计算错误: {expression!r}") from error
 
     return f"{value:.{precision}f}"
 
@@ -119,7 +119,12 @@ def build_tool_index(tools: list[BaseTool]) -> dict[str, BaseTool]:
     思路：遍历 tools，用 t.name 做键。放进字典前先检查这个名字在不在，
     在就抛 ValueError。四行左右。
     """
-    raise NotImplementedError
+    index = {}
+    for t in tools:
+        if t.name in index:
+            raise ValueError(f"出现重名工具: {t.name!r}")
+        index[t.name] = t
+    return index
 
 
 @tool
