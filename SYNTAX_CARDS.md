@@ -114,3 +114,21 @@
 | 去掉首尾空白 | `s.strip()` |
 | 按行切开 | `s.splitlines()` |
 | 值可能是 None 时先兜底 | `(s or "").strip()` |
+
+## 跑测试（pytest）
+
+完整命令从左到右：`uv run`（用项目的 `.venv` 执行）→ `pytest`（找 `test_` 开头的文件和函数）→ 目录（只在这里找）→ 选项。
+
+| 我想做 | 这样写 |
+|---|---|
+| 跑全部测试 | `uv run pytest` |
+| 只跑某一周 | `uv run pytest weeks/w03-langchain-core` |
+| 输出精简，只看点和汇总 | 加 `-q` |
+| 每条一行，看名字和 PASSED/FAILED | 加 `-v` |
+| 只跑名字里带某个词的 | 加 `-k resilient` |
+| 跑名字含 A 或含 B 的 | `-k "resilient or escape"` |
+| 跑某个类里的，但排除一部分 | `-k "TestTools and not dangerous"` |
+| 一次选中整个测试类 | `-k TestTools`（`-k` 匹配的名字包含类名） |
+| 遇到第一条失败就停 | 加 `-x` |
+
+一堆红的时候，常用组合是 `-q -x`：先把第一个修好再往下。
