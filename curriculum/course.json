@@ -1,0 +1,742 @@
+{
+  "schema_version": 1,
+  "start_week": "w04",
+  "daily_minutes": 60,
+  "total_sessions": 60,
+  "units": [
+    {
+      "week": "w04",
+      "title": "Python 基础与搜索工具",
+      "slug": "python-tools",
+      "guide": "curriculum/units/w04.md"
+    },
+    {
+      "week": "w05",
+      "title": "真实文件与有限 agent 循环",
+      "slug": "files-loop",
+      "guide": "curriculum/units/w05.md"
+    },
+    {
+      "week": "w06",
+      "title": "LangGraph 状态、路由与恢复",
+      "slug": "langgraph",
+      "guide": "curriculum/units/w06.md"
+    },
+    {
+      "week": "w07",
+      "title": "证据、结构化输出、评估与首月交付",
+      "slug": "evaluation",
+      "guide": "curriculum/units/w07.md"
+    },
+    {
+      "week": "w08",
+      "title": "知识检索与 RAG",
+      "slug": "retrieval",
+      "guide": "curriculum/units/w08.md"
+    },
+    {
+      "week": "w09",
+      "title": "记忆与跨进程恢复",
+      "slug": "memory-resume",
+      "guide": "curriculum/units/w09.md"
+    },
+    {
+      "week": "w10",
+      "title": "MCP 与 Skills 扩展",
+      "slug": "mcp-skills",
+      "guide": "curriculum/units/w10.md"
+    },
+    {
+      "week": "w11",
+      "title": "规划与多 agent 范式",
+      "slug": "planning-multiagent",
+      "guide": "curriculum/units/w11.md"
+    },
+    {
+      "week": "w12",
+      "title": "上下文、工具权限与安全执行",
+      "slug": "context-safety",
+      "guide": "curriculum/units/w12.md"
+    },
+    {
+      "week": "w13",
+      "title": "系统评估与可观测性",
+      "slug": "eval-observability",
+      "guide": "curriculum/units/w13.md"
+    },
+    {
+      "week": "w14",
+      "title": "服务接口、界面与部署",
+      "slug": "service-deploy",
+      "guide": "curriculum/units/w14.md"
+    },
+    {
+      "week": "w15",
+      "title": "综合应用与自主开发验收",
+      "slug": "capstone",
+      "guide": "curriculum/units/w15.md"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "D01",
+      "week": "w04",
+      "title": "从记录中筛选文件",
+      "card": "curriculum/tasks/D01.md",
+      "minutes": 60,
+      "prerequisite": null,
+      "material_status": "scaffold_ready",
+      "target": "ex1_records.py::find_matches",
+      "command": "uv run pytest weeks/w04-python-tools -k find_matches -xq"
+    },
+    {
+      "id": "D02",
+      "week": "w04",
+      "title": "只返回任务需要的字段",
+      "card": "curriculum/tasks/D02.md",
+      "minutes": 60,
+      "prerequisite": "D01",
+      "material_status": "scaffold_ready",
+      "target": "ex1_records.py::make_hits",
+      "command": "uv run pytest weeks/w04-python-tools -k make_hits -xq"
+    },
+    {
+      "id": "D03",
+      "week": "w04",
+      "title": "统一成功与错误结果",
+      "card": "curriculum/tasks/D03.md",
+      "minutes": 60,
+      "prerequisite": "D02",
+      "material_status": "scaffold_ready",
+      "target": "ex2_search_tool.py::success_result",
+      "command": "uv run pytest weeks/w04-python-tools -k success_result -xq"
+    },
+    {
+      "id": "D04",
+      "week": "w04",
+      "title": "把 Python 函数接成工具",
+      "card": "curriculum/tasks/D04.md",
+      "minutes": 60,
+      "prerequisite": "D03",
+      "material_status": "scaffold_ready",
+      "target": "ex2_search_tool.py::search_repository",
+      "command": "uv run pytest weeks/w04-python-tools -k search_repository -xq"
+    },
+    {
+      "id": "D05",
+      "week": "w04",
+      "title": "隔天重写与第一周验收",
+      "card": "curriculum/tasks/D05.md",
+      "minutes": 60,
+      "prerequisite": "D04",
+      "material_status": "scaffold_ready",
+      "target": "recall.py（本人创建）",
+      "command": "./check.sh --week w04"
+    },
+    {
+      "id": "D06",
+      "week": "w05",
+      "title": "把磁盘文件读成工具结果",
+      "card": "curriculum/tasks/D06.md",
+      "minutes": 60,
+      "prerequisite": "D05",
+      "material_status": "scaffold_ready",
+      "target": "ex1_files.py::read_text_tool",
+      "command": "uv run pytest weeks/w05-files-loop -k read_text_tool -xq"
+    },
+    {
+      "id": "D07",
+      "week": "w05",
+      "title": "给工具建立名字索引",
+      "card": "curriculum/tasks/D07.md",
+      "minutes": 60,
+      "prerequisite": "D06",
+      "material_status": "scaffold_ready",
+      "target": "ex2_loop.py::index_tools",
+      "command": "uv run pytest weeks/w05-files-loop -k index_tools -xq"
+    },
+    {
+      "id": "D08",
+      "week": "w05",
+      "title": "接通模型—工具—模型循环",
+      "card": "curriculum/tasks/D08.md",
+      "minutes": 60,
+      "prerequisite": "D07",
+      "material_status": "scaffold_ready",
+      "target": "ex2_loop.py::run_agent",
+      "command": "uv run pytest weeks/w05-files-loop -k run_agent -xq"
+    },
+    {
+      "id": "D09",
+      "week": "w05",
+      "title": "同一工具运行两种 agent",
+      "card": "curriculum/tasks/D09.md",
+      "minutes": 60,
+      "prerequisite": "D08",
+      "material_status": "scaffold_ready",
+      "target": "scripts/run_course_app.py --mode loop",
+      "command": "uv run python scripts/learn.py --task D09"
+    },
+    {
+      "id": "D10",
+      "week": "w05",
+      "title": "复盘数据流与失败路径",
+      "card": "curriculum/tasks/D10.md",
+      "minutes": 60,
+      "prerequisite": "D09",
+      "material_status": "scaffold_ready",
+      "target": "本周 README 的 Use It/Ship It",
+      "command": "./check.sh --week w05"
+    },
+    {
+      "id": "D11",
+      "week": "w06",
+      "title": "状态与分支路由",
+      "card": "curriculum/tasks/D11.md",
+      "minutes": 60,
+      "prerequisite": "D10",
+      "material_status": "scaffold_ready",
+      "target": "ex1_graph.py::choose_route",
+      "command": "uv run pytest weeks/w06-langgraph -k choose_route -xq"
+    },
+    {
+      "id": "D12",
+      "week": "w06",
+      "title": "亲手连接一张图",
+      "card": "curriculum/tasks/D12.md",
+      "minutes": 60,
+      "prerequisite": "D11",
+      "material_status": "scaffold_ready",
+      "target": "ex1_graph.py::build_search_graph",
+      "command": "uv run pytest weeks/w06-langgraph -k build_search_graph -xq"
+    },
+    {
+      "id": "D13",
+      "week": "w06",
+      "title": "看见中间步骤并保存会话",
+      "card": "curriculum/tasks/D13.md",
+      "minutes": 60,
+      "prerequisite": "D12",
+      "material_status": "scaffold_ready",
+      "target": "recovery_demo.py",
+      "command": "uv run python scripts/learn.py --task D13"
+    },
+    {
+      "id": "D14",
+      "week": "w06",
+      "title": "暂停等待人再恢复",
+      "card": "curriculum/tasks/D14.md",
+      "minutes": 60,
+      "prerequisite": "D13",
+      "material_status": "scaffold_ready",
+      "target": "recovery_demo.py",
+      "command": "uv run python scripts/learn.py --task D14"
+    },
+    {
+      "id": "D15",
+      "week": "w06",
+      "title": "把自己的 agent 放入图",
+      "card": "curriculum/tasks/D15.md",
+      "minutes": 60,
+      "prerequisite": "D14",
+      "material_status": "scaffold_ready",
+      "target": "scripts/run_course_app.py --mode graph",
+      "command": "./check.sh --week w06"
+    },
+    {
+      "id": "D16",
+      "week": "w07",
+      "title": "检查回答引用的路径",
+      "card": "curriculum/tasks/D16.md",
+      "minutes": 60,
+      "prerequisite": "D15",
+      "material_status": "scaffold_ready",
+      "target": "ex1_eval.py::unknown_paths",
+      "command": "uv run pytest weeks/w07-evaluation -k unknown_paths -xq"
+    },
+    {
+      "id": "D17",
+      "week": "w07",
+      "title": "用固定样例算通过率",
+      "card": "curriculum/tasks/D17.md",
+      "minutes": 60,
+      "prerequisite": "D16",
+      "material_status": "scaffold_ready",
+      "target": "ex1_eval.py::score_cases",
+      "command": "uv run pytest weeks/w07-evaluation -k score_cases -xq"
+    },
+    {
+      "id": "D18",
+      "week": "w07",
+      "title": "理解结构化输出的三层",
+      "card": "curriculum/tasks/D18.md",
+      "minutes": 60,
+      "prerequisite": "D17",
+      "material_status": "scaffold_ready",
+      "target": "structured_demo.py",
+      "command": "uv run python scripts/learn.py --task D18"
+    },
+    {
+      "id": "D19",
+      "week": "w07",
+      "title": "复测同一应用与理解前沿地图",
+      "card": "curriculum/tasks/D19.md",
+      "minutes": 60,
+      "prerequisite": "D18",
+      "material_status": "scaffold_ready",
+      "target": "scripts/run_course_app.py --mode evaluate",
+      "command": "uv run python scripts/learn.py --task D19"
+    },
+    {
+      "id": "D20",
+      "week": "w07",
+      "title": "首月作品验收与重写",
+      "card": "curriculum/tasks/D20.md",
+      "minutes": 60,
+      "prerequisite": "D19",
+      "material_status": "scaffold_ready",
+      "target": "本周 README 的首月验收单",
+      "command": "./check.sh --week w07"
+    },
+    {
+      "id": "D21",
+      "week": "w08",
+      "title": "从文件得到可引用片段",
+      "card": "curriculum/tasks/D21.md",
+      "minutes": 60,
+      "prerequisite": "D20",
+      "material_status": "planned",
+      "target": "ex1_chunks.py::split_with_source（开周创建）",
+      "command": "uv run python scripts/learn.py --task D21"
+    },
+    {
+      "id": "D22",
+      "week": "w08",
+      "title": "建立关键词检索基线",
+      "card": "curriculum/tasks/D22.md",
+      "minutes": 60,
+      "prerequisite": "D21",
+      "material_status": "planned",
+      "target": "ex1_chunks.py::rank_chunks（开周创建）",
+      "command": "uv run python scripts/learn.py --task D22"
+    },
+    {
+      "id": "D23",
+      "week": "w08",
+      "title": "对比语义检索",
+      "card": "curriculum/tasks/D23.md",
+      "minutes": 60,
+      "prerequisite": "D22",
+      "material_status": "planned",
+      "target": "embedding_demo.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D23"
+    },
+    {
+      "id": "D24",
+      "week": "w08",
+      "title": "把检索交给 agent",
+      "card": "curriculum/tasks/D24.md",
+      "minutes": 60,
+      "prerequisite": "D23",
+      "material_status": "planned",
+      "target": "retrieval_tool.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D24"
+    },
+    {
+      "id": "D25",
+      "week": "w08",
+      "title": "RAG 回归与迁移",
+      "card": "curriculum/tasks/D25.md",
+      "minutes": 60,
+      "prerequisite": "D24",
+      "material_status": "planned",
+      "target": "test_w08.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D25"
+    },
+    {
+      "id": "D26",
+      "week": "w09",
+      "title": "区分消息状态与长期记忆",
+      "card": "curriculum/tasks/D26.md",
+      "minutes": 60,
+      "prerequisite": "D25",
+      "material_status": "planned",
+      "target": "memory_design.md（本人创建）",
+      "command": "uv run python scripts/learn.py --task D26"
+    },
+    {
+      "id": "D27",
+      "week": "w09",
+      "title": "保存并重新读取状态",
+      "card": "curriculum/tasks/D27.md",
+      "minutes": 60,
+      "prerequisite": "D26",
+      "material_status": "planned",
+      "target": "ex1_store.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D27"
+    },
+    {
+      "id": "D28",
+      "week": "w09",
+      "title": "替换为持久化检查点",
+      "card": "curriculum/tasks/D28.md",
+      "minutes": 60,
+      "prerequisite": "D27",
+      "material_status": "planned",
+      "target": "checkpoint_demo.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D28"
+    },
+    {
+      "id": "D29",
+      "week": "w09",
+      "title": "防止恢复后重复副作用",
+      "card": "curriculum/tasks/D29.md",
+      "minutes": 60,
+      "prerequisite": "D28",
+      "material_status": "planned",
+      "target": "ex2_idempotency.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D29"
+    },
+    {
+      "id": "D30",
+      "week": "w09",
+      "title": "长任务交接演练",
+      "card": "curriculum/tasks/D30.md",
+      "minutes": 60,
+      "prerequisite": "D29",
+      "material_status": "planned",
+      "target": "test_w09.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D30"
+    },
+    {
+      "id": "D31",
+      "week": "w10",
+      "title": "先理解协议边界",
+      "card": "curriculum/tasks/D31.md",
+      "minutes": 60,
+      "prerequisite": "D30",
+      "material_status": "planned",
+      "target": "protocol_map.md（本人创建）",
+      "command": "uv run python scripts/learn.py --task D31"
+    },
+    {
+      "id": "D32",
+      "week": "w10",
+      "title": "用官方 SDK 暴露同一个工具",
+      "card": "curriculum/tasks/D32.md",
+      "minutes": 60,
+      "prerequisite": "D31",
+      "material_status": "planned",
+      "target": "mcp_server.py（教师连接/本人改说明）",
+      "command": "uv run python scripts/learn.py --task D32"
+    },
+    {
+      "id": "D33",
+      "week": "w10",
+      "title": "从第二进程实际调用",
+      "card": "curriculum/tasks/D33.md",
+      "minutes": 60,
+      "prerequisite": "D32",
+      "material_status": "planned",
+      "target": "mcp_client.py（教师提供）",
+      "command": "uv run python scripts/learn.py --task D33"
+    },
+    {
+      "id": "D34",
+      "week": "w10",
+      "title": "写一个能按需读取的 Skill",
+      "card": "curriculum/tasks/D34.md",
+      "minutes": 60,
+      "prerequisite": "D33",
+      "material_status": "planned",
+      "target": "skills/repo-investigation/SKILL.md（本人编写）",
+      "command": "uv run python scripts/learn.py --task D34"
+    },
+    {
+      "id": "D35",
+      "week": "w10",
+      "title": "跨 harness 复用验收",
+      "card": "curriculum/tasks/D35.md",
+      "minutes": 60,
+      "prerequisite": "D34",
+      "material_status": "planned",
+      "target": "test_w10.py 与交接记录（开周创建）",
+      "command": "uv run python scripts/learn.py --task D35"
+    },
+    {
+      "id": "D36",
+      "week": "w11",
+      "title": "先写可验证的小计划",
+      "card": "curriculum/tasks/D36.md",
+      "minutes": 60,
+      "prerequisite": "D35",
+      "material_status": "planned",
+      "target": "ex1_plan.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D36"
+    },
+    {
+      "id": "D37",
+      "week": "w11",
+      "title": "分清固定工作流与动态计划",
+      "card": "curriculum/tasks/D37.md",
+      "minutes": 60,
+      "prerequisite": "D36",
+      "material_status": "planned",
+      "target": "planner_demo.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D37"
+    },
+    {
+      "id": "D38",
+      "week": "w11",
+      "title": "两个可独立执行的子任务",
+      "card": "curriculum/tasks/D38.md",
+      "minutes": 60,
+      "prerequisite": "D37",
+      "material_status": "planned",
+      "target": "ex2_workers.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D38"
+    },
+    {
+      "id": "D39",
+      "week": "w11",
+      "title": "比较 supervisor 与 handoff",
+      "card": "curriculum/tasks/D39.md",
+      "minutes": 60,
+      "prerequisite": "D38",
+      "material_status": "planned",
+      "target": "multiagent_demo.py（教师提供）",
+      "command": "uv run python scripts/learn.py --task D39"
+    },
+    {
+      "id": "D40",
+      "week": "w11",
+      "title": "用评估决定是否保留多 agent",
+      "card": "curriculum/tasks/D40.md",
+      "minutes": 60,
+      "prerequisite": "D39",
+      "material_status": "planned",
+      "target": "test_w11.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D40"
+    },
+    {
+      "id": "D41",
+      "week": "w12",
+      "title": "为上下文设置预算",
+      "card": "curriculum/tasks/D41.md",
+      "minutes": 60,
+      "prerequisite": "D40",
+      "material_status": "planned",
+      "target": "ex1_context.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D41"
+    },
+    {
+      "id": "D42",
+      "week": "w12",
+      "title": "按需加载与压缩的取舍",
+      "card": "curriculum/tasks/D42.md",
+      "minutes": 60,
+      "prerequisite": "D41",
+      "material_status": "planned",
+      "target": "context_demo.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D42"
+    },
+    {
+      "id": "D43",
+      "week": "w12",
+      "title": "把权限做成执行边界",
+      "card": "curriculum/tasks/D43.md",
+      "minutes": 60,
+      "prerequisite": "D42",
+      "material_status": "planned",
+      "target": "ex2_policy.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D43"
+    },
+    {
+      "id": "D44",
+      "week": "w12",
+      "title": "隔离环境中的编辑—测试闭环",
+      "card": "curriculum/tasks/D44.md",
+      "minutes": 60,
+      "prerequisite": "D43",
+      "material_status": "planned",
+      "target": "sandbox_demo.py（教师提供）",
+      "command": "uv run python scripts/learn.py --task D44"
+    },
+    {
+      "id": "D45",
+      "week": "w12",
+      "title": "用失败样例检验 harness",
+      "card": "curriculum/tasks/D45.md",
+      "minutes": 60,
+      "prerequisite": "D44",
+      "material_status": "planned",
+      "target": "test_w12.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D45"
+    },
+    {
+      "id": "D46",
+      "week": "w13",
+      "title": "设计端到端评估集",
+      "card": "curriculum/tasks/D46.md",
+      "minutes": 60,
+      "prerequisite": "D45",
+      "material_status": "planned",
+      "target": "evals/cases.json（本人补充）",
+      "command": "uv run python scripts/learn.py --task D46"
+    },
+    {
+      "id": "D47",
+      "week": "w13",
+      "title": "记录执行轨迹与成本",
+      "card": "curriculum/tasks/D47.md",
+      "minutes": 60,
+      "prerequisite": "D46",
+      "material_status": "planned",
+      "target": "trace_demo.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D47"
+    },
+    {
+      "id": "D48",
+      "week": "w13",
+      "title": "加入规则评分与人工判读",
+      "card": "curriculum/tasks/D48.md",
+      "minutes": 60,
+      "prerequisite": "D47",
+      "material_status": "planned",
+      "target": "ex1_grading.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D48"
+    },
+    {
+      "id": "D49",
+      "week": "w13",
+      "title": "只改一个变量做实验",
+      "card": "curriculum/tasks/D49.md",
+      "minutes": 60,
+      "prerequisite": "D48",
+      "material_status": "planned",
+      "target": "evals/experiment.md（本人创建）",
+      "command": "uv run python scripts/learn.py --task D49"
+    },
+    {
+      "id": "D50",
+      "week": "w13",
+      "title": "建立回归门槛",
+      "card": "curriculum/tasks/D50.md",
+      "minutes": 60,
+      "prerequisite": "D49",
+      "material_status": "planned",
+      "target": "test_w13.py 与验收报告（开周创建）",
+      "command": "uv run python scripts/learn.py --task D50"
+    },
+    {
+      "id": "D51",
+      "week": "w14",
+      "title": "把能力提供成应用接口",
+      "card": "curriculum/tasks/D51.md",
+      "minutes": 60,
+      "prerequisite": "D50",
+      "material_status": "planned",
+      "target": "api.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D51"
+    },
+    {
+      "id": "D52",
+      "week": "w14",
+      "title": "显示进度与最终结果",
+      "card": "curriculum/tasks/D52.md",
+      "minutes": 60,
+      "prerequisite": "D51",
+      "material_status": "planned",
+      "target": "web/ 或教师提供的最小客户端（开周创建）",
+      "command": "uv run python scripts/learn.py --task D52"
+    },
+    {
+      "id": "D53",
+      "week": "w14",
+      "title": "任务取消、并发与会话隔离",
+      "card": "curriculum/tasks/D53.md",
+      "minutes": 60,
+      "prerequisite": "D52",
+      "material_status": "planned",
+      "target": "test_w14.py（开周创建）",
+      "command": "uv run python scripts/learn.py --task D53"
+    },
+    {
+      "id": "D54",
+      "week": "w14",
+      "title": "在独立环境部署",
+      "card": "curriculum/tasks/D54.md",
+      "minutes": 60,
+      "prerequisite": "D53",
+      "material_status": "planned",
+      "target": "部署说明与容器配置（开周创建）",
+      "command": "uv run python scripts/learn.py --task D54"
+    },
+    {
+      "id": "D55",
+      "week": "w14",
+      "title": "部署后验收与回滚",
+      "card": "curriculum/tasks/D55.md",
+      "minutes": 60,
+      "prerequisite": "D54",
+      "material_status": "planned",
+      "target": "deployment-checklist.md（本人执行）",
+      "command": "uv run python scripts/learn.py --task D55"
+    },
+    {
+      "id": "D56",
+      "week": "w15",
+      "title": "独立定义一条真实任务",
+      "card": "curriculum/tasks/D56.md",
+      "minutes": 60,
+      "prerequisite": "D55",
+      "material_status": "planned",
+      "target": "capstone/spec.md（本人创建）",
+      "command": "uv run python scripts/learn.py --task D56"
+    },
+    {
+      "id": "D57",
+      "week": "w15",
+      "title": "独立完成一个能力增量",
+      "card": "curriculum/tasks/D57.md",
+      "minutes": 60,
+      "prerequisite": "D56",
+      "material_status": "planned",
+      "target": "capstone/（本人实现）",
+      "command": "uv run python scripts/learn.py --task D57"
+    },
+    {
+      "id": "D58",
+      "week": "w15",
+      "title": "对抗失败与中断恢复",
+      "card": "curriculum/tasks/D58.md",
+      "minutes": 60,
+      "prerequisite": "D57",
+      "material_status": "planned",
+      "target": "capstone/evidence/（本人执行）",
+      "command": "uv run python scripts/learn.py --task D58"
+    },
+    {
+      "id": "D59",
+      "week": "w15",
+      "title": "让另一个人或模型按文档使用",
+      "card": "curriculum/tasks/D59.md",
+      "minutes": 60,
+      "prerequisite": "D58",
+      "material_status": "planned",
+      "target": "capstone/README.md 与交接材料",
+      "command": "uv run python scripts/learn.py --task D59"
+    },
+    {
+      "id": "D60",
+      "week": "w15",
+      "title": "结业演示与下一阶段路线",
+      "card": "curriculum/tasks/D60.md",
+      "minutes": 60,
+      "prerequisite": "D59",
+      "material_status": "planned",
+      "target": "结业报告与本人答辩",
+      "command": "uv run python scripts/learn.py --task D60"
+    }
+  ]
+}

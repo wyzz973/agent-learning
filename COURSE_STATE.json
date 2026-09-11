@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "active_task": "D01",
+  "progress": {},
+  "learner_context": {
+    "completed_legacy_weeks": [
+      "w01",
+      "w02",
+      "w03"
+    ],
+    "goal": "Pi 类 coding agent 与 LangChain/LangGraph 应用；完整闭环优先",
+    "daily_minutes": 60,
+    "weak_points": [
+      "列表与元素的层级",
+      "接住函数返回值",
+      "return 与循环位置"
+    ]
+  },
+  "materials": {
+    "w04": "scaffold_ready",
+    "w05": "scaffold_ready",
+    "w06": "scaffold_ready",
+    "w07": "scaffold_ready",
+    "w08": "planned",
+    "w09": "planned",
+    "w10": "planned",
+    "w11": "planned",
+    "w12": "planned",
+    "w13": "planned",
+    "w14": "planned",
+    "w15": "planned"
+  },
+  "blocker": null,
+  "next_action": "打开 D01，先用两条文件记录诊断取值、循环、收集与返回，再运行对应热身。",
+  "updated_at": "2026-09-11T22:57:51+08:00",
+  "evidence_note": "完整路线与任务卡由导师准备；D01 尚未开始。",
+  "material_evidence": {
+    "scope": "教师教材验证，不是本人学习进度",
+    "infrastructure_tests": "20 passed",
+    "gate": "./check.sh --wip 通过",
+    "cli_checks": "artifacts/course-setup/validation.json",
+    "live_model": "未调用",
+    "learner_exercises": "TODO 保留；D01 尚未开始"
+  }
+}

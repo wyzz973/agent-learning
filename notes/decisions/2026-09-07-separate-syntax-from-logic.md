@@ -1,6 +1,6 @@
 # Decision: 语法与逻辑分开学，每周前置 00_warmup.py
 
-Status: implemented
+Status: superseded — 见 [基础写作与小工具](2026-09-11-python-first-agent-tools.md)
 
 ## Problem
 

@@ -1,0 +1,13 @@
+仓库：/Users/sd3/Desktop/project/agentLearning
+请先读根 AGENTS.md、HARNESS_GUIDE.md、COURSE_STATE.json，再读目标目录规则。
+当前任务：D01 · 从记录中筛选文件
+任务卡：curriculum/tasks/D01.md
+本次动作位置：ex1_records.py::find_matches
+材料状态：scaffold_ready
+学习状态：not_started
+本人证据：[]
+实际检查：[]
+卡点：尚未记录
+下一步：打开 D01，先用两条文件记录诊断取值、循环、收集与返回，再运行对应热身。
+请从一个输入/输出小问题开始，中文解释；保留 TODO 和独立题给本人完成。
+不要把教师示范或脚本回放标成本人掌握；结束前按真实证据更新状态与逐字问答。

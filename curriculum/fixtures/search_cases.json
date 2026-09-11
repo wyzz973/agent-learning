@@ -1,0 +1,42 @@
+[
+  {
+    "query": "retry",
+    "ok": true,
+    "paths": [
+      "src/retry.py",
+      "README.md"
+    ]
+  },
+  {
+    "query": " RETRY ",
+    "ok": true,
+    "paths": [
+      "src/retry.py",
+      "README.md"
+    ]
+  },
+  {
+    "query": "assistant",
+    "ok": true,
+    "paths": [
+      "src/chat.py"
+    ]
+  },
+  {
+    "query": "MAX_ATTEMPTS",
+    "ok": true,
+    "paths": [
+      "src/retry.py"
+    ]
+  },
+  {
+    "query": "not-present",
+    "ok": true,
+    "paths": []
+  },
+  {
+    "query": " ",
+    "ok": false,
+    "paths": []
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "name": "week-selector",
+    "command": [
+      "./check.sh",
+      "--week",
+      "w04"
+    ],
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "teacher_check_passed": true
+  },
+  {
+    "name": "handoff",
+    "command": [
+      "uv",
+      "run",
+      "python",
+      "scripts/learn.py",
+      "--handoff"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "teacher_check_passed": true
+  },
+  {
+    "name": "last-task",
+    "command": [
+      "uv",
+      "run",
+      "python",
+      "scripts/learn.py",
+      "--task",
+      "D60"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "teacher_check_passed": true
+  },
+  {
+    "name": "invalid-task",
+    "command": [
+      "uv",
+      "run",
+      "python",
+      "scripts/learn.py",
+      "--task",
+      "D99"
+    ],
+    "exit_code": 2,
+    "expected_exit_code": 2,
+    "teacher_check_passed": true
+  },
+  {
+    "name": "unfinished-app",
+    "command": [
+      "uv",
+      "run",
+      "python",
+      "scripts/run_course_app.py",
+      "--mode",
+      "tool"
+    ],
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "teacher_check_passed": true
+  }
+]

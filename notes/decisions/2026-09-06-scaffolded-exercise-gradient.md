@@ -1,6 +1,6 @@
 # Decision: 练习文件按三段坡道写，AI 提供示范和骨架
 
-Status: implemented
+Status: superseded — 见 [基础写作与小工具](2026-09-11-python-first-agent-tools.md)
 
 ## Problem
 

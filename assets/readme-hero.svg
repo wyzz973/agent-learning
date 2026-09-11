@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Agent Learning — 从 Python 到 Agent 应用</title>
+  <desc id="desc">十二个学习周，六十次任务，每天一小时。通过 Python、工具、Agent 与交付逐步形成开发能力。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#102638"/>
+      <stop offset="1" stop-color="#07131f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop stop-color="#64dbc4"/>
+      <stop offset="1" stop-color="#71b9f4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="360" rx="24" fill="url(#bg)"/>
+  <path d="M870 0V360M980 0V360M1090 0V360M840 90H1200M840 180H1200M840 270H1200" stroke="#1d3648" stroke-width="1" opacity=".6"/>
+  <rect x="56" y="48" width="44" height="5" rx="2.5" fill="url(#accent)"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="56" y="126" fill="#f3f8fc" font-size="66" font-weight="700" letter-spacing="-2">Agent Learning</text>
+    <text x="59" y="177" fill="#b6cbd9" font-size="26" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif">把 Python 写明白，把 Agent 做出来。</text>
+    <text x="925" y="100" fill="#74dcc9" font-size="62" font-weight="650">12</text>
+    <text x="927" y="128" fill="#9ab2c3" font-size="17" letter-spacing="2">WEEKS</text>
+    <text x="1070" y="100" fill="#8bc7f6" font-size="62" font-weight="650">60</text>
+    <text x="1072" y="128" fill="#9ab2c3" font-size="17" letter-spacing="2">SESSIONS</text>
+    <text x="926" y="179" fill="#c7d9e4" font-size="21">1 HOUR / DAY</text>
+    <g fill="#122d3c" stroke="#335061">
+      <rect x="56" y="242" width="215" height="64" rx="12"/>
+      <rect x="347" y="242" width="215" height="64" rx="12"/>
+      <rect x="638" y="242" width="215" height="64" rx="12"/>
+      <rect x="929" y="242" width="215" height="64" rx="12"/>
+    </g>
+    <g fill="#e2eff6" font-size="24" font-weight="550" text-anchor="middle">
+      <text x="164" y="282">01 · Python</text>
+      <text x="455" y="282">02 · Tools</text>
+      <text x="746" y="282">03 · Agents</text>
+      <text x="1037" y="282">04 · Ship</text>
+    </g>
+  </g>
+  <g fill="none" stroke="#65caba" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M289 274H328M319 265L328 274L319 283"/>
+    <path d="M580 274H619M610 265L619 274L610 283"/>
+    <path d="M871 274H910M901 265L910 274L901 283"/>
+  </g>
+</svg>

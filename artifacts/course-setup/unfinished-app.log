@@ -1,0 +1,52 @@
+离线模式：回放回复固定；工具执行和学习者逻辑仍会真实运行。
+前置练习尚未完成。查看 COURSE_STATE.json，按当前任务完成 TODO，不要让模型代写。
+Traceback (most recent call last):
+  File "/Users/sd3/Desktop/project/agentLearning/scripts/run_course_app.py", line 52, in <module>
+    asyncio.run(main())
+  File "/Users/sd3/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/sd3/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sd3/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/sd3/Desktop/project/agentLearning/scripts/run_course_app.py", line 46, in main
+    result = await run_app(args.mode, model, args.query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sd3/Desktop/project/agentLearning/src/agentlab/course_runtime.py", line 182, in run_app
+    return {"mode": mode, "result": await tools[0].ainvoke({"keyword": query})}
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sd3/Desktop/project/agentLearning/.venv/lib/python3.12/site-packages/langchain_core/tools/structured.py", line 123, in ainvoke
+    return await run_in_executor(config, self.invoke, input, config, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sd3/Desktop/project/agentLearning/.venv/lib/python3.12/site-packages/langchain_core/runnables/config.py", line 707, in run_in_executor
+    return await asyncio.get_running_loop().run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sd3/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sd3/Desktop/project/agentLearning/.venv/lib/python3.12/site-packages/langchain_core/runnables/config.py", line 698, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sd3/Desktop/project/agentLearning/.venv/lib/python3.12/site-packages/langchain_core/tools/base.py", line 764, in invoke
+    return self.run(tool_input, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sd3/Desktop/project/agentLearning/.venv/lib/python3.12/site-packages/langchain_core/tools/base.py", line 1132, in run
+    raise error_to_raise
+  File "/Users/sd3/Desktop/project/agentLearning/.venv/lib/python3.12/site-packages/langchain_core/tools/base.py", line 1098, in run
+    response = context.run(self._run, *tool_args, **tool_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sd3/Desktop/project/agentLearning/.venv/lib/python3.12/site-packages/langchain_core/tools/structured.py", line 152, in _run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sd3/Desktop/project/agentLearning/src/agentlab/course_runtime.py", line 84, in repository_search
+    return dict(_lesson("records").search_repository(read_records(), keyword))
+                                                     ^^^^^^^^^^^^^^
+  File "/Users/sd3/Desktop/project/agentLearning/src/agentlab/course_runtime.py", line 54, in read_records
+    value = files.read_text_tool(FIXTURE, relative)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sd3/Desktop/project/agentLearning/weeks/w05-files-loop/ex1_files.py", line 51, in read_text_tool
+    raise NotImplementedError("D06：读取文件并返回成功结果")
+NotImplementedError: D06：读取文件并返回成功结果

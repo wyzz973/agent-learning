@@ -1,0 +1,516 @@
+
+▸ 格式化
+194 files left unchanged
+✓ 格式化
+
+▸ lint
+All checks passed!
+✓ lint
+
+▸ 类型检查
+Success: no issues found in 6 source files
+✓ 类型检查
+
+▸ 教师基础设施测试
+....................                                                     [100%]
+20 passed in 0.11s
+✓ 教师基础设施测试
+
+▸ 结构检查
+✓ 周目录
+✓ 文档链接
+✓ 参数说明
+✓ 密钥卫生
+✓ 结构检查
+
+▸ 课程与交接检查
+✓ 60 张任务卡、每日预算、规则共享与进度结构
+✓ 课程与交接检查
+
+▸ 学习者练习测试
+...FFFFFFFFFFFFF.....                                                    [100%]
+=================================== FAILURES ===================================
+______________________ test_find_matches_path_and_content ______________________
+
+files = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+
+    def test_find_matches_path_and_content(files: list[dict[str, str]]) -> None:
+>       assert find_matches(files, "retry") == files[:2]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+weeks/w04-python-tools/test_w04.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+keyword = 'retry'
+
+    def find_matches(records: list[dict[str, str]], keyword: str) -> list[dict[str, str]]:
+        """按关键词筛选文件路径或正文，忽略英文大小写和关键词两端的空白。
+    
+        Args:
+            records: 每项包含字符串 path、content；允许空列表，不修改输入。
+            keyword: 字符串；去掉两端空白后为空时返回空列表。
+        Returns:
+            匹配记录的列表，保留原字段和原顺序；每条记录最多出现一次。
+            例如搜 retry 可以同时找到 src/retry.py 和正文含 retry 的 README.md。
+        Raises:
+            KeyError: 记录缺少 path 或 content；练习数据保证包含它们。
+        """
+        cleaned = keyword.strip().lower()
+        matches: list[dict[str, str]] = []
+        if cleaned == "":
+            return matches
+    
+        for record in records:
+            path = record["path"].lower()
+            content = record["content"].lower()
+            # TODO：判断任一字段是否包含 cleaned，再把这条记录收集一次。
+>           raise NotImplementedError("ex1: 判断是否命中，把这一个 record 收集起来")
+E           NotImplementedError: ex1: 判断是否命中，把这一个 record 收集起来
+
+weeks/w04-python-tools/ex1_records.py:54: NotImplementedError
+_____________________ test_find_matches_normalizes_keyword _____________________
+
+files = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+
+    def test_find_matches_normalizes_keyword(files: list[dict[str, str]]) -> None:
+>       assert find_matches(files, "  RETRY  ") == files[:2]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+weeks/w04-python-tools/test_w04.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+keyword = '  RETRY  '
+
+    def find_matches(records: list[dict[str, str]], keyword: str) -> list[dict[str, str]]:
+        """按关键词筛选文件路径或正文，忽略英文大小写和关键词两端的空白。
+    
+        Args:
+            records: 每项包含字符串 path、content；允许空列表，不修改输入。
+            keyword: 字符串；去掉两端空白后为空时返回空列表。
+        Returns:
+            匹配记录的列表，保留原字段和原顺序；每条记录最多出现一次。
+            例如搜 retry 可以同时找到 src/retry.py 和正文含 retry 的 README.md。
+        Raises:
+            KeyError: 记录缺少 path 或 content；练习数据保证包含它们。
+        """
+        cleaned = keyword.strip().lower()
+        matches: list[dict[str, str]] = []
+        if cleaned == "":
+            return matches
+    
+        for record in records:
+            path = record["path"].lower()
+            content = record["content"].lower()
+            # TODO：判断任一字段是否包含 cleaned，再把这条记录收集一次。
+>           raise NotImplementedError("ex1: 判断是否命中，把这一个 record 收集起来")
+E           NotImplementedError: ex1: 判断是否命中，把这一个 record 收集起来
+
+weeks/w04-python-tools/ex1_records.py:54: NotImplementedError
+_____________________ test_find_matches_empty_and_missing ______________________
+
+files = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+
+    def test_find_matches_empty_and_missing(files: list[dict[str, str]]) -> None:
+>       assert find_matches(files, "missing") == []
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+weeks/w04-python-tools/test_w04.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+keyword = 'missing'
+
+    def find_matches(records: list[dict[str, str]], keyword: str) -> list[dict[str, str]]:
+        """按关键词筛选文件路径或正文，忽略英文大小写和关键词两端的空白。
+    
+        Args:
+            records: 每项包含字符串 path、content；允许空列表，不修改输入。
+            keyword: 字符串；去掉两端空白后为空时返回空列表。
+        Returns:
+            匹配记录的列表，保留原字段和原顺序；每条记录最多出现一次。
+            例如搜 retry 可以同时找到 src/retry.py 和正文含 retry 的 README.md。
+        Raises:
+            KeyError: 记录缺少 path 或 content；练习数据保证包含它们。
+        """
+        cleaned = keyword.strip().lower()
+        matches: list[dict[str, str]] = []
+        if cleaned == "":
+            return matches
+    
+        for record in records:
+            path = record["path"].lower()
+            content = record["content"].lower()
+            # TODO：判断任一字段是否包含 cleaned，再把这条记录收集一次。
+>           raise NotImplementedError("ex1: 判断是否命中，把这一个 record 收集起来")
+E           NotImplementedError: ex1: 判断是否命中，把这一个 record 收集起来
+
+weeks/w04-python-tools/ex1_records.py:54: NotImplementedError
+________________________ test_find_matches_keeps_input _________________________
+
+files = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+
+    def test_find_matches_keeps_input(files: list[dict[str, str]]) -> None:
+        before = deepcopy(files)
+>       find_matches(files, "retry")
+
+weeks/w04-python-tools/test_w04.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+keyword = 'retry'
+
+    def find_matches(records: list[dict[str, str]], keyword: str) -> list[dict[str, str]]:
+        """按关键词筛选文件路径或正文，忽略英文大小写和关键词两端的空白。
+    
+        Args:
+            records: 每项包含字符串 path、content；允许空列表，不修改输入。
+            keyword: 字符串；去掉两端空白后为空时返回空列表。
+        Returns:
+            匹配记录的列表，保留原字段和原顺序；每条记录最多出现一次。
+            例如搜 retry 可以同时找到 src/retry.py 和正文含 retry 的 README.md。
+        Raises:
+            KeyError: 记录缺少 path 或 content；练习数据保证包含它们。
+        """
+        cleaned = keyword.strip().lower()
+        matches: list[dict[str, str]] = []
+        if cleaned == "":
+            return matches
+    
+        for record in records:
+            path = record["path"].lower()
+            content = record["content"].lower()
+            # TODO：判断任一字段是否包含 cleaned，再把这条记录收集一次。
+>           raise NotImplementedError("ex1: 判断是否命中，把这一个 record 收集起来")
+E           NotImplementedError: ex1: 判断是否命中，把这一个 record 收集起来
+
+weeks/w04-python-tools/ex1_records.py:54: NotImplementedError
+________________________ test_make_hits_projects_fields ________________________
+
+files = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+
+    def test_make_hits_projects_fields(files: list[dict[str, str]]) -> None:
+>       assert make_hits(files) == [
+               ^^^^^^^^^^^^^^^^
+            {"path": "src/retry.py"},
+            {"path": "README.md"},
+            {"path": "tests/test_chat.py"},
+        ]
+
+weeks/w04-python-tools/test_w04.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+
+    def make_hits(records: list[dict[str, str]]) -> list[dict[str, str]]:
+        """只保留匹配记录的路径，给模型足够回答“在哪个文件”的信息。
+    
+        Args:
+            records: 每项含字符串 path、content；允许空列表，不修改输入。
+        Returns:
+            仅含 path 键的新字典列表，顺序不变；空输入返回 []。
+            例：[{"path": "a.py", "content": "hello"}] -> [{"path": "a.py"}]。
+        Raises:
+            KeyError: 记录缺少 path；练习数据保证包含它。
+    
+        思路：先确定返回容器；逐个取路径、组成小字典、保存；最后交还容器。
+        """
+>       raise NotImplementedError("ex1: 独立写 make_hits")
+E       NotImplementedError: ex1: 独立写 make_hits
+
+weeks/w04-python-tools/ex1_records.py:73: NotImplementedError
+_____________________________ test_make_hits_empty _____________________________
+
+    def test_make_hits_empty() -> None:
+>       assert make_hits([]) == []
+               ^^^^^^^^^^^^^
+
+weeks/w04-python-tools/test_w04.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = []
+
+    def make_hits(records: list[dict[str, str]]) -> list[dict[str, str]]:
+        """只保留匹配记录的路径，给模型足够回答“在哪个文件”的信息。
+    
+        Args:
+            records: 每项含字符串 path、content；允许空列表，不修改输入。
+        Returns:
+            仅含 path 键的新字典列表，顺序不变；空输入返回 []。
+            例：[{"path": "a.py", "content": "hello"}] -> [{"path": "a.py"}]。
+        Raises:
+            KeyError: 记录缺少 path；练习数据保证包含它。
+    
+        思路：先确定返回容器；逐个取路径、组成小字典、保存；最后交还容器。
+        """
+>       raise NotImplementedError("ex1: 独立写 make_hits")
+E       NotImplementedError: ex1: 独立写 make_hits
+
+weeks/w04-python-tools/ex1_records.py:73: NotImplementedError
+__________________________ test_make_hits_keeps_input __________________________
+
+files = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+
+    def test_make_hits_keeps_input(files: list[dict[str, str]]) -> None:
+        before = deepcopy(files)
+>       make_hits(files)
+
+weeks/w04-python-tools/test_w04.py:72: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+
+    def make_hits(records: list[dict[str, str]]) -> list[dict[str, str]]:
+        """只保留匹配记录的路径，给模型足够回答“在哪个文件”的信息。
+    
+        Args:
+            records: 每项含字符串 path、content；允许空列表，不修改输入。
+        Returns:
+            仅含 path 键的新字典列表，顺序不变；空输入返回 []。
+            例：[{"path": "a.py", "content": "hello"}] -> [{"path": "a.py"}]。
+        Raises:
+            KeyError: 记录缺少 path；练习数据保证包含它。
+    
+        思路：先确定返回容器；逐个取路径、组成小字典、保存；最后交还容器。
+        """
+>       raise NotImplementedError("ex1: 独立写 make_hits")
+E       NotImplementedError: ex1: 独立写 make_hits
+
+weeks/w04-python-tools/ex1_records.py:73: NotImplementedError
+_____________________________ test_success_result ______________________________
+
+files = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+
+    def test_success_result(files: list[dict[str, str]]) -> None:
+>       assert success_result(files[:1]) == {
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+            "ok": True,
+            "items": [{"path": "src/retry.py"}],
+            "count": 1,
+            "error": None,
+        }
+
+weeks/w04-python-tools/test_w04.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+weeks/w04-python-tools/ex2_search_tool.py:48: in success_result
+    hits = make_hits(records)
+           ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}]
+
+    def make_hits(records: list[dict[str, str]]) -> list[dict[str, str]]:
+        """只保留匹配记录的路径，给模型足够回答“在哪个文件”的信息。
+    
+        Args:
+            records: 每项含字符串 path、content；允许空列表，不修改输入。
+        Returns:
+            仅含 path 键的新字典列表，顺序不变；空输入返回 []。
+            例：[{"path": "a.py", "content": "hello"}] -> [{"path": "a.py"}]。
+        Raises:
+            KeyError: 记录缺少 path；练习数据保证包含它。
+    
+        思路：先确定返回容器；逐个取路径、组成小字典、保存；最后交还容器。
+        """
+>       raise NotImplementedError("ex1: 独立写 make_hits")
+E       NotImplementedError: ex1: 独立写 make_hits
+
+weeks/w04-python-tools/ex1_records.py:73: NotImplementedError
+__________________________ test_success_result_empty ___________________________
+
+    def test_success_result_empty() -> None:
+>       assert success_result([]) == {"ok": True, "items": [], "count": 0, "error": None}
+               ^^^^^^^^^^^^^^^^^^
+
+weeks/w04-python-tools/test_w04.py:86: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+weeks/w04-python-tools/ex2_search_tool.py:48: in success_result
+    hits = make_hits(records)
+           ^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = []
+
+    def make_hits(records: list[dict[str, str]]) -> list[dict[str, str]]:
+        """只保留匹配记录的路径，给模型足够回答“在哪个文件”的信息。
+    
+        Args:
+            records: 每项含字符串 path、content；允许空列表，不修改输入。
+        Returns:
+            仅含 path 键的新字典列表，顺序不变；空输入返回 []。
+            例：[{"path": "a.py", "content": "hello"}] -> [{"path": "a.py"}]。
+        Raises:
+            KeyError: 记录缺少 path；练习数据保证包含它。
+    
+        思路：先确定返回容器；逐个取路径、组成小字典、保存；最后交还容器。
+        """
+>       raise NotImplementedError("ex1: 独立写 make_hits")
+E       NotImplementedError: ex1: 独立写 make_hits
+
+weeks/w04-python-tools/ex1_records.py:73: NotImplementedError
+_________________________ test_search_repository_found _________________________
+
+files = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+
+    def test_search_repository_found(files: list[dict[str, str]]) -> None:
+>       assert search_repository(files, "  RETRY ") == {
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            "ok": True,
+            "items": [{"path": "src/retry.py"}, {"path": "README.md"}],
+            "count": 2,
+            "error": None,
+        }
+
+weeks/w04-python-tools/test_w04.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+keyword = '  RETRY '
+
+    def search_repository(records: list[dict[str, str]], keyword: str) -> dict[str, Any]:
+        """在迷你仓库中查找路径或正文包含关键词的文件。
+    
+        Args:
+            records: 每项含字符串 path、content 的记录列表；允许空列表，不修改输入。
+            keyword: 字符串，忽略英文大小写与两端空白；纯空白属于输入错误。
+        Returns:
+            固定包含 ok、items、count、error。成功时 items 仅含路径字典；
+            没找到也是成功。空关键词返回 error_result("keyword must not be blank")。
+        Raises:
+            KeyError: 内部记录缺少约定字段；这是程序数据错误，需要开发者修正。
+    
+        思路：先处理空关键词；有效时查找、接住结果、交给成功结果函数，再返回。
+        输入校验失败是交给模型的反馈；不要把编程错误或未完成的 TODO 当成搜索成功。
+        """
+>       raise NotImplementedError("ex2: 独立写 search_repository")
+E       NotImplementedError: ex2: 独立写 search_repository
+
+weeks/w04-python-tools/ex2_search_tool.py:69: NotImplementedError
+__________________ test_search_repository_no_match_is_success __________________
+
+files = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+
+    def test_search_repository_no_match_is_success(files: list[dict[str, str]]) -> None:
+>       assert search_repository(files, "missing") == {
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            "ok": True,
+            "items": [],
+            "count": 0,
+            "error": None,
+        }
+
+weeks/w04-python-tools/test_w04.py:99: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+keyword = 'missing'
+
+    def search_repository(records: list[dict[str, str]], keyword: str) -> dict[str, Any]:
+        """在迷你仓库中查找路径或正文包含关键词的文件。
+    
+        Args:
+            records: 每项含字符串 path、content 的记录列表；允许空列表，不修改输入。
+            keyword: 字符串，忽略英文大小写与两端空白；纯空白属于输入错误。
+        Returns:
+            固定包含 ok、items、count、error。成功时 items 仅含路径字典；
+            没找到也是成功。空关键词返回 error_result("keyword must not be blank")。
+        Raises:
+            KeyError: 内部记录缺少约定字段；这是程序数据错误，需要开发者修正。
+    
+        思路：先处理空关键词；有效时查找、接住结果、交给成功结果函数，再返回。
+        输入校验失败是交给模型的反馈；不要把编程错误或未完成的 TODO 当成搜索成功。
+        """
+>       raise NotImplementedError("ex2: 独立写 search_repository")
+E       NotImplementedError: ex2: 独立写 search_repository
+
+weeks/w04-python-tools/ex2_search_tool.py:69: NotImplementedError
+____________________ test_search_repository_blank_is_error _____________________
+
+files = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+
+    def test_search_repository_blank_is_error(files: list[dict[str, str]]) -> None:
+        for keyword in ["", " ", "\t\n"]:
+>           assert search_repository(files, keyword) == {
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                "ok": False,
+                "items": [],
+                "count": 0,
+                "error": "keyword must not be blank",
+            }
+
+weeks/w04-python-tools/test_w04.py:110: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+keyword = ''
+
+    def search_repository(records: list[dict[str, str]], keyword: str) -> dict[str, Any]:
+        """在迷你仓库中查找路径或正文包含关键词的文件。
+    
+        Args:
+            records: 每项含字符串 path、content 的记录列表；允许空列表，不修改输入。
+            keyword: 字符串，忽略英文大小写与两端空白；纯空白属于输入错误。
+        Returns:
+            固定包含 ok、items、count、error。成功时 items 仅含路径字典；
+            没找到也是成功。空关键词返回 error_result("keyword must not be blank")。
+        Raises:
+            KeyError: 内部记录缺少约定字段；这是程序数据错误，需要开发者修正。
+    
+        思路：先处理空关键词；有效时查找、接住结果、交给成功结果函数，再返回。
+        输入校验失败是交给模型的反馈；不要把编程错误或未完成的 TODO 当成搜索成功。
+        """
+>       raise NotImplementedError("ex2: 独立写 search_repository")
+E       NotImplementedError: ex2: 独立写 search_repository
+
+weeks/w04-python-tools/ex2_search_tool.py:69: NotImplementedError
+______________________ test_search_repository_keeps_input ______________________
+
+files = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+
+    def test_search_repository_keeps_input(files: list[dict[str, str]]) -> None:
+        before = deepcopy(files)
+>       search_repository(files, "retry")
+
+weeks/w04-python-tools/test_w04.py:120: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+records = [{'path': 'src/retry.py', 'content': 'Retry failed requests.'}, {'path': 'README.md', 'content': 'Use retry for network errors.'}, {'path': 'tests/test_chat.py', 'content': 'Check message history.'}]
+keyword = 'retry'
+
+    def search_repository(records: list[dict[str, str]], keyword: str) -> dict[str, Any]:
+        """在迷你仓库中查找路径或正文包含关键词的文件。
+    
+        Args:
+            records: 每项含字符串 path、content 的记录列表；允许空列表，不修改输入。
+            keyword: 字符串，忽略英文大小写与两端空白；纯空白属于输入错误。
+        Returns:
+            固定包含 ok、items、count、error。成功时 items 仅含路径字典；
+            没找到也是成功。空关键词返回 error_result("keyword must not be blank")。
+        Raises:
+            KeyError: 内部记录缺少约定字段；这是程序数据错误，需要开发者修正。
+    
+        思路：先处理空关键词；有效时查找、接住结果、交给成功结果函数，再返回。
+        输入校验失败是交给模型的反馈；不要把编程错误或未完成的 TODO 当成搜索成功。
+        """
+>       raise NotImplementedError("ex2: 独立写 search_repository")
+E       NotImplementedError: ex2: 独立写 search_repository
+
+weeks/w04-python-tools/ex2_search_tool.py:69: NotImplementedError
+=========================== short test summary info ============================
+FAILED weeks/w04-python-tools/test_w04.py::test_find_matches_path_and_content
+FAILED weeks/w04-python-tools/test_w04.py::test_find_matches_normalizes_keyword
+FAILED weeks/w04-python-tools/test_w04.py::test_find_matches_empty_and_missing
+FAILED weeks/w04-python-tools/test_w04.py::test_find_matches_keeps_input - No...
+FAILED weeks/w04-python-tools/test_w04.py::test_make_hits_projects_fields - N...
+FAILED weeks/w04-python-tools/test_w04.py::test_make_hits_empty - NotImplemen...
+FAILED weeks/w04-python-tools/test_w04.py::test_make_hits_keeps_input - NotIm...
+FAILED weeks/w04-python-tools/test_w04.py::test_success_result - NotImplement...
+FAILED weeks/w04-python-tools/test_w04.py::test_success_result_empty - NotImp...
+FAILED weeks/w04-python-tools/test_w04.py::test_search_repository_found - Not...
+FAILED weeks/w04-python-tools/test_w04.py::test_search_repository_no_match_is_success
+FAILED weeks/w04-python-tools/test_w04.py::test_search_repository_blank_is_error
+FAILED weeks/w04-python-tools/test_w04.py::test_search_repository_keeps_input
+13 failed, 8 passed in 0.19s
+✗ 学习者练习测试
+检查未通过。

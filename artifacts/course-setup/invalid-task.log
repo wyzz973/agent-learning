@@ -1,0 +1,2 @@
+usage: learn.py [-h] [--task TASK] [--handoff]
+learn.py: error: 未知任务 D99，请使用 D01～D60

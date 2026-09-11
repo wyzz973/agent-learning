@@ -1,0 +1,2 @@
+# 执行日志保留原始输出空白，不作为源码检查行尾空格。
+artifacts/**/*.log -whitespace
