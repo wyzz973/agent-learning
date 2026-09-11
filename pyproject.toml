@@ -36,7 +36,7 @@ select = ["E", "F", "I", "UP", "B", "ASYNC"]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
-testpaths = ["tests", "weeks"]
+testpaths = ["tests"]  # 每周的测试按周单独跑，见 check.sh
 
 [tool.mypy]
 python_version = "3.11"

@@ -7,7 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from check_structure import MD_LINK, WEEK_DIR, _documented_functions  # noqa: E402
+from check_structure import MD_LINK, WEEK_DIR, _documented_functions, _links_in  # noqa: E402
 
 
 def test_week_dir_accepts_the_documented_naming() -> None:
@@ -80,3 +80,12 @@ class TestDocstringCoverage:
             "    def inner(a: int) -> int:\n        return a\n"
         )
         assert self._check(tmp_path, source) == []
+
+
+def test_links_inside_code_are_not_treated_as_links() -> None:
+    text = (
+        "见 [路线](LEARNING_PATH.md)\n"
+        "行内代码 `d['k'](x)` 不算\n"
+        "```python\nf\"{c['name']}({c['args']})\"\n```\n"
+    )
+    assert _links_in(text) == ["LEARNING_PATH.md"]

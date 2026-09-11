@@ -24,8 +24,20 @@ step() {
 step "格式化"   uv run ruff format .
 step "lint"     uv run ruff check --fix .
 step "类型检查"  uv run mypy
+# 每周单独一个 pytest 进程：不同周可能有同名的 exN 模块（如 ex1_messages.py），
+# 同一进程里 Python 会复用第一次 import 的缓存，第二周就拿到了上一周的代码。
+run_tests() {
+    local status=0
+    uv run pytest -q tests || status=1
+    for week in weeks/w*/; do
+        [ -d "$week" ] || continue
+        uv run pytest -q "$week" || status=1
+    done
+    return "$status"
+}
+
 if [ "$wip" -eq 0 ]; then
-    step "测试" uv run pytest -q
+    step "测试" run_tests
 else
     printf '\n\033[33m▸ 测试（--wip 跳过）\033[0m\n'
 fi

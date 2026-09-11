@@ -19,10 +19,14 @@ ROOT = Path(__file__).resolve().parent.parent
 
 WEEK_DIR = re.compile(r"^w(\d{2})-[a-z0-9-]+$")
 MD_LINK = re.compile(r"\[[^\]]*\]\(([^)\s]+)\)")
+FENCED_CODE = re.compile(r"^```.*?^```", re.DOTALL | re.MULTILINE)
+INLINE_CODE = re.compile(r"`[^`\n]*`")
 
 # templates/ holds placeholder paths written relative to a week directory, not
 # to templates/ itself, so its links resolve only after a template is copied.
-LINK_SCAN_SKIP = {"templates", ".git", ".venv", "node_modules"}
+# notes/qa/ holds verbatim Q&A logs; pasted code and tracebacks there look like
+# markdown links (e.g. d['k'](x)) and the log values fidelity over link integrity.
+LINK_SCAN_SKIP = {"templates", ".git", ".venv", "node_modules", "qa"}
 
 
 def week_dirs() -> list[Path]:
@@ -81,6 +85,20 @@ def check_weeks() -> list[str]:
     return problems
 
 
+def _links_in(text: str) -> list[str]:
+    """Return markdown link targets, ignoring anything inside code.
+
+    Args:
+        text: Markdown source.
+
+    Returns:
+        Link targets in order of appearance.
+    """
+    text = FENCED_CODE.sub("", text)
+    text = INLINE_CODE.sub("", text)
+    return MD_LINK.findall(text)
+
+
 def check_links() -> list[str]:
     """Relative markdown links resolve to real files.
 
@@ -94,7 +112,7 @@ def check_links() -> list[str]:
             continue
         if any(part in LINK_SCAN_SKIP for part in md.relative_to(ROOT).parts):
             continue
-        for target in MD_LINK.findall(md.read_text(encoding="utf-8")):
+        for target in _links_in(md.read_text(encoding="utf-8")):
             if target.startswith(("http://", "https://", "mailto:", "#")):
                 continue
             path = target.split("#", 1)[0]

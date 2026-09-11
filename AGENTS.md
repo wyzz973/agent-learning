@@ -67,7 +67,7 @@ uv run ruff format . && uv run ruff check --fix .  # 手动格式化
 
 ## 每周的最小交付
 
-每个 `weeks/wNN-topic/` 必须有 `README.md`（用 [templates/week-readme.md](templates/week-readme.md)）、至少一个可独立运行的 `.py`、至少一个测试文件。**测试文件名必须是 `test_wNN...`**——pytest 拿文件名当模块名，两周重名会在收集阶段整体失败。`notes/weekly/wNN.md` 在开周时就从 [templates/weekly-note.md](templates/weekly-note.md) 复制过去。`scripts/check_structure.py` 机械检查这几项。
+每个 `weeks/wNN-topic/` 必须有 `README.md`（用 [templates/week-readme.md](templates/week-readme.md)）、至少一个可独立运行的 `.py`、至少一个测试文件。**测试文件名必须是 `test_wNN...`**——pytest 拿文件名当模块名，两周重名会在收集阶段整体失败。**每周的测试要单独一个进程跑**：不同周常有同名的 `exN_*.py`，同一进程里 Python 会复用第一次 import 的模块缓存，后面那周拿到的是前一周的代码。`./check.sh` 已按周分开跑；手动跑用 `uv run pytest weeks/wNN-topic`，不要 `uv run pytest weeks/`。`notes/weekly/wNN.md` 在开周时就从 [templates/weekly-note.md](templates/weekly-note.md) 复制过去。`scripts/check_structure.py` 机械检查这几项。
 
 **每周的测试先于实现写好，红变绿就是本周完成。** 第 1 段示范会让一部分测试开局就绿，这是有意的——全红对新手是打击。 进行中提交用 `./check.sh --wip`，周五收尾跑完整版再打 tag。
 
