@@ -119,12 +119,26 @@ class TestCreateAgent:
         )
         assert ex3.run_agent(agent, "上海天气") == "上海今天晴，25 度。"
 
-    def test_system_prompt_becomes_the_first_message(self) -> None:
+    def test_system_prompt_reaches_the_model_but_is_not_stored(self) -> None:
+        # w02 你把 system 消息存成了历史第 0 条。create_agent 不存：
+        # 它在每次调模型时临时插到最前面，result["messages"] 里看不到它。
+        seen: list[list[AnyMessage]] = []
+
+        class Recording(ex3.ScriptedChatModel):
+            def _generate(self, messages, *args, **kwargs):  # type: ignore[no-untyped-def]
+                seen.append(list(messages))
+                return super()._generate(messages, *args, **kwargs)
+
         agent = ex3.build_agent(
-            [ex2.get_weather], ex3.scripted(AIMessage("好的")), system_prompt="你是助手。"
+            [ex2.get_weather],
+            Recording(messages=iter([AIMessage("好的")])),
+            system_prompt="你是助手。",
         )
         result = agent.invoke({"messages": [HumanMessage("hi")]})
-        assert isinstance(result["messages"][0], SystemMessage)
+
+        assert isinstance(seen[0][0], SystemMessage), "模型收到的第一条应该是 system prompt"
+        assert seen[0][0].text == "你是助手。"
+        assert not any(isinstance(m, SystemMessage) for m in result["messages"])
 
     def test_trace_records_every_step_in_order(self) -> None:
         agent = ex3.build_agent(

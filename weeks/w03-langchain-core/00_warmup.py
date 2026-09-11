@@ -251,6 +251,44 @@ def demo_match() -> None:
     print("误配置要大声失败，不能悄悄跳过。这是 w01 学的规则。")
 
 
+# ═══════════ 11. lambda：一行写完的小函数 ═══════════
+#    用在 ex3 build_resilient_agent：ToolErrorMiddleware(on_error=...)
+
+
+def demo_lambda() -> None:
+    """lambda 就是没名字的 def，只能写一个表达式。"""
+    print("\n======== 11. lambda（用在 ex3）========")
+
+    def describe(error, request):
+        return f"工具执行失败：{error}"
+
+    same = lambda error, request: f"工具执行失败：{error}"  # noqa: E731
+
+    print(f"  def 版:    {describe(ValueError('城市不存在'), None)}")
+    print(f"  lambda 版: {same(ValueError('城市不存在'), None)}")
+    print("  两个完全等价。")
+
+    print('\n  拆开看  lambda error, request: f"工具执行失败：{error}"')
+    print("    lambda           关键字，意思是'在这里定义一个函数'")
+    print("    error, request   参数，和 def 括号里的一样，用逗号隔开")
+    print("    :                冒号后面就是返回值，自动 return，不用写 return")
+    print('    f"...{error}"    返回的东西')
+
+    # 把函数当参数传：调用方在出错时回调你给的函数
+    def run_with_handler(handler):
+        try:
+            raise ValueError("城市 '火星' 不存在")
+        except ValueError as error:
+            return handler(error, "假装这是请求")
+
+    print(f"\n  把 lambda 当参数传进去: {run_with_handler(lambda e, r: f'工具执行失败：{e}')}")
+
+    print("\n什么时候用：某个参数要你传'一个函数'进去，而这个函数只有一行。")
+    print("ToolErrorMiddleware(on_error=...) 就是这种：工具出错时它调用你给的函数，")
+    print("传进来两个值 (异常, 请求)，你返回的字符串就成了 ToolMessage 的内容。")
+    print("request 用不上也得写在参数里——它总是传两个值进来，少一个参数会报错。")
+
+
 def main() -> None:
     """按顺序跑完所有小节。"""
     demo_isinstance()
@@ -263,6 +301,7 @@ def main() -> None:
     demo_negative_index()
     demo_json_loads()
     demo_match()
+    demo_lambda()
     print("\n跑完了。再跑 01_langchain_api.py，然后开始做练习。")
     print("练习里卡住，按小节标题里的'用在 exN'回来查。")
 
