@@ -30,13 +30,18 @@ from langchain.chains import ...
 | `init_chat_model("provider:model")` | `OpenAICompatLLM` + 双向格式转换 |
 | `content_blocks` | `complete` 里的响应解析 |
 
-## 先跑语法热身
+## 先跑两个热身（顺序别反）
 
 ```sh
-uv run python weeks/w03-langchain-core/00_warmup.py
+uv run python weeks/w03-langchain-core/00_warmup.py        # ① Python 语法
+uv run python weeks/w03-langchain-core/01_langchain_api.py  # ② LangChain 五入口
 ```
 
-五个小节，全是可运行的实测输出。第 3 节会打印 `create_agent` 产出的消息序列：
+**`00` 是这周练习用到的每一个 Python 写法**，十节：`isinstance`、两层嵌套循环、
+`eval`、`raise ... from`、嵌套 f-string 格式化、字典查重、继承与覆盖、负数下标、
+`json.loads`、`match`。每节标题都标了「用在 exN」，练习卡住时按标题回来查。
+
+**`01` 是五个 API 入口**的最小例子。它的第 3 节会打印 `create_agent` 产出的消息序列：
 
 ```
 HumanMessage → AIMessage(tool_calls) → ToolMessage → AIMessage
@@ -55,7 +60,8 @@ HumanMessage → AIMessage(tool_calls) → ToolMessage → AIMessage
 
 | 文件 | 练什么 |
 |---|---|
-| `00_warmup.py` | 五个入口的最小例子，先跑，只读不写 |
+| `00_warmup.py` | 本周用到的十个 Python 写法，先跑，只读不写 |
+| `01_langchain_api.py` | 五个 API 入口的最小例子 |
 | `ex1_messages.py` | 消息类型；把 w02 的字典格式迁移过来 |
 | `ex2_tools.py` | `@tool`、pydantic 约束、工具重名检测 |
 | `ex3_create_agent.py` | **核心**：`create_agent`、执行轨迹、错误中间件 |

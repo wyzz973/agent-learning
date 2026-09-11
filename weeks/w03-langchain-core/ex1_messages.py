@@ -75,7 +75,8 @@ def extract_tool_calls(messages: list[AnyMessage]) -> list[dict[str, Any]]:
         #   LangChain 的 tool_call 是字典，键有 name / args / id / type。
         #   注意 args 是**已经解析好的字典**，不像 w02 那样是 JSON 字符串——
         #   这是 LangChain 替你做掉的一件事。
-        # TODO 在这里收集
+        for call in message.tool_calls:
+            calls.append({"name": call["name"], "args": call["args"]})
 
     return calls
 

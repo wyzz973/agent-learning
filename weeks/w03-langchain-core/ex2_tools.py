@@ -19,7 +19,7 @@ LangChain 直接复用了 pydantic，所以 w01 ex3 学的东西在这里全能�
 
 from __future__ import annotations
 
-from typing import Any
+from typing import Any, re
 
 from langchain.tools import BaseTool, tool
 from pydantic import Field
@@ -88,8 +88,13 @@ def calculator(expression: str, precision: int = 2) -> str:
     #     （这条是 w01 学的：错误信息要能指向解决办法）
     #   - 返回值要是字符串，用 f"{数值:.{precision}f}" 格式化
     #     那个嵌套的大括号是把 precision 的值插进格式说明里
-    # TODO 在这里实现
-    raise NotImplementedError
+
+    try:
+        value = eval(expression)
+    except Exception as error:
+        raise ValueError(f"表达式计算错误：: {expression!r}") from error
+
+    return f"{value:.{precision}f}"
 
 
 # ─────────────────── 第 3 段：独立完成 ───────────────────
