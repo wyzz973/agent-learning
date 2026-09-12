@@ -1,3 +1,4 @@
+# Day 1-3 语法热身｜只读只跑，不用写
 """w04 语法热身：每次只读当天对应的小节，预测 print，再运行。
 
 练到的 Python：变量与类型注解、列表/字典取值、for/if、in、字符串方法、
@@ -5,9 +6,15 @@ append、len、函数调用与 return、布尔值与 None、跨文件 import。
 第 1～3 节用在 ex1；第 4～6 节用在 ex2。这里没有练习答案。
 """
 
+import sys
+from pathlib import Path
 from typing import Any
 
-from sample_repo import FILES
+CURRENT_DIR = Path(__file__).resolve().parent
+if str(CURRENT_DIR) not in sys.path:
+    sys.path.insert(0, str(CURRENT_DIR))
+
+from sample_repo import FILES  # noqa: E402 — 要等上面的 sys.path 设好才能导入
 
 # 1. 用在 ex1：列表 → 字典 → 字符串。类型注解描述值，不会替你创建值。
 print("\n1. 一批、一个、一个字段")

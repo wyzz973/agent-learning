@@ -4,6 +4,57 @@
 
 每日具体任务以 [D01～D05](../../curriculum/units/w04.md) 为准；当前任务由 COURSE_STATE.json 指定。
 
+## 文件读哪个、什么时候读
+
+按这个顺序，不用管编辑器里的字母排序。每个文件第一行也标了同样的信息。
+
+| 读的顺序 | 文件 | 什么时候用 | 含哪个练习 |
+|---|---|---|---|
+| 1 | [00_warmup.py](00_warmup.py) | Day 1-3 开头 | 无，只读只跑，预测 print 结果 |
+| 2 | [sample_repo.py](sample_repo.py) | 全周 | 无，本周的数据，不用改 |
+| 3 | [ex1_records.py](ex1_records.py) | Day 1-2 | **练习 1、2** |
+| 4 | [ex2_search_tool.py](ex2_search_tool.py) | Day 3-4 | **练习 3、4** |
+| 5 | [warmup_tools.py](warmup_tools.py) | Day 4 开头 | 无，只读只跑 |
+| 6 | [agent_demo.py](agent_demo.py) | Day 4 末尾 | 无，只运行；三种跑法见下 |
+| 7 | `recall.py` | Day 5 | **练习 5** ← 这个文件由你创建，仓库里现在没有 |
+| 8 | [test_w04.py](test_w04.py) | 每天结尾 | 无，不用改，你的实现要让它变绿 |
+| — | [test_w04_bridge.py](test_w04_bridge.py) | 不用管 | 无，检查教师连接代码 |
+
+
+## agent_demo.py 的三种跑法
+
+```sh
+uv run python weeks/w04-python-tools/agent_demo.py                 # 只调工具，不联网
+uv run python weeks/w04-python-tools/agent_demo.py --live          # 调真实模型，看消息轨迹
+uv run python weeks/w04-python-tools/agent_demo.py --live --debug  # 额外看链路与请求/响应 JSON
+```
+
+`--debug` 会打印三样东西，都是平时看不到的：
+
+| 打印什么 | 为什么值得看 |
+|---|---|
+| LangChain 链路 | 一次运行里，middleware、模型、工具各被调用了几次、按什么顺序 |
+| 发出的请求 JSON | **你写的工具 docstring 原样出现在 `tools[0].function.description` 里**——模型就是靠这段文字决定调不调、怎么填参数 |
+| 收到的响应 JSON | 模型的 `tool_calls` 长什么样，以及 token 用量 |
+
+请求头里有 API key，所以只打印 URL 和消息体，不打印请求头。
+
+## 五个练习的顺序
+
+文件里每个练习上方都标了同样的编号，例如 `── 练习 1/5 · Day 1 ·`。
+
+| 练习 | 写哪个函数 | 在哪个文件 | 哪天 | 测试筛选词 |
+|---|---|---|---|---|
+| 1/5 | `find_matches` | ex1_records.py | Day 1 | `-k find_matches` |
+| 2/5 | `make_hits` | ex1_records.py | Day 2 | `-k make_hits` |
+| 3/5 | `success_result` | ex2_search_tool.py | Day 3 | `-k success_result` |
+| 4/5 | `search_repository` | ex2_search_tool.py | Day 4 | `-k search_repository` |
+| 5/5 | 重写 `find_matches`、`make_hits` | **`recall.py`（你创建）** | Day 5 | `./check.sh --week w04` |
+
+**需要你自己创建的文件只有一个：`weeks/w04-python-tools/recall.py`（Day 5）。**它不提供骨架也不提供签名——Day 5 的目的就是关掉范例、凭记忆重写，给了骨架就失去意义了。写法要求见 [D05 任务卡](../../curriculum/tasks/D05.md)。
+
+其余文件仓库里都已存在，你只在标了「练习 N/5」的地方动手。
+
 ## 目标
 
 独立把“一批文件记录”变成“可以给 agent 使用的搜索结果”。本周只写四个函数，反复练取值、判断、收集和返回。
@@ -75,14 +126,30 @@ Day 1 开始先花 5 分钟，在编辑器临时文件里尝试：从两条文�
 
 ## Use It — 框架版
 
-完成 ex2 后，先跑 [01_tool_warmup.py](01_tool_warmup.py)，再看 [agent_demo.py](agent_demo.py) 中的 `repository_search`。它只把你的函数接到 LangChain；不需要重写搜索逻辑。
+完成 ex2 后，先跑 [warmup_tools.py](warmup_tools.py)，再看 [agent_demo.py](agent_demo.py) 中的 `repository_search`。它只把你的函数接到 LangChain；不需要重写搜索逻辑。
 
 ```sh
-uv run python weeks/w04-python-tools/01_tool_warmup.py
+uv run python weeks/w04-python-tools/warmup_tools.py
 uv run python weeks/w04-python-tools/agent_demo.py
 ```
 
 第一条是完整离线示范，开局就能跑；第二条调用你写好的工具，预计得到上面的两条路径。它是代码指定的工具调用，还没有模型决策。
+
+### 对比表（Day 5 填）
+
+跑完 `--live --debug` 之后填这张表。**重点是最后一列**：框架替你做的每一件事，你都要能说出它解决了什么问题。
+
+| 这件事 | 你的 Python 负责什么 | LangChain 负责什么 |
+|---|---|---|
+| 把函数变成模型能看懂的工具 | 写函数签名、类型注解和 docstring | `@tool` 把它们翻译成 JSON Schema，塞进请求的 `tools` 字段。请求里 `description` 就是你那段 docstring 原文，`parameters.keyword.type` 来自 `keyword: str` |
+| 决定要不要搜、搜什么词 | **完全不参与** | 把工具清单和问题一起发给模型；模型决定后，框架把响应里的 `tool_calls` 解析成 Python 对象 |
+| 真正执行搜索、返回结果 | `search_repository` → `find_matches` → `make_hits`，**全是你的代码** | 只负责按 `tool_calls` 里的名字和参数调用你的函数，不碰搜索逻辑 |
+| 把工具结果交回模型 | 返回一个普通 dict | 转成 `ToolMessage` 追加进消息列表，带上对应的 `tool_call_id`，再发一次请求。**这一步你在 w02 手写过** |
+| 防止模型无限调用 | 不参与 | `ModelCallLimitMiddleware(run_limit=4)`，见 `agent_demo.py` 的 `build_demo_agent` |
+
+一句话总结：**模型决定做什么，你的 Python 决定怎么做，框架负责在两者之间传话。**
+
+三件事框架都没替你做：搜索逻辑本身、返回什么字段、出错时返回什么。这些决定了模型能不能给出对的答案——`--debug` 里模型那句 `reasoning_content` 就是照着你写的 docstring 推理的。
 
 可选体验：已有模型配置且练习完成后运行。它会读取 `.env` 并产生真实模型调用费用；模型须支持工具调用。教师提供了单次模型请求 20 秒、整轮 60 秒、最多 4 次模型调用和图步数上限。连接代码由教师维护，这周只需能解释三步：注册工具 → 模型要求调用 → 结果返回模型。
 
@@ -126,7 +193,7 @@ records = [
 | [00_warmup.py](00_warmup.py) | Day 1 / Day 3，分段跑与读 |
 | [sample_repo.py](sample_repo.py) | 看清一批文件的数据形状 |
 | [ex1_records.py](ex1_records.py) / [ex2_search_tool.py](ex2_search_tool.py) | 本周仅有的两个主练习 |
-| [01_tool_warmup.py](01_tool_warmup.py) / [agent_demo.py](agent_demo.py) | Day 4，看函数怎么接入 agent |
+| [warmup_tools.py](warmup_tools.py) / [agent_demo.py](agent_demo.py) | Day 4，看函数怎么接入 agent |
 | [test_w04.py](test_w04.py) | 练习的行为规格，不需要学习 pytest 写法 |
 | [test_w04_bridge.py](test_w04_bridge.py) | 教师的连接测试，不需要学习假模型实现 |
 
