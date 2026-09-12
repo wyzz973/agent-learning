@@ -1,7 +1,80 @@
 {
   "schema_version": 1,
-  "active_task": "D01",
-  "progress": {},
+  "active_task": "D06",
+  "progress": {
+    "D01": {
+      "status": "completed",
+      "learner_evidence": [
+        "本人实现 find_matches（按关键词筛选记录）；实现留在工作区未提交"
+      ],
+      "checks": [
+        {
+          "command": "uv run pytest weeks/w04-python-tools -q",
+          "result": "21 passed",
+          "passed": true
+        }
+      ]
+    },
+    "D02": {
+      "status": "completed",
+      "learner_evidence": [
+        "本人实现 make_hits（只保留任务需要的字段）；实现留在工作区未提交"
+      ],
+      "checks": [
+        {
+          "command": "uv run pytest weeks/w04-python-tools -q",
+          "result": "21 passed",
+          "passed": true
+        }
+      ]
+    },
+    "D03": {
+      "status": "completed",
+      "learner_evidence": [
+        "本人实现 success_result（统一成功与错误结果）；实现留在工作区未提交"
+      ],
+      "checks": [
+        {
+          "command": "uv run pytest weeks/w04-python-tools -q",
+          "result": "21 passed",
+          "passed": true
+        }
+      ]
+    },
+    "D04": {
+      "status": "completed",
+      "learner_evidence": [
+        "本人实现 search_repository（组合成可被工具调用的函数）；实现留在工作区未提交"
+      ],
+      "checks": [
+        {
+          "command": "uv run pytest weeks/w04-python-tools -q",
+          "result": "21 passed",
+          "passed": true
+        }
+      ]
+    },
+    "D05": {
+      "status": "completed",
+      "learner_evidence": [
+        "本人新建 recall.py，关掉 ex1 凭记忆重写 find_matches 与 make_hits",
+        "隔天重写暴露并由本人修正了大小写缺陷：比较两边统一 .lower()，反例（正文大写 Cache）已通过",
+        "README 的 Use It 对比表已填，依据是 --live --debug 的真实请求与响应 JSON"
+      ],
+      "checks": [
+        {
+          "command": "./check.sh --week w04",
+          "result": "全部通过",
+          "passed": true
+        },
+        {
+          "command": "uv run python weeks/w04-python-tools/recall.py 验收数据",
+          "result": "cache 2 条、retry 空列表、输入未被修改、大写 CACHE 亦匹配",
+          "passed": true
+        }
+      ]
+    }
+  },
   "learner_context": {
     "completed_legacy_weeks": [
       "w01",
@@ -31,15 +104,15 @@
     "w15": "planned"
   },
   "blocker": null,
-  "next_action": "打开 D01，先用两条文件记录诊断取值、循环、收集与返回，再运行对应热身。",
-  "updated_at": "2026-09-11T22:57:51+08:00",
-  "evidence_note": "完整路线与任务卡由导师准备；D01 尚未开始。",
+  "next_action": "进入 w05：把磁盘文件读成工具结果；产物 ex1_files.py::read_text_tool。先读 w05 README 与 00_warmup。",
+  "updated_at": "2026-09-12T23:59:00+08:00",
+  "evidence_note": "w04 五次任务全部完成：四个函数由本人实现，隔天重写通过并自行修正大小写缺陷，Use It 对比表依据真实模型调用填写。w05 材料 scaffold_ready，学习尚未开始。",
   "material_evidence": {
     "scope": "教师教材验证，不是本人学习进度",
     "infrastructure_tests": "20 passed",
     "gate": "./check.sh --wip 通过",
     "cli_checks": "artifacts/course-setup/validation.json",
-    "live_model": "未调用",
-    "learner_exercises": "TODO 保留；D01 尚未开始"
+    "live_model": "已调用 deepseek-flash 验证 agent_demo --live --debug",
+    "learner_exercises": "w04 21 passed；D05 重写与 Use It 表完成"
   }
 }
