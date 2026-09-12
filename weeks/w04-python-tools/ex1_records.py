@@ -1,3 +1,4 @@
+# Day 1-2｜本文件含练习 1 和练习 2（共 5 个）
 """练习 1：从一批文件记录里取值、筛选、整理。
 
 练到的 Python：list[dict[str, str]]、for、if、in、or、append、return、字符串方法。
@@ -11,7 +12,7 @@
 from sample_repo import FILES
 
 
-# 第 1 段：完整示范。先预测输出，再运行文件。
+# ── 示范（不编号）· 第 1 段：完整示范。先预测输出，再运行文件。
 def collect_paths(records: list[dict[str, str]]) -> list[str]:
     """按输入顺序收集文件路径。
 
@@ -29,7 +30,7 @@ def collect_paths(records: list[dict[str, str]]) -> list[str]:
     return paths  # 循环结束后再返回，保证所有记录都已经处理。
 
 
-# 第 2 段：补 TODO，不修改输入记录。
+# ── 练习 1/5 · Day 1 · 第 2 段：补 TODO，不修改输入记录。
 def find_matches(records: list[dict[str, str]], keyword: str) -> list[dict[str, str]]:
     """按关键词筛选文件路径或正文，忽略英文大小写和关键词两端的空白。
 
@@ -50,13 +51,13 @@ def find_matches(records: list[dict[str, str]], keyword: str) -> list[dict[str, 
     for record in records:
         path = record["path"].lower()
         content = record["content"].lower()
-        # TODO：判断任一字段是否包含 cleaned，再把这条记录收集一次。
-        raise NotImplementedError("ex1: 判断是否命中，把这一个 record 收集起来")
+        if cleaned in path or cleaned in content:
+            matches.append(record)
 
     return matches
 
 
-# 第 3 段：仅有签名与契约，函数体由你独立写。
+# ── 练习 2/5 · Day 2 · 第 3 段：仅有签名与契约，函数体由你独立写。
 def make_hits(records: list[dict[str, str]]) -> list[dict[str, str]]:
     """只保留匹配记录的路径，给模型足够回答“在哪个文件”的信息。
 
@@ -70,7 +71,11 @@ def make_hits(records: list[dict[str, str]]) -> list[dict[str, str]]:
 
     思路：先确定返回容器；逐个取路径、组成小字典、保存；最后交还容器。
     """
-    raise NotImplementedError("ex1: 独立写 make_hits")
+    paths: list[dict[str, str]] = []
+    for record in records:
+        path = record["path"]
+        paths.append({"path": path})
+    return paths
 
 
 if __name__ == "__main__":

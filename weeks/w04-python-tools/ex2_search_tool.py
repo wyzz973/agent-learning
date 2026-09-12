@@ -1,3 +1,4 @@
+# Day 3-4｜本文件含练习 3 和练习 4（共 5 个）
 """练习 2：把你写的数据处理函数接成一个能被 agent 使用的工具。
 
 练到的 Python：函数参数、接住返回值、跨文件 import、if/return、len、字典、None。
@@ -13,7 +14,7 @@ from typing import Any
 from ex1_records import find_matches, make_hits
 
 
-# 第 1 段：完整示范。所有结果使用相同的四个字段。
+# ── 示范（不编号）· 第 1 段：完整示范。所有结果使用相同的四个字段。
 def error_result(message: str) -> dict[str, Any]:
     """把可预期的输入错误表示成工具结果。
 
@@ -33,7 +34,7 @@ def error_result(message: str) -> dict[str, Any]:
     return result  # 返回对象，而不是只打印出来。
 
 
-# 第 2 段：按下面的输入输出契约完成 TODO。
+# ── 练习 3/5 · Day 3 · 第 2 段：按下面的输入输出契约完成 TODO。
 def success_result(records: list[dict[str, str]]) -> dict[str, Any]:
     """整理成功的搜索结果，包括“查过了但没找到”的情况。
 
@@ -46,11 +47,11 @@ def success_result(records: list[dict[str, str]]) -> dict[str, Any]:
         KeyError: 记录缺少 path；练习数据保证包含它。
     """
     hits = make_hits(records)
-    # TODO：计算 hits 的条数，再返回包含四个字段的成功结果。
-    raise NotImplementedError("ex2: 接住 hits 的数量，返回完整的成功结果")
+    count = len(hits)
+    return {"ok": True, "items": hits, "count": count, "error": None}
 
 
-# 第 3 段：只有签名和契约。由你组合已经写过的函数。
+# ── 练习 4/5 · Day 4 · 第 3 段：只有签名和契约。由你组合已经写过的函数。
 def search_repository(records: list[dict[str, str]], keyword: str) -> dict[str, Any]:
     """在迷你仓库中查找路径或正文包含关键词的文件。
 
@@ -66,7 +67,11 @@ def search_repository(records: list[dict[str, str]], keyword: str) -> dict[str, 
     思路：先处理空关键词；有效时查找、接住结果、交给成功结果函数，再返回。
     输入校验失败是交给模型的反馈；不要把编程错误或未完成的 TODO 当成搜索成功。
     """
-    raise NotImplementedError("ex2: 独立写 search_repository")
+    cleaned = keyword.strip().lower()
+    if cleaned == "":
+        return error_result("keyword must not be blank")
+    matches = find_matches(records, cleaned)
+    return success_result(matches)
 
 
 if __name__ == "__main__":
