@@ -41,17 +41,17 @@ def read_text_tool(root: Path, relative_path: str) -> dict[str, Any]:
         成功为 ok=True/path=输入名/content=正文/error=None；
         失败为 ok=False/path=输入名/content=""/error=具体原因。
     Raises:
-        NotImplementedError: 学习者尚未完成读取与成功结果。
+        无：路径、大小与编码错误都转成 ok=False 的返回值。
     """
     try:
         target = safe_path(root, relative_path)
         if target.stat().st_size > 32768:
             raise ValueError("文件超过本课 32768 字节上限")
-        # TODO：用 UTF-8 读取 target，接住正文，返回四字段成功对象。
-        raise NotImplementedError("D06：读取文件并返回成功结果")
+        content = target.read_text(encoding="utf-8")
     except (OSError, ValueError, UnicodeError) as error:
         return {"ok": False, "path": relative_path, "content": "", "error": str(error)}
 
+    return {"ok": True, "path": relative_path, "content": content, "error": None}
 
 def successful_paths(results: list[dict[str, Any]]) -> list[str]:
     """第 3 段：独立收集读取成功的文件路径。
@@ -65,7 +65,11 @@ def successful_paths(results: list[dict[str, Any]]) -> list[str]:
 
     思路：建立结果容器，逐个判断是否成功，保存路径，最后返回。
     """
-    raise NotImplementedError("D10：独立收集成功路径")
+    paths = []
+    for result in results:
+        if result["ok"]:
+            paths.append(result["path"])
+    return paths
 
 
 if __name__ == "__main__":
