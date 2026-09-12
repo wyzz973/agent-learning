@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "active_task": "D06",
+  "active_task": "D07",
   "progress": {
     "D01": {
       "status": "completed",
@@ -73,6 +73,33 @@
           "passed": true
         }
       ]
+    },
+    "D06": {
+      "status": "completed",
+      "learner_evidence": [
+        "本人补完 read_text_tool：UTF-8 读取并返回四字段成功对象",
+        "主动把成功 return 移出 try，使 try 只包住可能出错的三行（骨架原本把 TODO 放在 try 内）",
+        "答对 target 是路径对象而非文件内容；答对失败时保持字段结构一致的理由",
+        "经演示理解 safe_path 拦截的是 resolve 后逃出教学目录的符号链接，而非字面不合法的路径",
+        "按说明与行为一致的要求修正了 docstring 的 Raises 段"
+      ],
+      "checks": [
+        {
+          "command": "uv run pytest weeks/w05-files-loop -k read_text_tool -q",
+          "result": "2 passed",
+          "passed": true
+        },
+        {
+          "command": "uv run ruff check weeks/w05-files-loop/ 与 scripts/check_structure.py",
+          "result": "lint 与结构检查全部通过",
+          "passed": true
+        }
+      ]
+    },
+    "D07": {
+      "status": "in_progress",
+      "learner_evidence": [],
+      "checks": []
     }
   },
   "learner_context": {
@@ -104,15 +131,15 @@
     "w15": "planned"
   },
   "blocker": null,
-  "next_action": "进入 w05：把磁盘文件读成工具结果；产物 ex1_files.py::read_text_tool。先读 w05 README 与 00_warmup。",
-  "updated_at": "2026-09-12T23:59:00+08:00",
-  "evidence_note": "w04 五次任务全部完成：四个函数由本人实现，隔天重写通过并自行修正大小写缺陷，Use It 对比表依据真实模型调用填写。w05 材料 scaffold_ready，学习尚未开始。",
+  "next_action": "独立写 ex2_loop.py 的 index_tools：把工具列表变成「名字 → 工具」字典，空列表返回空字典。",
+  "updated_at": "2026-09-13T01:10:00+08:00",
+  "evidence_note": "D06 完成：read_text_tool 由本人实现并通过两条测试；符号链接拦截机制已理解。D07 未开始。",
   "material_evidence": {
     "scope": "教师教材验证，不是本人学习进度",
     "infrastructure_tests": "20 passed",
     "gate": "./check.sh --wip 通过",
     "cli_checks": "artifacts/course-setup/validation.json",
     "live_model": "已调用 deepseek-flash 验证 agent_demo --live --debug",
-    "learner_exercises": "w04 21 passed；D05 重写与 Use It 表完成"
+    "learner_exercises": "w05：D06 的 2 条通过，D07～D10 的规格仍为红"
   }
 }
