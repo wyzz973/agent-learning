@@ -5,9 +5,14 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 .mypy_cache/
-*.db
-*.sqlite3
+.ipynb_checkpoints/
 .DS_Store
 .idea/
 .vscode/
-references/
+outputs/
+instructor/local-backup.json
+# 逐字学习对话保存在本机；公开仓库保留教材和结构化学习状态。
+instructor/qa/*.md
+
+# IDE 的本机求值设施，不属于课程。
+.jbeval/

@@ -1,143 +1,127 @@
-<p align="center">
-  <img src="assets/readme-hero.svg" alt="Agent Learning：从 Python 到 Agent 应用，12 个学习周、60 次任务、每天一小时" width="100%" />
-</p>
+![雾岛图书馆：开馆行动](assets/readme-hero.svg)
 
-<p align="center">
-  <strong>一边学 Python，一边亲手构建能运行、能验证、能交付的 Agent。</strong>
-</p>
+# 雾岛图书馆：开馆行动
 
-<p align="center">
-  <a href="curriculum/README.md">完整课程</a> ·
-  <a href="curriculum/tasks/D01.md">从 D01 开始</a> ·
-  <a href="GLOSSARY.md">术语词典</a> ·
-  <a href="API_GUIDE.md">API 手册</a> ·
-  <a href="HARNESS_GUIDE.md">换模型继续学</a>
-</p>
+**一门从零开始、用 Jupyter 边学 Python 边造 Agent 的中文实践课程。**
 
----
+[开始第一关](#当前委托) · [全馆地图](#全馆地图) · [启动工作台](#启动工作台) · [教学方法](instructor/PEDAGOGY.md)
 
-## 为独立开发而练习
+> 图书馆准备试营业。馆长林禾把一张公告放在电脑旁：
+> “门口有读者问周六几点开门。先让阿灯把这一件事做好。”
 
-这是一个面向 Python 基础薄弱学习者的个人学习仓库。以“代码仓库助手”为主线，从列表、字典和函数返回值开始，逐步加入工具调用、LangChain、LangGraph、知识检索、记忆、协作与部署。
+你是新人工程师，亲手建造助手 **阿灯**。它将学会依据公告回答、调用工具查资料、恢复中断的委托、组织有来源的研究、向分馆提供服务，最后在隔离环境维护自己的代码。
 
-**12 个学习周 · 60 次任务 · 每天最多 1 小时。** 首月目标是交付第一版应用，完整路线继续覆盖后续能力。每一课都有具体动作、原因、核心思想与验收；进度以独立写作和实际结果为准。
+无需既往 Python 或 Agent 经验。每关的故事、必要写法、真实 prompt、示范、本人练习与验收都放在同一份 Notebook。主线是 **Python → LangChain → LangGraph → Deep Research → Coding Agent**。
 
-> **学习边界**：AI 提供中文注释的示范、骨架和测试；TODO 与独立练习由学习者完成。每周通过测试、本人解释与隔天重写共同验收。
+## 当前委托
 
-## 三步开始
+<!-- current-task:start -->
+### [M01-T01 · 门口的第一位读者](modules/01-langchain-foundations/01-first-reader.ipynb)
+<!-- current-task:end -->
 
-需要 [uv](https://docs.astral.sh/uv/getting-started/installation/) 与 Git。项目要求 Python 3.11+，依赖由 `uv.lock` 锁定。
+**第一关要交付一封可以对照公告核查的读者答复。**
+
+1. 从字符串、变量和 `print` 写下第一句话。
+2. 对比真实模型“未收到公告”与“收到公告”的回答，找到资料进入请求的位置。
+3. 亲手实现答复函数，处理临时公告，再接待一位询问还书箱的新读者。
+
+完成本人代码后，Notebook会保存 `opening-answer.md` 和 `quest-evidence.json`。教师示范已有真实输出可供观察；本人练习仍由你完成，不会用教师答案兜底。
+
+## 启动工作台
+
+准备好 Git 和 [uv](https://docs.astral.sh/uv/getting-started/installation/)。环境使用 Python 3.12，uv可按需准备对应版本。
 
 ```sh
-# 1. 获取课程与依赖
 git clone https://github.com/wyzz973/agent-learning.git
 cd agent-learning
-uv sync
-
-# 2. 查看当前任务
-uv run python scripts/learn.py
-
-# 3. 预测输出，再运行第一份热身
-uv run python weeks/w04-python-tools/00_warmup.py
+uv sync --locked --python 3.12
 ```
 
-已有本地仓库时，从 `uv sync` 开始。离线热身与练习无需 API key。
-
-<details>
-<summary><strong>什么时候需要真实模型？</strong></summary>
-
-完成对应前置练习后，可以显式选择 `--live`，体验真实模型调用。按照 [.env.example](.env.example) 在本地 `.env` 配置 `DEFAULT_MODEL` 和对应厂商密钥；保留已有配置，密钥不提交到 Git。
+**首次配置模型：**将 [`.env.example`](.env.example) 另存为仓库根目录的 `.env`，填入自己的 `DEEPSEEK_API_KEY`；`DEFAULT_MODEL` 使用模板中的默认值即可。已有 `.env` 时直接沿用，不覆盖。第一关真实调用需要可用的模型服务。
 
 ```sh
-# 前置：完成 w04、w05 对应练习
-uv run python scripts/run_course_app.py --mode langchain --live
+uv run python -m instructor.launch
 ```
 
-真实调用按模型服务实际计费。默认回放模式使用固定回复，工具和学习者代码仍会执行；回放结果与真实模型能力分别记录。
+启动器会注册项目内核，并打开 JupyterLab 中的当前委托。也可以在支持 Jupyter 的 IDE 中打开同一份 Notebook，选择项目 `.venv` 内核。
 
-</details>
+点击一格，按 **Shift + Enter**。按顺序阅读和运行；遇到标为“本人动手”的格子，先完成其中的代码。`NotImplementedError` 表示这一步正在等你实现。环境或认证报错可以直接交给模型导师，注意不要贴出密钥。
 
-## 同一个项目，逐步长出能力
+## 一关怎样玩
 
-| 学习阶段 | 任务 | 本阶段要交付什么 |
-| :--- | :---: | :--- |
-| **01 · Python 与 Agent 基础** | D01–D20 | 搜索工具 → 有限 agent 循环 → LangChain / LangGraph → 基础评估 |
-| **02 · 知识与持续任务** | D21–D30 | 带来源的 RAG、长期记忆、跨进程恢复与幂等 |
-| **03 · 协议与协作** | D31–D40 | MCP、Skills、任务规划、单 / 多 agent 对照 |
-| **04 · 可控与可度量** | D41–D50 | 上下文预算、权限、沙箱、执行轨迹与回归评估 |
-| **05 · 应用交付** | D51–D60 | API、流式界面、部署、回滚与综合项目验收 |
+**收到委托 → 预测与示范 → 学必要写法 → 亲手实现 → 对照验证 → 展示作品 → 新情况挑战。**
 
-课程从仓库编号 **w04** 开始；w01–w03 保留为历史学习存档。每周详细安排见 [学习路线](LEARNING_PATH.md) 与 [60 张任务卡](curriculum/README.md)。
+每关都会回答五个问题：谁需要帮助、为什么当前办不到、你要写什么、怎样证明有效、完成后留下什么。
 
-## 每天的一小时
+| 你解决的事情 | 放进作品夹的成果 |
+|---|---|
+| 读者需要准确的开馆信息 | 有出处的答复与实际输入记录 |
+| 咨询办理到一半中断 | 可以恢复的委托档案 |
+| 馆长需要数字馆建设方案 | 带原文证据和未解决问题的研究报告 |
+| 分馆想使用同样的能力 | 可调用的 MCP 工具与可复用的 Skill |
+| 阿灯的引用组件出现缺陷 | 经过隔离测试和研究回归的源码补丁 |
 
-| 回忆 | 热身 | 动手 | 验证 | 交接 |
-| :---: | :---: | :---: | :---: | :---: |
-| **5 min** | **10 min** | **30 min** | **10 min** | **5 min** |
-| 说清上次输入与输出 | 预测、运行、解释 | 自己填空或独立写 | 测试、检查失败路径 | 记录证据与下一步 |
+**一关可以分多次学习。** 每次约一小时，在Notebook的休息点留下当前cell、卡点和下一小步。没有开馆倒计时，也不因报错扣分。提示随时可看，关键实现保留给你。
 
-每天只打开当前任务。遇到卡点就续做同一课，周末可休息或补课；每第五次课做复盘与迁移检查。
+## 全馆地图
 
-## 按问题找到入口
+<!-- evolution-map:start -->
+| 区域 | 你会接到什么委托 | 在这里学的核心技术 |
+|---|---|---|
+| [门厅 · 第一盏接待灯](modules/01-langchain-foundations/README.md) | 帮门口读者读懂开馆公告，让公告台显示答复。 | Python起步、消息、结构化输出 |
+| [问询台 · 打开资料柜](modules/02-tools-and-agents/README.md) | 让阿灯自己申请公告和手册，处理取件失败。 | Tools、tool calling、执行器、错误反馈 |
+| [委托台 · 把事情办完](modules/03-langgraph-control/README.md) | 连续查资料、分流问题，让读者看到进度并能取消。 | LangGraph状态、节点、反馈循环、事件 |
+| [值班室 · 交班不失忆](modules/04-memory-and-human-review/README.md) | 断电后接续委托，记住确认信息，保留可核对的经验。 | 检查点、HITL、长期记忆、上下文、Reflexion |
+| [研究阅览室 · 为数字馆查证](modules/05-deep-research/README.md) | 为阿灯的建设方案寻找真实技术依据，补足研究缺口。 | 搜索/fetch、RAG、证据、自适应研究 |
+| [服务台 · 接受开馆验收](modules/06-research-system/README.md) | 研究者分工，定位失败，让另一台设备使用阿灯。 | 协作、评估、消融、tracing、服务交付 |
+| [交换站 · 分享工具和方法](modules/07-protocols-and-skills/README.md) | 把资料工具与核查方法交给分馆，比较成熟装配方式。 | MCP、Skills、按需工具发现、DeepAgents |
+| [维修间 · 阿灯维护自己](modules/08-coding-agent/README.md) | 修复数字馆的真实组件，中断后还能继续维修。 | coding agent、隔离执行、harness、源码迁移 |
 
-| 我现在需要…… | 打开这里 |
-| :--- | :--- |
-| 知道今天具体做什么 | [当前学习状态](COURSE_STATE.json) · [课程入口](scripts/learn.py) |
-| 看某周的目标和任务 | [完整课程目录](curriculum/README.md) |
-| 弄懂一个名词或 Python 写法 | [术语词典](GLOSSARY.md) · [Python 能力线](PYTHON_TRACK.md) · [语法速查](SYNTAX_CARDS.md) |
-| 弄懂 API、消息与数据流 | [API 手册](API_GUIDE.md) |
-| 换 Claude Code、Codex 或其他模型 | [跨 harness 交接协议](HARNESS_GUIDE.md) |
-| 查导师规则与模块职责 | [AGENTS.md](AGENTS.md) · [模块地图](MODULES.md) |
-| 了解教学方法与资料来源 | [调研依据](curriculum/RESEARCH.md) · [资源入口](RESOURCES.md) |
+全馆设计了 **28 项委托**；目前 **1 关教材可开始**，0 关编写中，27 关待编写。故事地图和prompt设计完成，不代表全部Notebook已经制作完成。
+<!-- evolution-map:end -->
 
-## 换模型，接着同一课
+地图中的委托有明确的学习目标、本人控制点、作品奖励、对照实验和迁移挑战。模块索引用于了解路线；实际学习始终从首页的当前Notebook进入。
 
-根目录和各模块的 `CLAUDE.md` 链接同目录 `AGENTS.md`，共用一份规则。当前任务、本人证据、卡点与下一步统一保存在 `COURSE_STATE.json`。
+## Prompt 与代码都在故事里
+
+阿灯的身份、岗位、读者或馆长的委托、可用信息和完成条件会写入实际模型prompt。第一关使用的[系统提示原文](world/prompts/M01-T01.md)也会在Notebook中显示，随后真正传入 `SystemMessage`。
+
+研究者、调度模块、记忆、工具、Skills和维修任务都服务于这座图书馆。技术名称保持准确：**Tools负责执行，MCP负责连接，Skills保存方法，memory保存并取回信息，LangGraph管理状态与控制。**
+
+馆务与人物属于虚构教学场景；研究任务使用的公开技术资料需要记录真实URL、取得时间和原文证据。
+
+## 怎样判断自己学会了
+
+分别保留三种证据：**程序实际运行、本人能解释、换输入仍能完成。**
+
+教师提供环境、完整示范、局部提示和验收设施；你组织关键实现。运行成功后，还要解释数据怎么流动，并尝试一个陌生输入。故事奖励与学习掌握不会自动画等号。
+
+| 目录 | 用途 |
+|---|---|
+| [`modules/`](modules/) | 区域索引与可学习的Notebook |
+| [`world/`](world/) | 公告等场景素材、各关实际prompt |
+| [`project/`](project/) | 在课程中逐步积累的本人作品 |
+| `outputs/` | 本机实际运行产生的答复、报告和记录 |
+| [`instructor/`](instructor/) | 导师维护的任务目录、状态、检查和依据 |
+
+需要模型导师帮助时，可以直接说：**“请读仓库规则和当前学习状态，从我正在看的cell开始解释。”** `AGENTS.md` 与指向它的 `CLAUDE.md` 为不同harness提供同一套教学约定。
+
+## 教材依据与验证
+
+课程设计参考 [LangChain Academy](https://academy.langchain.com/) 和 [Deep Research From Scratch](https://github.com/langchain-ai/deep_research_from_scratch)，并核查 MCP、Agent Skills、Deep Agents 与相关研究的适用边界。
+
+- [教学依据](instructor/PEDAGOGY.md)：示范、练习、反馈与迁移怎样安排。
+- [技术调研](instructor/RESEARCH.md)：官方来源、版本与仍在变化的接口。
+- [作品约定](project/README.md)：阿灯的数据与代码职责。
+- [教师验证记录](instructor/validation.json)：第一关实际运行的范围；不代表本人通关。
+
+维护教材时使用：
 
 ```sh
-# 生成交接提示，交给下一位模型导师
-uv run python scripts/learn.py --handoff
-
-# 只读预览其他任务，不推进学习状态
-uv run python scripts/learn.py --task D20
+uv run python -m instructor.check
+uv run pytest instructor/tests -q
+uv run ruff check instructor
+uv run mypy instructor
 ```
 
-其他模型仍需实际读取这些文件；它们不会自动共享聊天历史。完整流程见 [交接协议](HARNESS_GUIDE.md)。
-
-## 仓库结构
-
-```text
-agent-learning/
-├── curriculum/           # 完整路线、60 张任务卡与教学依据
-├── weeks/                # 每周热身、示范、本人练习和测试
-├── src/agentlab/          # 跨周复用与教师连接代码
-├── scripts/              # 每日入口、交接与仓库检查
-├── tests/                # 教师基础设施测试
-├── notes/                # 逐字问答、本人复盘与决策记录
-├── templates/            # 新任务与新周模板
-├── COURSE_STATE.json     # 实际学习进度
-└── AGENTS.md             # 共同教学与开发规则
-```
-
-## 检查与验收
-
-```sh
-# 进行中：检查格式、类型、教师设施、课程与规则
-./check.sh --wip
-
-# 周末验收：额外运行指定周的练习测试
-./check.sh --week w04
-
-# 只调试当前练习；每周使用独立测试进程
-uv run pytest weeks/w04-python-tools -q
-```
-
-学习者尚未完成的 TODO 会明确报错。`--wip` 通过表示仓库与教材设施通过检查，不能据此宣布练习完成；不带参数的 `./check.sh` 会检查所有已创建周的练习。
-
-| 材料 | 当前范围 |
-| :--- | :--- |
-| **w01–w03** | 历史学习代码，保持冻结 |
-| **w04–w07** | 已备好可运行热身、示范、练习骨架与测试；答案由学习者完成 |
-| **w08–w15** | 每日任务、产物与验收已排定；练习代码按 [开周流程](curriculum/TEACHING.md) 准备 |
-
-实际学习进度以 [COURSE_STATE.json](COURSE_STATE.json) 为准。**能独立实现、解释、调试和验证，才算学到自己手里。**
+这些检查不调用模型，也不填写本人练习。密钥、运行产物和本机逐字对话日志不进入公开仓库。

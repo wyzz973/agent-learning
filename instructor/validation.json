@@ -1,0 +1,47 @@
+{
+  "campaign_id": "fog-island-library",
+  "verified_at": "2026-09-13T14:05:00+08:00",
+  "scope": "全新雾岛课程第一关教师setup/demo；本人实现与通关尚未进行。",
+  "results": [
+    {
+      "task": "M01-T01",
+      "notebook": "modules/01-langchain-foundations/01-first-reader.ipynb",
+      "passed": true,
+      "scope": "仅 setup/demo；不代表本人完成",
+      "executed_cells": 10,
+      "skipped_exercise_cells": [
+        "welcome-exercise",
+        "reader-exercise",
+        "answer-check",
+        "transfer-check",
+        "boundary-check",
+        "save-player-artifact"
+      ],
+      "elapsed_seconds": 6.8,
+      "error": null,
+      "executed_notebook": "outputs/validation/M01-T01/executed.ipynb",
+      "teacher_source_sha256": "7440e3d8514a42d3a5712a2c809f3c27fa89d5200e3dbf42871917d3efddde6f",
+      "prompt_sha256": "afd4c9ffe8e6e8b60acf1dcdd8c74e5cea5a2a3549c09f04fb19cefc25c15200",
+      "real_model_calls": 2
+    }
+  ],
+  "course_design": {
+    "zones": 8,
+    "quests": 28,
+    "scene_prompts": 28,
+    "ready_notebooks": 1,
+    "planned_notebooks": 27
+  },
+  "checks": {
+    "course": "passed",
+    "pytest": "7 passed",
+    "ruff": "passed",
+    "mypy": "7 files passed",
+    "launch": "M01-T01 first-reader"
+  },
+  "evidence_availability": {
+    "public": "modules/01-langchain-foundations/01-first-reader.ipynb保留教师实际输出；查看scene-prompt-view、baseline-call、teacher-call。",
+    "local_only": "results中的executed_notebook是本机完整执行副本，outputs不随Git发布。",
+    "scope": "公开输出只展示教师路径，未执行或代写玩家练习。"
+  }
+}

@@ -1,2 +1,3 @@
-# 执行日志保留原始输出空白，不作为源码检查行尾空格。
-artifacts/**/*.log -whitespace
+*.ipynb text eol=lf
+# 逐字问答保留原始空白。
+instructor/qa/*.md -whitespace

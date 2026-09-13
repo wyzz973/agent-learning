@@ -1,0 +1,28 @@
+{
+  "schema_version": 3,
+  "campaign_id": "fog-island-library",
+  "active_task": "M01-T01",
+  "active_cell": "opening-scene",
+  "progress": {},
+  "learner_profile": {
+    "language": "中文",
+    "study_interface": "Jupyter",
+    "learning_units": "module/task",
+    "python_context": "从零教起，不预设Python、框架或其他课程经验；必要写法在当前Notebook内解释。",
+    "primary_goal": "在雾岛图书馆情景中学习Python与LangChain/LangGraph，走向研究应用与coding agent。",
+    "model_policy": "使用现有.env真实模型，已授权；保留超时、轮数与隔离边界。"
+  },
+  "next_action": "打开modules/01-langchain-foundations/01-first-reader.ipynb，从门口的第一位读者开始。",
+  "quest_log": {
+    "generated_artifacts": [],
+    "verified_capabilities": [],
+    "next_authoring_task": "M01-T02"
+  },
+  "updated_at": "2026-09-13T14:05:00+08:00",
+  "evidence_note": "故事、教材状态与本人通关证据分别记录；运行教师示范不登记为玩家完成。",
+  "material_validation": {
+    "report": "instructor/validation.json",
+    "real_demo_notebooks_passed": 1,
+    "student_tasks_completed": 0
+  }
+}

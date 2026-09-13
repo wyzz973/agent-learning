@@ -1,7 +1,7 @@
 [project]
 name = "agent-learning"
 version = "0.1.0"
-description = "Agent 开发学习仓库"
+description = "以 Jupyter 专题任务学习 LangChain、LangGraph 与 Deep Research"
 requires-python = ">=3.11"
 dependencies = [
     "langchain>=1.0",
@@ -20,6 +20,14 @@ dev = [
     "ruff>=0.6",
     "mypy>=1.11",
 ]
+notebooks = [
+    "ipykernel>=6.29",
+    "jupyterlab>=4.4,<5",
+    "langchain-mcp-adapters>=0.1,<1",
+    "mcp>=1.20,<2",
+    "nbclient>=0.10",
+    "nbformat>=5.10",
+]
 
 [tool.ruff]
 line-length = 100
@@ -30,19 +38,21 @@ target-version = "py311"
 select = ["E", "F", "I", "UP", "B", "ASYNC"]
 
 [tool.ruff.lint.per-file-ignores]
-# 填空式练习里，已给出的前半段代码在未实现的后半段用到它之前必然"未使用"。
-# 只在 weeks/ 放宽，src/ 仍然严格。
-"weeks/*" = ["F401", "F841"]
+# Notebook 中的示范、导入和本人练习分格编写。
+"modules/**/*.ipynb" = ["F401", "F841", "E402", "B018"]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
-testpaths = ["tests"]  # 每周的测试按周单独跑，见 check.sh
+testpaths = ["instructor/tests"]
+pythonpath = ["."]
 
 [tool.mypy]
 python_version = "3.11"
-# weeks/ 是一次性练习，允许粗糙；src/ 是沉淀，必须严格
-files = ["src", "scripts"]
+files = ["instructor"]
 strict = true
+ignore_missing_imports = true
+untyped_calls_exclude = ["nbformat"]
 
 [tool.uv]
 package = false
+default-groups = ["dev", "notebooks"]
