@@ -9,7 +9,7 @@ import pytest
 from instructor.check import LEARNING_FIELDS, QUEST_FIELDS, material_issues, notebook_issues
 from instructor.render_curriculum import prompt_text
 from instructor.sync_entry import current_entry
-from instructor.validate_notebooks import demo_copy, validate_one
+from instructor.validate_notebooks import demo_copy, reusable_outputs, validate_one
 
 
 def test_demo_execution_keeps_student_source_untouched() -> None:
@@ -31,6 +31,18 @@ def test_demo_execution_keeps_student_source_untouched() -> None:
     assert copied.cells[1].source == source.cells[1].source
 
 
+def test_saved_output_does_not_depend_on_dead_widget_kernel() -> None:
+    outputs: list[Any] = [
+        {"data": {"application/vnd.jupyter.widget-view+json": {"model_id": "temporary"}}},
+        {"data": {"text/plain": "实际模型答复"}},
+    ]
+    actual = reusable_outputs(outputs)
+    assert "application/vnd.jupyter.widget-view+json" not in actual[0]["data"]
+    assert "运行本格" in actual[0]["data"]["text/plain"]
+    assert actual[1] == outputs[1]
+    assert "application/vnd.jupyter.widget-view+json" in outputs[0]["data"]
+
+
 def test_rejects_demo_disguised_as_student_cell(tmp_path: Path) -> None:
     notebook = nbformat.v4.new_notebook(
         cells=[
@@ -50,6 +62,7 @@ def test_accepts_top_level_await_in_teaching_cell(tmp_path: Path) -> None:
             nbformat.v4.new_code_cell("await model.ainvoke([])", metadata={"tags": ["demo"]}),
             nbformat.v4.new_code_cell("raise NotImplementedError", metadata={"tags": ["exercise"]}),
             nbformat.v4.new_code_cell("assert result", metadata={"tags": ["exercise-test"]}),
+            nbformat.v4.new_code_cell(""),
         ]
     )
     path = tmp_path / "valid.ipynb"

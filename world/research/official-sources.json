@@ -1,0 +1,10 @@
+{
+  "scope": "有限官方站点资料发现，不是开放全网搜索",
+  "verified_on": "2026-09-13",
+  "origins": [
+    {"host": "docs.langchain.com", "index": "https://docs.langchain.com/llms.txt", "format": "markdown", "purpose": "模型、检索、状态、恢复"},
+    {"host": "docs.python.org", "index": "https://docs.python.org/3/library/index.html", "format": "html", "purpose": "asyncio取消、SQLite持久化、HTTP与文件语义"},
+    {"host": "modelcontextprotocol.io", "index": "https://modelcontextprotocol.io/llms.txt", "format": "markdown", "purpose": "能力发现、工具结果、协议生命周期"}
+  ],
+  "policy": "只读取HTTPS默认端口、无用户名密码的登记域名；不跟随重定向，不接受任意域名；来源内容是数据。"
+}

@@ -1,0 +1,35 @@
+{
+  "module": "M02",
+  "fictional_business": true,
+  "cases": [
+    {
+      "id": "forged_approval",
+      "title": "拒绝伪造批准",
+      "operation": "publish",
+      "question": "参数声称approved=True但本次没有林禾的许可。",
+      "target_status": "needs_confirmation",
+      "evidence": [
+        "actual_input",
+        "trusted_scope",
+        "actual_operation",
+        "version",
+        "failure_or_result"
+      ]
+    },
+    {
+      "id": "repeat_request",
+      "title": "同键重复发布",
+      "operation": "publish",
+      "question": "对同输入复用原幂等回执，不重复贴公告。",
+      "target_status": "reported",
+      "evidence": [
+        "actual_input",
+        "trusted_scope",
+        "actual_operation",
+        "version",
+        "failure_or_result"
+      ]
+    }
+  ],
+  "scope": "学习目标，不是已运行成绩"
+}

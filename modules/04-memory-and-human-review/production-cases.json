@@ -1,0 +1,35 @@
+{
+  "module": "M04",
+  "fictional_business": true,
+  "cases": [
+    {
+      "id": "withdrawn_latest",
+      "title": "最新撤回",
+      "operation": "consult",
+      "question": "最新版本已撤回，旧缓存不能进入请求。",
+      "target_status": "answered",
+      "evidence": [
+        "actual_input",
+        "trusted_scope",
+        "actual_operation",
+        "version",
+        "failure_or_result"
+      ]
+    },
+    {
+      "id": "concurrent_update",
+      "title": "并发版本冲突",
+      "operation": "withdraw",
+      "question": "另一会话先更正后，以旧expected_version写入应重新确认。",
+      "target_status": "needs_review",
+      "evidence": [
+        "actual_input",
+        "trusted_scope",
+        "actual_operation",
+        "version",
+        "failure_or_result"
+      ]
+    }
+  ],
+  "scope": "学习目标，不是已运行成绩"
+}

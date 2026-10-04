@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="395" viewBox="0 0 1000 395" role="img"><title>检查点、长期记忆、上下文与缓存</title><rect width="1000" height="395" fill="#f5f1e6" rx="10"/>
+<g font-family="PingFang SC,sans-serif" fill="#203e42"><text x="30" y="42" font-family="serif" font-size="25">值班室 · 保存的文字有不同职责</text>
+<g fill="#fffdf7" stroke="#99a798"><rect x="30" y="92" width="218" height="205" rx="8"/><rect x="270" y="92" width="218" height="205" rx="8"/><rect x="510" y="92" width="218" height="205" rx="8"/><rect x="750" y="92" width="218" height="205" rx="8"/></g>
+<text x="49" y="127" font-size="20">任务检查点</text><text x="49" y="169" font-size="14">归属：thread_id</text><text x="49" y="199" font-size="14">内容：执行状态与待办</text><text x="49" y="229" font-size="14">用途：跨进程继续</text><text x="49" y="270" font-size="13">不等于跨读者偏好</text>
+<text x="289" y="127" font-size="20">长期记忆</text><text x="289" y="169" font-size="14">user / key / 版本</text><text x="289" y="199" font-size="14">确认信息与条件</text><text x="289" y="229" font-size="14">跨任务取回</text><text x="289" y="270" font-size="13">可更正、撤回与过期</text>
+<text x="529" y="127" font-size="20">本轮上下文</text><text x="529" y="169" font-size="14">归属：当前请求</text><text x="529" y="199" font-size="14">本轮需要的输入</text><text x="529" y="229" font-size="14">模型实际使用</text><text x="529" y="270" font-size="13">保留完整原文入口</text>
+<text x="769" y="127" font-size="20">结果缓存</text><text x="769" y="169" font-size="14">归属：完整输入身份</text><text x="769" y="199" font-size="14">已有计算结果</text><text x="769" y="229" font-size="14">减少重复调用</text><text x="769" y="270" font-size="13">命中不等于新查证</text>
+<text x="30" y="350" font-size="15">进入模型前核对：属于谁、何时确认、是否撤回、是否到期、当前来源是哪一版？</text></g></svg>

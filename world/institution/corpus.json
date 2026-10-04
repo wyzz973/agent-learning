@@ -1,0 +1,22 @@
+{
+  "dataset": "雾岛机构知识服务实训语料",
+  "fiction_disclosure": "本文件为虚构馆务与机构资料；运行时只把document.text作为资料交给阿灯，说明留在教材。",
+  "documents": [
+    {"id":"KB-A-01","tenant":"branch-a","title":"分馆A临时开馆安排","text":"[KB-A-01] Branch A opens this Saturday at 14:00 and closes at 18:00. Morning shelf maintenance delays opening. This document does not specify Sunday reading-room hours.","version":1},
+    {"id":"KB-A-02","tenant":"branch-a","title":"分馆A周日还书箱","text":"[KB-A-02] The self-service return box is outside the east gate. It is available when the reading room is closed on Sunday. Return-box access does not imply the reading room is open.","version":1},
+    {"id":"KB-A-03","tenant":"branch-a","title":"分馆A志愿者报名","text":"[KB-A-03] Volunteer registration is at the reception desk on Saturday from 14:00 to 16:00. Bring the required form. Registration hours are shorter than library opening hours.","version":1},
+    {"id":"KB-A-04","tenant":"branch-a","title":"分馆A雨天入口","text":"[KB-A-04] On rainy days visitors use the east covered entrance. Rain does not automatically close the library. Temporary closure needs a separately confirmed notice.","version":1},
+    {"id":"KB-A-05","tenant":"branch-a","title":"分馆A旧索引提示","text":"[KB-A-05] A search index stores a document version and a content hash. Updating a source requires invalidating stale chunks and cached answers that depend on it.","version":1},
+    {"id":"KB-A-06","tenant":"branch-a","title":"分馆A发布审核","text":"[KB-A-06] Lin He confirms the exact notice version before publication. Approval for an earlier version does not authorize a modified notice. A publication receipt identifies the version actually posted.","version":1},
+    {"id":"KB-A-07","tenant":"branch-a","title":"分馆A任务交班","text":"[KB-A-07] A consultation thread retains its task identity, input fingerprint and pending position. A new process must check these before resuming. Checkpoint storage alone does not make external writes idempotent.","version":1},
+    {"id":"KB-A-08","tenant":"branch-a","title":"分馆A答复偏好","text":"[KB-A-08] Confirmed preferences belong to the named anonymous reader. The latest version controls consent, withdrawal and expiration. A withdrawn latest version must not revive an older preference.","version":1},
+    {"id":"KB-A-09","tenant":"branch-a","title":"分馆A查询范围","text":"[KB-A-09] Retrieval filters documents by the trusted branch identity before placing excerpts in model input. A visitor cannot change branch scope by putting a different tenant name in the question.","version":1},
+    {"id":"KB-A-10","tenant":"branch-a","title":"分馆A超时核对","text":"[KB-A-10] Client timeout means the result did not arrive in time. It does not prove the service did not commit. Read the operation ledger and use the same input-bound idempotency key when retrying.","version":1},
+    {"id":"KB-A-11","tenant":"branch-a","title":"分馆A报告交付","text":"[KB-A-11] A research report separates supported conclusions, recommendations and unresolved gaps. A failed child investigation remains a failed or partial result, not a normal successful completion.","version":1},
+    {"id":"KB-A-12","tenant":"branch-a","title":"分馆A维修验收","text":"[KB-A-12] A passing fixed test must match the current candidate file hash. Protected tests cannot be edited to manufacture success. Generated candidate code runs only in the isolated maintenance workspace.","version":1},
+    {"id":"KB-B-01","tenant":"branch-b","title":"分馆B开放安排","text":"[KB-B-01] Branch B opens on Saturday at 09:00 and closes at 12:00. These hours are private to Branch B operations and are not Branch A's current schedule.","version":1},
+    {"id":"KB-B-02","tenant":"branch-b","title":"分馆B私有报名说明","text":"[KB-B-02] Branch B volunteer registration closes at 10:00. Access requires Branch B scope. Similar wording in another branch document does not grant access.","version":1},
+    {"id":"KB-B-03","tenant":"branch-b","title":"分馆B内部交班","text":"[KB-B-03] Branch B's internal handover notes belong to this branch namespace. Shared search infrastructure must not share private snippets with Branch A users.","version":1},
+    {"id":"KB-B-04","tenant":"branch-b","title":"分馆B方法权限","text":"[KB-B-04] A method guide describes how to verify notices. It does not grant permission to publish, remove preferences or run arbitrary commands.","version":1}
+  ]
+}

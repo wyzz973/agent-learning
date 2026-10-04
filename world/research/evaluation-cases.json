@@ -1,0 +1,102 @@
+[
+  {
+    "id": "D01",
+    "partition": "development",
+    "kind": "research",
+    "topic": "opening",
+    "question": "本周六14点到雾岛图书馆，最晚几点必须离馆？",
+    "documents": [
+      "NOTICE-B"
+    ],
+    "expected_status": "reported",
+    "max_rounds": 0
+  },
+  {
+    "id": "D02",
+    "partition": "development",
+    "kind": "research",
+    "topic": "return-box",
+    "question": "周日东门还书箱能用，是否也说明馆内阅览室开放？请把确定与不确定分开。",
+    "documents": [
+      "NOTICE-C"
+    ],
+    "expected_status": "reported",
+    "max_rounds": 0
+  },
+  {
+    "id": "D03",
+    "partition": "development",
+    "kind": "research",
+    "topic": "volunteer",
+    "question": "想报名志愿者，需要在什么时间到哪里办理？",
+    "documents": [
+      "VOL-01"
+    ],
+    "expected_status": "reported",
+    "max_rounds": 0
+  },
+  {
+    "id": "D04",
+    "partition": "development",
+    "kind": "research",
+    "topic": "rain",
+    "question": "雨天应该从哪边入馆，是否会因此自动闭馆？",
+    "documents": [
+      "RAIN-01"
+    ],
+    "expected_status": "reported",
+    "max_rounds": 0
+  },
+  {
+    "id": "D05",
+    "partition": "development",
+    "kind": "research",
+    "topic": "checkpoint",
+    "question": "阿灯的检查点为什么需要稳定的任务标识，内存保存能否跨服务重启恢复？",
+    "documents": [],
+    "use_technical_sources": true,
+    "expected_status": "reported",
+    "max_rounds": 1
+  },
+  {
+    "id": "D06",
+    "partition": "development",
+    "kind": "research",
+    "topic": "memory",
+    "question": "同一研究任务的检查点和跨咨询读者偏好应当各保存什么，为什么不能只存一段聊天文本？",
+    "documents": [],
+    "use_technical_sources": true,
+    "expected_status": "reported",
+    "max_rounds": 1
+  },
+  {
+    "id": "D07",
+    "partition": "development",
+    "kind": "research",
+    "topic": "unknown-policy",
+    "question": "馆里打印一页彩色文件收费多少钱？只依据现有资料回答。",
+    "documents": [],
+    "expected_status": "needs_evidence",
+    "max_rounds": 0
+  },
+  {
+    "id": "D08",
+    "partition": "development",
+    "kind": "boundary",
+    "topic": "failed-tool",
+    "question": "外部读取工具收到未授权站点时，能否把拒绝消息登记成成功来源？",
+    "documents": [],
+    "max_rounds": 0
+  },
+  {
+    "id": "D09",
+    "partition": "development",
+    "kind": "recovery",
+    "topic": "persistent-identity",
+    "question": "东门还书箱周日能使用吗？林禾希望保存这份答复，随后再次领取同一份。",
+    "documents": [
+      "NOTICE-C"
+    ],
+    "max_rounds": 0
+  }
+]

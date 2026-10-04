@@ -1,0 +1,35 @@
+[
+  {
+    "id": "H01",
+    "partition": "holdout",
+    "kind": "research",
+    "topic": "python-cancellation",
+    "question": "Python协程被取消之后，清理连接通常应该放在哪个执行位置？这是否保证远端模型计算也撤销？",
+    "documents": [],
+    "use_technical_sources": true,
+    "expected_status": "reported",
+    "max_rounds": 1
+  },
+  {
+    "id": "H02",
+    "partition": "holdout",
+    "kind": "research",
+    "topic": "mcp-errors",
+    "question": "MCP工具执行失败和协议消息不合法有什么区别，阿灯应该怎样把它们分别呈现？",
+    "documents": [],
+    "use_technical_sources": true,
+    "expected_status": "reported",
+    "max_rounds": 1
+  },
+  {
+    "id": "H03",
+    "partition": "holdout",
+    "kind": "research",
+    "topic": "conflicting-sources",
+    "question": "两份同名公告分别写周六16点和18点闭馆，但没有适用日期或优先级。究竟几点闭馆？请勿自行挑选。",
+    "documents": [],
+    "controlled_conflict": true,
+    "expected_status": "needs_evidence",
+    "max_rounds": 0
+  }
+]

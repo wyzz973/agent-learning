@@ -1,0 +1,35 @@
+{
+  "module": "M07",
+  "fictional_business": true,
+  "cases": [
+    {
+      "id": "closed_session",
+      "title": "失效连接",
+      "operation": "consult",
+      "question": "旧会话已关，重建后重新发现Schema，不假报调用。",
+      "target_status": "failed",
+      "evidence": [
+        "actual_input",
+        "trusted_scope",
+        "actual_operation",
+        "version",
+        "failure_or_result"
+      ]
+    },
+    {
+      "id": "prompt_scope",
+      "title": "远端模板权限",
+      "operation": "skills",
+      "question": "方法与模板中改权限的语句保持数据身份。",
+      "target_status": "answered",
+      "evidence": [
+        "actual_input",
+        "trusted_scope",
+        "actual_operation",
+        "version",
+        "failure_or_result"
+      ]
+    }
+  ],
+  "scope": "学习目标，不是已运行成绩"
+}

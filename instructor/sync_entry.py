@@ -22,7 +22,10 @@ def current_entry(task: dict[str, Any]) -> str:
         raise ValueError("只允许把完整教材已就绪的任务设为学习入口")
     return (
         "<!-- current-task:start -->\n"
-        f"### [{task['id']} · {task['title']}]({task['notebook']})\n"
+        f"### [{task['id']} · {task['title']}]({task['notebook']})\n\n"
+        f"> {task['quest']['commission']}\n\n"
+        f"**你亲手完成：**{task['quest']['player_action']}\n\n"
+        f"**本关作品：**{task['quest']['reward']}\n"
         "<!-- current-task:end -->"
     )
 

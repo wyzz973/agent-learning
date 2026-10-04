@@ -1,0 +1,23 @@
+name: 课程改进建议
+description: 提出有明确学习目标和验证方法的改进。
+title: "[建议] "
+body:
+  - type: textarea
+    id: learning_gap
+    attributes:
+      label: 具体学习障碍
+      description: 哪个任务、机制或交接环节需要改善？它妨碍了什么学习目标？
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议与依据
+      description: 描述可实施的改动，按需附官方文档、论文或对照案例。
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: 怎样验证有效
+      description: 建议可观察的输入、结果、对照或陌生输入迁移。

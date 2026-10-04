@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500" role="img">
+<title>RAG的资料入库与本次查询</title><desc>原文取得后切块嵌入索引；问题检索候选，融合打包，再生成并核对。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#203e42"/></marker></defs>
+<rect width="1000" height="500" rx="10" fill="#f5f1e6"/>
+<g font-family="PingFang SC,sans-serif" fill="#203e42">
+<text x="32" y="40" font-family="serif" font-size="25">RAG · 找到证据，再让阿灯回答</text>
+<text x="32" y="70" font-size="14">检索相似、原文可信、回答有据是不同检查。</text>
+<text x="32" y="112" font-size="17">资料准备</text>
+<g fill="#fffdf7" stroke="#9daa99"><rect x="32" y="133" width="206" height="90" rx="7"/><rect x="277" y="133" width="206" height="90" rx="7"/><rect x="522" y="133" width="206" height="90" rx="7"/><rect x="767" y="133" width="201" height="90" rx="7"/></g>
+<text x="54" y="164" font-size="18">取得完整原文</text><text x="54" y="194" font-size="13">URL / 时间 / SHA</text>
+<text x="299" y="164" font-size="18">带位置的切块</text><text x="299" y="194" font-size="13">窗口 / 重叠 / 身份</text>
+<text x="544" y="164" font-size="18">文本变向量</text><text x="544" y="194" font-size="13">embedding / 维度</text>
+<text x="789" y="164" font-size="18">可检索索引</text><text x="789" y="194" font-size="13">关键词与向量 / 版本</text>
+<text x="32" y="280" font-size="17">本次查询</text>
+<g fill="#fffdf7" stroke="#9daa99"><rect x="32" y="300" width="206" height="90" rx="7"/><rect x="277" y="300" width="206" height="90" rx="7"/><rect x="522" y="300" width="206" height="90" rx="7"/><rect x="767" y="300" width="201" height="90" rx="7"/></g>
+<text x="54" y="331" font-size="18">问题与约束</text><text x="54" y="360" font-size="13">同义 / 精确名称 / 范围</text>
+<text x="299" y="331" font-size="18">检索实际候选</text><text x="299" y="360" font-size="13">召回 / BM25 / 向量</text>
+<text x="544" y="331" font-size="18">融合与打包</text><text x="544" y="360" font-size="13">RRF / 去重 / 预算</text>
+<text x="789" y="331" font-size="18">生成与核对</text><text x="789" y="360" font-size="13">出处 / 支持 / 缺口</text>
+<text x="32" y="445" font-size="15">查不到先看候选与分块；找到了却答错再看模型输入、原文支持与输出。</text>
+<text x="32" y="475" font-size="13">相似度高不保证日期、否定、条件一致；完整原文的取回入口仍需保留。</text></g>
+<g stroke="#203e42" fill="none" stroke-width="2" marker-end="url(#a)"><path d="M238 178h37"/><path d="M483 178h37"/><path d="M728 178h37"/><path d="M238 345h37"/><path d="M483 345h37"/><path d="M728 345h37"/><path d="M868 225v25H380v48" stroke-dasharray="5 5"/></g></svg>

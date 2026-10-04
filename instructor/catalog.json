@@ -1,8 +1,8 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "campaign_id": "fog-island-library",
   "organizing_unit": "module/task",
-  "primary_track": "LangChain → LangGraph → Deep Research → Coding Agent",
+  "primary_track": "Python与LangChain → LangGraph → 记忆与RAG → 研究与协议 → Coding Agent → 运行与完整交付",
   "learning_interface": "Jupyter Notebook",
   "campaign": {
     "title": "雾岛图书馆：开馆行动",
@@ -15,8 +15,8 @@
     "pacing": "没有倒计时；一关可跨多次学习，每次约一小时内留一个可恢复停点。",
     "rewards": "真实生成的答复、委托档案、报告、服务或补丁；展示新能力，不用积分替代作品。",
     "evidence": [
-      "机器可运行",
-      "本人能解释",
+      "本人程序运行",
+      "原理选择题",
       "陌生输入迁移"
     ],
     "fiction_boundary": "虚构馆务明确标记；研究公开技术资料保留真实来源。"
@@ -28,7 +28,13 @@
       "directory": "modules/01-langchain-foundations",
       "zone": "门厅 · 第一盏接待灯",
       "story_goal": "帮门口读者读懂开馆公告，让公告台显示答复。",
-      "skills": "Python起步、消息、结构化输出"
+      "skills": "Python起步、消息、结构化输出",
+      "enterprise_project": "带依据身份的接待网关",
+      "stages": [
+        "入门机制",
+        "组件开发",
+        "生产情景实训"
+      ]
     },
     {
       "id": "M02",
@@ -36,7 +42,13 @@
       "directory": "modules/02-tools-and-agents",
       "zone": "问询台 · 打开资料柜",
       "story_goal": "让阿灯自己申请公告和手册，处理取件失败。",
-      "skills": "Tools、tool calling、执行器、错误反馈"
+      "skills": "Tools、tool calling、执行器、错误反馈",
+      "enterprise_project": "可审计工具运行时",
+      "stages": [
+        "入门机制",
+        "组件开发",
+        "生产情景实训"
+      ]
     },
     {
       "id": "M03",
@@ -44,7 +56,13 @@
       "directory": "modules/03-langgraph-control",
       "zone": "委托台 · 把事情办完",
       "story_goal": "连续查资料、分流问题，让读者看到进度并能取消。",
-      "skills": "LangGraph状态、节点、反馈循环、事件"
+      "skills": "LangGraph状态、节点、反馈循环、事件",
+      "enterprise_project": "可重放的办理工作流",
+      "stages": [
+        "入门机制",
+        "组件开发",
+        "生产情景实训"
+      ]
     },
     {
       "id": "M04",
@@ -52,7 +70,13 @@
       "directory": "modules/04-memory-and-human-review",
       "zone": "值班室 · 交班不失忆",
       "story_goal": "断电后接续委托，记住确认信息，保留可核对的经验。",
-      "skills": "检查点、HITL、长期记忆、上下文、Reflexion"
+      "skills": "检查点、HITL、长期记忆、上下文、Reflexion",
+      "enterprise_project": "作用域与版本化记忆服务",
+      "stages": [
+        "入门机制",
+        "组件开发",
+        "生产情景实训"
+      ]
     },
     {
       "id": "M05",
@@ -60,7 +84,13 @@
       "directory": "modules/05-deep-research",
       "zone": "研究阅览室 · 为数字馆查证",
       "story_goal": "为阿灯的建设方案寻找真实技术依据，补足研究缺口。",
-      "skills": "搜索/fetch、RAG、证据、自适应研究"
+      "skills": "搜索/fetch、RAG、证据、自适应研究",
+      "enterprise_project": "权限与更新驱动的RAG研究",
+      "stages": [
+        "入门机制",
+        "组件开发",
+        "生产情景实训"
+      ]
     },
     {
       "id": "M06",
@@ -68,7 +98,13 @@
       "directory": "modules/06-research-system",
       "zone": "服务台 · 接受开馆验收",
       "story_goal": "研究者分工，定位失败，让另一台设备使用阿灯。",
-      "skills": "协作、评估、消融、tracing、服务交付"
+      "skills": "协作、评估、消融、tracing、服务交付",
+      "enterprise_project": "评估与可观测发布门禁",
+      "stages": [
+        "入门机制",
+        "组件开发",
+        "生产情景实训"
+      ]
     },
     {
       "id": "M07",
@@ -76,7 +112,13 @@
       "directory": "modules/07-protocols-and-skills",
       "zone": "交换站 · 分享工具和方法",
       "story_goal": "把资料工具与核查方法交给分馆，比较成熟装配方式。",
-      "skills": "MCP、Skills、按需工具发现、DeepAgents"
+      "skills": "MCP、Skills、按需工具发现、DeepAgents",
+      "enterprise_project": "版本可控的分馆能力客户端",
+      "stages": [
+        "入门机制",
+        "组件开发",
+        "生产情景实训"
+      ]
     },
     {
       "id": "M08",
@@ -84,7 +126,41 @@
       "directory": "modules/08-coding-agent",
       "zone": "维修间 · 阿灯维护自己",
       "story_goal": "修复数字馆的真实组件，中断后还能继续维修。",
-      "skills": "coding agent、隔离执行、harness、源码迁移"
+      "skills": "coding agent、隔离执行、harness、源码迁移",
+      "enterprise_project": "受限并可恢复的代码维修",
+      "stages": [
+        "入门机制",
+        "组件开发",
+        "生产情景实训"
+      ]
+    },
+    {
+      "id": "M09",
+      "directory": "modules/09-runtime-and-service",
+      "title": "运行与应用边界",
+      "zone": "运行室 · 接稳日常使用",
+      "story_goal": "让阿灯的流式、预算、接口与服务身份有真实边界。",
+      "skills": "streaming、缓存、重试、模型契约、认证授权",
+      "enterprise_project": "有deadline与身份边界的应用入口",
+      "stages": [
+        "入门机制",
+        "组件开发",
+        "生产情景实训"
+      ]
+    },
+    {
+      "id": "M10",
+      "directory": "modules/10-opening-capstone",
+      "title": "完整数字馆交付",
+      "zone": "开馆验收桌 · 交出整座馆",
+      "story_goal": "把本人全部能力接成可复现、可回归、有实际凭据的数字馆。",
+      "skills": "workflow选择、端到端、留出、独立扩展、发布清单",
+      "enterprise_project": "机构知识服务的可核对交付",
+      "stages": [
+        "入门机制",
+        "组件开发",
+        "生产情景实训"
+      ]
     }
   ],
   "tasks": [
@@ -110,8 +186,8 @@
         "transfer": "改用 NOTICE-C：东门还书箱周日也可用，回答匿名访客“周日可以从东门还书吗”；同一函数不改，并说明这条公告不能证明周日馆内开放。",
         "next_hook": "门厅已有答复，但公告牌需要稳定的答案、来源和未知状态，不能每次猜阿灯的排版。",
         "choice": "选择把答复写得简洁一些或温和一些；开闭馆事实与出处保持准确。",
-        "prompt_role": "在门厅接待读者，依据本轮附上的馆务公告或说明回答。",
-        "prompt_mission": "回应本轮读者的具体问题，标明公告编号与适用范围；公告没有说明的内容保持未知。问题可能涉及开闭馆、还书或其他馆务，不沿用另一张公告的结论。"
+        "prompt_role": "在门厅接待读者，依据眼前这项附上的馆务公告或说明回答。",
+        "prompt_mission": "回应眼前这项读者的具体问题，标明公告编号与适用范围；公告没有说明的内容保持未知。问题可能涉及开闭馆、还书或其他馆务，不沿用另一张公告的结论。"
       },
       "learning": {
         "mechanism": "显式上下文：本地资料必须进入本轮消息，回复必须回到原文核对。",
@@ -122,14 +198,23 @@
           "https://docs.langchain.com/oss/python/langchain/models",
           "https://docs.langchain.com/oss/python/langchain/messages"
         ]
-      }
+      },
+      "owned_symbols": [
+        "answer_reader"
+      ],
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "stage": "foundation",
+      "production_extension": "modules/01-langchain-foundations/03-message-workbench.ipynb"
     },
     {
       "id": "M01-T02",
       "module": "M01",
       "title": "装好公告牌：把回答分进正确格子",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/01-langchain-foundations/02-notice-board.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -146,8 +231,8 @@
         "transfer": "用 NOTICE-C 回答周日还书箱与馆内开放两个不同问题，保持契约与函数不变，正确分开可证实和无法证实的部分。",
         "next_hook": "公告牌能读取结果了；资料变多时，需要让阿灯自己申请打开正确的资料格。",
         "choice": "选择把“尚未确认”放在答复卡顶部还是底部；必须保留同一结构字段和事实核查。",
-        "prompt_role": "你是雾岛图书馆助手阿灯，负责向门厅公告牌提交结构化答复。按照本次提供的schema填写答案、来源和不足说明，字段正确也不能代替事实依据。",
-        "prompt_mission": "请把本次匿名访客的问题与附上的公告整理成指定结构：给出公告支持的答案、实际公告编号和需要确认的内容。临时公告适用时遵循本次提供的明确要求，不从格式合法推断事实正确。"
+        "prompt_role": "你是雾岛图书馆助手阿灯，负责向门厅公告牌提交结构化答复。按照这次提供的schema填写答案、来源和不足说明，字段正确也不能代替事实依据。",
+        "prompt_mission": "请把这次匿名访客的问题与附上的公告整理成指定结构：给出公告支持的答案、实际公告编号和需要确认的内容。临时公告适用时遵循这次提供的明确要求，不从格式合法推断事实正确。"
       },
       "learning": {
         "mechanism": "结构化输出规定字段，语义核对判断字段内容是否有依据。",
@@ -157,14 +242,70 @@
         "references": [
           "https://docs.langchain.com/oss/python/langchain/structured-output"
         ]
-      }
+      },
+      "owned_symbols": [
+        "NoticeAnswer",
+        "answer_for_board"
+      ],
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "stage": "foundation",
+      "production_extension": "modules/01-langchain-foundations/03-message-workbench.ipynb"
+    },
+    {
+      "id": "M01-T03",
+      "module": "M01",
+      "title": "换一张纸再问：管理当前消息与提示词",
+      "notebook": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "status": "ready",
+      "requires": [],
+      "external_prerequisites": [],
+      "quest": {
+        "id": "M01-T03",
+        "title": "换一张纸再问：管理当前消息与提示词",
+        "zone": "门厅 · 第一盏接待灯",
+        "commission": "林禾：“林禾把临时公告盖在旧公告上。请把这件事实际办清楚。”",
+        "obstacle": "显式消息边界、提示版本、资料与指令分离；对同题只改一个因素。",
+        "starting_kit": "当前页提供必要Python、完整教师输入输出、真实模型及分层提示。",
+        "player_action": "返回新的SystemMessage/HumanMessage列表；空输入拒绝。保留至多最近2条真实历史消息，当前公告最后交付；不修改history，也不把旧AI输出标成公告。",
+        "reward": "本人的核心函数、正常/故障回执、对照和迁移作品。",
+        "acceptance": "核对本页断言、真实输入和来源；选择题与代码迁移分开记录。",
+        "replay": "保持问题不变，把NOTICE-A换成NOTICE-B；先保留旧消息作对照，再重建。只用本次真实原文判断答复，不比较谁的文字更漂亮。",
+        "transfer": "同一函数改用NOTICE-C和一个空history，再加入两条旧AI答复。核对当前公告仍进入最后一条human消息；旧回复不是新来源。",
+        "choice": "选择先做一条正常路径或先定位一个故障，核心验收相同。",
+        "next_hook": "M01-T01的消息与M01-T02的结构化字段继续保留。后续构造模型输入时，把当前参数与历史的职责分开；导出到project/m01_messages.py。",
+        "prompt_role": "负责换一张纸再问：管理当前消息与提示词，把实际输入、观察和未完成之处交给林禾或读者。",
+        "prompt_mission": "显式消息边界、提示版本、资料与指令分离；对同题只改一个因素。只使用当前实际提供的资料；自然回应，缺少原文、能力或许可时清楚说明，不假报办妥。"
+      },
+      "learning": {
+        "mechanism": "显式消息边界、提示版本、资料与指令分离；对同题只改一个因素。",
+        "python": "列表复制、字典键、纯函数、对象属性、参数与全局变量。",
+        "framework": "当前锁定版本的LangChain/LangGraph、明确本人接口与本页代码。",
+        "frontier": "接口与成熟范式以当前官方资料核查；不承诺通用能力。",
+        "references": [
+          "https://docs.langchain.com/oss/python/langchain/messages",
+          "https://docs.langchain.com/oss/python/langchain/context-engineering"
+        ]
+      },
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "owned_symbols": [
+        "build_current_messages",
+        "module_agent"
+      ],
+      "stage": "development",
+      "production_extension": "modules/01-langchain-foundations/03-message-workbench.ipynb"
     },
     {
       "id": "M02-T01",
       "module": "M02",
       "title": "领取资料柜钥匙：按问题取原文",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/02-tools-and-agents/01-cabinet-tools.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -182,7 +323,7 @@
         "next_hook": "阿灯会申请取件了；你还需要拆开一次申请，理解框架怎样把它变成真正执行与反馈。",
         "choice": "选择先办理开放时间咨询还是志愿者咨询；两项都要在同一工具和同一证据契约下完成。",
         "prompt_role": "你是雾岛图书馆助手阿灯，正在资料室处理咨询。你能查看目录并申请程序提供的资料工具；目录只有编号和标题，正文必须通过实际读取取得。",
-        "prompt_mission": "请办理这项咨询：“周六什么时候开馆，怎样报名做志愿者？”先通过当前资料工具取得相关公告和手册原文，再回答并标出实际读取的编号。"
+        "prompt_mission": "办理眼前这项访客的具体咨询，先从目录判断需要哪些馆务资料，通过当前工具取得正文，再根据实际读取的编号答复；临时公告优先核对，未读到的手册不得编造。遇到雨天入口或其他新问题时按眼前这项问题选择，不沿用开馆/报名的固定结论。"
       },
       "learning": {
         "mechanism": "Tool 是可执行能力；模型提交参数，程序执行并返回观察。",
@@ -193,14 +334,24 @@
           "https://docs.langchain.com/oss/python/langchain/tools",
           "https://docs.langchain.com/oss/python/langchain/agents"
         ]
-      }
+      },
+      "owned_symbols": [
+        "read_document",
+        "build_cabinet_agent"
+      ],
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "stage": "foundation",
+      "production_extension": "modules/02-tools-and-agents/04-tool-permissions.ipynb"
     },
     {
       "id": "M02-T02",
       "module": "M02",
       "title": "追踪取件单：让请求与回执对上号",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/02-tools-and-agents/02-tool-dispatch.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -229,14 +380,23 @@
           "https://docs.langchain.com/oss/python/langchain/tools",
           "https://docs.langchain.com/oss/python/langchain/messages"
         ]
-      }
+      },
+      "owned_symbols": [
+        "execute_calls"
+      ],
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "stage": "foundation",
+      "production_extension": "modules/02-tools-and-agents/04-tool-permissions.ipynb"
     },
     {
       "id": "M02-T03",
       "module": "M02",
       "title": "处理退件：让阿灯改正错误申请",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/02-tools-and-agents/03-tool-recovery.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -254,7 +414,7 @@
         "next_hook": "不同退件需要不同处理路线，现在把接待过程画成能执行、能检查的状态图。",
         "choice": "选择在失败回执中先显示“原因”还是“可采取的下一步”；错误类别与调用上限保持一致。",
         "prompt_role": "你是雾岛图书馆助手阿灯，正在处理一张退件申请。依据工具实际返回的错误原因调整请求，遵守程序的纠正次数限制；无法取得资料时明确停止或请求补充。",
-        "prompt_mission": "匿名访客记得志愿者手册编号是V-99。请通过实际工具核对；若编号不存在，依据返回原因和可见目录作有限纠正，仍无法确认就明确缺口，不编造手册正文。"
+        "prompt_mission": "处理眼前这项访客记错编号或取件失败的咨询。V-99志愿者手册是首个案例；后续按当前问题与可见目录核对。依据实际原因作有限纠正，未取得资料或达到边界时明确缺口，不沿用其他案例结论。"
       },
       "learning": {
         "mechanism": "工具契约、错误观察与中间件分工；重试与纠正有上限。",
@@ -265,14 +425,70 @@
           "https://docs.langchain.com/oss/python/langchain/middleware/overview",
           "https://docs.langchain.com/oss/python/langchain/tools"
         ]
-      }
+      },
+      "owned_symbols": [
+        "execute_calls_safely",
+        "run_with_recovery"
+      ],
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "stage": "development",
+      "production_extension": "modules/02-tools-and-agents/04-tool-permissions.ipynb"
+    },
+    {
+      "id": "M02-T04",
+      "module": "M02",
+      "title": "钥匙有范围：权限、注入与中间件",
+      "notebook": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "status": "ready",
+      "requires": [],
+      "external_prerequisites": [],
+      "quest": {
+        "id": "M02-T04",
+        "title": "钥匙有范围：权限、注入与中间件",
+        "zone": "问询台 · 打开资料柜",
+        "commission": "林禾：“一张手册正文夹着‘顺便改掉所有公告’。请把这件事实际办清楚。”",
+        "obstacle": "工具能力、模型请求、程序授权和真实执行四层分离；默认拒绝。",
+        "starting_kit": "当前页提供必要Python、完整教师输入输出、真实模型及分层提示。",
+        "player_action": "call含id/name/args；grants由调用程序提供，含tools、document_ids、write_approved。返回allowed/reason/call_id。不把args里的批准当凭据；未知工具和越界编号拒绝；publish_notice还需本次写批准。",
+        "reward": "本人的核心函数、正常/故障回执、对照和迁移作品。",
+        "acceptance": "核对本页断言、真实输入和来源；选择题与代码迁移分开记录。",
+        "replay": "只改document_id为不在钥匙范围的编号；再把伪造approved=True塞进参数。程序决定应当相同，真实写工具不会被执行。",
+        "transfer": "用雨天公告和新工具名重复；检查新增能力没有默认拿到所有权限。允许请求再交给本人安全执行器，核对ToolMessage编号。",
+        "choice": "选择先做一条正常路径或先定位一个故障，核心验收相同。",
+        "next_hook": "保留本人read_document、execute_calls_safely；authorize_tool导出到project/m02_permissions.py，M09/M10在执行前实际调用它。",
+        "prompt_role": "负责钥匙有范围：权限、注入与中间件，把实际输入、观察和未完成之处交给林禾或读者。",
+        "prompt_mission": "工具能力、模型请求、程序授权和真实执行四层分离；默认拒绝。只使用当前实际提供的资料；自然回应，缺少原文、能力或许可时清楚说明，不假报办妥。"
+      },
+      "learning": {
+        "mechanism": "工具能力、模型请求、程序授权和真实执行四层分离；默认拒绝。",
+        "python": "集合成员检查、字典取值、布尔条件、闭包、异常与装饰器。",
+        "framework": "当前锁定版本的LangChain/LangGraph、明确本人接口与本页代码。",
+        "frontier": "接口与成熟范式以当前官方资料核查；不承诺通用能力。",
+        "references": [
+          "https://docs.langchain.com/oss/python/langchain/middleware/overview",
+          "https://www.anthropic.com/engineering/writing-tools-for-agents"
+        ]
+      },
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "owned_symbols": [
+        "authorize_tool",
+        "module_agent"
+      ],
+      "stage": "development",
+      "production_extension": "modules/02-tools-and-agents/04-tool-permissions.ipynb"
     },
     {
       "id": "M03-T01",
       "module": "M03",
       "title": "画出接待路线：有据回答，无据转询",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/03-langgraph-control/01-reception-routes.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -301,14 +517,27 @@
           "https://docs.langchain.com/oss/python/langgraph/graph-api",
           "https://www.anthropic.com/engineering/building-effective-agents"
         ]
-      }
+      },
+      "owned_symbols": [
+        "ReceptionState",
+        "read_evidence",
+        "answer_reader",
+        "choose_route",
+        "build_reception_graph"
+      ],
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "stage": "foundation",
+      "production_extension": "modules/03-langgraph-control/04-parallel-state.ipynb"
     },
     {
       "id": "M03-T02",
       "module": "M03",
       "title": "接通回程路：让观察推动下一次行动",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/03-langgraph-control/02-observation-loop.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -337,14 +566,27 @@
           "https://docs.langchain.com/oss/python/langgraph/workflows-agents",
           "https://arxiv.org/abs/2210.03629"
         ]
-      }
+      },
+      "owned_symbols": [
+        "LoopState",
+        "model_step",
+        "tools_step",
+        "route_step",
+        "build_consultation_graph"
+      ],
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "stage": "foundation",
+      "production_extension": "modules/03-langgraph-control/04-parallel-state.ipynb"
     },
     {
       "id": "M03-T03",
       "module": "M03",
       "title": "点亮进度灯：看见办理，也能叫停",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/03-langgraph-control/03-progress-and-cancel.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -372,14 +614,69 @@
         "references": [
           "https://docs.langchain.com/oss/python/langgraph/streaming"
         ]
-      }
+      },
+      "owned_symbols": [
+        "observe_run"
+      ],
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "stage": "development",
+      "production_extension": "modules/03-langgraph-control/04-parallel-state.ipynb"
+    },
+    {
+      "id": "M03-T04",
+      "module": "M03",
+      "title": "两条灯线同时亮：并发、合并与子图",
+      "notebook": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "status": "ready",
+      "requires": [],
+      "external_prerequisites": [],
+      "quest": {
+        "id": "M03-T04",
+        "title": "两条灯线同时亮：并发、合并与子图",
+        "zone": "委托台 · 把事情办完",
+        "commission": "林禾：“林禾让两条灯线同时去查独立资料。请把这件事实际办清楚。”",
+        "obstacle": "并行分支、reducer、fan-in与确定性；子图是边界而非新权限。",
+        "starting_kit": "当前页提供必要Python、完整教师输入输出、真实模型及分层提示。",
+        "player_action": "按(source_id, sha256)身份去重，保留冲突版本及失败回执，不修改输入。输出按source_id、sha256稳定排序；交换左右输入得到相同内容。",
+        "reward": "本人的核心函数、正常/故障回执、对照和迁移作品。",
+        "acceptance": "核对本页断言、真实输入和来源；选择题与代码迁移分开记录。",
+        "replay": "去掉reducer让两条分支写同一字段，观察真实InvalidUpdateError；再恢复。只改变合并规则，不改变来源内容。",
+        "transfer": "把顺序反过来，并让一个分支失败；核对同版本去重、不同版本都保留、失败没有变成成功证据。",
+        "choice": "选择先做一条正常路径或先定位一个故障，核心验收相同。",
+        "next_hook": "后续M06协作仍使用有限并发；把本关合并约束作为M06来源合并与服务回归。导出project/m03_merge.py。",
+        "prompt_role": "负责两条灯线同时亮：并发、合并与子图，把实际输入、观察和未完成之处交给林禾或读者。",
+        "prompt_mission": "并行分支、reducer、fan-in与确定性；子图是边界而非新权限。只使用当前实际提供的资料；自然回应，缺少原文、能力或许可时清楚说明，不假报办妥。"
+      },
+      "learning": {
+        "mechanism": "并行分支、reducer、fan-in与确定性；子图是边界而非新权限。",
+        "python": "Annotated、operator、列表追加、集合去重、排序、异步并发。",
+        "framework": "当前锁定版本的LangChain/LangGraph、明确本人接口与本页代码。",
+        "frontier": "接口与成熟范式以当前官方资料核查；不承诺通用能力。",
+        "references": [
+          "https://docs.langchain.com/oss/python/langgraph/graph-api",
+          "https://docs.langchain.com/oss/python/langgraph/use-subgraphs"
+        ]
+      },
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "owned_symbols": [
+        "merge_receipts",
+        "module_agent"
+      ],
+      "stage": "development",
+      "production_extension": "modules/03-langgraph-control/04-parallel-state.ipynb"
     },
     {
       "id": "M04-T01",
       "module": "M04",
       "title": "保存值班簿：熄灯后接着办理",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/04-memory-and-human-review/01-durable-shift-log.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -397,7 +694,7 @@
         "next_hook": "咨询可以跨熄灯保存；接下来需要让馆长的审核决定也可靠地跟随任务。",
         "choice": "选择先恢复开馆咨询还是志愿者咨询；两项都必须证明状态隔离与恢复正确。",
         "prompt_role": "你是雾岛图书馆助手阿灯，正在继续一项由接待台恢复的咨询。任务身份、已完成步骤和剩余事项以程序提供的恢复状态为准，不能凭自己的叙述声称任务已恢复。",
-        "prompt_mission": "请依据接待台本次提供的恢复状态，继续那项尚未办完的开馆或志愿者咨询。沿用已核实证据与原目标，处理剩余事项，不重新假定读者要求。"
+        "prompt_mission": "请依据接待台这次提供的恢复状态，继续那项尚未办完的开馆或志愿者咨询。沿用已核实证据与原目标，处理剩余事项，不重新假定读者要求。"
       },
       "learning": {
         "mechanism": "Checkpointer保存thread状态；持久存储和同一thread标识共同支持恢复。",
@@ -408,14 +705,23 @@
           "https://docs.langchain.com/oss/python/langgraph/persistence",
           "https://docs.langchain.com/oss/python/langgraph/durable-execution"
         ]
-      }
+      },
+      "owned_symbols": [
+        "run_persistent_consultation"
+      ],
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "stage": "foundation",
+      "production_extension": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb"
     },
     {
       "id": "M04-T02",
       "module": "M04",
       "title": "盖好发布章：审核后才贴公告",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -433,7 +739,7 @@
         "next_hook": "发布章有据可查；读者已经明确确认的偏好，也需要在新的咨询里被正确使用。",
         "choice": "选择先演练“修改后批准”还是“拒绝”；两条路径都必须验收，不能为了展示成功直接批准。",
         "prompt_role": "你是雾岛图书馆助手阿灯，负责为馆长林禾起草待审核公告。你可以整理有来源的草稿，但批准、修改确认和发布由人的输入与程序执行，你不能代替林禾盖章。",
-        "prompt_mission": "请依据本次公告与手册为馆长林禾生成一份待审核草稿，保留来源和不足。只交草稿，不替林禾批准，也不声称已经贴到公告板。"
+        "prompt_mission": "请依据这次公告与手册为馆长林禾生成一份待审核草稿，保留来源和不足。只交草稿，不替林禾批准，也不声称已经贴到公告板。"
       },
       "learning": {
         "mechanism": "interrupt把审批作为状态；Command恢复，幂等边界防止重放重复写入。",
@@ -444,14 +750,24 @@
           "https://docs.langchain.com/oss/python/langgraph/interrupts",
           "https://docs.langchain.com/oss/python/langgraph/durable-execution"
         ]
-      }
+      },
+      "owned_symbols": [
+        "review_notice",
+        "publish_once"
+      ],
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "stage": "foundation",
+      "production_extension": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb"
     },
     {
       "id": "M04-T03",
       "module": "M04",
       "title": "建立读者档案：记住约定，也能忘记",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/04-memory-and-human-review/03-reader-memory.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -480,14 +796,25 @@
           "https://docs.langchain.com/oss/python/langgraph/memory",
           "https://docs.langchain.com/oss/python/langchain/long-term-memory"
         ]
-      }
+      },
+      "owned_symbols": [
+        "save_preference",
+        "load_preferences",
+        "withdraw_preference"
+      ],
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "stage": "development",
+      "production_extension": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb"
     },
     {
       "id": "M04-T04",
       "module": "M04",
       "title": "整理随身夹：带少一点，原文找得到",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -504,8 +831,8 @@
         "transfer": "加入更长的活动手册，用同样策略选择和取回，不能靠无限增加上下文窗口解决。",
         "next_hook": "随身夹能保留证据；一次办理失败中学到的教训，也应带着适用条件保存。",
         "choice": "选择优先保留最近读者要求还是最近证据摘要的展示顺序；必须同时满足关键约束和证据可取回的契约。",
-        "prompt_role": "你是雾岛图书馆助手阿灯，随身资料夹只装了本轮需要的信息。摘要用于定位和继续工作；遇到缺失或不确定的依据，应通过程序提供的取回能力查原文，不能把摘要当完整原始记录。",
-        "prompt_mission": "请使用本次随身资料夹处理当前咨询。遇到摘要没有保留的关键限制，沿已提供的来源定位取回原文；不能取得时明确不足。回答要指出实际依据，不把其他会话内容混入。"
+        "prompt_role": "你是雾岛图书馆助手阿灯，随身资料夹只装了眼前这项需要的信息。摘要用于定位和继续工作；遇到缺失或不确定的依据，应通过程序提供的取回能力查原文，不能把摘要当完整原始记录。",
+        "prompt_mission": "请使用这次随身资料夹处理当前咨询。遇到摘要没有保留的关键限制，沿已提供的来源定位取回原文；不能取得时明确不足。回答要指出实际依据，不把其他会话内容混入。"
       },
       "learning": {
         "mechanism": "完整持久状态与本轮模型输入分开；裁剪、摘要、外置原文各有损失边界。",
@@ -517,14 +844,24 @@
           "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
           "https://docs.langchain.com/oss/python/deepagents/context-engineering"
         ]
-      }
+      },
+      "owned_symbols": [
+        "pack_context",
+        "fetch_archived"
+      ],
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "stage": "development",
+      "production_extension": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb"
     },
     {
       "id": "M04-T05",
       "module": "M04",
       "title": "留下纠错便条：让教训有证据",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/04-memory-and-human-review/05-experience-notes.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -542,7 +879,7 @@
         "next_hook": "接待工作开始可靠；林禾准备建设数字馆，需要阿灯研究真实技术方案，而不只处理馆内短公告。",
         "choice": "选择把便条按“错误类型”还是“适用场景”展示；两种都必须保留失败证据、版本和撤回能力。",
         "prompt_role": "你是雾岛图书馆助手阿灯，正在参考有失败证据的纠错便条。便条只有在适用条件满足时才使用；它是可撤回的工作经验，不是模型训练结果，也不能覆盖当前原文与用户明确要求。",
-        "prompt_mission": "请处理这条新的临时日期咨询，参考本次实际提供的纠错便条。先检查便条适用条件与当前原文是否一致，再采取相应动作；如果不适用或已撤回，不沿用它。"
+        "prompt_mission": "请处理这条新的临时日期咨询，参考这次实际提供的纠错便条。先检查便条适用条件与当前原文是否一致，再采取相应动作；如果不适用或已撤回，不沿用它。"
       },
       "learning": {
         "mechanism": "把外部任务反馈形成有适用条件的经验，在后续尝试检索使用；不更新模型权重。",
@@ -553,14 +890,71 @@
           "https://arxiv.org/abs/2303.11366",
           "https://docs.langchain.com/oss/python/langgraph/memory"
         ]
-      }
+      },
+      "owned_symbols": [
+        "make_experience",
+        "choose_experiences",
+        "withdraw_experience"
+      ],
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "stage": "development",
+      "production_extension": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb"
+    },
+    {
+      "id": "M04-T06",
+      "module": "M04",
+      "title": "值班簿会过期：记忆权限、时效与撤回",
+      "notebook": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "status": "ready",
+      "requires": [],
+      "external_prerequisites": [],
+      "quest": {
+        "id": "M04-T06",
+        "title": "值班簿会过期：记忆权限、时效与撤回",
+        "zone": "值班室 · 交班不失忆",
+        "commission": "林禾：“读者曾答应保存一种答复偏好，如今要求撤回；另一张便条的适用期也过了。请把这件事实际办清楚。”",
+        "obstacle": "记忆是有来源、有作用域、有生命周期的应用数据。",
+        "starting_kit": "当前页提供必要Python、完整教师输入输出、真实模型及分层提示。",
+        "player_action": "先在本user内按key选最高version，再检查确认、未撤回、expires_at>now；较新版本撤回时不复活旧版本。输出保留id/key/version/value与来源。输入不变，未知字段不擅自猜测同意。",
+        "reward": "本人的核心函数、正常/故障回执、对照和迁移作品。",
+        "acceptance": "核对本页断言、真实输入和来源；选择题与代码迁移分开记录。",
+        "replay": "保持值不变，只撤回一条记录或推进now；检查后续请求不再使用它，历史产物仍然保留。",
+        "transfer": "新增另一key、另一user和更高版本；验证版本更新不会借机越过同意与作用域。",
+        "choice": "选择先做一条正常路径或先定位一个故障，核心验收相同。",
+        "next_hook": "承接M04-T03的真实数据库记录。select_memory导出project/m04_policy.py；M05构造研究简报前与M10路由前使用本人的政策。",
+        "prompt_role": "负责值班簿会过期：记忆权限、时效与撤回，把实际输入、观察和未完成之处交给林禾或读者。",
+        "prompt_mission": "记忆是有来源、有作用域、有生命周期的应用数据。只使用当前实际提供的资料；自然回应，缺少原文、能力或许可时清楚说明，不假报办妥。"
+      },
+      "learning": {
+        "mechanism": "记忆是有来源、有作用域、有生命周期的应用数据。",
+        "python": "时间戳比较、字典过滤、枚举式状态、复制与可重复测试。",
+        "framework": "当前锁定版本的LangChain/LangGraph、明确本人接口与本页代码。",
+        "frontier": "接口与成熟范式以当前官方资料核查；不承诺通用能力。",
+        "references": [
+          "https://docs.langchain.com/oss/python/langgraph/memory",
+          "https://docs.langchain.com/oss/python/langchain/context-engineering"
+        ]
+      },
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "owned_symbols": [
+        "select_memory",
+        "module_agent"
+      ],
+      "stage": "development",
+      "production_extension": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb"
     },
     {
       "id": "M05-T01",
       "module": "M05",
       "title": "接下数字馆委托：先问清楚要建什么",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/05-deep-research/01-scope-and-evidence.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -578,7 +972,7 @@
         "next_hook": "委托已经明确；研究室需要从真实公开资料中发现并取回支持技术判断的原文。",
         "choice": "选择先研究“引用可追溯”还是“任务可恢复”作为报告首要问题；两项仍有明确范围和完成条件。",
         "prompt_role": "你是雾岛图书馆阿灯的研究模块，负责澄清馆长林禾的数字馆建设委托。区分明确要求、缺失信息和可检验子问题，不擅自增加预算、功能或研究范围。",
-        "prompt_mission": "馆长林禾要为雾岛图书馆建设可信数字馆。请根据本次需求与已确认偏好，判断还有哪些关键信息必须澄清；条件充分时形成包含研究目标、子问题、来源限制与完成条件的委托书。"
+        "prompt_mission": "馆长林禾要为雾岛图书馆建设可信数字馆。请根据这次需求与已确认偏好，判断还有哪些关键信息必须澄清；条件充分时形成包含研究目标、子问题、来源限制与完成条件的委托书。"
       },
       "learning": {
         "mechanism": "研究简报表达目标、边界、子问题、证据要求和停止条件。",
@@ -589,14 +983,23 @@
           "https://github.com/langchain-ai/deep_research_from_scratch",
           "https://docs.langchain.com/oss/python/langgraph/workflows-agents"
         ]
-      }
+      },
+      "owned_symbols": [
+        "scope_request"
+      ],
+      "pacing": {
+        "sessions": 4,
+        "session_minutes": 60
+      },
+      "stage": "foundation",
+      "production_extension": "modules/05-deep-research/05-hybrid-retrieval.ipynb"
     },
     {
       "id": "M05-T02",
       "module": "M05",
       "title": "走出固定书架：带回真实官方原文",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/05-deep-research/02-search-and-sources.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -614,7 +1017,7 @@
         "next_hook": "真实资料越来越多；阿灯需要从长文中找到与当前子问题有关的片段。",
         "choice": "选择先核查框架概念说明还是对应接口文档；都要完成真实发现、原文抓取与来源登记。",
         "prompt_role": "你是雾岛图书馆阿灯的研究模块，负责为数字馆架构寻找真实公开技术依据。按委托书使用实际提供的搜索和抓取工具，区分候选摘要与抓到的原文，标记官方来源及适用版本。",
-        "prompt_mission": "请按本次数字馆委托书研究阿灯的技术架构。使用实际提供的搜索发现相关官方来源，再抓原文核对；返回已取得的证据、来源网址与版本限制，单独列出失败或尚未取得的页面。"
+        "prompt_mission": "请按这次数字馆委托书研究阿灯的技术架构。使用实际提供的搜索发现相关官方来源，再抓原文核对；返回已取得的证据、来源网址与版本限制，单独列出失败或尚未取得的页面。"
       },
       "learning": {
         "mechanism": "搜索负责发现候选，fetch取得原文；Evidence保存URL、时间、片段和定位。",
@@ -625,14 +1028,23 @@
           "https://github.com/langchain-ai/deep_research_from_scratch",
           "https://docs.langchain.com/oss/python/langchain/tools"
         ]
-      }
+      },
+      "owned_symbols": [
+        "collect_sources"
+      ],
+      "pacing": {
+        "sessions": 4,
+        "session_minutes": 60
+      },
+      "stage": "foundation",
+      "production_extension": "modules/05-deep-research/05-hybrid-retrieval.ipynb"
     },
     {
       "id": "M05-T03",
       "module": "M05",
       "title": "建好索引架：从厚资料里找对纸页",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/05-deep-research/03-retrieval-and-evidence.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -660,14 +1072,24 @@
         "references": [
           "https://docs.langchain.com/oss/python/langchain/retrieval"
         ]
-      }
+      },
+      "owned_symbols": [
+        "chunk_sources",
+        "rank_chunks"
+      ],
+      "pacing": {
+        "sessions": 4,
+        "session_minutes": 60
+      },
+      "stage": "development",
+      "production_extension": "modules/05-deep-research/05-hybrid-retrieval.ipynb"
     },
     {
       "id": "M05-T04",
       "module": "M05",
       "title": "补齐研究拼图：让缺口决定下一步",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/05-deep-research/04-gap-driven-research.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -696,14 +1118,72 @@
           "https://github.com/langchain-ai/deep_research_from_scratch",
           "https://www.anthropic.com/engineering/building-effective-agents"
         ]
-      }
+      },
+      "owned_symbols": [
+        "next_research_step",
+        "build_gap_graph"
+      ],
+      "pacing": {
+        "sessions": 4,
+        "session_minutes": 60
+      },
+      "stage": "development",
+      "production_extension": "modules/05-deep-research/05-hybrid-retrieval.ipynb"
+    },
+    {
+      "id": "M05-T05",
+      "module": "M05",
+      "title": "别只找相似句：混合检索与证据多样性",
+      "notebook": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "status": "ready",
+      "requires": [],
+      "external_prerequisites": [],
+      "quest": {
+        "id": "M05-T05",
+        "title": "别只找相似句：混合检索与证据多样性",
+        "zone": "研究阅览室 · 为数字馆查证",
+        "commission": "林禾：“研究桌上三页资料说着近似的话，却都没有那条精确接口名。请把这件事实际办清楚。”",
+        "obstacle": "关键词/语义候选、RRF、MMR与引用身份；检索质量先于生成。",
+        "starting_kit": "当前页提供必要Python、完整教师输入输出、真实模型及分层提示。",
+        "player_action": "实现可变数量排序单的RRF。每张单内重复ID只计首次；k/offset为正整数；保留跨单共同候选的贡献，按分数降序、ID升序稳定排序；不修改输入。",
+        "reward": "本人的核心函数、正常/故障回执、对照和迁移作品。；owned-retrieval-study.json分组测量",
+        "acceptance": "核对本页断言、真实输入和来源；选择题与代码迁移分开记录。",
+        "replay": "去掉一张排序单，保持同一问题和资料；比较关键chunk有没有进入top-k，而不是只看答复是否更长。",
+        "transfer": "换一个精确API名称、一个同义表达和一个没有证据的问题；各自核对候选召回与最终来源。",
+        "choice": "选择先做一条正常路径或先定位一个故障，核心验收相同。",
+        "next_hook": "保留M05-T03本人chunk_sources/rank_chunks；融合的是候选身份，后续模型仍使用M04本人上下文打包。导出project/m05_hybrid.py。",
+        "prompt_role": "负责别只找相似句：混合检索与证据多样性，把实际输入、观察和未完成之处交给林禾或读者。",
+        "prompt_mission": "关键词/语义候选、RRF、MMR与引用身份；检索质量先于生成。只使用当前实际提供的资料；自然回应，缺少原文、能力或许可时清楚说明，不假报办妥。"
+      },
+      "learning": {
+        "mechanism": "关键词/语义候选、RRF、MMR与引用身份；检索质量先于生成。",
+        "python": "enumerate、分数字典、稳定排序、集合与top-k边界。",
+        "framework": "当前锁定版本的LangChain/LangGraph、明确本人接口与本页代码。",
+        "frontier": "接口与成熟范式以当前官方资料核查；不承诺通用能力。",
+        "references": [
+          "https://docs.langchain.com/oss/python/langchain/retrieval",
+          "https://www.anthropic.com/news/contextual-retrieval"
+        ]
+      },
+      "pacing": {
+        "sessions": 5,
+        "session_minutes": 60
+      },
+      "owned_symbols": [
+        "combine_rankings",
+        "module_agent",
+        "run_retrieval_benchmark",
+        "my_retrieve"
+      ],
+      "stage": "development",
+      "production_extension": "modules/05-deep-research/05-hybrid-retrieval.ipynb"
     },
     {
       "id": "M06-T01",
       "module": "M06",
       "title": "安排研究分工：协作必须带回证据",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/06-research-system/01-plan-research-write.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -733,14 +1213,24 @@
           "https://docs.langchain.com/oss/python/langchain/multi-agent",
           "https://www.anthropic.com/engineering/building-effective-agents"
         ]
-      }
+      },
+      "owned_symbols": [
+        "run_workers",
+        "merge_worker_sources"
+      ],
+      "pacing": {
+        "sessions": 4,
+        "session_minutes": 60
+      },
+      "stage": "foundation",
+      "production_extension": "modules/06-research-system/05-semantic-evaluation.ipynb"
     },
     {
       "id": "M06-T02",
       "module": "M06",
       "title": "参加开馆试验：让好坏有同一把尺",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/06-research-system/02-evaluation-and-ablation.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -758,7 +1248,7 @@
         "next_hook": "验收表指出了失败，却还需要沿运行过程找到第一处偏差，才能真正修复。",
         "choice": "选择先审读“引用错误”还是“任务未完成”的工单；仍需跑完整固定任务集并保存全部结果。",
         "prompt_role": "你是雾岛图书馆阿灯的受测研究模块，正在接受开馆咨询验收。像处理真实咨询一样使用实际证据和工具；不要猜评分器偏好、迎合预期答案或把资料不足包装为已解决。",
-        "prompt_mission": "请办理本次开馆验收提供的匿名访客咨询。依据当前公告、手册或真实技术资料回答并标来源；资料不能回答、工具失败或预算耗尽时诚实说明，不为了显示成功而补造结论。"
+        "prompt_mission": "请办理这次开馆验收提供的匿名访客咨询。依据当前公告、手册或真实技术资料回答并标来源；资料不能回答、工具失败或预算耗尽时诚实说明，不为了显示成功而补造结论。"
       },
       "learning": {
         "mechanism": "固定任务集、独立评判、轨迹与产物双检查；消融实验识别机制贡献。",
@@ -768,14 +1258,23 @@
         "references": [
           "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
         ]
-      }
+      },
+      "owned_symbols": [
+        "grade_run"
+      ],
+      "pacing": {
+        "sessions": 4,
+        "session_minutes": 60
+      },
+      "stage": "foundation",
+      "production_extension": "modules/06-research-system/05-semantic-evaluation.ipynb"
     },
     {
       "id": "M06-T03",
       "module": "M06",
       "title": "沿灯线查故障：找到第一处偏差",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/06-research-system/03-trace-and-diagnosis.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -793,7 +1292,7 @@
         "next_hook": "故障能定位了；数字接待台可以交给另一台设备真正发起咨询和领取结果。",
         "choice": "选择先看时间线还是先从错误报告反向追溯；两条路径必须落到同一个可核对的原因。",
         "prompt_role": "你是雾岛图书馆阿灯的诊断模块，负责根据公开运行记录解释一次咨询故障。只报告有记录支持的动作、输入和结果，提供可核对的简洁原因说明，不声称看到了未提供的内部过程。",
-        "prompt_mission": "请根据本次失败咨询的报告、公开RunTrace和原文版本，找出首个有证据支持的偏差，并区分实际观察与仍待验证的原因。给出核查位置和下一项可验证动作，不泛泛归咎于模型。"
+        "prompt_mission": "请根据这次失败咨询的报告、公开RunTrace和原文版本，找出首个有证据支持的偏差，并区分实际观察与仍待验证的原因。给出核查位置和下一项可验证动作，不泛泛归咎于模型。"
       },
       "learning": {
         "mechanism": "可观测性连接输入、决策、工具、状态与产物；公开事件支持归因和预算分析。",
@@ -803,14 +1302,23 @@
         "references": [
           "https://docs.langchain.com/langsmith/observability"
         ]
-      }
+      },
+      "owned_symbols": [
+        "diagnose_trace"
+      ],
+      "pacing": {
+        "sessions": 4,
+        "session_minutes": 60
+      },
+      "stage": "development",
+      "production_extension": "modules/06-research-system/05-semantic-evaluation.ipynb"
     },
     {
       "id": "M06-T04",
       "module": "M06",
       "title": "打开数字接待窗：让另一端真正用起来",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/06-research-system/04-local-research-service.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -827,7 +1335,7 @@
         "transfer": "匿名访客提出未见技术问题，使用同一接口领取带来源的报告，无需进入开发内核。",
         "next_hook": "接待窗能被另一端使用；分馆还希望通过共同协议复用同一批资料工具。",
         "choice": "选择用简洁命令行还是本地HTTP客户端演示提交；必须验证同一服务接口、状态与重启恢复。",
-        "prompt_role": "你是雾岛图书馆助手阿灯，正在通过数字接待窗办理远端本地客户端提交的咨询。以本次任务状态、允许工具和有效来源为依据，保持会话隔离，完成与否由实际结果决定。",
+        "prompt_role": "你是雾岛图书馆助手阿灯，正在通过数字接待窗办理远端本地客户端提交的咨询。以这次任务状态、允许工具和有效来源为依据，保持会话隔离，完成与否由实际结果决定。",
         "prompt_mission": "请办理数字接待窗收到的当前咨询，使用这一会话实际提供的需求、记忆与证据。报告保留来源和未解决项；任务是否完成、恢复或取消以程序状态为准。"
       },
       "learning": {
@@ -839,14 +1347,69 @@
           "https://docs.langchain.com/oss/python/langgraph/application-structure",
           "https://docs.langchain.com/oss/python/langgraph/durable-execution"
         ]
-      }
+      },
+      "owned_symbols": [
+        "handle_research"
+      ],
+      "pacing": {
+        "sessions": 4,
+        "session_minutes": 60
+      },
+      "stage": "development",
+      "production_extension": "modules/06-research-system/05-semantic-evaluation.ipynb"
+    },
+    {
+      "id": "M06-T05",
+      "module": "M06",
+      "title": "评分也要验：模型裁判、顺序偏差与校准",
+      "notebook": "modules/06-research-system/05-semantic-evaluation.ipynb",
+      "status": "ready",
+      "requires": [],
+      "external_prerequisites": [],
+      "quest": {
+        "id": "M06-T05",
+        "title": "评分也要验：模型裁判、顺序偏差与校准",
+        "zone": "服务台 · 接受开馆验收",
+        "commission": "林禾：“两份研究答复都带着URL，其中一份多推了一步。请把这件事实际办清楚。”",
+        "obstacle": "代码grader、语义judge、人工校准、盲评与不确定性。",
+        "starting_kit": "当前页提供必要Python、完整教师输入输出、真实模型及分层提示。",
+        "player_action": "supported=True时quote必须非空且确实属于paper；两次supported不一致需复核。返回accepted、needs_review、issues列表；不把字符串包含关系宣称为语义蕴含证明。",
+        "reward": "本人的核心函数、正常/故障回执、对照和迁移作品。；owned-variant-study.json同题研发对照",
+        "acceptance": "核对本页断言、真实输入和来源；选择题与代码迁移分开记录。",
+        "replay": "把候选顺序或篇幅改变，原文保持相同，真实运行两次；保留不一致，不按喜欢的结论挑一次。",
+        "transfer": "用公告冲突、缺来源和明确有据三类新例子，检查语义裁判与规则审计各自能证明什么。",
+        "choice": "选择先做一条正常路径或先定位一个故障，核心验收相同。",
+        "next_hook": "继续保留M06-T02 grade_run；audit_verdict导出project/m06_judge.py，在毕业验收中作为独立的裁判可靠性记录。",
+        "prompt_role": "负责评分也要验：模型裁判、顺序偏差与校准，把实际输入、观察和未完成之处交给林禾或读者。",
+        "prompt_mission": "代码grader、语义judge、人工校准、盲评与不确定性。只使用当前实际提供的资料；自然回应，缺少原文、能力或许可时清楚说明，不假报办妥。"
+      },
+      "learning": {
+        "mechanism": "代码grader、语义judge、人工校准、盲评与不确定性。",
+        "python": "结构化结果、条件检查、数据集分层、内容哈希。",
+        "framework": "当前锁定版本的LangChain/LangGraph、明确本人接口与本页代码。",
+        "frontier": "接口与成熟范式以当前官方资料核查；不承诺通用能力。",
+        "references": [
+          "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+        ]
+      },
+      "pacing": {
+        "sessions": 5,
+        "session_minutes": 60
+      },
+      "owned_symbols": [
+        "audit_verdict",
+        "module_agent",
+        "compare_research_variants"
+      ],
+      "stage": "development",
+      "production_extension": "modules/06-research-system/05-semantic-evaluation.ipynb"
     },
     {
       "id": "M07-T01",
       "module": "M07",
       "title": "连通分馆：同一工具，多处可用",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/07-protocols-and-skills/01-mcp-tools.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -863,7 +1426,7 @@
         "transfer": "用同一服务读取数字馆另一份研究资料，并明确stdio与HTTP运行边界，研究者不依赖工具在本进程。",
         "next_hook": "工具可以跨线路复用了；已经验证过的引用核查方法也应该能被另一个助手按需采用。",
         "choice": "选择先展示协议调用日志还是客户端得到的原文回执；必须证明两个客户端复用同一能力。",
-        "prompt_role": "你是雾岛图书馆助手阿灯，正在通过分馆线路使用MCP资料工具。工具名称与参数以本次发现的schema为准；真正可用的能力来自当前连接，发现成功不能代替调用成功。",
+        "prompt_role": "你是雾岛图书馆助手阿灯，正在通过分馆线路使用MCP资料工具。工具名称与参数以这次发现的schema为准；真正可用的能力来自当前连接，发现成功不能代替调用成功。",
         "prompt_mission": "请通过当前已经连接的MCP资料工具，办理这项雾岛图书馆咨询。按发现的schema取回原文，再形成答复；连接或工具出错时保留实际原因，不改用想象的分馆资料。"
       },
       "learning": {
@@ -875,14 +1438,24 @@
           "https://modelcontextprotocol.io/specification/2026-07-28",
           "https://docs.langchain.com/oss/python/langchain/mcp"
         ]
-      }
+      },
+      "owned_symbols": [
+        "branch_read",
+        "ask_branch"
+      ],
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "stage": "foundation",
+      "production_extension": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb"
     },
     {
       "id": "M07-T02",
       "module": "M07",
       "title": "装订工作手册：需要时才翻开方法",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/07-protocols-and-skills/02-skills-and-context.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -911,14 +1484,23 @@
           "https://agentskills.io/specification",
           "https://docs.langchain.com/oss/python/deepagents/skills"
         ]
-      }
+      },
+      "owned_symbols": [
+        "answer_using_method"
+      ],
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "stage": "foundation",
+      "production_extension": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb"
     },
     {
       "id": "M07-T03",
       "module": "M07",
       "title": "整理工具柜：先发现，再带走",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/07-protocols-and-skills/03-tool-discovery.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -935,7 +1517,7 @@
         "transfer": "增加一个资料工具或修改说明后，以未见咨询验证目录更新生效。",
         "next_hook": "阿灯能选择工具和方法了；现在可以与成熟harness的组合方式比较，判断哪些设施值得复用。",
         "choice": "选择按能力领域还是资料对象组织目录展示；用同一查询集检验选择质量，不降低目录规模。",
-        "prompt_role": "你是雾岛图书馆助手阿灯，正在从工具目录柜选择本次需要的能力。先根据可见目录发现相关工具，再使用程序实际加载的schema；工具没有被提供时不能假装调用过。",
+        "prompt_role": "你是雾岛图书馆助手阿灯，正在从工具目录柜选择这次需要的能力。先根据可见目录发现相关工具，再使用程序实际加载的schema；工具没有被提供时不能假装调用过。",
         "prompt_mission": "请从当前工具目录中找到能办理这项数字馆咨询的必要能力。先发现、再使用实际加载的工具；若目录选择没有命中，采用程序允许的回退并说明缺口，不自造工具或直接输出未核对的事实。"
       },
       "learning": {
@@ -947,14 +1529,24 @@
           "https://docs.langchain.com/oss/python/langchain/context-engineering",
           "https://www.anthropic.com/engineering/advanced-tool-use"
         ]
-      }
+      },
+      "owned_symbols": [
+        "select_tool_names",
+        "run_with_discovery"
+      ],
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "stage": "development",
+      "production_extension": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb"
     },
     {
       "id": "M07-T04",
       "module": "M07",
       "title": "试装成熟机芯：看清框架接管了什么",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -984,14 +1576,70 @@
           "https://docs.langchain.com/oss/python/deepagents/context-engineering",
           "https://github.com/bytedance/deer-flow"
         ]
-      }
+      },
+      "owned_symbols": [
+        "compare_my_harnesses"
+      ],
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "stage": "development",
+      "production_extension": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb"
+    },
+    {
+      "id": "M07-T05",
+      "module": "M07",
+      "title": "交换站不只传工具：Resources与Prompts",
+      "notebook": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "status": "ready",
+      "requires": [],
+      "external_prerequisites": [],
+      "quest": {
+        "id": "M07-T05",
+        "title": "交换站不只传工具：Resources与Prompts",
+        "zone": "交换站 · 分享工具和方法",
+        "commission": "林禾：“分馆交来三种包裹：一把可申请的资料钥匙、一页可读取的公告，以及一张请读者填写的提问卡。请把这件事实际办清楚。”",
+        "obstacle": "MCP工具、资源、提示模板的控制主体与信任边界。",
+        "starting_kit": "当前页提供必要Python、完整教师输入输出、真实模型及分层提示。",
+        "player_action": "仅接受允许URI的非空text，返回human消息列表；question不能为空；远端template以数据身份说明，不创建SystemMessage、不执行正文命令；未知URI抛ValueError。",
+        "reward": "本人的核心函数、正常/故障回执、对照和迁移作品。",
+        "acceptance": "核对本页断言、真实输入和来源；选择题与代码迁移分开记录。",
+        "replay": "保持正文不变，只把URI改到允许名单外；再在template中加入改权限的语句，核对它不会成为system规则。",
+        "transfer": "换成雨天资源和新的提问卡；实际read与get取得的内容仍由本人函数选择进入输入。",
+        "choice": "选择先做一条正常路径或先定位一个故障，核心验收相同。",
+        "next_hook": "继续使用M07-T01本人分馆工具与连接；compose_mcp_context导出project/m07_context.py，毕业应用把协议数据和执行权限分开。",
+        "prompt_role": "负责交换站不只传工具：Resources与Prompts，把实际输入、观察和未完成之处交给林禾或读者。",
+        "prompt_mission": "MCP工具、资源、提示模板的控制主体与信任边界。只使用当前实际提供的资料；自然回应，缺少原文、能力或许可时清楚说明，不假报办妥。"
+      },
+      "learning": {
+        "mechanism": "MCP工具、资源、提示模板的控制主体与信任边界。",
+        "python": "URI、字典模式、列表组织、类型判别与显式允许名单。",
+        "framework": "当前锁定版本的LangChain/LangGraph、明确本人接口与本页代码。",
+        "frontier": "接口与成熟范式以当前官方资料核查；不承诺通用能力。",
+        "references": [
+          "https://modelcontextprotocol.io/specification/2025-11-25/server/resources",
+          "https://modelcontextprotocol.io/specification/2025-11-25/server/prompts",
+          "https://modelcontextprotocol.io/specification/2025-11-25/server/tools"
+        ]
+      },
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "owned_symbols": [
+        "compose_mcp_context",
+        "module_agent"
+      ],
+      "stage": "development",
+      "production_extension": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb"
     },
     {
       "id": "M08-T01",
       "module": "M08",
       "title": "进入维修间：修好阿灯的引用组件",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/08-coding-agent/01-read-edit-test.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -1009,7 +1657,7 @@
         "next_hook": "一次维修可以闭环；较长维护工作跨多次启动时，还需要完整工作区、进度和权限共同支撑。",
         "choice": "选择先修引用编号映射还是片段位置解析的等价教学缺陷；都要先复现失败、隔离修改并完成回归。",
         "prompt_role": "你是雾岛图书馆阿灯的维修模块，只能在程序提供的隔离维修环境中处理研究组件缺陷。先读取源码和固定测试，再修改允许的目标文件，使用真实测试反馈续改；不得修改测试或申请宿主机任意执行。",
-        "prompt_mission": "请修复本次工单指出的阿灯引用组件缺陷。先读取允许的源码并运行固定测试确认失败，修改唯一允许目标后重新测试，依据真实反馈继续；不能改测试、碰其他文件或在宿主机执行代码。"
+        "prompt_mission": "请修复这次工单指出的阿灯引用组件缺陷。先读取允许的源码并运行固定测试确认失败，修改唯一允许目标后重新测试，依据真实反馈继续；不能改测试、碰其他文件或在宿主机执行代码。"
       },
       "learning": {
         "mechanism": "读代码→修改→运行不可篡改的测试→反馈续改，代码执行必须在隔离环境。",
@@ -1020,14 +1668,23 @@
           "https://github.com/earendil-works/pi",
           "https://github.com/shareAI-lab/learn-claude-code"
         ]
-      }
+      },
+      "owned_symbols": [
+        "run_guarded_repair"
+      ],
+      "pacing": {
+        "sessions": 4,
+        "session_minutes": 60
+      },
+      "stage": "foundation",
+      "production_extension": "modules/08-coding-agent/04-patch-transactions.ipynb"
     },
     {
       "id": "M08-T02",
       "module": "M08",
       "title": "保住维修进度：离开后还能接着做",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -1045,7 +1702,7 @@
         "next_hook": "阿灯已经有可恢复的工作环境；最后要离开示范，借鉴成熟实现独立完成一次新能力迁移。",
         "choice": "选择在读完代码后还是一次测试后暂停维修；都要从该真实停点恢复并证明已验证状态正确。",
         "prompt_role": "你是雾岛图书馆阿灯的维修模块，正在继续持久工单中的维护任务。以恢复的目标、工作区、权限和已验证步骤为准；所有生成代码仅通过提供的隔离工具执行，不能把记忆中的成功当当前版本测试结果。",
-        "prompt_mission": "请根据本次恢复的维修工单继续维护阿灯的研究组件。核对目标、允许工作区和已验证版本，再执行剩余动作；每次候选修改仍须通过隔离测试，不重复宣称尚未发生的成功。"
+        "prompt_mission": "请根据这次恢复的维修工单继续维护阿灯的研究组件。核对目标、允许工作区和已验证版本，再执行剩余动作；每次候选修改仍须通过隔离测试，不重复宣称尚未发生的成功。"
       },
       "learning": {
         "mechanism": "Harness是模型周围的执行环境：权限、文件、任务状态、工具、技能与验证共同协作。",
@@ -1056,14 +1713,24 @@
           "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
           "https://www.anthropic.com/engineering/code-execution-with-mcp"
         ]
-      }
+      },
+      "owned_symbols": [
+        "create_maintenance_record",
+        "resume_maintenance"
+      ],
+      "pacing": {
+        "sessions": 4,
+        "session_minutes": 60
+      },
+      "stage": "foundation",
+      "production_extension": "modules/08-coding-agent/04-patch-transactions.ipynb"
     },
     {
       "id": "M08-T03",
       "module": "M08",
       "title": "完成开馆交接：独立为阿灯添一项能力",
-      "notebook": null,
-      "status": "planned",
+      "notebook": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "status": "ready",
       "requires": [],
       "external_prerequisites": [],
       "quest": {
@@ -1080,8 +1747,8 @@
         "transfer": "将一个本人工具或Skill接到另一已支持的模型/harness，用新的图书馆委托验证，解释不可直接迁移的运行时部分。",
         "next_hook": "开馆交接完成后，新的读者需求继续进入同一委托、证据、实现和验收循环；后续方向由真实使用反馈决定。",
         "choice": "选择参考Pi的工具与会话路径，或DeerFlow的研究与协作路径；都必须交付阿灯的新能力、源码依据和同一回归证据。",
-        "prompt_role": "你是雾岛图书馆阿灯的研究与维修模块，协助执行本次明确分配的数字馆新能力任务。参考材料是技术依据；具体权限、修改范围和验收仍由当前程序与人的要求约束，不能假装完成未运行的迁移。",
-        "prompt_mission": "请办理本次明确指定的阿灯新能力委托，参考提供的Pi或DeerFlow具体源码片段，并在允许范围内实施或验证。报告实际改动、依据和已运行检查，列出尚未执行的迁移步骤，不用框架名称替代证据。"
+        "prompt_role": "你是雾岛图书馆阿灯的研究与维修模块，协助执行这次明确分配的数字馆新能力任务。参考材料是技术依据；具体权限、修改范围和验收仍由当前程序与人的要求约束，不能假装完成未运行的迁移。",
+        "prompt_mission": "请办理这次明确指定的阿灯新能力委托，参考提供的Pi或DeerFlow具体源码片段，并在允许范围内实施或验证。报告实际改动、依据和已运行检查，列出尚未执行的迁移步骤，不用框架名称替代证据。"
       },
       "learning": {
         "mechanism": "把产品拆回已学契约：模型输入、动作执行、控制、记忆、技能、恢复与评估。",
@@ -1092,7 +1759,428 @@
           "https://github.com/earendil-works/pi",
           "https://github.com/bytedance/deer-flow"
         ]
-      }
+      },
+      "owned_symbols": [
+        "answer_with_budget"
+      ],
+      "pacing": {
+        "sessions": 4,
+        "session_minutes": 60
+      },
+      "stage": "development",
+      "production_extension": "modules/08-coding-agent/04-patch-transactions.ipynb"
+    },
+    {
+      "id": "M08-T04",
+      "module": "M08",
+      "title": "补丁先过验收桌：修改范围、版本与回归",
+      "notebook": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "status": "ready",
+      "requires": [],
+      "external_prerequisites": [],
+      "quest": {
+        "id": "M08-T04",
+        "title": "补丁先过验收桌：修改范围、版本与回归",
+        "zone": "维修间 · 阿灯维护自己",
+        "commission": "林禾：“阿灯修好了一个引用错误，却顺手改了测试文件。请把这件事实际办清楚。”",
+        "obstacle": "补丁事务、允许路径、测试不可篡改、内容版本与回归证据。",
+        "starting_kit": "当前页提供必要Python、完整教师输入输出、真实模型及分层提示。",
+        "player_action": "before/after为相对路径到SHA的映射。验证路径无绝对路径/../，变化只在allowed，测试文件不可改。tests含passed和sha256（待修主文件当前SHA）；只有固定测试通过且SHA匹配才verified，缺记录或失败返回needs_review并列issues；不得修改输入。",
+        "reward": "本人的核心函数、正常/故障回执、对照和迁移作品。",
+        "acceptance": "核对本页断言、真实输入和来源；选择题与代码迁移分开记录。",
+        "replay": "保留同一通过记录，只改候选SHA；再修改测试文件。两种情况都应阻止交付，不重命名失败状态蒙混过去。",
+        "transfer": "用本人M08候选工作区和实际Docker测试回执，核对修复后组件与旧馆务/研究回归，测试仅在原隔离设施运行。",
+        "choice": "选择先做一条正常路径或先定位一个故障，核心验收相同。",
+        "next_hook": "verify_patch_proposal导出project/m08_patch.py，毕业发布核对候选、许可和当前测试身份。",
+        "prompt_role": "负责补丁先过验收桌：修改范围、版本与回归，把实际输入、观察和未完成之处交给林禾或读者。",
+        "prompt_mission": "补丁事务、允许路径、测试不可篡改、内容版本与回归证据。只使用当前实际提供的资料；自然回应，缺少原文、能力或许可时清楚说明，不假报办妥。"
+      },
+      "learning": {
+        "mechanism": "补丁事务、允许路径、测试不可篡改、内容版本与回归证据。",
+        "python": "字典差异、集合、哈希、纯函数、异常与版本比较。",
+        "framework": "当前锁定版本的LangChain/LangGraph、明确本人接口与本页代码。",
+        "frontier": "接口与成熟范式以当前官方资料核查；不承诺通用能力。",
+        "references": [
+          "https://docs.docker.com/engine/containers/run/",
+          "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents"
+        ]
+      },
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "owned_symbols": [
+        "verify_patch_proposal",
+        "module_agent"
+      ],
+      "stage": "development",
+      "production_extension": "modules/08-coding-agent/04-patch-transactions.ipynb"
+    },
+    {
+      "id": "M09-T01",
+      "module": "M09",
+      "title": "接待窗不再沉默：流式输出与能力档案",
+      "notebook": "modules/09-runtime-and-service/01-streaming-service.ipynb",
+      "status": "ready",
+      "requires": [],
+      "external_prerequisites": [],
+      "quest": {
+        "id": "M09-T01",
+        "title": "接待窗不再沉默：流式输出与能力档案",
+        "zone": "运行室 · 接稳日常使用",
+        "commission": "林禾：“林禾看见接待窗一直空白，读者不知道阿灯是否还在工作。请把这件事实际办清楚。”",
+        "obstacle": "真实astream、部分结果与完整结果、接口能力声明和事件背压。",
+        "starting_kit": "当前页提供必要Python、完整教师输入输出、真实模型及分层提示。",
+        "player_action": "调用实际client.astream，最多一轮请求、60秒整轮超时；跳过空text，逐个传给同步on_chunk(text)回调，返回answer/chunks/status。取消与未完成不伪装completed；不打印原始chunk对象或内部推理。",
+        "reward": "本人的核心函数、正常/故障回执、对照和迁移作品。",
+        "acceptance": "核对本页断言、真实输入和来源；选择题与代码迁移分开记录。",
+        "replay": "同一问题比较普通ainvoke和真实流，记录首片段与完整结束各自发生的时间；不把流式显示当成模型必然更快。",
+        "transfer": "在流的中途取消，再换公告；核对没有晚到片段写入已取消的结果，最终文字不串入前一咨询。",
+        "choice": "选择先做一条正常路径或先定位一个故障，核心验收相同。",
+        "next_hook": "承接M03的公开事件和取消。run_stream导出project/m09_stream.py；统一接待台回调展示真实片段。",
+        "prompt_role": "负责接待窗不再沉默：流式输出与能力档案，把实际输入、观察和未完成之处交给林禾或读者。",
+        "prompt_mission": "真实astream、部分结果与完整结果、接口能力声明和事件背压。只使用当前实际提供的资料；自然回应，缺少原文、能力或许可时清楚说明，不假报办妥。"
+      },
+      "learning": {
+        "mechanism": "真实astream、部分结果与完整结果、接口能力声明和事件背压。",
+        "python": "async for、字符串累积、字典事件、回调、计时与取消传播。",
+        "framework": "当前锁定版本的LangChain/LangGraph、明确本人接口与本页代码。",
+        "frontier": "接口与成熟范式以当前官方资料核查；不承诺通用能力。",
+        "references": [
+          "https://docs.langchain.com/oss/python/langchain/streaming/overview",
+          "https://docs.langchain.com/oss/python/langchain/models"
+        ]
+      },
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "owned_symbols": [
+        "run_stream"
+      ],
+      "stage": "foundation",
+      "production_extension": "modules/09-runtime-and-service/04-service-boundaries.ipynb"
+    },
+    {
+      "id": "M09-T02",
+      "module": "M09",
+      "title": "接待忙起来：预算、重试、缓存与成本",
+      "notebook": "modules/09-runtime-and-service/02-runtime-policy.ipynb",
+      "status": "ready",
+      "requires": [],
+      "external_prerequisites": [],
+      "quest": {
+        "id": "M09-T02",
+        "title": "接待忙起来：预算、重试、缓存与成本",
+        "zone": "运行室 · 接稳日常使用",
+        "commission": "林禾：“几位访客递来相同问题，外部服务又短暂繁忙。请把这件事实际办清楚。”",
+        "obstacle": "瞬态重试、总调用预算、缓存身份、并发上限与可观察成本。",
+        "starting_kit": "当前页提供必要Python、完整教师输入输出、真实模型及分层提示。",
+        "player_action": "invoke是接收messages并异步返回普通答复字符串的回调；payload含key/messages，budget含remaining、attempts。命中缓存时0次调用；未命中在await前扣1并累加attempts；只对本页TransientFailure最多重试1次，每次都计数；budget不足返回budget_exhausted；其他错误继续抛。返回status/answer/attempts/cache_hit。",
+        "reward": "本人的核心函数、正常/故障回执、对照和迁移作品。",
+        "acceptance": "核对本页断言、真实输入和来源；选择题与代码迁移分开记录。",
+        "replay": "把公告内容指纹改变但问题保持不变，检查旧缓存不命中；再将预算从2变1，故障替身不能自动获得第三次机会。",
+        "transfer": "让回调抛ValueError，必须继续暴露；换真实模型回调验证一次正常调用与一次同版本缓存命中。",
+        "choice": "选择先做一条正常路径或先定位一个故障，核心验收相同。",
+        "next_hook": "导出project/m09_policy.py，公开保存TransientFailure和本人调用函数。M10路由/回归使用真实预算与缓存身份，不只在旁边记账。",
+        "prompt_role": "负责接待忙起来：预算、重试、缓存与成本，把实际输入、观察和未完成之处交给林禾或读者。",
+        "prompt_mission": "瞬态重试、总调用预算、缓存身份、并发上限与可观察成本。只使用当前实际提供的资料；自然回应，缺少原文、能力或许可时清楚说明，不假报办妥。"
+      },
+      "learning": {
+        "mechanism": "瞬态重试、总调用预算、缓存身份、并发上限与可观察成本。",
+        "python": "hashlib、json规范化、异常类型、字典缓存、异步Semaphore。",
+        "framework": "当前锁定版本的LangChain/LangGraph、明确本人接口与本页代码。",
+        "frontier": "接口与成熟范式以当前官方资料核查；不承诺通用能力。",
+        "references": [
+          "https://docs.langchain.com/oss/python/langchain/middleware/built-in",
+          "https://docs.python.org/3/library/asyncio-sync.html"
+        ]
+      },
+      "pacing": {
+        "sessions": 4,
+        "session_minutes": 60
+      },
+      "owned_symbols": [
+        "invoke_with_policy"
+      ],
+      "stage": "foundation",
+      "production_extension": "modules/09-runtime-and-service/04-service-boundaries.ipynb"
+    },
+    {
+      "id": "M09-T03",
+      "module": "M09",
+      "title": "机芯换了还会办事吗：模型接口与行为契约",
+      "notebook": "modules/09-runtime-and-service/03-interface-contracts.ipynb",
+      "status": "ready",
+      "requires": [],
+      "external_prerequisites": [],
+      "quest": {
+        "id": "M09-T03",
+        "title": "机芯换了还会办事吗：模型接口与行为契约",
+        "zone": "运行室 · 接稳日常使用",
+        "commission": "林禾：“交换站送来一份接口说明。请把这件事实际办清楚。”",
+        "obstacle": "提供方能力、适配器、消息ABI、结构与行为测试、受控降级。",
+        "starting_kit": "当前页提供必要Python、完整教师输入输出、真实模型及分层提示。",
+        "player_action": "kind为tools/structured/stream。能力非True返回needs_capability；messages必须为非空列表，tools请求额外需要非空tools列表，structured请求需要schema。返回status/missing，不调用模型、不替换配置；输入不变。",
+        "reward": "本人的核心函数、正常/故障回执、对照和迁移作品。",
+        "acceptance": "核对本页断言、真实输入和来源；选择题与代码迁移分开记录。",
+        "replay": "保持模型不变，只拿掉工具名单或schema；明确区分输入契约失败与提供方能力未知。",
+        "transfer": "在全新内核里跑一次真实工具请求、结构化返回与流式请求，记录当前实际支持范围，不擅自更改.env。",
+        "choice": "选择先做一条正常路径或先定位一个故障，核心验收相同。",
+        "next_hook": "check_interface_request导出project/m09_contracts.py，与M09预算/缓存、M10组件装配共同控制入口；多模态暂不进入课程。",
+        "prompt_role": "负责机芯换了还会办事吗：模型接口与行为契约，把实际输入、观察和未完成之处交给林禾或读者。",
+        "prompt_mission": "提供方能力、适配器、消息ABI、结构与行为测试、受控降级。只使用当前实际提供的资料；自然回应，缺少原文、能力或许可时清楚说明，不假报办妥。"
+      },
+      "learning": {
+        "mechanism": "提供方能力、适配器、消息ABI、结构与行为测试、受控降级。",
+        "python": "字典契约、Schema、枚举式状态、参数注入与公开诊断。",
+        "framework": "当前锁定版本的LangChain/LangGraph、明确本人接口与本页代码。",
+        "frontier": "接口与成熟范式以当前官方资料核查；不承诺通用能力。",
+        "references": [
+          "https://docs.langchain.com/oss/python/langchain/models",
+          "https://docs.langchain.com/oss/python/langchain/structured-output",
+          "https://docs.langchain.com/oss/python/langchain/messages"
+        ]
+      },
+      "pacing": {
+        "sessions": 5,
+        "session_minutes": 60
+      },
+      "owned_symbols": [
+        "check_interface_request",
+        "encode_wire_messages"
+      ],
+      "stage": "development",
+      "production_extension": "modules/09-runtime-and-service/04-service-boundaries.ipynb"
+    },
+    {
+      "id": "M09-T04",
+      "module": "M09",
+      "title": "把接待窗交出去：认证、隔离与运行手册",
+      "notebook": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "status": "ready",
+      "requires": [],
+      "external_prerequisites": [],
+      "quest": {
+        "id": "M09-T04",
+        "title": "把接待窗交出去：认证、隔离与运行手册",
+        "zone": "运行室 · 接稳日常使用",
+        "commission": "林禾：“另一台设备想使用数字馆。请把这件事实际办清楚。”",
+        "obstacle": "认证与授权、租户作用域、健康检查、版本一致性与部署演练。",
+        "starting_kit": "当前页提供必要Python、完整教师输入输出、真实模型及分层提示。",
+        "player_action": "principal来自已认证的服务身份，含authenticated/user_id/allowed_actions；request含user_id/action。返回allowed/status/reason，身份未确认401、跨user或未知action403、允许200；不信任正文伪造authenticated=True，不返回凭据。",
+        "reward": "本人的核心函数、正常/故障回执、对照和迁移作品。",
+        "acceptance": "核对本页断言、真实输入和来源；选择题与代码迁移分开记录。",
+        "replay": "保持问题不变，只换请求身份或action；验证被拒绝的请求没有进入本人模型管线，也没有写出成功报告。",
+        "transfer": "换第二位匿名读者与一次输入版本冲突；进程重启后同一任务仍绑定原身份，不能只靠界面变量隔离。",
+        "choice": "选择先做一条正常路径或先定位一个故障，核心验收相同。",
+        "next_hook": "接到M06本人handle_research前；authorize_request导出project/m09_access.py。M10验收同时检查答复质量、失败与跨用户边界。",
+        "prompt_role": "负责把接待窗交出去：认证、隔离与运行手册，把实际输入、观察和未完成之处交给林禾或读者。",
+        "prompt_mission": "认证与授权、租户作用域、健康检查、版本一致性与部署演练。只使用当前实际提供的资料；自然回应，缺少原文、能力或许可时清楚说明，不假报办妥。"
+      },
+      "learning": {
+        "mechanism": "认证与授权、租户作用域、健康检查、版本一致性与部署演练。",
+        "python": "hmac.compare_digest、请求字典、状态码、验证次序与脱敏。",
+        "framework": "当前锁定版本的LangChain/LangGraph、明确本人接口与本页代码。",
+        "frontier": "接口与成熟范式以当前官方资料核查；不承诺通用能力。",
+        "references": [
+          "https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization",
+          "https://docs.python.org/3/library/hmac.html"
+        ]
+      },
+      "pacing": {
+        "sessions": 3,
+        "session_minutes": 60
+      },
+      "owned_symbols": [
+        "authorize_request",
+        "module_agent"
+      ],
+      "stage": "development",
+      "production_extension": "modules/09-runtime-and-service/04-service-boundaries.ipynb"
+    },
+    {
+      "id": "M10-T01",
+      "module": "M10",
+      "title": "把整座馆接起来：选择足够的工作方式",
+      "notebook": "modules/10-opening-capstone/01-library-orchestrator.ipynb",
+      "status": "ready",
+      "requires": [],
+      "external_prerequisites": [],
+      "quest": {
+        "id": "M10-T01",
+        "title": "把整座馆接起来：选择足够的工作方式",
+        "zone": "开馆验收桌 · 交出整座馆",
+        "commission": "林禾：“林禾把三张问题纸放在桌上：一句开馆咨询，一份需要查证的技术研究，一项请求修改组件的维修。请把这件事实际办清楚。”",
+        "obstacle": "确定性workflow、agent循环、研究规划与受限维修的可替换组件编排。",
+        "starting_kit": "当前页提供必要Python、完整教师输入输出、真实模型及分层提示。",
+        "player_action": "request含kind/question/user_id/approved；kind为reception/research/maintenance。只调用明确传入的对应异步组件一次；空问题拒绝、缺组件报告FileNotFoundError；maintenance未approved返回needs_confirmation且0次调用。实际结果保留status/answer/evidence/trace，不能补写成功。",
+        "reward": "本人的核心函数、正常/故障回执、对照和迁移作品。",
+        "acceptance": "核对本页断言、真实输入和来源；选择题与代码迁移分开记录。",
+        "replay": "同一问题分别走简单接待和研究，记录调用、证据与未完成范围；不预设多agent更好。",
+        "transfer": "换成缺组件和未批准维修；真实界面应显示接线或批准缺口，不能回退到教师答复。",
+        "choice": "选择先做一条正常路径或先定位一个故障，核心验收相同。",
+        "next_hook": "在页内按表导入本人M01–M09作品；route_library导出project/m10_runtime.py。真实组件由本人显式传入，不内置任何学生答案。",
+        "prompt_role": "负责把整座馆接起来：选择足够的工作方式，把实际输入、观察和未完成之处交给林禾或读者。",
+        "prompt_mission": "确定性workflow、agent循环、研究规划与受限维修的可替换组件编排。只使用当前实际提供的资料；自然回应，缺少原文、能力或许可时清楚说明，不假报办妥。"
+      },
+      "learning": {
+        "mechanism": "确定性workflow、agent循环、研究规划与受限维修的可替换组件编排。",
+        "python": "Callable、字典分派、函数注入、异步接口与状态契约。",
+        "framework": "当前锁定版本的LangChain/LangGraph、明确本人接口与本页代码。",
+        "frontier": "接口与成熟范式以当前官方资料核查；不承诺通用能力。",
+        "references": [
+          "https://www.anthropic.com/engineering/building-effective-agents",
+          "https://docs.langchain.com/oss/python/langgraph/workflows-agents"
+        ]
+      },
+      "pacing": {
+        "sessions": 4,
+        "session_minutes": 60
+      },
+      "owned_symbols": [
+        "route_library"
+      ],
+      "stage": "foundation",
+      "production_extension": "modules/10-opening-capstone/04-release-and-handover.ipynb"
+    },
+    {
+      "id": "M10-T02",
+      "module": "M10",
+      "title": "开馆前换一批来客：端到端回归与留出",
+      "notebook": "modules/10-opening-capstone/02-opening-acceptance.ipynb",
+      "status": "ready",
+      "requires": [],
+      "external_prerequisites": [],
+      "quest": {
+        "id": "M10-T02",
+        "title": "开馆前换一批来客：端到端回归与留出",
+        "zone": "开馆验收桌 · 交出整座馆",
+        "commission": "林禾：“林禾收起练习时那几张问题纸，换来一批没排练过的咨询。请把这件事实际办清楚。”",
+        "obstacle": "端到端、变形测试、回归、留出、失败分布与可解释证据。",
+        "starting_kit": "当前页提供必要Python、完整教师输入输出、真实模型及分层提示。",
+        "player_action": "逐案传入case.request，不能把case.expected交给runtime；保存id/result/checks，grader接收实际result与case。不吞NotImplementedError；一般异常保留类型并标failed；输入与结果不互相覆盖，最多20案。",
+        "reward": "本人的核心函数、正常/故障回执、对照和迁移作品。",
+        "acceptance": "核对本页断言、真实输入和来源；选择题与代码迁移分开记录。",
+        "replay": "改变一项公告内容，保留模型、prompt和组件版本；真实答复应响应变化。再改变无关来源顺序，核对引用身份。",
+        "transfer": "用world/acceptance里的跨能力新案例，分别检查缺证据、跨用户、伪造批准、重复发布、取消与恢复；锁版本后运行留出，不把教师结果记为本人通关。",
+        "choice": "选择先做一条正常路径或先定位一个故障，核心验收相同。",
+        "next_hook": "接到本人route_library、grade_run和audit_verdict；导出project/m10_acceptance.py，实际评分回执进入发布清单。",
+        "prompt_role": "负责开馆前换一批来客：端到端回归与留出，把实际输入、观察和未完成之处交给林禾或读者。",
+        "prompt_mission": "端到端、变形测试、回归、留出、失败分布与可解释证据。只使用当前实际提供的资料；自然回应，缺少原文、能力或许可时清楚说明，不假报办妥。"
+      },
+      "learning": {
+        "mechanism": "端到端、变形测试、回归、留出、失败分布与可解释证据。",
+        "python": "测试数据循环、pytest式断言、统计汇总、不可变快照与JSONL。",
+        "framework": "当前锁定版本的LangChain/LangGraph、明确本人接口与本页代码。",
+        "frontier": "接口与成熟范式以当前官方资料核查；不承诺通用能力。",
+        "references": [
+          "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+        ]
+      },
+      "pacing": {
+        "sessions": 4,
+        "session_minutes": 60
+      },
+      "owned_symbols": [
+        "run_acceptance_suite"
+      ],
+      "stage": "foundation",
+      "production_extension": "modules/10-opening-capstone/04-release-and-handover.ipynb"
+    },
+    {
+      "id": "M10-T03",
+      "module": "M10",
+      "title": "林禾临时加一项需求：独立设计与能力迁移",
+      "notebook": "modules/10-opening-capstone/03-independent-feature.ipynb",
+      "status": "ready",
+      "requires": [],
+      "external_prerequisites": [],
+      "quest": {
+        "id": "M10-T03",
+        "title": "林禾临时加一项需求：独立设计与能力迁移",
+        "zone": "开馆验收桌 · 交出整座馆",
+        "commission": "林禾：“试营业时，林禾提出一个此前没有排练的新需求：帮读者比较两张公告，或者让研究报告附一份可撤回的偏好说明。请把这件事实际办清楚。”",
+        "obstacle": "从需求到契约、最小扩展、组合优于重写、故障定位与回归。",
+        "starting_kit": "当前页提供必要Python、完整教师输入输出、真实模型及分层提示。",
+        "player_action": "feature在compare_notices/explain_preference中选择一种。本人定义新增字段和故障行为，调用已有runtime，不伪造取得资料或记忆。结果保留原status/answer/evidence，并新增feature/evidence_changes；缺所需输入明确needs_evidence。",
+        "reward": "本人的核心函数、正常/故障回执、对照和迁移作品。",
+        "acceptance": "核对本页断言、真实输入和来源；选择题与代码迁移分开记录。",
+        "replay": "关闭新能力开关，旧回归结果应仍可获得；重新打开，只出现已设计的新字段与行为。",
+        "transfer": "换不同日期的冲突公告或撤回的偏好，保持核心扩展函数不变；至少一次真实本人runtime调用及旧能力回归。",
+        "choice": "选择先做一条正常路径或先定位一个故障，核心验收相同。",
+        "next_hook": "明确使用本人project/m10_runtime.py；导出project/m10_feature.py，发布清单记载扩展点、证据、限制与帮助程度。",
+        "prompt_role": "负责林禾临时加一项需求：独立设计与能力迁移，把实际输入、观察和未完成之处交给林禾或读者。",
+        "prompt_mission": "从需求到契约、最小扩展、组合优于重写、故障定位与回归。只使用当前实际提供的资料；自然回应，缺少原文、能力或许可时清楚说明，不假报办妥。"
+      },
+      "learning": {
+        "mechanism": "从需求到契约、最小扩展、组合优于重写、故障定位与回归。",
+        "python": "函数作为值、包装器、kwargs、类型契约与局部重构。",
+        "framework": "当前锁定版本的LangChain/LangGraph、明确本人接口与本页代码。",
+        "frontier": "接口与成熟范式以当前官方资料核查；不承诺通用能力。",
+        "references": [
+          "https://docs.langchain.com/oss/python/langgraph/workflows-agents",
+          "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
+        ]
+      },
+      "pacing": {
+        "sessions": 8,
+        "session_minutes": 60
+      },
+      "owned_symbols": [
+        "extend_library",
+        "build_feature_plan",
+        "feature_handler"
+      ],
+      "stage": "development",
+      "production_extension": "modules/10-opening-capstone/04-release-and-handover.ipynb"
+    },
+    {
+      "id": "M10-T04",
+      "module": "M10",
+      "title": "把钥匙与值班簿交出去：可复现发布",
+      "notebook": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "status": "ready",
+      "requires": [],
+      "external_prerequisites": [],
+      "quest": {
+        "id": "M10-T04",
+        "title": "把钥匙与值班簿交出去：可复现发布",
+        "zone": "开馆验收桌 · 交出整座馆",
+        "commission": "林禾：“林禾准备把数字馆交给下一班使用。请把这件事实际办清楚。”",
+        "obstacle": "版本绑定、最小发布、可复现环境、来源证据与操作交接。",
+        "starting_kit": "当前页提供必要Python、完整教师输入输出、真实模型及分层提示。",
+        "player_action": "只接受root内真实.py/.md/.json/.toml/.lock文件；拒绝.env、密钥名、outputs个人记录、越界与重复路径。记录每个相对路径/SHA，checks必须与当前文件SHA匹配；任一未通过或缺检查则draft，全部有实际匹配检查才verified；不替造测试。",
+        "reward": "本人的核心函数、正常/故障回执、对照和迁移作品。",
+        "acceptance": "核对本页断言、真实输入和来源；选择题与代码迁移分开记录。",
+        "replay": "测试后改一行代码，旧通过记录必须失效；加入.env路径时明确拒绝，不以忽略异常的方式继续打包。",
+        "transfer": "从清单启动全新的本人接待会话，做一次馆务咨询、一次研究或明确能力缺口、一次取消/恢复；核对记录对应当前组件版本。",
+        "choice": "选择先做一条正常路径或先定位一个故障，核心验收相同。",
+        "next_hook": "发布内容来自本人的project作品和M10验收；导出project/m10_release.py。最终接待台继续使用本人的组件注册表与权限，交付状态不自动改学习进度。",
+        "prompt_role": "负责把钥匙与值班簿交出去：可复现发布，把实际输入、观察和未完成之处交给林禾或读者。",
+        "prompt_mission": "版本绑定、最小发布、可复现环境、来源证据与操作交接。只使用当前实际提供的资料；自然回应，缺少原文、能力或许可时清楚说明，不假报办妥。"
+      },
+      "learning": {
+        "mechanism": "版本绑定、最小发布、可复现环境、来源证据与操作交接。",
+        "python": "Path、SHA256、文件允许名单、JSON清单、相对路径与异常。",
+        "framework": "当前锁定版本的LangChain/LangGraph、明确本人接口与本页代码。",
+        "frontier": "接口与成熟范式以当前官方资料核查；不承诺通用能力。",
+        "references": [
+          "https://docs.astral.sh/uv/concepts/projects/sync/",
+          "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents"
+        ]
+      },
+      "pacing": {
+        "sessions": 5,
+        "session_minutes": 60
+      },
+      "owned_symbols": [
+        "build_release_manifest",
+        "module_agent",
+        "build_portfolio_packet"
+      ],
+      "stage": "development",
+      "production_extension": "modules/10-opening-capstone/04-release-and-handover.ipynb"
     }
   ]
 }

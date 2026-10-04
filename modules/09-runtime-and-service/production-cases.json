@@ -1,0 +1,35 @@
+{
+  "module": "M09",
+  "fictional_business": true,
+  "cases": [
+    {
+      "id": "client_timeout",
+      "title": "deadline歧义",
+      "operation": "contracts",
+      "question": "客户端超时后核对服务端记录，不称零执行。",
+      "target_status": "needs_review",
+      "evidence": [
+        "actual_input",
+        "trusted_scope",
+        "actual_operation",
+        "version",
+        "failure_or_result"
+      ]
+    },
+    {
+      "id": "partial_stream",
+      "title": "流途中停止",
+      "operation": "stream",
+      "question": "保留partial及实际取消，不用晚到片段制造成功。",
+      "target_status": "cancelled",
+      "evidence": [
+        "actual_input",
+        "trusted_scope",
+        "actual_operation",
+        "version",
+        "failure_or_result"
+      ]
+    }
+  ],
+  "scope": "学习目标，不是已运行成绩"
+}

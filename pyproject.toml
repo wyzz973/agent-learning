@@ -2,7 +2,7 @@
 name = "agent-learning"
 version = "0.1.0"
 description = "以 Jupyter 专题任务学习 LangChain、LangGraph 与 Deep Research"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = [
     "langchain>=1.0",
     "langgraph>=1.0",
@@ -11,6 +11,10 @@ dependencies = [
     "pydantic>=2.0",
     "httpx>=0.27",
     "langchain-deepseek>=1.1.0",
+    "langgraph-checkpoint-sqlite>=3.1.1,<4",
+    "fastembed>=0.8,<1",
+    "deepagents>=0.7.13,<0.8",
+    "pyyaml>=6,<7",
 ]
 
 [dependency-groups]
@@ -22,6 +26,7 @@ dev = [
 ]
 notebooks = [
     "ipykernel>=6.29",
+    "ipywidgets>=8.1,<9",
     "jupyterlab>=4.4,<5",
     "langchain-mcp-adapters>=0.1,<1",
     "mcp>=1.20,<2",
@@ -31,7 +36,7 @@ notebooks = [
 
 [tool.ruff]
 line-length = 100
-target-version = "py311"
+target-version = "py312"
 
 [tool.ruff.lint]
 # E,F 基础；I 导入排序；UP 语法现代化；B 常见 bug；ASYNC 异步误用
@@ -43,11 +48,16 @@ select = ["E", "F", "I", "UP", "B", "ASYNC"]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
-testpaths = ["instructor/tests"]
+testpaths = [
+    "instructor/tests",
+    "tests",
+    "modules/05-deep-research/tests",
+    "modules/06-research-system/tests",
+]
 pythonpath = ["."]
 
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.12"
 files = ["instructor"]
 strict = true
 ignore_missing_imports = true

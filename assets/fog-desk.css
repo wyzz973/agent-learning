@@ -1,0 +1,134 @@
+/* 雾岛工作台：颜色表达真实状态；模型正文只作为文本显示。 */
+.fog-root {
+  --fog-paper: #f5f1e6;
+  --fog-ink: #203e42;
+  --fog-gold: #9b7939;
+  --fog-surface: #fffdf7;
+  --fog-muted: #526669;
+  --fog-line: #b6b6a4;
+  --fog-error: #8b302b;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 920px;
+  margin: 20px auto;
+  padding: 24px;
+  border: 1px solid var(--fog-line);
+  border-top: 5px solid var(--fog-ink);
+  border-radius: 4px 4px 14px 14px;
+  color: var(--fog-ink);
+  background: var(--fog-paper);
+  font: 15px/1.65 "Avenir Next", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+}
+.fog-root *, .fog-root *::before, .fog-root *::after { box-sizing: border-box; }
+/* ipywidgets默认左右各2px margin；满宽子控件必须清零，不能靠裁剪隐藏溢出。 */
+.fog-root .jupyter-widgets {
+  margin-left: 0;
+  margin-right: 0;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+/* 行内标签保留可访问名称，输入区允许在剩余宽度内收缩。 */
+.fog-root .widget-inline-hbox > :is(textarea, select, .widget-radio-box) {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+.fog-root h2, .fog-root h3, .fog-root p { margin: 0; color: inherit; }
+.fog-root h2 {
+  margin: 6px 0 8px;
+  font: 600 29px/1.35 "Iowan Old Style", "Songti SC", "Noto Serif CJK SC", serif;
+  letter-spacing: .035em;
+}
+.fog-root h3 { font-size: 17px; line-height: 1.5; }
+.fog-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .16em; }
+.fog-intro { max-width: 70ch; color: var(--fog-muted) !important; }
+.fog-shelf {
+  display: flex; align-items: end; gap: 5px; width: 66px; height: 27px;
+  margin: 0 0 12px; border-bottom: 2px solid var(--fog-gold);
+}
+.fog-shelf i { width: 10px; height: 22px; border: 1px solid var(--fog-ink); background: #dcd6be; }
+.fog-shelf i:nth-child(2) { height: 26px; background: #d7e0d7; }
+.fog-shelf i:nth-child(3) { height: 19px; background: #e6d8b6; }
+.fog-root .widget-html, .fog-root .widget-html-content { width: 100%; overflow-wrap: anywhere; }
+.fog-status { display: flex; align-items: center; gap: 10px; margin: 18px 0 12px; min-height: 30px; }
+.fog-lamp {
+  display: inline-block; flex: 0 0 10px; width: 10px; height: 10px;
+  border: 1px solid var(--fog-ink); border-radius: 50%; background: #c6cabd;
+}
+.fog-status[data-state="running"] .fog-lamp,
+.fog-status[data-state="cancelling"] .fog-lamp { background: var(--fog-gold); animation: fog-working 1.4s ease-in-out infinite; }
+.fog-status[data-state="completed"] .fog-lamp { background: #316951; }
+.fog-status[data-state="error"] .fog-lamp,
+.fog-status[data-state="failed"] .fog-lamp { background: var(--fog-error); }
+.fog-status[data-state="needs_confirmation"] .fog-lamp,
+.fog-status[data-state="unrecognized"] .fog-lamp { background: var(--fog-gold); }
+.fog-status[data-state="cancelled"] .fog-lamp { background: #8f8d7f; }
+.fog-conversation { padding: 6px 0; margin: 0 0 16px; }
+.fog-empty {
+  padding: 24px 18px; border-left: 3px solid var(--fog-gold);
+  background: var(--fog-surface); color: var(--fog-muted);
+}
+.fog-message { margin: 12px 0; padding: 14px 16px; border-left: 3px solid var(--fog-line); background: var(--fog-surface); }
+.fog-message[data-speaker="visitor"] { margin-left: 30px; border-left-color: var(--fog-gold); background: #eee8d9; }
+.fog-message[data-speaker="adeng"] { margin-right: 20px; border-left-color: var(--fog-ink); }
+.fog-speaker { margin-bottom: 5px; font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+.fog-message-text, .fog-pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.fog-message-text { line-height: 1.75; }
+.fog-controls { width: 100%; gap: 10px; align-items: stretch; }
+.fog-actions { display: flex; flex-wrap: wrap; gap: 10px; width: 100%; margin-top: 10px; }
+.fog-root .widget-button {
+  min-height: 42px; height: auto; padding: 9px 18px;
+  border: 1px solid var(--fog-ink); border-radius: 5px;
+  box-shadow: none; text-shadow: none; background: var(--fog-surface);
+  color: var(--fog-ink); font: 600 14px/1.4 "Avenir Next", "PingFang SC", sans-serif;
+}
+.fog-root .fog-primary.widget-button { background: var(--fog-ink); color: #fffdf7; }
+.fog-root .widget-button:hover:enabled { background: #e8e4d5; }
+.fog-root .fog-primary.widget-button:hover:enabled { background: #30575a; }
+.fog-root .widget-button:disabled { opacity: 1; background: #e4e1d8; color: #657270; border-color: #a9b0a8; cursor: not-allowed; }
+.fog-root .widget-textarea textarea, .fog-root .widget-dropdown select {
+  width: 100%; border: 1px solid #80908b; border-radius: 5px; color: var(--fog-ink);
+  background: var(--fog-surface); padding: 10px 12px; font: inherit; box-shadow: none;
+}
+.fog-root .widget-textarea textarea { min-height: 94px; resize: vertical; }
+.fog-root .widget-dropdown { min-height: 44px; width: 100%; }
+.fog-root .widget-dropdown select { min-height: 42px; }
+.fog-root .widget-label { height: auto; color: var(--fog-ink); font-weight: 600; white-space: normal; }
+.fog-root :is(button, textarea, select, input, summary, a):focus-visible {
+  outline: 3px solid var(--fog-ink); outline-offset: 3px;
+}
+.fog-root .widget-radio-box { width: 100%; padding: 8px 0; }
+.fog-root .widget-radio-box label {
+  display: flex; align-items: flex-start; gap: 8px; width: 100%; min-height: 44px;
+  margin: 4px 0; padding: 10px 12px; white-space: normal; line-height: 1.55;
+  border: 1px solid #a6b1a6; border-radius: 5px; background: var(--fog-surface); cursor: pointer;
+}
+.fog-root .widget-radio-box input { flex: 0 0 auto; margin-top: 5px; accent-color: var(--fog-ink); }
+.fog-root details { margin-top: 12px; border-top: 1px solid var(--fog-line); padding: 10px 0 0; }
+.fog-root summary { cursor: pointer; font-weight: 600; min-height: 32px; padding: 3px 0; }
+.fog-root details > div { padding: 8px 0 4px; }
+.fog-evidence-item { margin: 9px 0; padding-left: 12px; border-left: 2px solid var(--fog-gold); }
+.fog-root a { color: #254f56; text-decoration: underline; text-underline-offset: 3px; }
+.fog-root .fog-note { margin-top: 10px; font-size: 13px; color: var(--fog-muted); }
+.fog-root .fog-error { color: var(--fog-error); }
+.fog-pre { max-height: 360px; overflow: auto; padding: 12px; color: var(--fog-ink); background: #ebe9df; border-radius: 4px; font: 12px/1.65 "SFMono-Regular", Consolas, monospace; }
+.fog-quiz-card { margin: 18px 0 10px; padding: 18px; border: 1px solid var(--fog-line); background: #f9f6ee; border-radius: 7px; }
+.fog-feedback { margin-top: 12px; }
+.fog-feedback-line { margin: 8px 0; padding: 8px 10px; border-left: 3px solid #9ea99b; background: var(--fog-surface); }
+.fog-feedback-line[data-reference="true"] { border-left-color: var(--fog-ink); }
+.fog-feedback-tag { font-size: 12px; font-weight: 700; margin-right: 7px; }
+.fog-scene {
+  padding: 16px 18px; margin: 12px 0; border-left: 3px solid var(--fog-gold);
+  background: #eee8d9; line-height: 1.8;
+}
+.fog-scene .fog-eyebrow { margin-bottom: 8px; }
+@keyframes fog-working { 50% { opacity: .4; } }
+@media (prefers-reduced-motion: reduce) { .fog-root *, .fog-root *::before, .fog-root *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+@media (max-width: 560px) {
+  .fog-root { padding: 16px 12px; margin: 12px 0; }
+  .fog-root h2 { font-size: 24px; }
+  .fog-message[data-speaker="visitor"] { margin-left: 12px; }
+  .fog-message[data-speaker="adeng"] { margin-right: 0; }
+  .fog-quiz-card { padding: 12px; }
+  .fog-actions .widget-button { flex: 1 1 130px; }
+}

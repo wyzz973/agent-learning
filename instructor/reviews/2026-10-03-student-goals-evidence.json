@@ -1,0 +1,6833 @@
+{
+  "validation": [
+    {
+      "task": "M01-T01",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M01-T02",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M01-T03",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M02-T01",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M02-T02",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M02-T03",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M02-T04",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M03-T01",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M03-T02",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M03-T03",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M03-T04",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M04-T01",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M04-T02",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M04-T03",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M04-T04",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M04-T05",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M04-T06",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M05-T01",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M05-T02",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M05-T03",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M05-T04",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M05-T05",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M06-T01",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M06-T02",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M06-T03",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M06-T04",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M06-T05",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M07-T01",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M07-T02",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M07-T03",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M07-T04",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M07-T05",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M08-T01",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M08-T02",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M08-T03",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M08-T04",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M09-T01",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M09-T02",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M09-T03",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M09-T04",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M10-T01",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M10-T02",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M10-T03",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    },
+    {
+      "task": "M10-T04",
+      "passed_record": true,
+      "teacher_hash_match": true,
+      "prompt_hash_match": true,
+      "execution_source_match": true,
+      "skipped_learner_match": true,
+      "executed_error_outputs": 0
+    }
+  ],
+  "versions": {
+    "langchain": "1.4.0",
+    "langchain-core": "1.6.2",
+    "langgraph": "1.2.11",
+    "langsmith": "0.12.2",
+    "langchain-deepseek": "1.1.0",
+    "deepagents": "0.7.13",
+    "mcp": "1.30.0",
+    "langchain-mcp-adapters": "0.3.2",
+    "fastembed": "0.8.0",
+    "pydantic": "2.13.5"
+  },
+  "core_sessions": 148,
+  "probes": {
+    "M01_T02_export_missing_required_names": [
+      "structured_model",
+      "STORY_PROMPT"
+    ],
+    "export_accepts_unresolved_globals": true,
+    "reexport_changed_definition_blocked": true,
+    "scope": "临时Notebook与无答案诊断函数，未修改本人课程代码或project"
+  },
+  "generic_hint_tasks": [
+    "M01-T03",
+    "M02-T04",
+    "M03-T04",
+    "M04-T06",
+    "M05-T05",
+    "M06-T05",
+    "M07-T05",
+    "M08-T04",
+    "M09-T01",
+    "M09-T02",
+    "M09-T03",
+    "M09-T04",
+    "M10-T01",
+    "M10-T02",
+    "M10-T03",
+    "M10-T04"
+  ],
+  "duplicated_principle_tasks": [
+    "M01-T03",
+    "M02-T04",
+    "M03-T04",
+    "M04-T06",
+    "M05-T05",
+    "M06-T05",
+    "M07-T05",
+    "M08-T04",
+    "M09-T01",
+    "M09-T02",
+    "M09-T03",
+    "M09-T04",
+    "M10-T01",
+    "M10-T02",
+    "M10-T03",
+    "M10-T04"
+  ],
+  "inventory": [
+    {
+      "id": "M01-T01",
+      "path": "modules/01-langchain-foundations/01-first-reader.ipynb",
+      "cells": 47,
+      "md_chars": 15404,
+      "tags": {
+        "setup": 2,
+        "demo": 9,
+        "exercise": 2,
+        "exercise-test": 5
+      },
+      "outputs": 16,
+      "exercise_outputs": 2
+    },
+    {
+      "id": "M01-T02",
+      "path": "modules/01-langchain-foundations/02-notice-board.ipynb",
+      "cells": 58,
+      "md_chars": 13892,
+      "tags": {
+        "setup": 3,
+        "demo": 13,
+        "exercise": 2,
+        "exercise-test": 7
+      },
+      "outputs": 15,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M01-T03",
+      "path": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "cells": 42,
+      "md_chars": 9245,
+      "tags": {
+        "setup": 3,
+        "demo": 9,
+        "exercise": 2,
+        "exercise-test": 6
+      },
+      "outputs": 8,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M02-T01",
+      "path": "modules/02-tools-and-agents/01-cabinet-tools.ipynb",
+      "cells": 45,
+      "md_chars": 13294,
+      "tags": {
+        "setup": 3,
+        "demo": 7,
+        "exercise": 2,
+        "exercise-test": 7
+      },
+      "outputs": 9,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M02-T02",
+      "path": "modules/02-tools-and-agents/02-tool-dispatch.ipynb",
+      "cells": 46,
+      "md_chars": 12590,
+      "tags": {
+        "setup": 4,
+        "demo": 7,
+        "exercise": 2,
+        "exercise-test": 8
+      },
+      "outputs": 9,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M02-T03",
+      "path": "modules/02-tools-and-agents/03-tool-recovery.ipynb",
+      "cells": 56,
+      "md_chars": 14507,
+      "tags": {
+        "setup": 5,
+        "demo": 6,
+        "exercise": 3,
+        "exercise-test": 10
+      },
+      "outputs": 7,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M02-T04",
+      "path": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "cells": 43,
+      "md_chars": 11028,
+      "tags": {
+        "setup": 3,
+        "demo": 10,
+        "exercise": 2,
+        "exercise-test": 6
+      },
+      "outputs": 9,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M03-T01",
+      "path": "modules/03-langgraph-control/01-reception-routes.ipynb",
+      "cells": 34,
+      "md_chars": 11976,
+      "tags": {
+        "setup": 1,
+        "demo": 5,
+        "exercise": 3,
+        "exercise-test": 3
+      },
+      "outputs": 5,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M03-T02",
+      "path": "modules/03-langgraph-control/02-observation-loop.ipynb",
+      "cells": 35,
+      "md_chars": 8653,
+      "tags": {
+        "setup": 1,
+        "demo": 3,
+        "exercise": 3,
+        "exercise-test": 6
+      },
+      "outputs": 3,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M03-T03",
+      "path": "modules/03-langgraph-control/03-progress-and-cancel.ipynb",
+      "cells": 31,
+      "md_chars": 8357,
+      "tags": {
+        "setup": 1,
+        "demo": 6,
+        "exercise": 1,
+        "exercise-test": 5
+      },
+      "outputs": 6,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M03-T04",
+      "path": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cells": 43,
+      "md_chars": 10736,
+      "tags": {
+        "setup": 3,
+        "demo": 10,
+        "exercise": 2,
+        "exercise-test": 6
+      },
+      "outputs": 9,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M04-T01",
+      "path": "modules/04-memory-and-human-review/01-durable-shift-log.ipynb",
+      "cells": 35,
+      "md_chars": 10276,
+      "tags": {
+        "setup": 1,
+        "demo": 7,
+        "exercise": 1,
+        "exercise-test": 4
+      },
+      "outputs": 5,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M04-T02",
+      "path": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cells": 36,
+      "md_chars": 8758,
+      "tags": {
+        "setup": 1,
+        "demo": 5,
+        "exercise": 2,
+        "exercise-test": 7
+      },
+      "outputs": 4,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M04-T03",
+      "path": "modules/04-memory-and-human-review/03-reader-memory.ipynb",
+      "cells": 32,
+      "md_chars": 7162,
+      "tags": {
+        "setup": 1,
+        "demo": 5,
+        "exercise": 2,
+        "exercise-test": 4
+      },
+      "outputs": 5,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M04-T04",
+      "path": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "cells": 35,
+      "md_chars": 9067,
+      "tags": {
+        "setup": 1,
+        "demo": 7,
+        "exercise": 1,
+        "exercise-test": 5
+      },
+      "outputs": 7,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M04-T05",
+      "path": "modules/04-memory-and-human-review/05-experience-notes.ipynb",
+      "cells": 36,
+      "md_chars": 8892,
+      "tags": {
+        "setup": 1,
+        "demo": 7,
+        "exercise": 2,
+        "exercise-test": 4
+      },
+      "outputs": 6,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M04-T06",
+      "path": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cells": 48,
+      "md_chars": 9429,
+      "tags": {
+        "setup": 3,
+        "demo": 9,
+        "exercise": 2,
+        "exercise-test": 9
+      },
+      "outputs": 8,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M05-T01",
+      "path": "modules/05-deep-research/01-scope-and-evidence.ipynb",
+      "cells": 31,
+      "md_chars": 10282,
+      "tags": {
+        "setup": 2,
+        "demo": 3,
+        "exercise": 2,
+        "exercise-test": 6
+      },
+      "outputs": 4,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M05-T02",
+      "path": "modules/05-deep-research/02-search-and-sources.ipynb",
+      "cells": 30,
+      "md_chars": 6719,
+      "tags": {
+        "setup": 4,
+        "demo": 2,
+        "exercise": 2,
+        "exercise-test": 5
+      },
+      "outputs": 6,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M05-T03",
+      "path": "modules/05-deep-research/03-retrieval-and-evidence.ipynb",
+      "cells": 31,
+      "md_chars": 7657,
+      "tags": {
+        "setup": 2,
+        "demo": 4,
+        "exercise": 2,
+        "exercise-test": 7
+      },
+      "outputs": 6,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M05-T04",
+      "path": "modules/05-deep-research/04-gap-driven-research.ipynb",
+      "cells": 33,
+      "md_chars": 7437,
+      "tags": {
+        "setup": 6,
+        "demo": 2,
+        "exercise": 2,
+        "exercise-test": 7
+      },
+      "outputs": 8,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M05-T05",
+      "path": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "cells": 46,
+      "md_chars": 10194,
+      "tags": {
+        "setup": 3,
+        "demo": 12,
+        "exercise": 2,
+        "exercise-test": 6
+      },
+      "outputs": 10,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M06-T01",
+      "path": "modules/06-research-system/01-plan-research-write.ipynb",
+      "cells": 31,
+      "md_chars": 10953,
+      "tags": {
+        "setup": 1,
+        "demo": 5,
+        "exercise": 2,
+        "exercise-test": 6
+      },
+      "outputs": 4,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M06-T02",
+      "path": "modules/06-research-system/02-evaluation-and-ablation.ipynb",
+      "cells": 26,
+      "md_chars": 7937,
+      "tags": {
+        "setup": 2,
+        "demo": 3,
+        "exercise": 1,
+        "exercise-test": 6
+      },
+      "outputs": 5,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M06-T03",
+      "path": "modules/06-research-system/03-trace-and-diagnosis.ipynb",
+      "cells": 23,
+      "md_chars": 7077,
+      "tags": {
+        "setup": 1,
+        "demo": 3,
+        "exercise": 1,
+        "exercise-test": 5
+      },
+      "outputs": 4,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M06-T04",
+      "path": "modules/06-research-system/04-local-research-service.ipynb",
+      "cells": 32,
+      "md_chars": 9640,
+      "tags": {
+        "setup": 4,
+        "demo": 3,
+        "exercise": 1,
+        "exercise-test": 6
+      },
+      "outputs": 5,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M06-T05",
+      "path": "modules/06-research-system/05-semantic-evaluation.ipynb",
+      "cells": 40,
+      "md_chars": 9172,
+      "tags": {
+        "setup": 3,
+        "demo": 8,
+        "exercise": 2,
+        "exercise-test": 6
+      },
+      "outputs": 7,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M07-T01",
+      "path": "modules/07-protocols-and-skills/01-mcp-tools.ipynb",
+      "cells": 36,
+      "md_chars": 10105,
+      "tags": {
+        "setup": 7,
+        "demo": 4,
+        "exercise": 2,
+        "exercise-test": 4
+      },
+      "outputs": 7,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M07-T02",
+      "path": "modules/07-protocols-and-skills/02-skills-and-context.ipynb",
+      "cells": 30,
+      "md_chars": 7282,
+      "tags": {
+        "setup": 6,
+        "demo": 4,
+        "exercise": 2,
+        "exercise-test": 3
+      },
+      "outputs": 7,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M07-T03",
+      "path": "modules/07-protocols-and-skills/03-tool-discovery.ipynb",
+      "cells": 30,
+      "md_chars": 7828,
+      "tags": {
+        "setup": 6,
+        "demo": 4,
+        "exercise": 2,
+        "exercise-test": 3
+      },
+      "outputs": 6,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M07-T04",
+      "path": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cells": 29,
+      "md_chars": 7243,
+      "tags": {
+        "setup": 8,
+        "demo": 3,
+        "exercise": 2,
+        "exercise-test": 2
+      },
+      "outputs": 6,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M07-T05",
+      "path": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cells": 44,
+      "md_chars": 10375,
+      "tags": {
+        "setup": 3,
+        "demo": 11,
+        "exercise": 2,
+        "exercise-test": 6
+      },
+      "outputs": 11,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M08-T01",
+      "path": "modules/08-coding-agent/01-read-edit-test.ipynb",
+      "cells": 38,
+      "md_chars": 11755,
+      "tags": {
+        "setup": 6,
+        "demo": 5,
+        "exercise": 2,
+        "exercise-test": 6
+      },
+      "outputs": 7,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M08-T02",
+      "path": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cells": 31,
+      "md_chars": 6755,
+      "tags": {
+        "setup": 5,
+        "demo": 4,
+        "exercise": 3,
+        "exercise-test": 4
+      },
+      "outputs": 6,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M08-T03",
+      "path": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "cells": 33,
+      "md_chars": 8046,
+      "tags": {
+        "setup": 5,
+        "demo": 4,
+        "exercise": 2,
+        "exercise-test": 5
+      },
+      "outputs": 5,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M08-T04",
+      "path": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cells": 42,
+      "md_chars": 11010,
+      "tags": {
+        "setup": 3,
+        "demo": 9,
+        "exercise": 2,
+        "exercise-test": 6
+      },
+      "outputs": 8,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M09-T01",
+      "path": "modules/09-runtime-and-service/01-streaming-service.ipynb",
+      "cells": 29,
+      "md_chars": 8054,
+      "tags": {
+        "setup": 3,
+        "demo": 3,
+        "exercise": 1,
+        "exercise-test": 4
+      },
+      "outputs": 3,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M09-T02",
+      "path": "modules/09-runtime-and-service/02-runtime-policy.ipynb",
+      "cells": 31,
+      "md_chars": 5891,
+      "tags": {
+        "setup": 3,
+        "demo": 5,
+        "exercise": 1,
+        "exercise-test": 5
+      },
+      "outputs": 5,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M09-T03",
+      "path": "modules/09-runtime-and-service/03-interface-contracts.ipynb",
+      "cells": 30,
+      "md_chars": 6440,
+      "tags": {
+        "setup": 3,
+        "demo": 5,
+        "exercise": 1,
+        "exercise-test": 4
+      },
+      "outputs": 5,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M09-T04",
+      "path": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cells": 44,
+      "md_chars": 10176,
+      "tags": {
+        "setup": 3,
+        "demo": 11,
+        "exercise": 2,
+        "exercise-test": 6
+      },
+      "outputs": 9,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M10-T01",
+      "path": "modules/10-opening-capstone/01-library-orchestrator.ipynb",
+      "cells": 31,
+      "md_chars": 9580,
+      "tags": {
+        "setup": 3,
+        "demo": 4,
+        "exercise": 1,
+        "exercise-test": 4
+      },
+      "outputs": 4,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M10-T02",
+      "path": "modules/10-opening-capstone/02-opening-acceptance.ipynb",
+      "cells": 29,
+      "md_chars": 5420,
+      "tags": {
+        "setup": 3,
+        "demo": 4,
+        "exercise": 1,
+        "exercise-test": 4
+      },
+      "outputs": 4,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M10-T03",
+      "path": "modules/10-opening-capstone/03-independent-feature.ipynb",
+      "cells": 29,
+      "md_chars": 5801,
+      "tags": {
+        "setup": 3,
+        "demo": 4,
+        "exercise": 1,
+        "exercise-test": 4
+      },
+      "outputs": 4,
+      "exercise_outputs": 0
+    },
+    {
+      "id": "M10-T04",
+      "path": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cells": 42,
+      "md_chars": 9491,
+      "tags": {
+        "setup": 3,
+        "demo": 9,
+        "exercise": 2,
+        "exercise-test": 6
+      },
+      "outputs": 9,
+      "exercise_outputs": 0
+    }
+  ],
+  "review_date": "2026-10-03",
+  "timezone": "Asia/Shanghai",
+  "repository_root": "/Users/sd3/Desktop/project/agentLearning",
+  "git_base_commit": "19348d8a2ac306d817348b6f8f130f9d50d50eaa",
+  "scope": "审查当前工作区；教师执行记录重新比对，未重跑模型或学生路径",
+  "checks": {
+    "instructor_check": {
+      "command": "uv run --locked python -m instructor.check",
+      "exit_code": 0,
+      "result": "10 modules / 44 ready tasks"
+    },
+    "pytest": {
+      "command": "uv run --locked pytest -q",
+      "exit_code": 0,
+      "passed": 84,
+      "duration_seconds": 2.39
+    },
+    "mypy": {
+      "command": "uv run --locked mypy",
+      "exit_code": 0,
+      "source_files": 36
+    },
+    "ruff_python_only": {
+      "command": "uv run --locked ruff check instructor tests modules --exclude '*.ipynb'",
+      "exit_code": 0
+    },
+    "ruff_with_notebooks": {
+      "command": "uv run --locked ruff check instructor tests modules",
+      "exit_code": 1,
+      "count": 533,
+      "by_code": {
+        "I001": 234,
+        "E501": 258,
+        "UP035": 24,
+        "B905": 6,
+        "F811": 7,
+        "ASYNC240": 1,
+        "B007": 2,
+        "UP017": 1
+      }
+    }
+  },
+  "learner_state": {
+    "active_task": "M01-T02",
+    "active_cell": "opening-scene",
+    "full_student_tasks_completed": 0,
+    "student_practice_passed": 1,
+    "student_python_exports": 0,
+    "learner_enterprise_cases_executed": 0
+  },
+  "material_statistics": {
+    "modules": 10,
+    "tasks": 44,
+    "ready_tasks": 44,
+    "notebook_cells": 1603,
+    "markdown_characters": 410747,
+    "quiz_questions": 108,
+    "teacher_executed_cells_recorded": 401,
+    "student_cells_skipped_recorded": 318,
+    "estimated_core_sessions": 148,
+    "estimated_extra_production_sessions": [
+      30,
+      60
+    ],
+    "estimated_total_hours": [
+      178,
+      208
+    ]
+  },
+  "ruff_diagnostics": [
+    {
+      "file": "modules/01-langchain-foundations/01-first-reader.ipynb",
+      "cell_one_based": 44,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/01-langchain-foundations/01-first-reader.ipynb",
+      "cell_one_based": 46,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/01-langchain-foundations/01-first-reader.ipynb",
+      "cell_one_based": 46,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/01-langchain-foundations/02-notice-board.ipynb",
+      "cell_one_based": 10,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/01-langchain-foundations/02-notice-board.ipynb",
+      "cell_one_based": 17,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/01-langchain-foundations/02-notice-board.ipynb",
+      "cell_one_based": 53,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/01-langchain-foundations/02-notice-board.ipynb",
+      "cell_one_based": 55,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/01-langchain-foundations/02-notice-board.ipynb",
+      "cell_one_based": 55,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (453 > 100)"
+    },
+    {
+      "file": "modules/01-langchain-foundations/02-notice-board.ipynb",
+      "cell_one_based": 55,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 4
+      },
+      "message": "Line too long (208 > 100)"
+    },
+    {
+      "file": "modules/01-langchain-foundations/02-notice-board.ipynb",
+      "cell_one_based": 57,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/01-langchain-foundations/02-notice-board.ipynb",
+      "cell_one_based": 57,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "cell_one_based": 5,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 6
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 78,
+        "row": 1
+      },
+      "message": "Line too long (145 > 100)"
+    },
+    {
+      "file": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 96,
+        "row": 3
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "cell_one_based": 17,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "cell_one_based": 21,
+      "code": "E501",
+      "location": {
+        "column": 87,
+        "row": 13
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "cell_one_based": 32,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "cell_one_based": 32,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (306 > 100)"
+    },
+    {
+      "file": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "cell_one_based": 32,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (127 > 100)"
+    },
+    {
+      "file": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "cell_one_based": 36,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "cell_one_based": 37,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "cell_one_based": 38,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "cell_one_based": 40,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "cell_one_based": 40,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/01-cabinet-tools.ipynb",
+      "cell_one_based": 8,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 20
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/01-cabinet-tools.ipynb",
+      "cell_one_based": 20,
+      "code": "E501",
+      "location": {
+        "column": 74,
+        "row": 4
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/01-cabinet-tools.ipynb",
+      "cell_one_based": 43,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/01-cabinet-tools.ipynb",
+      "cell_one_based": 43,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/02-tool-dispatch.ipynb",
+      "cell_one_based": 5,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/02-tool-dispatch.ipynb",
+      "cell_one_based": 27,
+      "code": "B905",
+      "location": {
+        "column": 25,
+        "row": 9
+      },
+      "message": "`zip()` without an explicit `strict=` parameter"
+    },
+    {
+      "file": "modules/02-tools-and-agents/02-tool-dispatch.ipynb",
+      "cell_one_based": 36,
+      "code": "B905",
+      "location": {
+        "column": 25,
+        "row": 2
+      },
+      "message": "`zip()` without an explicit `strict=` parameter"
+    },
+    {
+      "file": "modules/02-tools-and-agents/02-tool-dispatch.ipynb",
+      "cell_one_based": 36,
+      "code": "E501",
+      "location": {
+        "column": 86,
+        "row": 28
+      },
+      "message": "Line too long (101 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/02-tool-dispatch.ipynb",
+      "cell_one_based": 38,
+      "code": "B905",
+      "location": {
+        "column": 25,
+        "row": 14
+      },
+      "message": "`zip()` without an explicit `strict=` parameter"
+    },
+    {
+      "file": "modules/02-tools-and-agents/02-tool-dispatch.ipynb",
+      "cell_one_based": 44,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/02-tool-dispatch.ipynb",
+      "cell_one_based": 44,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/03-tool-recovery.ipynb",
+      "cell_one_based": 11,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 23
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/03-tool-recovery.ipynb",
+      "cell_one_based": 17,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 12
+      },
+      "message": "Line too long (113 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/03-tool-recovery.ipynb",
+      "cell_one_based": 23,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 8
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/03-tool-recovery.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 4
+      },
+      "message": "Line too long (108 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/03-tool-recovery.ipynb",
+      "cell_one_based": 29,
+      "code": "E501",
+      "location": {
+        "column": 85,
+        "row": 9
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/03-tool-recovery.ipynb",
+      "cell_one_based": 29,
+      "code": "E501",
+      "location": {
+        "column": 86,
+        "row": 19
+      },
+      "message": "Line too long (108 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/03-tool-recovery.ipynb",
+      "cell_one_based": 34,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 30
+      },
+      "message": "Line too long (101 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/03-tool-recovery.ipynb",
+      "cell_one_based": 43,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 4
+      },
+      "message": "Line too long (113 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/03-tool-recovery.ipynb",
+      "cell_one_based": 46,
+      "code": "E501",
+      "location": {
+        "column": 59,
+        "row": 3
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/03-tool-recovery.ipynb",
+      "cell_one_based": 50,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/03-tool-recovery.ipynb",
+      "cell_one_based": 52,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/03-tool-recovery.ipynb",
+      "cell_one_based": 52,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (508 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/03-tool-recovery.ipynb",
+      "cell_one_based": 52,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 4
+      },
+      "message": "Line too long (159 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/03-tool-recovery.ipynb",
+      "cell_one_based": 54,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/03-tool-recovery.ipynb",
+      "cell_one_based": 54,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "cell_one_based": 5,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 6
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "cell_one_based": 14,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 87,
+        "row": 11
+      },
+      "message": "Line too long (115 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "cell_one_based": 16,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "cell_one_based": 16,
+      "code": "E501",
+      "location": {
+        "column": 89,
+        "row": 13
+      },
+      "message": "Line too long (115 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "cell_one_based": 18,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "cell_one_based": 22,
+      "code": "E501",
+      "location": {
+        "column": 87,
+        "row": 13
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "cell_one_based": 33,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "cell_one_based": 33,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (197 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "cell_one_based": 33,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (113 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "cell_one_based": 37,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "cell_one_based": 38,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "cell_one_based": 39,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "cell_one_based": 41,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "cell_one_based": 41,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/01-reception-routes.ipynb",
+      "cell_one_based": 10,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/01-reception-routes.ipynb",
+      "cell_one_based": 12,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/01-reception-routes.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 16
+      },
+      "message": "Line too long (113 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/01-reception-routes.ipynb",
+      "cell_one_based": 26,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 9
+      },
+      "message": "Line too long (113 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/01-reception-routes.ipynb",
+      "cell_one_based": 26,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 17
+      },
+      "message": "Line too long (114 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/01-reception-routes.ipynb",
+      "cell_one_based": 30,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/01-reception-routes.ipynb",
+      "cell_one_based": 30,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (868 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/01-reception-routes.ipynb",
+      "cell_one_based": 30,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (261 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/01-reception-routes.ipynb",
+      "cell_one_based": 33,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/01-reception-routes.ipynb",
+      "cell_one_based": 33,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/02-observation-loop.ipynb",
+      "cell_one_based": 7,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/02-observation-loop.ipynb",
+      "cell_one_based": 9,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/02-observation-loop.ipynb",
+      "cell_one_based": 14,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/02-observation-loop.ipynb",
+      "cell_one_based": 19,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 3
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/02-observation-loop.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 96,
+        "row": 5
+      },
+      "message": "Line too long (112 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/02-observation-loop.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 29
+      },
+      "message": "Line too long (120 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/02-observation-loop.ipynb",
+      "cell_one_based": 31,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/02-observation-loop.ipynb",
+      "cell_one_based": 31,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (1020 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/02-observation-loop.ipynb",
+      "cell_one_based": 31,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 4
+      },
+      "message": "Line too long (197 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/02-observation-loop.ipynb",
+      "cell_one_based": 31,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 7
+      },
+      "message": "Line too long (261 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/02-observation-loop.ipynb",
+      "cell_one_based": 34,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/02-observation-loop.ipynb",
+      "cell_one_based": 34,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/03-progress-and-cancel.ipynb",
+      "cell_one_based": 6,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/03-progress-and-cancel.ipynb",
+      "cell_one_based": 14,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/03-progress-and-cancel.ipynb",
+      "cell_one_based": 15,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 16
+      },
+      "message": "Line too long (116 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/03-progress-and-cancel.ipynb",
+      "cell_one_based": 21,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 22
+      },
+      "message": "Line too long (117 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/03-progress-and-cancel.ipynb",
+      "cell_one_based": 24,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/03-progress-and-cancel.ipynb",
+      "cell_one_based": 27,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/03-progress-and-cancel.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (152 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/03-progress-and-cancel.ipynb",
+      "cell_one_based": 30,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/03-progress-and-cancel.ipynb",
+      "cell_one_based": 30,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 5,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 6
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 11,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 78,
+        "row": 1
+      },
+      "message": "Line too long (145 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 96,
+        "row": 3
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 18,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 20,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 20,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 21,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 22,
+      "code": "E501",
+      "location": {
+        "column": 87,
+        "row": 13
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 33,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 33,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (197 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 33,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (112 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 37,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 38,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 39,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 41,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "cell_one_based": 41,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/01-durable-shift-log.ipynb",
+      "cell_one_based": 8,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/01-durable-shift-log.ipynb",
+      "cell_one_based": 17,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 12
+      },
+      "message": "Line too long (110 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/01-durable-shift-log.ipynb",
+      "cell_one_based": 17,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 15
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/01-durable-shift-log.ipynb",
+      "cell_one_based": 25,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/01-durable-shift-log.ipynb",
+      "cell_one_based": 25,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (173 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/01-durable-shift-log.ipynb",
+      "cell_one_based": 25,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (180 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/01-durable-shift-log.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 10
+      },
+      "message": "Line too long (101 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/01-durable-shift-log.ipynb",
+      "cell_one_based": 28,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 9
+      },
+      "message": "Line too long (108 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/01-durable-shift-log.ipynb",
+      "cell_one_based": 28,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 20
+      },
+      "message": "Line too long (106 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/01-durable-shift-log.ipynb",
+      "cell_one_based": 33,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/01-durable-shift-log.ipynb",
+      "cell_one_based": 33,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cell_one_based": 6,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cell_one_based": 8,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cell_one_based": 12,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cell_one_based": 12,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 9
+      },
+      "message": "Line too long (106 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cell_one_based": 14,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cell_one_based": 14,
+      "code": "F811",
+      "location": {
+        "column": 29,
+        "row": 4
+      },
+      "message": "Redefinition of unused `interrupt` from cell 8, line 3: `interrupt` redefined here"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 21
+      },
+      "message": "Line too long (118 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cell_one_based": 18,
+      "code": "E501",
+      "location": {
+        "column": 87,
+        "row": 7
+      },
+      "message": "Line too long (104 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cell_one_based": 18,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 18
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cell_one_based": 20,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cell_one_based": 20,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (2706 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cell_one_based": 20,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (171 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cell_one_based": 22,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 28
+      },
+      "message": "Line too long (113 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 15
+      },
+      "message": "Line too long (115 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cell_one_based": 29,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 14
+      },
+      "message": "Line too long (124 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cell_one_based": 34,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/02-review-and-publish.ipynb",
+      "cell_one_based": 34,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/03-reader-memory.ipynb",
+      "cell_one_based": 6,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/03-reader-memory.ipynb",
+      "cell_one_based": 9,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/03-reader-memory.ipynb",
+      "cell_one_based": 9,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (107 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/03-reader-memory.ipynb",
+      "cell_one_based": 9,
+      "code": "E501",
+      "location": {
+        "column": 97,
+        "row": 6
+      },
+      "message": "Line too long (119 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/03-reader-memory.ipynb",
+      "cell_one_based": 9,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 12
+      },
+      "message": "Line too long (110 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/03-reader-memory.ipynb",
+      "cell_one_based": 11,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 4
+      },
+      "message": "Line too long (104 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/03-reader-memory.ipynb",
+      "cell_one_based": 13,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 11
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/03-reader-memory.ipynb",
+      "cell_one_based": 15,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/03-reader-memory.ipynb",
+      "cell_one_based": 20,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 23
+      },
+      "message": "Line too long (115 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/03-reader-memory.ipynb",
+      "cell_one_based": 22,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/03-reader-memory.ipynb",
+      "cell_one_based": 22,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (700 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/03-reader-memory.ipynb",
+      "cell_one_based": 22,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (227 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/03-reader-memory.ipynb",
+      "cell_one_based": 26,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 13
+      },
+      "message": "Line too long (112 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/03-reader-memory.ipynb",
+      "cell_one_based": 30,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/03-reader-memory.ipynb",
+      "cell_one_based": 30,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "cell_one_based": 6,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "cell_one_based": 10,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "cell_one_based": 13,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "cell_one_based": 13,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 18
+      },
+      "message": "Line too long (106 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "cell_one_based": 19,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "cell_one_based": 21,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "cell_one_based": 21,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 7
+      },
+      "message": "Line too long (104 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "cell_one_based": 21,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 17
+      },
+      "message": "Line too long (112 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "cell_one_based": 25,
+      "code": "E501",
+      "location": {
+        "column": 86,
+        "row": 4
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "cell_one_based": 25,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 12
+      },
+      "message": "Line too long (119 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "cell_one_based": 25,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 14
+      },
+      "message": "Line too long (114 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "cell_one_based": 30,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "cell_one_based": 30,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (846 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "cell_one_based": 30,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (177 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "cell_one_based": 33,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/04-context-folder.ipynb",
+      "cell_one_based": 33,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/05-experience-notes.ipynb",
+      "cell_one_based": 6,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/05-experience-notes.ipynb",
+      "cell_one_based": 9,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 26
+      },
+      "message": "Line too long (114 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/05-experience-notes.ipynb",
+      "cell_one_based": 21,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 7
+      },
+      "message": "Line too long (113 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/05-experience-notes.ipynb",
+      "cell_one_based": 21,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 18
+      },
+      "message": "Line too long (115 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/05-experience-notes.ipynb",
+      "cell_one_based": 23,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/05-experience-notes.ipynb",
+      "cell_one_based": 26,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 13
+      },
+      "message": "Line too long (121 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/05-experience-notes.ipynb",
+      "cell_one_based": 28,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (118 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/05-experience-notes.ipynb",
+      "cell_one_based": 31,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/05-experience-notes.ipynb",
+      "cell_one_based": 31,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (218 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/05-experience-notes.ipynb",
+      "cell_one_based": 34,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/05-experience-notes.ipynb",
+      "cell_one_based": 34,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cell_one_based": 5,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 6
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cell_one_based": 15,
+      "code": "E501",
+      "location": {
+        "column": 78,
+        "row": 1
+      },
+      "message": "Line too long (145 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cell_one_based": 15,
+      "code": "E501",
+      "location": {
+        "column": 96,
+        "row": 3
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cell_one_based": 18,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cell_one_based": 22,
+      "code": "E501",
+      "location": {
+        "column": 87,
+        "row": 13
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cell_one_based": 36,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cell_one_based": 37,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cell_one_based": 37,
+      "code": "F811",
+      "location": {
+        "column": 8,
+        "row": 1
+      },
+      "message": "Redefinition of unused `time` from cell 18, line 3: `time` redefined here"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cell_one_based": 38,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cell_one_based": 38,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (197 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cell_one_based": 38,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (119 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cell_one_based": 42,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cell_one_based": 43,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cell_one_based": 44,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cell_one_based": 46,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "cell_one_based": 46,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/01-scope-and-evidence.ipynb",
+      "cell_one_based": 7,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 8
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/05-deep-research/01-scope-and-evidence.ipynb",
+      "cell_one_based": 9,
+      "code": "E501",
+      "location": {
+        "column": 90,
+        "row": 10
+      },
+      "message": "Line too long (101 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/01-scope-and-evidence.ipynb",
+      "cell_one_based": 9,
+      "code": "E501",
+      "location": {
+        "column": 87,
+        "row": 11
+      },
+      "message": "Line too long (112 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/01-scope-and-evidence.ipynb",
+      "cell_one_based": 22,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/01-scope-and-evidence.ipynb",
+      "cell_one_based": 22,
+      "code": "F811",
+      "location": {
+        "column": 8,
+        "row": 1
+      },
+      "message": "Redefinition of unused `time` from cell 7, line 6: `time` redefined here"
+    },
+    {
+      "file": "modules/05-deep-research/01-scope-and-evidence.ipynb",
+      "cell_one_based": 22,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 5
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/01-scope-and-evidence.ipynb",
+      "cell_one_based": 23,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/01-scope-and-evidence.ipynb",
+      "cell_one_based": 26,
+      "code": "E501",
+      "location": {
+        "column": 91,
+        "row": 2
+      },
+      "message": "Line too long (112 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/01-scope-and-evidence.ipynb",
+      "cell_one_based": 29,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/01-scope-and-evidence.ipynb",
+      "cell_one_based": 29,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/02-search-and-sources.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 8
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/05-deep-research/02-search-and-sources.ipynb",
+      "cell_one_based": 25,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 4
+      },
+      "message": "Line too long (132 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/02-search-and-sources.ipynb",
+      "cell_one_based": 28,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/02-search-and-sources.ipynb",
+      "cell_one_based": 28,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/03-retrieval-and-evidence.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 8
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/05-deep-research/03-retrieval-and-evidence.ipynb",
+      "cell_one_based": 12,
+      "code": "B905",
+      "location": {
+        "column": 23,
+        "row": 2
+      },
+      "message": "`zip()` without an explicit `strict=` parameter"
+    },
+    {
+      "file": "modules/05-deep-research/03-retrieval-and-evidence.ipynb",
+      "cell_one_based": 12,
+      "code": "B905",
+      "location": {
+        "column": 39,
+        "row": 4
+      },
+      "message": "`zip()` without an explicit `strict=` parameter"
+    },
+    {
+      "file": "modules/05-deep-research/03-retrieval-and-evidence.ipynb",
+      "cell_one_based": 20,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 3
+      },
+      "message": "Line too long (102 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/03-retrieval-and-evidence.ipynb",
+      "cell_one_based": 26,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 4
+      },
+      "message": "Line too long (174 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/03-retrieval-and-evidence.ipynb",
+      "cell_one_based": 29,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/03-retrieval-and-evidence.ipynb",
+      "cell_one_based": 29,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/04-gap-driven-research.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 8
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/05-deep-research/04-gap-driven-research.ipynb",
+      "cell_one_based": 20,
+      "code": "E501",
+      "location": {
+        "column": 97,
+        "row": 1
+      },
+      "message": "Line too long (117 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/04-gap-driven-research.ipynb",
+      "cell_one_based": 20,
+      "code": "E501",
+      "location": {
+        "column": 89,
+        "row": 8
+      },
+      "message": "Line too long (111 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/04-gap-driven-research.ipynb",
+      "cell_one_based": 22,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 5
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/04-gap-driven-research.ipynb",
+      "cell_one_based": 23,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (106 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/04-gap-driven-research.ipynb",
+      "cell_one_based": 23,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 7
+      },
+      "message": "Line too long (110 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/04-gap-driven-research.ipynb",
+      "cell_one_based": 28,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 4
+      },
+      "message": "Line too long (176 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/04-gap-driven-research.ipynb",
+      "cell_one_based": 28,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (138 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/04-gap-driven-research.ipynb",
+      "cell_one_based": 31,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/04-gap-driven-research.ipynb",
+      "cell_one_based": 31,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "cell_one_based": 5,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 6
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "cell_one_based": 15,
+      "code": "E501",
+      "location": {
+        "column": 78,
+        "row": 1
+      },
+      "message": "Line too long (145 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "cell_one_based": 15,
+      "code": "E501",
+      "location": {
+        "column": 96,
+        "row": 3
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "cell_one_based": 17,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "cell_one_based": 21,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "cell_one_based": 23,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "cell_one_based": 25,
+      "code": "E501",
+      "location": {
+        "column": 87,
+        "row": 13
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "cell_one_based": 36,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "cell_one_based": 36,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (197 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "cell_one_based": 36,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (112 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "cell_one_based": 40,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "cell_one_based": 41,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "cell_one_based": 42,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "cell_one_based": 44,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "cell_one_based": 44,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/06-research-system/01-plan-research-write.ipynb",
+      "cell_one_based": 7,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 8
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/06-research-system/01-plan-research-write.ipynb",
+      "cell_one_based": 12,
+      "code": "E501",
+      "location": {
+        "column": 73,
+        "row": 12
+      },
+      "message": "Line too long (102 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/01-plan-research-write.ipynb",
+      "cell_one_based": 12,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 21
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/01-plan-research-write.ipynb",
+      "cell_one_based": 13,
+      "code": "E501",
+      "location": {
+        "column": 67,
+        "row": 1
+      },
+      "message": "Line too long (108 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/01-plan-research-write.ipynb",
+      "cell_one_based": 13,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (108 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/01-plan-research-write.ipynb",
+      "cell_one_based": 13,
+      "code": "E501",
+      "location": {
+        "column": 92,
+        "row": 8
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/01-plan-research-write.ipynb",
+      "cell_one_based": 23,
+      "code": "B905",
+      "location": {
+        "column": 25,
+        "row": 6
+      },
+      "message": "`zip()` without an explicit `strict=` parameter"
+    },
+    {
+      "file": "modules/06-research-system/01-plan-research-write.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 4
+      },
+      "message": "Line too long (176 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/01-plan-research-write.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (118 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/01-plan-research-write.ipynb",
+      "cell_one_based": 30,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/06-research-system/01-plan-research-write.ipynb",
+      "cell_one_based": 30,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/06-research-system/02-evaluation-and-ablation.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 8
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/06-research-system/02-evaluation-and-ablation.ipynb",
+      "cell_one_based": 7,
+      "code": "E501",
+      "location": {
+        "column": 98,
+        "row": 9
+      },
+      "message": "Line too long (121 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/02-evaluation-and-ablation.ipynb",
+      "cell_one_based": 12,
+      "code": "E501",
+      "location": {
+        "column": 76,
+        "row": 5
+      },
+      "message": "Line too long (104 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/02-evaluation-and-ablation.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 4
+      },
+      "message": "Line too long (130 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/02-evaluation-and-ablation.ipynb",
+      "cell_one_based": 19,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 20
+      },
+      "message": "Line too long (119 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/02-evaluation-and-ablation.ipynb",
+      "cell_one_based": 20,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (179 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/02-evaluation-and-ablation.ipynb",
+      "cell_one_based": 22,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (136 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/02-evaluation-and-ablation.ipynb",
+      "cell_one_based": 25,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/06-research-system/02-evaluation-and-ablation.ipynb",
+      "cell_one_based": 25,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/06-research-system/03-trace-and-diagnosis.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 8
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/06-research-system/03-trace-and-diagnosis.ipynb",
+      "cell_one_based": 7,
+      "code": "E501",
+      "location": {
+        "column": 96,
+        "row": 10
+      },
+      "message": "Line too long (112 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/03-trace-and-diagnosis.ipynb",
+      "cell_one_based": 7,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 16
+      },
+      "message": "Line too long (107 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/03-trace-and-diagnosis.ipynb",
+      "cell_one_based": 15,
+      "code": "E501",
+      "location": {
+        "column": 94,
+        "row": 6
+      },
+      "message": "Line too long (132 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/03-trace-and-diagnosis.ipynb",
+      "cell_one_based": 15,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 7
+      },
+      "message": "Line too long (144 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/03-trace-and-diagnosis.ipynb",
+      "cell_one_based": 19,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 4
+      },
+      "message": "Line too long (134 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/03-trace-and-diagnosis.ipynb",
+      "cell_one_based": 22,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/06-research-system/03-trace-and-diagnosis.ipynb",
+      "cell_one_based": 22,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/06-research-system/04-local-research-service.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 8
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/06-research-system/04-local-research-service.ipynb",
+      "cell_one_based": 9,
+      "code": "ASYNC240",
+      "location": {
+        "column": 5,
+        "row": 11
+      },
+      "message": "Async functions should not perform blocking pathlib.Path operations"
+    },
+    {
+      "file": "modules/06-research-system/04-local-research-service.ipynb",
+      "cell_one_based": 9,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 14
+      },
+      "message": "Line too long (102 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/04-local-research-service.ipynb",
+      "cell_one_based": 9,
+      "code": "B007",
+      "location": {
+        "column": 9,
+        "row": 19
+      },
+      "message": "Loop control variable `attempt` not used within loop body"
+    },
+    {
+      "file": "modules/06-research-system/04-local-research-service.ipynb",
+      "cell_one_based": 10,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 38
+      },
+      "message": "Line too long (102 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/04-local-research-service.ipynb",
+      "cell_one_based": 12,
+      "code": "E501",
+      "location": {
+        "column": 92,
+        "row": 16
+      },
+      "message": "Line too long (101 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/04-local-research-service.ipynb",
+      "cell_one_based": 21,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 4
+      },
+      "message": "Line too long (144 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/04-local-research-service.ipynb",
+      "cell_one_based": 21,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (128 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/04-local-research-service.ipynb",
+      "cell_one_based": 24,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 20
+      },
+      "message": "Line too long (101 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/04-local-research-service.ipynb",
+      "cell_one_based": 31,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/06-research-system/04-local-research-service.ipynb",
+      "cell_one_based": 31,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/06-research-system/05-semantic-evaluation.ipynb",
+      "cell_one_based": 5,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/06-research-system/05-semantic-evaluation.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 6
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/06-research-system/05-semantic-evaluation.ipynb",
+      "cell_one_based": 11,
+      "code": "E501",
+      "location": {
+        "column": 85,
+        "row": 17
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/05-semantic-evaluation.ipynb",
+      "cell_one_based": 15,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/06-research-system/05-semantic-evaluation.ipynb",
+      "cell_one_based": 19,
+      "code": "E501",
+      "location": {
+        "column": 87,
+        "row": 13
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/05-semantic-evaluation.ipynb",
+      "cell_one_based": 30,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/06-research-system/05-semantic-evaluation.ipynb",
+      "cell_one_based": 30,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (197 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/05-semantic-evaluation.ipynb",
+      "cell_one_based": 30,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (114 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/05-semantic-evaluation.ipynb",
+      "cell_one_based": 34,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/06-research-system/05-semantic-evaluation.ipynb",
+      "cell_one_based": 35,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/06-research-system/05-semantic-evaluation.ipynb",
+      "cell_one_based": 36,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/06-research-system/05-semantic-evaluation.ipynb",
+      "cell_one_based": 38,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/06-research-system/05-semantic-evaluation.ipynb",
+      "cell_one_based": 38,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/01-mcp-tools.ipynb",
+      "cell_one_based": 12,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/01-mcp-tools.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (350 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/01-mcp-tools.ipynb",
+      "cell_one_based": 16,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 14
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/01-mcp-tools.ipynb",
+      "cell_one_based": 20,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 12
+      },
+      "message": "Line too long (110 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/01-mcp-tools.ipynb",
+      "cell_one_based": 23,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 5
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/01-mcp-tools.ipynb",
+      "cell_one_based": 25,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/01-mcp-tools.ipynb",
+      "cell_one_based": 33,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/01-mcp-tools.ipynb",
+      "cell_one_based": 33,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (2528 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/01-mcp-tools.ipynb",
+      "cell_one_based": 33,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 4
+      },
+      "message": "Line too long (152 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/01-mcp-tools.ipynb",
+      "cell_one_based": 35,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/01-mcp-tools.ipynb",
+      "cell_one_based": 35,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/02-skills-and-context.ipynb",
+      "cell_one_based": 9,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/02-skills-and-context.ipynb",
+      "cell_one_based": 9,
+      "code": "E501",
+      "location": {
+        "column": 79,
+        "row": 15
+      },
+      "message": "Line too long (112 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/02-skills-and-context.ipynb",
+      "cell_one_based": 13,
+      "code": "E501",
+      "location": {
+        "column": 96,
+        "row": 10
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/02-skills-and-context.ipynb",
+      "cell_one_based": 21,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/02-skills-and-context.ipynb",
+      "cell_one_based": 22,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 6
+      },
+      "message": "Line too long (111 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/02-skills-and-context.ipynb",
+      "cell_one_based": 24,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 11
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/02-skills-and-context.ipynb",
+      "cell_one_based": 27,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/02-skills-and-context.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (2808 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/02-skills-and-context.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 4
+      },
+      "message": "Line too long (171 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/02-skills-and-context.ipynb",
+      "cell_one_based": 29,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/02-skills-and-context.ipynb",
+      "cell_one_based": 29,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/03-tool-discovery.ipynb",
+      "cell_one_based": 9,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/03-tool-discovery.ipynb",
+      "cell_one_based": 15,
+      "code": "E501",
+      "location": {
+        "column": 79,
+        "row": 3
+      },
+      "message": "Line too long (110 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/03-tool-discovery.ipynb",
+      "cell_one_based": 17,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 20
+      },
+      "message": "Line too long (104 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/03-tool-discovery.ipynb",
+      "cell_one_based": 20,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 5
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/03-tool-discovery.ipynb",
+      "cell_one_based": 20,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 8
+      },
+      "message": "Line too long (107 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/03-tool-discovery.ipynb",
+      "cell_one_based": 21,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (113 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/03-tool-discovery.ipynb",
+      "cell_one_based": 27,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/03-tool-discovery.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (1791 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/03-tool-discovery.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 4
+      },
+      "message": "Line too long (203 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/03-tool-discovery.ipynb",
+      "cell_one_based": 29,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/03-tool-discovery.ipynb",
+      "cell_one_based": 29,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 9,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 9,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (113 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 11,
+      "code": "E501",
+      "location": {
+        "column": 59,
+        "row": 11
+      },
+      "message": "Line too long (112 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 11,
+      "code": "E501",
+      "location": {
+        "column": 75,
+        "row": 12
+      },
+      "message": "Line too long (108 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 57,
+        "row": 2
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 9
+      },
+      "message": "Line too long (106 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 10
+      },
+      "message": "Line too long (108 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 17,
+      "code": "E501",
+      "location": {
+        "column": 88,
+        "row": 19
+      },
+      "message": "Line too long (115 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 17,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 20
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 17,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 22
+      },
+      "message": "Line too long (113 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 20,
+      "code": "E501",
+      "location": {
+        "column": 84,
+        "row": 3
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 20,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 6
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 20,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 9
+      },
+      "message": "Line too long (107 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 22,
+      "code": "E501",
+      "location": {
+        "column": 78,
+        "row": 7
+      },
+      "message": "Line too long (104 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 23,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 12
+      },
+      "message": "Line too long (129 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 25,
+      "code": "E501",
+      "location": {
+        "column": 84,
+        "row": 3
+      },
+      "message": "Line too long (107 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 25,
+      "code": "E501",
+      "location": {
+        "column": 82,
+        "row": 4
+      },
+      "message": "Line too long (118 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 28,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb",
+      "cell_one_based": 28,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 5,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 6
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 78,
+        "row": 1
+      },
+      "message": "Line too long (145 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 96,
+        "row": 3
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 17,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 19,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 21,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 21,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 22,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 23,
+      "code": "E501",
+      "location": {
+        "column": 87,
+        "row": 13
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 26,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 34,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 34,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (197 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 34,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (131 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 38,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 39,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 40,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 42,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "cell_one_based": 42,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/01-read-edit-test.ipynb",
+      "cell_one_based": 11,
+      "code": "E501",
+      "location": {
+        "column": 82,
+        "row": 6
+      },
+      "message": "Line too long (133 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/01-read-edit-test.ipynb",
+      "cell_one_based": 11,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 7
+      },
+      "message": "Line too long (576 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/01-read-edit-test.ipynb",
+      "cell_one_based": 23,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (1185 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/01-read-edit-test.ipynb",
+      "cell_one_based": 25,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (210 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/01-read-edit-test.ipynb",
+      "cell_one_based": 25,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 9
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/01-read-edit-test.ipynb",
+      "cell_one_based": 30,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 14
+      },
+      "message": "Line too long (140 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/01-read-edit-test.ipynb",
+      "cell_one_based": 30,
+      "code": "E501",
+      "location": {
+        "column": 91,
+        "row": 17
+      },
+      "message": "Line too long (114 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/01-read-edit-test.ipynb",
+      "cell_one_based": 30,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 19
+      },
+      "message": "Line too long (104 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/01-read-edit-test.ipynb",
+      "cell_one_based": 34,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/01-read-edit-test.ipynb",
+      "cell_one_based": 34,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (243 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/01-read-edit-test.ipynb",
+      "cell_one_based": 37,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/01-read-edit-test.ipynb",
+      "cell_one_based": 37,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cell_one_based": 9,
+      "code": "E501",
+      "location": {
+        "column": 89,
+        "row": 7
+      },
+      "message": "Line too long (136 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cell_one_based": 9,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 8
+      },
+      "message": "Line too long (327 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cell_one_based": 11,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 19
+      },
+      "message": "Line too long (102 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cell_one_based": 13,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 6
+      },
+      "message": "Line too long (101 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cell_one_based": 15,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 7
+      },
+      "message": "Line too long (111 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cell_one_based": 18,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 12
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cell_one_based": 21,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (118 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cell_one_based": 21,
+      "code": "E501",
+      "location": {
+        "column": 80,
+        "row": 5
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cell_one_based": 21,
+      "code": "E501",
+      "location": {
+        "column": 80,
+        "row": 9
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cell_one_based": 23,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cell_one_based": 23,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 6
+      },
+      "message": "Line too long (115 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cell_one_based": 24,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (1453 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cell_one_based": 26,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 17
+      },
+      "message": "Line too long (114 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 81,
+        "row": 5
+      },
+      "message": "Line too long (119 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 10
+      },
+      "message": "Line too long (104 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cell_one_based": 30,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/02-maintenance-resume.ipynb",
+      "cell_one_based": 30,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "cell_one_based": 9,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "cell_one_based": 11,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "cell_one_based": 11,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 17
+      },
+      "message": "Line too long (101 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "cell_one_based": 11,
+      "code": "UP017",
+      "location": {
+        "column": 67,
+        "row": 18
+      },
+      "message": "Use `datetime.UTC` alias"
+    },
+    {
+      "file": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "cell_one_based": 11,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 23
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "cell_one_based": 13,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 7
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "cell_one_based": 13,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 9
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "cell_one_based": 20,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (2150 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "cell_one_based": 20,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 5
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "cell_one_based": 22,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 10
+      },
+      "message": "Line too long (112 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "cell_one_based": 22,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 18
+      },
+      "message": "Line too long (106 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "cell_one_based": 25,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (111 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (108 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 28
+      },
+      "message": "Line too long (110 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "cell_one_based": 32,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/03-opening-handover.ipynb",
+      "cell_one_based": 32,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 5,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 6
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 11,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 11,
+      "code": "F811",
+      "location": {
+        "column": 8,
+        "row": 1
+      },
+      "message": "Redefinition of unused `hashlib` from cell 5, line 2: `hashlib` redefined here"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 78,
+        "row": 1
+      },
+      "message": "Line too long (145 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 96,
+        "row": 3
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 17,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 19,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 19,
+      "code": "F811",
+      "location": {
+        "column": 8,
+        "row": 1
+      },
+      "message": "Redefinition of unused `hashlib` from cell 11, line 1: `hashlib` redefined here"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 20,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 20,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 20,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 6
+      },
+      "message": "Line too long (224 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 21,
+      "code": "E501",
+      "location": {
+        "column": 87,
+        "row": 13
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 32,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 32,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (197 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 32,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (118 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 36,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 37,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 38,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 40,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "cell_one_based": 40,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/01-streaming-service.ipynb",
+      "cell_one_based": 7,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/01-streaming-service.ipynb",
+      "cell_one_based": 7,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 6
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/09-runtime-and-service/01-streaming-service.ipynb",
+      "cell_one_based": 26,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/01-streaming-service.ipynb",
+      "cell_one_based": 26,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (197 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/01-streaming-service.ipynb",
+      "cell_one_based": 26,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (113 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/01-streaming-service.ipynb",
+      "cell_one_based": 28,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/01-streaming-service.ipynb",
+      "cell_one_based": 28,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/02-runtime-policy.ipynb",
+      "cell_one_based": 5,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/02-runtime-policy.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 6
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/09-runtime-and-service/02-runtime-policy.ipynb",
+      "cell_one_based": 11,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/02-runtime-policy.ipynb",
+      "cell_one_based": 11,
+      "code": "F811",
+      "location": {
+        "column": 8,
+        "row": 1
+      },
+      "message": "Redefinition of unused `hashlib` from cell 5, line 2: `hashlib` redefined here"
+    },
+    {
+      "file": "modules/09-runtime-and-service/02-runtime-policy.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 78,
+        "row": 1
+      },
+      "message": "Line too long (145 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/02-runtime-policy.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 96,
+        "row": 3
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/02-runtime-policy.ipynb",
+      "cell_one_based": 22,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 20
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/02-runtime-policy.ipynb",
+      "cell_one_based": 28,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/02-runtime-policy.ipynb",
+      "cell_one_based": 28,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (277 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/02-runtime-policy.ipynb",
+      "cell_one_based": 28,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (118 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/02-runtime-policy.ipynb",
+      "cell_one_based": 30,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/02-runtime-policy.ipynb",
+      "cell_one_based": 30,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/03-interface-contracts.ipynb",
+      "cell_one_based": 5,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/03-interface-contracts.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 6
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/09-runtime-and-service/03-interface-contracts.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 78,
+        "row": 1
+      },
+      "message": "Line too long (145 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/03-interface-contracts.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 96,
+        "row": 3
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/03-interface-contracts.ipynb",
+      "cell_one_based": 21,
+      "code": "E501",
+      "location": {
+        "column": 99,
+        "row": 1
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/03-interface-contracts.ipynb",
+      "cell_one_based": 27,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/03-interface-contracts.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (197 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/03-interface-contracts.ipynb",
+      "cell_one_based": 27,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (128 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/03-interface-contracts.ipynb",
+      "cell_one_based": 29,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/03-interface-contracts.ipynb",
+      "cell_one_based": 29,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 5,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 6
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 11,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 78,
+        "row": 1
+      },
+      "message": "Line too long (145 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 96,
+        "row": 3
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 16,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 17,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 17,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (102 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 19,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 22,
+      "code": "B007",
+      "location": {
+        "column": 13,
+        "row": 6
+      },
+      "message": "Loop control variable `attempt` not used within loop body"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 23,
+      "code": "E501",
+      "location": {
+        "column": 87,
+        "row": 13
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 34,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 34,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (197 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 34,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (121 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 38,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 39,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 40,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 42,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "cell_one_based": 42,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/01-library-orchestrator.ipynb",
+      "cell_one_based": 7,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/01-library-orchestrator.ipynb",
+      "cell_one_based": 7,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 6
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/10-opening-capstone/01-library-orchestrator.ipynb",
+      "cell_one_based": 16,
+      "code": "E501",
+      "location": {
+        "column": 78,
+        "row": 1
+      },
+      "message": "Line too long (145 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/01-library-orchestrator.ipynb",
+      "cell_one_based": 16,
+      "code": "E501",
+      "location": {
+        "column": 96,
+        "row": 3
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/01-library-orchestrator.ipynb",
+      "cell_one_based": 22,
+      "code": "E501",
+      "location": {
+        "column": 94,
+        "row": 6
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/01-library-orchestrator.ipynb",
+      "cell_one_based": 28,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/01-library-orchestrator.ipynb",
+      "cell_one_based": 28,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (197 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/01-library-orchestrator.ipynb",
+      "cell_one_based": 28,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (116 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/01-library-orchestrator.ipynb",
+      "cell_one_based": 30,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/01-library-orchestrator.ipynb",
+      "cell_one_based": 30,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/02-opening-acceptance.ipynb",
+      "cell_one_based": 5,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/02-opening-acceptance.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 6
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/10-opening-capstone/02-opening-acceptance.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 78,
+        "row": 1
+      },
+      "message": "Line too long (145 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/02-opening-acceptance.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 96,
+        "row": 3
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/02-opening-acceptance.ipynb",
+      "cell_one_based": 20,
+      "code": "E501",
+      "location": {
+        "column": 99,
+        "row": 7
+      },
+      "message": "Line too long (107 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/02-opening-acceptance.ipynb",
+      "cell_one_based": 26,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/02-opening-acceptance.ipynb",
+      "cell_one_based": 26,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (197 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/02-opening-acceptance.ipynb",
+      "cell_one_based": 26,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (121 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/02-opening-acceptance.ipynb",
+      "cell_one_based": 28,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/02-opening-acceptance.ipynb",
+      "cell_one_based": 28,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/03-independent-feature.ipynb",
+      "cell_one_based": 5,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/03-independent-feature.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 6
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/10-opening-capstone/03-independent-feature.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 78,
+        "row": 1
+      },
+      "message": "Line too long (145 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/03-independent-feature.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 96,
+        "row": 3
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/03-independent-feature.ipynb",
+      "cell_one_based": 26,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/03-independent-feature.ipynb",
+      "cell_one_based": 26,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (197 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/03-independent-feature.ipynb",
+      "cell_one_based": 26,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (116 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/03-independent-feature.ipynb",
+      "cell_one_based": 28,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/03-independent-feature.ipynb",
+      "cell_one_based": 28,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cell_one_based": 5,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cell_one_based": 5,
+      "code": "UP035",
+      "location": {
+        "column": 1,
+        "row": 6
+      },
+      "message": "Import from `collections.abc` instead: `Callable`"
+    },
+    {
+      "file": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cell_one_based": 11,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cell_one_based": 11,
+      "code": "F811",
+      "location": {
+        "column": 8,
+        "row": 1
+      },
+      "message": "Redefinition of unused `hashlib` from cell 5, line 2: `hashlib` redefined here"
+    },
+    {
+      "file": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 78,
+        "row": 1
+      },
+      "message": "Line too long (145 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cell_one_based": 14,
+      "code": "E501",
+      "location": {
+        "column": 96,
+        "row": 3
+      },
+      "message": "Line too long (109 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cell_one_based": 17,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cell_one_based": 20,
+      "code": "E501",
+      "location": {
+        "column": 92,
+        "row": 3
+      },
+      "message": "Line too long (110 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cell_one_based": 21,
+      "code": "E501",
+      "location": {
+        "column": 87,
+        "row": 13
+      },
+      "message": "Line too long (103 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cell_one_based": 32,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cell_one_based": 32,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 2
+      },
+      "message": "Line too long (197 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cell_one_based": 32,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 5
+      },
+      "message": "Line too long (125 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cell_one_based": 36,
+      "code": "E501",
+      "location": {
+        "column": 101,
+        "row": 1
+      },
+      "message": "Line too long (105 > 100)"
+    },
+    {
+      "file": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cell_one_based": 37,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cell_one_based": 38,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cell_one_based": 40,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 1
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "cell_one_based": 40,
+      "code": "I001",
+      "location": {
+        "column": 1,
+        "row": 4
+      },
+      "message": "Import block is un-sorted or un-formatted"
+    }
+  ],
+  "external_sources": [
+    {
+      "id": "S01",
+      "title": "HF Agents Course",
+      "url": "https://huggingface.co/learn/agents-course/en/unit0/introduction",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "公开课程介绍；基础、框架、RAG、挑战与认证；Python/LLM基础要求",
+      "evidence_level": "official public description or syllabus"
+    },
+    {
+      "id": "S02",
+      "title": "LangGraph Academy",
+      "url": "https://academy.langchain.com/courses/intro-to-langgraph",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "公开大纲；图、状态、记忆、HITL与多智能体",
+      "evidence_level": "official public description or syllabus"
+    },
+    {
+      "id": "S03",
+      "title": "Deep Agents Academy",
+      "url": "https://academy.langchain.com/courses/foundation-introduction-to-deepagents",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "公开大纲；执行环境、上下文、委派与应用",
+      "evidence_level": "official public description or syllabus"
+    },
+    {
+      "id": "S04",
+      "title": "DLAI LangGraph",
+      "url": "https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "httpx HTTP 200; web transport returned 403",
+      "supports": "官方课程介绍；原生循环到图、搜索、持久化、流式与审核",
+      "evidence_level": "official public description or syllabus"
+    },
+    {
+      "id": "S05",
+      "title": "DLAI Agentic AI",
+      "url": "https://www.deeplearning.ai/courses/agentic-ai",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "httpx HTTP 200; web transport returned 403",
+      "supports": "官方课程介绍；设计模式、业务分解、评估与优化",
+      "evidence_level": "official public description or syllabus"
+    },
+    {
+      "id": "S06",
+      "title": "Hello-Agents",
+      "url": "https://github.com/datawhalechina/hello-agents",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "维护方目录；原理、框架、记忆、协议、训练、研究与面试素材",
+      "evidence_level": "official public description or syllabus"
+    },
+    {
+      "id": "S07",
+      "title": "Stanford CS329Z",
+      "url": "https://cs329z.stanford.edu/",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "2026秋季大纲；数据、系统、评估、优化与项目；未来日期内容仍属安排",
+      "evidence_level": "official public description or syllabus"
+    },
+    {
+      "id": "S08",
+      "title": "LangChain Agents",
+      "url": "https://docs.langchain.com/oss/python/langchain/agents",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "agent loop与harness职责、create_agent与middleware",
+      "evidence_level": "official documentation or original paper"
+    },
+    {
+      "id": "S09",
+      "title": "LangGraph Interrupts",
+      "url": "https://docs.langchain.com/oss/python/langgraph/interrupts",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "中断恢复及副作用重入边界",
+      "evidence_level": "official documentation or original paper"
+    },
+    {
+      "id": "S10",
+      "title": "LangGraph Persistence",
+      "url": "https://docs.langchain.com/oss/python/langgraph/persistence",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "检查点与恢复机制；durable-execution链接当前重定向至此",
+      "evidence_level": "official documentation or original paper"
+    },
+    {
+      "id": "S11",
+      "title": "LangGraph Graph API",
+      "url": "https://docs.langchain.com/oss/python/langgraph/graph-api",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "节点、状态、reducer与图机制",
+      "evidence_level": "official documentation or original paper"
+    },
+    {
+      "id": "S12",
+      "title": "DeepAgents",
+      "url": "https://docs.langchain.com/oss/python/deepagents/overview",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "成熟harness、文件、记忆、方法与委派能力",
+      "evidence_level": "official documentation or original paper"
+    },
+    {
+      "id": "S13",
+      "title": "OpenAI SDK",
+      "url": "https://developers.openai.com/api/docs/guides/agents/sdk",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "代码型Agent SDK路线与运行责任",
+      "evidence_level": "official documentation or original paper"
+    },
+    {
+      "id": "S14",
+      "title": "OpenAI Agent Evals",
+      "url": "https://developers.openai.com/api/docs/guides/agent-evals",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "轨迹、grader、数据与重复评估",
+      "evidence_level": "official documentation or original paper"
+    },
+    {
+      "id": "S15",
+      "title": "DeepSeek Tool Calls",
+      "url": "https://api-docs.deepseek.com/guides/tool_calls/",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "具体提供方工具调用机制",
+      "evidence_level": "official documentation or original paper"
+    },
+    {
+      "id": "S16",
+      "title": "Reflexion",
+      "url": "https://arxiv.org/abs/2303.11366",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "原始论文；文本反馈记忆与后续尝试",
+      "evidence_level": "official documentation or original paper"
+    },
+    {
+      "id": "S17",
+      "title": "Effective Context",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "上下文选择、管理与使用",
+      "evidence_level": "official documentation or original paper"
+    },
+    {
+      "id": "S18",
+      "title": "Demystifying Evals",
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "Agent评估设计及证明范围",
+      "evidence_level": "official documentation or original paper"
+    },
+    {
+      "id": "S19",
+      "title": "Effective Agents",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "workflow/agent区分与复杂度取舍；页面说明部分工具内容已经变化",
+      "evidence_level": "official documentation or original paper"
+    },
+    {
+      "id": "S20",
+      "title": "Agent Skills",
+      "url": "https://agentskills.io/specification",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "Skill格式与方法组织规范",
+      "evidence_level": "official documentation or original paper"
+    },
+    {
+      "id": "S21",
+      "title": "MCP Tools",
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/server/tools",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "工具职责与调用协议",
+      "evidence_level": "official documentation or original paper"
+    },
+    {
+      "id": "S22",
+      "title": "MCP Resources",
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/server/resources",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "资源职责及上下文使用",
+      "evidence_level": "official documentation or original paper"
+    },
+    {
+      "id": "S23",
+      "title": "MCP Prompts",
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/server/prompts",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "模板职责与客户端控制",
+      "evidence_level": "official documentation or original paper"
+    },
+    {
+      "id": "S24",
+      "title": "BGE Small EN",
+      "url": "https://huggingface.co/BAAI/bge-small-en-v1.5",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open",
+      "supports": "官方模型卡；英文适配与检索能力边界",
+      "evidence_level": "official documentation or original paper"
+    },
+    {
+      "id": "S25",
+      "title": "Microsoft AI Agents for Beginners",
+      "url": "https://github.com/microsoft/ai-agents-for-beginners",
+      "accessed_date": "2026-10-03",
+      "provider": "primary",
+      "read_method": "web open and find lesson catalogue",
+      "supports": "当前课程目录与Microsoft Agent Framework/Foundry示例；模式、协议、记忆、生产与部署",
+      "evidence_level": "official public repository description and syllabus"
+    }
+  ],
+  "preserved_files_sha256": {
+    "instructor/state.json": "fcdf0e0951714a4551dbf49bdd9391223307e389ec1b514eeb1682fa76fb55fe",
+    "instructor/catalog.json": "07fab0cd57f169e08f64b510e619384deb2aee1fca1ff2ff56b90160c01e610a",
+    "README.md": "48dd3b009f5410b6cddc61406cbf4e937d8a4de134954e0e1b903c1d948abb7a",
+    "modules/04-memory-and-human-review/02-review-and-publish.ipynb": "17b0e715c92fedb51efaacd317b55da2bb9a030623793983aeb200c4ba46aa9b",
+    "modules/04-memory-and-human-review/01-durable-shift-log.ipynb": "a7a3ed5c05d0181ad5227568aca64dd12210cb40a549ff3d4dced98411e6936a",
+    "modules/04-memory-and-human-review/03-reader-memory.ipynb": "40be35ee543fa521ce974558a1876fc3a212cd18751d83cc014767bff6675e76",
+    "modules/04-memory-and-human-review/05-experience-notes.ipynb": "24d81278c2b4c1caacfff15465b949aa94d4ffa32b4d81a8977c2dccaf34c031",
+    "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb": "4eb600a98d788dc48bf43c0094688bb28df8f6d637c01df86271466bc8fded49",
+    "modules/04-memory-and-human-review/04-context-folder.ipynb": "2335039e3bb5bdfbb118eb0a5738b337bec0d200433974dbdb1c0b1728cf709b",
+    "modules/05-deep-research/05-hybrid-retrieval.ipynb": "a4f1fe878096481ea10798c8041a45ec6f4a5ff8fa0371a9657c7b1bb69aee01",
+    "modules/05-deep-research/04-gap-driven-research.ipynb": "96f7b1abe6914da7f653b4f94f297a083cd055edb25959be2f69a3e160062f80",
+    "modules/05-deep-research/03-retrieval-and-evidence.ipynb": "76034a46c2b09300370ab60b2b3b4e5253370abef877904da9730f5ed0407450",
+    "modules/05-deep-research/02-search-and-sources.ipynb": "e247014d51838d56d3d0f6135620f9e8cb65e820eeabf34087706219a61bcaae",
+    "modules/05-deep-research/01-scope-and-evidence.ipynb": "32e05ac693bc524d00fba29c3e658f05f3d5891bdc04db7291d5d3edc476d317",
+    "modules/07-protocols-and-skills/01-mcp-tools.ipynb": "d99355e54f5589d7da30d87ec333d20e7e58a8a6a0cb8515f09d26e2f6e35a7c",
+    "modules/07-protocols-and-skills/04-deep-agents-comparison.ipynb": "854ab7e928cb127c4b3ee3c6bd1254d8ba3f287fcc9aba75cd4de4d85e847516",
+    "modules/07-protocols-and-skills/02-skills-and-context.ipynb": "27e65bacf8f1214d4343945d2c70b51e873014657a04b42873a3e8de6f28326a",
+    "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb": "5a15f068e03aa8a36c98f7cfb6cc142ea9f7ceb690dcf9a5f648056a02c305c4",
+    "modules/07-protocols-and-skills/03-tool-discovery.ipynb": "cdaad05c2861f3f66c1361d8b93fa11ec600b1c19fb30c79fccb1a1a47c741c4",
+    "modules/09-runtime-and-service/03-interface-contracts.ipynb": "e0654be8d36f24495150cead497484541800fe121d0f9445128f0f973f5b952a",
+    "modules/09-runtime-and-service/04-service-boundaries.ipynb": "d30994391a1f31c30a0540fd0d93549002e5eb3ecfbca4a0a5075f2e43869f2d",
+    "modules/09-runtime-and-service/01-streaming-service.ipynb": "e09e6f68335c7e280452a559c9b5df4efe36fa3a53b4b3d1f44d5d96ca410bc5",
+    "modules/09-runtime-and-service/02-runtime-policy.ipynb": "21749abae3c48b2643636406f74a7df0c84b44a39d3d510cbfe7c77bede58779",
+    "modules/10-opening-capstone/03-independent-feature.ipynb": "f4b3222a4ad1adfd4ca966647d9c6c464366ccb4cc03f32c29a401a72037da4d",
+    "modules/10-opening-capstone/02-opening-acceptance.ipynb": "f568e6d1547bd7e5a9c4d0b43a63a663534889988e42fb180f172596007a3fce",
+    "modules/10-opening-capstone/01-library-orchestrator.ipynb": "b0f3fc1473d63214ac7c68596959b68cb598fff86b82339be0378d4ef949424c",
+    "modules/10-opening-capstone/04-release-and-handover.ipynb": "3731741fa62d54700329eaecf2cb2ee2e53fa783ea7972a37a7d4b246edb9e7c",
+    "modules/06-research-system/02-evaluation-and-ablation.ipynb": "aff44de70eb023ce79893ee9b90cf452161cef27d2be1ba687349d4dd83590c9",
+    "modules/06-research-system/05-semantic-evaluation.ipynb": "8b02d86525580b789e4efa876d9c6f5a9486139abcff7f6265bf83753fae616a",
+    "modules/06-research-system/01-plan-research-write.ipynb": "8cfdf41e427c664176394aba1cb813253360106e261a95329aae9aa9f8ea2db4",
+    "modules/06-research-system/04-local-research-service.ipynb": "c4b800c5474b4de5471ab68ac3d92f92278a5ceb2016971e398d73ef06bffd28",
+    "modules/06-research-system/03-trace-and-diagnosis.ipynb": "959ed629f46b2d9d335bbdf4779b336239de3a593616214870651b06f695c2f4",
+    "modules/02-tools-and-agents/01-cabinet-tools.ipynb": "7dbcdf88418f822d8665bddf6adbfd101126456123520cc6250b0f601e62c6f8",
+    "modules/02-tools-and-agents/04-tool-permissions.ipynb": "7b176bcfedcb30713ca2a32547a9bdc348263d6db4a4f54bafc5adb952efcbe9",
+    "modules/02-tools-and-agents/03-tool-recovery.ipynb": "c5968316db31b20259f13ee6099df638890d2836955cf8b793fe7526729ab3be",
+    "modules/02-tools-and-agents/02-tool-dispatch.ipynb": "3611f619b7660e5cb999280f0f4e866b81aa5ff7c10dfe21858277a4010f44d1",
+    "modules/03-langgraph-control/02-observation-loop.ipynb": "e856ea92fd76c2b037bea27e07b49e8a4bb537c0b109303173b9d4ebb9f6c7ce",
+    "modules/03-langgraph-control/01-reception-routes.ipynb": "5ab519920ab6f74959554d9acf24c8b9944d7233ad31376da049852b6d201afc",
+    "modules/03-langgraph-control/03-progress-and-cancel.ipynb": "1c1bfd2c34db567d4f3dd591aedac3a42b830f6fd6e84cc747ae04b16099d09c",
+    "modules/03-langgraph-control/04-parallel-state.ipynb": "ceb3852f10bc7ce0ff0f1fa5a92b9a8887738dec07e5e86c8c801fd065a4039d",
+    "modules/08-coding-agent/04-patch-transactions.ipynb": "a3034231191100a9bccec8fbdb6195c5319ece10ae88d65684017c39680fec89",
+    "modules/08-coding-agent/01-read-edit-test.ipynb": "93551003cc4e6ffd88164ac8f5d29617c0c1c3ca6218a0191e0876ffcd04bb42",
+    "modules/08-coding-agent/02-maintenance-resume.ipynb": "751960430674d496064daaa6358e10fb5e5803c138fe14703c90b4fdbfdcb551",
+    "modules/08-coding-agent/03-opening-handover.ipynb": "02fccf02747e0e51ee85a1bfef785e97bca62d3bee294611f237610dd20cc058",
+    "modules/01-langchain-foundations/03-message-workbench.ipynb": "e59d88099c5bfd05beafc7a310768c06a6994a22c553f353abbce85ee247aa34",
+    "modules/01-langchain-foundations/01-first-reader.ipynb": "bc92884b1a397c18e94182536238ff026a08ed249e909ede390bfa3a072d5c44",
+    "modules/01-langchain-foundations/02-notice-board.ipynb": "144750d8bbec957bae23398aaba3ba13f84be3d71a754a0a153e063ba2e14dcb",
+    "modules/01-langchain-foundations/.ipynb_checkpoints/01-first-reader-checkpoint.ipynb": "304d8ccd6b67a40a9379af8df41b1262cf9c77ca0d2c1bc6b78ae5f9602a49f6"
+  },
+  "reviewed_sources_sha256": {
+    "instructor/mcp_fixture.py": "316dc76258e39cc7b147911b12c724a276d9a0815223010c47a1c1c297f33c54",
+    "instructor/extension_specs.py": "539b5d88444a0d51e47ca2d4a411e9cb09c777fe179c9d40dc8e71a7dc4346a1",
+    "instructor/institution_http.py": "74ab582cd9a7f7312a72c15a4a821bc473736cb895796fd399f90f054d3ffc5d",
+    "instructor/check.py": "4f2345c53457c91b0da5fa5d07f132e45235bfef9e08bb05f09db372efb1cd0a",
+    "instructor/enterprise_demos.py": "c4d51fc7b7c21ddc5be984c5e50e0d3f02cb1f0f5c0cb5613af05ec7190b8807",
+    "instructor/interaction.py": "621d4c7b5a3d15fe45a42e71a65b5a8539d7fb48d2fc095a821c7889355b1ce6",
+    "instructor/institution.py": "cf8cf271e0d7be4120b8999b67982e2d8a6c500339ce3fbda995f2f22602a8cc",
+    "instructor/enterprise_narrative.py": "6bcdd7e8f0de593ebf86a7e42d7ef624207eb82fa5723cf0ec88fe813b364c89",
+    "instructor/enterprise_course.py": "327ba32a7932eb9ec6ea670f8da7f65c6731817db9a6b51c994314971bfa484c",
+    "instructor/retrieval_bridge.py": "d688b60090e1ba728563979db0e7b67fd4801bb4321866e2eeeaeea0163ed3e3",
+    "instructor/enterprise_acceptance.py": "10f7b3f263576a0904746fb9a54bdbd6d819655b909a0c2eb5c190b346436b96",
+    "instructor/__init__.py": "28cbe044b5b21764c943bb83d9e7e2fc01bcdff6930c031beaeea4f8e7341ed6",
+    "instructor/course_workspace.py": "324445a1c1afc0bbe2c86fb4426ecebb6d41788032d16141cf4c2f0082906954",
+    "instructor/publish_walkthroughs.py": "832c87edb7093db375ca4d07eef6ac25c1a8e612608a5bb030854a61454e358d",
+    "instructor/course_atlas.py": "0ca526c0a56c205ef3692d871369054b9d177dd22b5d34ff87af5aab4ce92595",
+    "instructor/author_walkthroughs.py": "d29aa4eb4cd4c3c398d875d57194e3c9b13bdf08befc8b87e74a24c9e50ae311",
+    "instructor/learner_exports.py": "ba4bc05638ee893eca4e72c64f0b3f0dc93114697c0d7f78df2e3de7bb0b04c2",
+    "instructor/launch.py": "f9f4713dc323e50f49eb1c14de8eb95dc144d6149c7132ae85cc243dab73c196",
+    "instructor/graph_crash_fixture.py": "32dd3ea1372c6ef58274ae2dc50c4b6479f2b9a4208d5deeb5dd6cf3c6bb841e",
+    "instructor/author_course.py": "1b26d313c9377fd52318e8c9498af172affb398e7062291963c018bcb184189a",
+    "instructor/validate_notebooks.py": "87dfd5ea3732bc2773a5f453d15fef7bd5f6e50699731b0489f083b5a792f69a",
+    "instructor/render_curriculum.py": "6fac2cbc1e5d5bd080b0a96d6ac8027dd7571ebe56cf44926cbc2a80f18df875",
+    "instructor/record_validation.py": "cdf9aecc70a8f89c9fa1e8f56b94151f622b4323355849b4e5957a931b0fab1c",
+    "instructor/check_enterprise_fixtures.py": "890c238a6bd225edb2bf50372097b3dbb54961f837a8fed1b58cf1a9dcccdc2c",
+    "instructor/finalize_course.py": "b0c1bb6ea6b97579fb5c302af44145bbd3dcef041b152f93cb67c5eb8aa0f91c",
+    "instructor/preview_course.py": "8e0569630734a12ead6db87351706f90602663b8746a58c2d463025bf9afd2fd",
+    "instructor/doctor.py": "a244c0836bef17a86f36f2a0c1a534783c6b188a4c1e3a5740bf46596b04d871",
+    "instructor/sync_entry.py": "2dd7a42d4a45917830eff79e3b126cef72ee4ddb82b701760c2e3a0181b0426d",
+    "instructor/PEDAGOGY.md": "db55cdf609b4649bac44f300d0140fa84f3c9985615b34f52a7bc470979699a1",
+    "instructor/GLOSSARY.md": "0d3682c5b6569367a1d667fa95f9091fd040c2464e8d7601500298d68bd0f95f",
+    "instructor/LEARNING_ROUTE.md": "0343e541f9b27d99498f230bbdb7385b1b3af7f1efea26d87b687489ae42e426",
+    "instructor/README.md": "304b81aceb74d3c2b0e196cfd2fe6918cfe4c7c95c74f79f8f9a7460cefc2913",
+    "instructor/RESEARCH.md": "cb034a2dd50e5fbfed4ebb5ddb2cde975152a04b8a4069db9225c850f5884c90",
+    "instructor/COURSE_IMPROVEMENTS.md": "9df1beebab6a7309aeafa4d3b326de00737819afa83355f3f2282ef44486b9d6",
+    "instructor/PRODUCTION_RESEARCH.md": "f85f6f967694b1cc32734c364bdf0afe6ab2a3bdba141679161b335369d6495c",
+    "instructor/AGENTS.md": "846bb647cbe96f28d83aa73a2f142bf96d60060f3bd131be5fa1178b8bc316cb",
+    "instructor/QUALITY_STANDARD.md": "8184bb8b17744c8e6375cea478ddd5da13869ed26a8983a6bdc981f65a101464",
+    "instructor/INTERACTION_DESIGN.md": "061a74dee1b78156f407402fa2437de407a238dd4a88d2a46f44b54be8f5cac1",
+    "instructor/CLAUDE.md": "846bb647cbe96f28d83aa73a2f142bf96d60060f3bd131be5fa1178b8bc316cb",
+    "instructor/ACCEPTANCE.md": "10f06574ae167cb9a69b4f74acff99d273d697eaf2c06db37c1f93f672ba7908",
+    "instructor/catalog.json": "07fab0cd57f169e08f64b510e619384deb2aee1fca1ff2ff56b90160c01e610a",
+    "instructor/course_enrichment.json": "83954c9fe07df67c4c6c0aad079b04df2a35ba608dfda57e12480042faa45434",
+    "instructor/validation.json": "761d11a33f8173e05344ee6b95eab8c8595e41f298712d7d3392faa1e057b557",
+    "instructor/module_blueprints.json": "f4f83ce8ee283d29187ca53b29517a6fb6e8e0f4c047a977927fa10fa7dc8bf1",
+    "pyproject.toml": "36360827d1004c6c2292418f3cdeb9c994859ac17bdaa1cdd3677d178ab9f71c",
+    "uv.lock": "8f3953d09610e12ddcafc10d6fa51d6b568e157e342148e4dbfe052fe21eeb94",
+    "modules/05-deep-research/library_facilities.py": "baec5894b8707ca51c1b163394f0311809038dda8e5afd56d87a5524d41cce8b",
+    "modules/06-research-system/local_research_service.py": "203883e7faf21c68d83d1b6fa2a43d1154b617b71d9bfeab7c6bdef4b3f9414d",
+    "modules/08-coding-agent/fog_coding_runtime.py": "a3200836e0910a9f362640d4820eeb05879f7997d646020363570df01c3d3e3d",
+    "modules/08-coding-agent/fog_resume_reference.py": "52bb547945b3cc5fd1f1cfcc47fc31db78ab806e2ea328d31426fc61cf0f9f24",
+    "modules/08-coding-agent/fog_worker_process.py": "1c748c35364dc651029d00029067aa34834eb479dff701d1753ca3c22e0fc75a"
+  },
+  "report_sha256": "d8b63a1d918fb1c9daea2132f2d12cfe03de03ced1cdd4962ede894bf09cb81b"
+}

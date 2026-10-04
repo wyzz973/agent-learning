@@ -1,0 +1,35 @@
+{
+  "module": "M05",
+  "fictional_business": true,
+  "cases": [
+    {
+      "id": "source_changed",
+      "title": "更新后重新查证",
+      "operation": "research",
+      "question": "更新KB-A-01后使用当前版本，不读旧索引回答。",
+      "target_status": "reported",
+      "evidence": [
+        "actual_input",
+        "trusted_scope",
+        "actual_operation",
+        "version",
+        "failure_or_result"
+      ]
+    },
+    {
+      "id": "private_candidate",
+      "title": "相近私有证据",
+      "operation": "research",
+      "question": "分馆A的查询不能把语义相近的B资料放进模型。",
+      "target_status": "reported",
+      "evidence": [
+        "actual_input",
+        "trusted_scope",
+        "actual_operation",
+        "version",
+        "failure_or_result"
+      ]
+    }
+  ],
+  "scope": "学习目标，不是已运行成绩"
+}

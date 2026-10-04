@@ -1,0 +1,416 @@
+{
+  "schema_version": 1,
+  "fiction": true,
+  "purpose": "雾岛资料检索的中英文与跨语言受控实验；目标只供grader，不能发送给检索器或agent",
+  "split_policy": "开发/留出用于演练隔离流程；学生读过参考后须另准备未见案例，不能把公开卡宣称独立泛化证据",
+  "embedding_policy": "保留当前英文BGE模型，测量适配边界，不自动换模型或声称多语言保证",
+  "corpus": [
+    {
+      "id": "EN-SEAT",
+      "language": "en",
+      "version": 1,
+      "tenant": "branch-a",
+      "text": "Saturday reading seats are available from 14:00 to 18:00. No Sunday indoor reading arrangement is confirmed."
+    },
+    {
+      "id": "ZH-SEAT",
+      "language": "zh",
+      "version": 1,
+      "tenant": "branch-a",
+      "text": "本周六阅览座位开放时间为14:00到18:00。周日馆内阅览尚未确认。"
+    },
+    {
+      "id": "EN-RETURN",
+      "language": "en",
+      "version": 1,
+      "tenant": "branch-a",
+      "text": "The outdoor return box beside the east gate accepts books on Sunday when indoor reading is closed."
+    },
+    {
+      "id": "ZH-RETURN",
+      "language": "zh",
+      "version": 1,
+      "tenant": "branch-a",
+      "text": "馆内关闭时，东门外还书箱周日仍可用于归还图书。"
+    },
+    {
+      "id": "EN-VOLUNTEER",
+      "language": "en",
+      "version": 1,
+      "tenant": "branch-a",
+      "text": "Volunteer registration closes on Friday at 16:00. Meet the librarian at the reception desk after registering."
+    },
+    {
+      "id": "ZH-VOLUNTEER",
+      "language": "zh",
+      "version": 1,
+      "tenant": "branch-a",
+      "text": "志愿者报名周五16:00截止。报名后到接待台办理，不代表获准发布公告。"
+    },
+    {
+      "id": "EN-POWER",
+      "language": "en",
+      "version": 1,
+      "tenant": "branch-a",
+      "text": "A persistent checkpoint can continue the same interrupted consultation after a power failure. External publications still need idempotency."
+    },
+    {
+      "id": "ZH-POWER",
+      "language": "zh",
+      "version": 1,
+      "tenant": "branch-a",
+      "text": "持久检查点可以在断电后接续同一咨询。外部发布仍要单独处理幂等。"
+    },
+    {
+      "id": "EN-MEMORY",
+      "language": "en",
+      "version": 1,
+      "tenant": "branch-a",
+      "text": "An anonymous reader can withdraw a confirmed preference. Later requests stop using it; model weights and old reports are not automatically erased."
+    },
+    {
+      "id": "ZH-MEMORY",
+      "language": "zh",
+      "version": 1,
+      "tenant": "branch-a",
+      "text": "匿名读者可撤回已确认的偏好，后续请求不再使用。模型权重与旧报告不会自动被删除。"
+    },
+    {
+      "id": "EN-INDEX",
+      "language": "en",
+      "version": 1,
+      "tenant": "branch-a",
+      "text": "When a source changes version, refresh its chunks and invalidate the old retrieval cache. Similarity does not prove factual support."
+    },
+    {
+      "id": "ZH-INDEX",
+      "language": "zh",
+      "version": 1,
+      "tenant": "branch-a",
+      "text": "原文版本改变后要更新片段并失效旧检索缓存。相似度不证明事实受到支持。"
+    },
+    {
+      "id": "EN-APPROVAL",
+      "language": "en",
+      "version": 1,
+      "tenant": "branch-a",
+      "text": "A draft notice requires Lin He approval of its current content before publication. The draft cannot approve itself."
+    },
+    {
+      "id": "ZH-APPROVAL",
+      "language": "zh",
+      "version": 1,
+      "tenant": "branch-a",
+      "text": "公告草稿需要林禾对当前正文作出批准后才能发布。草稿不能给自己批准。"
+    },
+    {
+      "id": "EN-TEST",
+      "language": "en",
+      "version": 1,
+      "tenant": "branch-a",
+      "text": "A code repair is accepted only when fixed tests pass against the current source hash in the restricted container. Old green receipts cannot verify new code."
+    },
+    {
+      "id": "ZH-TEST",
+      "language": "zh",
+      "version": 1,
+      "tenant": "branch-a",
+      "text": "代码维修应在受限容器用固定测试验证当前源码指纹。旧绿色回执不能证明修改后的代码。"
+    }
+  ],
+  "cases": [
+    {
+      "id": "retrieval-01",
+      "group": "en",
+      "split": "development",
+      "request": {
+        "query": "What are the Saturday reading seat opening hours?",
+        "corpus_language": "en"
+      },
+      "expected": {
+        "relevant_ids": [
+          "EN-SEAT"
+        ],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-02",
+      "group": "en",
+      "split": "development",
+      "request": {
+        "query": "Can I return books outside the east gate on Sunday?",
+        "corpus_language": "en"
+      },
+      "expected": {
+        "relevant_ids": [
+          "EN-RETURN"
+        ],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-03",
+      "group": "en",
+      "split": "development",
+      "request": {
+        "query": "When does volunteer registration close?",
+        "corpus_language": "en"
+      },
+      "expected": {
+        "relevant_ids": [
+          "EN-VOLUNTEER"
+        ],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-04",
+      "group": "en",
+      "split": "development",
+      "request": {
+        "query": "How can a consultation continue after a power failure?",
+        "corpus_language": "en"
+      },
+      "expected": {
+        "relevant_ids": [
+          "EN-POWER"
+        ],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-05",
+      "group": "en",
+      "split": "development",
+      "request": {
+        "query": "Do checkpoint recovery and publication require the same guarantee?",
+        "corpus_language": "en"
+      },
+      "expected": {
+        "relevant_ids": [
+          "EN-POWER",
+          "EN-APPROVAL"
+        ],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-06",
+      "group": "en",
+      "split": "holdout",
+      "request": {
+        "query": "Which receipt proves the current code repair?",
+        "corpus_language": "en"
+      },
+      "expected": {
+        "relevant_ids": [
+          "EN-TEST"
+        ],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-07",
+      "group": "zh",
+      "split": "development",
+      "request": {
+        "query": "周六阅览座位几点开放和结束？",
+        "corpus_language": "zh"
+      },
+      "expected": {
+        "relevant_ids": [
+          "ZH-SEAT"
+        ],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-08",
+      "group": "zh",
+      "split": "development",
+      "request": {
+        "query": "周日馆内关闭还可以在哪里还书？",
+        "corpus_language": "zh"
+      },
+      "expected": {
+        "relevant_ids": [
+          "ZH-RETURN"
+        ],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-09",
+      "group": "zh",
+      "split": "development",
+      "request": {
+        "query": "志愿者报名什么时候截止？",
+        "corpus_language": "zh"
+      },
+      "expected": {
+        "relevant_ids": [
+          "ZH-VOLUNTEER"
+        ],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-10",
+      "group": "zh",
+      "split": "development",
+      "request": {
+        "query": "读者撤回偏好后后续咨询还能使用吗？",
+        "corpus_language": "zh"
+      },
+      "expected": {
+        "relevant_ids": [
+          "ZH-MEMORY"
+        ],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-11",
+      "group": "zh",
+      "split": "development",
+      "request": {
+        "query": "正文更新后索引和缓存怎么办？",
+        "corpus_language": "zh"
+      },
+      "expected": {
+        "relevant_ids": [
+          "ZH-INDEX"
+        ],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-12",
+      "group": "zh",
+      "split": "holdout",
+      "request": {
+        "query": "把草稿贴出去之前谁批准哪一版？",
+        "corpus_language": "zh"
+      },
+      "expected": {
+        "relevant_ids": [
+          "ZH-APPROVAL"
+        ],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-13",
+      "group": "zh_to_en",
+      "split": "development",
+      "request": {
+        "query": "断电后怎样继续原来的咨询？",
+        "corpus_language": "en"
+      },
+      "expected": {
+        "relevant_ids": [
+          "EN-POWER"
+        ],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-14",
+      "group": "zh_to_en",
+      "split": "development",
+      "request": {
+        "query": "旧绿色测试能证明刚改的代码吗？",
+        "corpus_language": "en"
+      },
+      "expected": {
+        "relevant_ids": [
+          "EN-TEST"
+        ],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-15",
+      "group": "zh_to_en",
+      "split": "development",
+      "request": {
+        "query": "要发布草稿公告还缺什么步骤？",
+        "corpus_language": "en"
+      },
+      "expected": {
+        "relevant_ids": [
+          "EN-APPROVAL"
+        ],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-16",
+      "group": "zh_to_en",
+      "split": "holdout",
+      "request": {
+        "query": "撤回偏好会永久修改模型参数吗？",
+        "corpus_language": "en"
+      },
+      "expected": {
+        "relevant_ids": [
+          "EN-MEMORY"
+        ],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-17",
+      "group": "no_answer",
+      "split": "development",
+      "request": {
+        "query": "What time is the library cafe open?",
+        "corpus_language": "en"
+      },
+      "expected": {
+        "relevant_ids": [],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-18",
+      "group": "no_answer",
+      "split": "development",
+      "request": {
+        "query": "图书馆停车收费是多少？",
+        "corpus_language": "zh"
+      },
+      "expected": {
+        "relevant_ids": [],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-19",
+      "group": "no_answer",
+      "split": "development",
+      "request": {
+        "query": "What are annual library membership fees?",
+        "corpus_language": "en"
+      },
+      "expected": {
+        "relevant_ids": [],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    },
+    {
+      "id": "retrieval-20",
+      "group": "no_answer",
+      "split": "holdout",
+      "request": {
+        "query": "馆内儿童绘本活动每周几举办？",
+        "corpus_language": "zh"
+      },
+      "expected": {
+        "relevant_ids": [],
+        "rule": "只评价本次原文支持的证据身份；无答案卡不可冒称有据"
+      }
+    }
+  ]
+}

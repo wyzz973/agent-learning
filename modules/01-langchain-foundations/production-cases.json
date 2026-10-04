@@ -1,0 +1,35 @@
+{
+  "module": "M01",
+  "fictional_business": true,
+  "cases": [
+    {
+      "id": "contract_current",
+      "title": "当前版本接待",
+      "operation": "consult",
+      "question": "按KB-A-01当前版本回答本周六开闭馆时间，保留来源。",
+      "target_status": "answered",
+      "evidence": [
+        "actual_input",
+        "trusted_scope",
+        "actual_operation",
+        "version",
+        "failure_or_result"
+      ]
+    },
+    {
+      "id": "unknown_fact",
+      "title": "未知日期",
+      "operation": "consult",
+      "question": "同一份资料没有说明周日阅览时间，请保留未知而非猜测。",
+      "target_status": "needs_evidence",
+      "evidence": [
+        "actual_input",
+        "trusted_scope",
+        "actual_operation",
+        "version",
+        "failure_or_result"
+      ]
+    }
+  ],
+  "scope": "学习目标，不是已运行成绩"
+}

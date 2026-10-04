@@ -1,28 +1,147 @@
 {
   "schema_version": 3,
   "campaign_id": "fog-island-library",
-  "active_task": "M01-T01",
+  "active_task": "M01-T02",
   "active_cell": "opening-scene",
-  "progress": {},
+  "progress": {
+    "M01-T01": {
+      "status": "practice_passed",
+      "learner_report": "用户确认只完成了第一份Jupyter。",
+      "machine_execution": {
+        "status": "observed_saved_pass",
+        "source": "modules/01-langchain-foundations/01-first-reader.ipynb",
+        "cells": [
+          "reader-exercise",
+          "answer-check",
+          "transfer-check",
+          "boundary-check",
+          "save-player-artifact"
+        ],
+        "detail": "本人实现参数校验、消息构造、异步调用和返回；NOTICE-B为14:00—18:00，空输入两项检查通过。本轮只读核验，未重跑本人代码。"
+      },
+      "transfer": {
+        "status": "observed_saved_pass",
+        "detail": "同一函数处理NOTICE-C，答复周日可使用东门外还书箱。属于一个同域迁移案例。"
+      },
+      "explanation": {
+        "status": "not_recorded",
+        "detail": "已保留本人预测；课末原理与复盘改为选择题，尚未记录本人作答。代码运行、理解和独立迁移分别核验。"
+      },
+      "artifacts": [
+        "outputs/fog-island/M01-T01/opening-answer.md",
+        "outputs/fog-island/M01-T01/quest-evidence.json"
+      ]
+    }
+  },
   "learner_profile": {
     "language": "中文",
     "study_interface": "Jupyter",
     "learning_units": "module/task",
     "python_context": "从零教起，不预设Python、框架或其他课程经验；必要写法在当前Notebook内解释。",
     "primary_goal": "在雾岛图书馆情景中学习Python与LangChain/LangGraph，走向研究应用与coding agent。",
-    "model_policy": "使用现有.env真实模型，已授权；保留超时、轮数与隔离边界。"
+    "model_policy": "使用现有.env真实模型，已授权；保留超时、轮数与隔离边界。",
+    "reflection_preference": "课末复盘、原理问答用选择题和选项解析完成；保留本人核心编码。",
+    "interaction_preference": "每个模块末有能自由使用的阿灯；统一样式、状态与真实本人能力绑定，按模块学习进度接入。"
   },
-  "next_action": "打开modules/01-langchain-foundations/01-first-reader.ipynb，从门口的第一位读者开始。",
+  "next_action": "从M01-T02当前Notebook继续，完成后进入M01-T03消息工作垫，再进入M02四项工具委托；不重做已完成第一关。",
   "quest_log": {
-    "generated_artifacts": [],
+    "generated_artifacts": [
+      "outputs/fog-island/M01-T01/opening-answer.md",
+      "outputs/fog-island/M01-T01/quest-evidence.json"
+    ],
     "verified_capabilities": [],
-    "next_authoring_task": "M01-T02"
+    "next_authoring_task": null
   },
-  "updated_at": "2026-09-13T14:05:00+08:00",
+  "updated_at": "2026-10-04",
   "evidence_note": "故事、教材状态与本人通关证据分别记录；运行教师示范不登记为玩家完成。",
   "material_validation": {
     "report": "instructor/validation.json",
-    "real_demo_notebooks_passed": 1,
-    "student_tasks_completed": 0
+    "real_demo_notebooks_passed": 44,
+    "learner_practice_passed": 1,
+    "student_tasks_completed": 0,
+    "note": "103设施测试通过；44份教师新内核验证，本人格按实际清单跳过，未新增通关。"
+  },
+  "authoring_scope": {
+    "request": "按模块系统设计企业情景精品课程，原理、组件、生产故障、真实实训与本人交付；多模态暂不涉及。",
+    "learner_entry": "M01-T02",
+    "note": "教材完成与本人完成分开。阿灯对读者不念课程虚构、公文式免责声明，真实未知以日常说法表达。",
+    "status": "materials_ready",
+    "completed_notebooks": 44,
+    "polish": "10模块三级路线、44逐关源码拆解、10架构图与手册、20生产案例环境、115判断卡、统一接待台；实际验证与本人掌握分别记录。",
+    "enterprise_revision": "materials_verified_learner_work_pending",
+    "enterprise_scope": "十章三级路线、逐模块原理/架构/来源、真实生产故障实验；不新增本人通关。"
+  },
+  "interface_delivery": {
+    "M01": {
+      "status": "workspace_ready_learner_binding_pending",
+      "entry": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "contract": "module_agent(question, selection, controls)",
+      "verification": "instructor/tests/test_workspace.py；本人函数运行与教师UI演练单独记录",
+      "note": "界面不回退教师答案，不自动修改学习状态。",
+      "observed_existing_binding": "answer_reader真实浏览器验收通过，公告卡与新module_agent待本人完成。"
+    },
+    "M02": {
+      "status": "workspace_ready_learner_binding_pending",
+      "entry": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "contract": "module_agent(question, selection, controls)",
+      "verification": "instructor/tests/test_workspace.py；本人函数运行与教师UI演练单独记录",
+      "note": "界面不回退教师答案，不自动修改学习状态。"
+    },
+    "M03": {
+      "status": "workspace_ready_learner_binding_pending",
+      "entry": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "contract": "module_agent(question, selection, controls)",
+      "verification": "instructor/tests/test_workspace.py；本人函数运行与教师UI演练单独记录",
+      "note": "界面不回退教师答案，不自动修改学习状态。"
+    },
+    "M04": {
+      "status": "workspace_ready_learner_binding_pending",
+      "entry": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "contract": "module_agent(question, selection, controls)",
+      "verification": "instructor/tests/test_workspace.py；本人函数运行与教师UI演练单独记录",
+      "note": "界面不回退教师答案，不自动修改学习状态。"
+    },
+    "M05": {
+      "status": "workspace_ready_learner_binding_pending",
+      "entry": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "contract": "module_agent(question, selection, controls)",
+      "verification": "instructor/tests/test_workspace.py；本人函数运行与教师UI演练单独记录",
+      "note": "界面不回退教师答案，不自动修改学习状态。"
+    },
+    "M06": {
+      "status": "workspace_ready_learner_binding_pending",
+      "entry": "modules/06-research-system/05-semantic-evaluation.ipynb",
+      "contract": "module_agent(question, selection, controls)",
+      "verification": "instructor/tests/test_workspace.py；本人函数运行与教师UI演练单独记录",
+      "note": "界面不回退教师答案，不自动修改学习状态。"
+    },
+    "M07": {
+      "status": "workspace_ready_learner_binding_pending",
+      "entry": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "contract": "module_agent(question, selection, controls)",
+      "verification": "instructor/tests/test_workspace.py；本人函数运行与教师UI演练单独记录",
+      "note": "界面不回退教师答案，不自动修改学习状态。"
+    },
+    "M08": {
+      "status": "workspace_ready_learner_binding_pending",
+      "entry": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "contract": "module_agent(question, selection, controls)",
+      "verification": "instructor/tests/test_workspace.py；本人函数运行与教师UI演练单独记录",
+      "note": "界面不回退教师答案，不自动修改学习状态。"
+    },
+    "M09": {
+      "status": "workspace_ready_learner_binding_pending",
+      "entry": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "contract": "module_agent(question, selection, controls)",
+      "verification": "instructor/tests/test_workspace.py；本人函数运行与教师UI演练单独记录",
+      "note": "界面不回退教师答案，不自动修改学习状态。"
+    },
+    "M10": {
+      "status": "workspace_ready_learner_binding_pending",
+      "entry": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "contract": "module_agent(question, selection, controls)",
+      "verification": "instructor/tests/test_workspace.py；本人函数运行与教师UI演练单独记录",
+      "note": "界面不回退教师答案，不自动修改学习状态。"
+    }
   }
 }

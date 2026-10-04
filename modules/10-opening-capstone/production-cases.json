@@ -1,0 +1,35 @@
+{
+  "module": "M10",
+  "fictional_business": true,
+  "cases": [
+    {
+      "id": "release_blocked",
+      "title": "关键边界门禁",
+      "operation": "reception",
+      "question": "当前版本有关键边界失败，停止发布并列阻止项。",
+      "target_status": "blocked",
+      "evidence": [
+        "actual_input",
+        "trusted_scope",
+        "actual_operation",
+        "version",
+        "failure_or_result"
+      ]
+    },
+    {
+      "id": "content_drift",
+      "title": "批准后版本漂移",
+      "operation": "maintenance",
+      "question": "当前内容不同于批准与测试证据，重新确认并回归。",
+      "target_status": "needs_review",
+      "evidence": [
+        "actual_input",
+        "trusted_scope",
+        "actual_operation",
+        "version",
+        "failure_or_result"
+      ]
+    }
+  ],
+  "scope": "学习目标，不是已运行成绩"
+}

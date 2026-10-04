@@ -1,0 +1,342 @@
+{
+  "date": "2026-10-03",
+  "audience": [
+    "Python从零",
+    "已有Python开发者",
+    "后端/Agent开发者"
+  ],
+  "world": "雾岛机构数字知识服务；人物仍为你/阿灯/林禾/匿名访客",
+  "modules": [
+    {
+      "module": "M01",
+      "project": "带依据身份的接待网关",
+      "handbook": "instructor/blueprints/M01.md",
+      "stages": [
+        "foundation",
+        "development",
+        "production_lab"
+      ],
+      "architecture": [
+        "可信请求身份",
+        "当前资料与版本",
+        "消息构建",
+        "模型适配",
+        "解析与Schema",
+        "业务/原文核对",
+        "公开回执"
+      ],
+      "production_lab": "modules/01-langchain-foundations/03-message-workbench.ipynb",
+      "teacher_experiments": [
+        "enterprise-schema",
+        "enterprise-bad-json"
+      ],
+      "learner_project": "本人的answer_for_board/build_current_messages取得本次原文，分别处理HTTP/解析/Schema/业务支持错误；返回源版本、未知与公开调用账。",
+      "research_urls": [
+        "https://docs.langchain.com/oss/python/langchain/models",
+        "https://docs.langchain.com/oss/python/langchain/structured-output",
+        "https://docs.python.org/3/library/asyncio-task.html"
+      ],
+      "lab_status": "teacher_verified_learner_pending",
+      "learner_status": "not_auto_completed"
+    },
+    {
+      "module": "M02",
+      "project": "可审计工具运行时",
+      "handbook": "instructor/blueprints/M02.md",
+      "stages": [
+        "foundation",
+        "development",
+        "production_lab"
+      ],
+      "architecture": [
+        "模型工具申请",
+        "可信grants",
+        "参数与范围检查",
+        "真实业务服务",
+        "事务/幂等账",
+        "带ID的观察",
+        "模型续答/停止"
+      ],
+      "production_lab": "modules/02-tools-and-agents/04-tool-permissions.ipynb",
+      "teacher_experiments": [
+        "enterprise-idempotence",
+        "enterprise-denial"
+      ],
+      "learner_project": "实际调用本人authorize_tool、execute_calls_safely及有限循环；读/写权限分开，重复发布使用输入绑定幂等键，拒绝时客户端0执行。",
+      "research_urls": [
+        "https://docs.langchain.com/oss/python/langchain/tools",
+        "https://docs.langchain.com/oss/python/langchain/middleware/overview",
+        "https://www.anthropic.com/engineering/writing-tools-for-agents",
+        "https://docs.python.org/3/library/sqlite3.html"
+      ],
+      "lab_status": "teacher_verified_learner_pending",
+      "learner_status": "not_auto_completed"
+    },
+    {
+      "module": "M03",
+      "project": "可重放的办理工作流",
+      "handbook": "instructor/blueprints/M03.md",
+      "stages": [
+        "foundation",
+        "development",
+        "production_lab"
+      ],
+      "architecture": [
+        "任务/输入身份",
+        "状态与reducer",
+        "模型/工具节点",
+        "外部业务副作用",
+        "检查点存储",
+        "新进程恢复",
+        "完成/失败/取消"
+      ],
+      "production_lab": "modules/03-langgraph-control/04-parallel-state.ipynb",
+      "teacher_experiments": [
+        "enterprise-worker-source",
+        "enterprise-restart"
+      ],
+      "learner_project": "本人图保留授权与安全回执，使用明确任务/输入身份。把外部服务提交与checkpoint分开检查，恢复时不重复副作用；节点、边、reducer与取消有实际轨迹。",
+      "research_urls": [
+        "https://docs.langchain.com/oss/python/langgraph/graph-api",
+        "https://docs.langchain.com/oss/python/langgraph/persistence",
+        "https://docs.langchain.com/oss/python/langgraph/interrupts",
+        "https://docs.langchain.com/oss/python/langgraph/use-subgraphs"
+      ],
+      "lab_status": "teacher_verified_learner_pending",
+      "learner_status": "not_auto_completed"
+    },
+    {
+      "module": "M04",
+      "project": "作用域与版本化记忆服务",
+      "handbook": "instructor/blueprints/M04.md",
+      "stages": [
+        "foundation",
+        "development",
+        "production_lab"
+      ],
+      "architecture": [
+        "可信tenant/user",
+        "历史/偏好存储",
+        "当前版本与同意",
+        "撤回/TTL/CAS",
+        "上下文选择",
+        "原文取回",
+        "真实模型输入"
+      ],
+      "production_lab": "modules/04-memory-and-human-review/06-memory-lifecycle.ipynb",
+      "teacher_experiments": [
+        "enterprise-memory-conflict",
+        "enterprise-memory-withdraw"
+      ],
+      "learner_project": "本人select_memory/pack_context与原文取回真正进入本轮请求；最新撤回不复活旧记录，CAS冲突不静默覆盖，缓存与摘要失效范围明确。",
+      "research_urls": [
+        "https://docs.langchain.com/oss/python/langchain/short-term-memory",
+        "https://docs.langchain.com/oss/python/langgraph/persistence",
+        "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+        "https://docs.python.org/3/library/sqlite3.html"
+      ],
+      "lab_status": "teacher_verified_learner_pending",
+      "learner_status": "not_auto_completed"
+    },
+    {
+      "module": "M05",
+      "project": "权限与更新驱动的RAG研究",
+      "handbook": "instructor/blueprints/M05.md",
+      "stages": [
+        "foundation",
+        "development",
+        "production_lab"
+      ],
+      "architecture": [
+        "原文/权限/版本",
+        "入库与更新",
+        "chunk与索引",
+        "可见候选召回",
+        "融合/重排",
+        "证据打包",
+        "生成/补证/核对"
+      ],
+      "production_lab": "modules/05-deep-research/05-hybrid-retrieval.ipynb",
+      "teacher_experiments": [
+        "enterprise-rag-visible",
+        "enterprise-rag-refresh"
+      ],
+      "learner_project": "本人chunk/rank/RRF/context/gap graph消费当前作用域与源版本。索引/删除/权限/缓存分别验证，证据原句与结论关系核对，缺口驱动有限补证。",
+      "research_urls": [
+        "https://docs.langchain.com/oss/python/langchain/retrieval",
+        "https://developers.llamaindex.ai/python/framework/module_guides/loading/ingestion_pipeline/",
+        "https://developers.llamaindex.ai/python/framework/module_guides/querying/node_postprocessors/",
+        "https://github.com/langchain-ai/open_deep_research",
+        "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide"
+      ],
+      "lab_status": "teacher_verified_learner_pending",
+      "learner_status": "not_auto_completed"
+    },
+    {
+      "module": "M06",
+      "project": "评估与可观测发布门禁",
+      "handbook": "instructor/blueprints/M06.md",
+      "stages": [
+        "foundation",
+        "development",
+        "production_lab"
+      ],
+      "architecture": [
+        "案例与环境版本",
+        "实际运行轨迹",
+        "规则与语义grader",
+        "校准/留出",
+        "分层质量/成本",
+        "critical门禁",
+        "发布/复核/回归"
+      ],
+      "production_lab": "modules/06-research-system/05-semantic-evaluation.ipynb",
+      "teacher_experiments": [
+        "enterprise-release-metrics",
+        "enterprise-first-deviation"
+      ],
+      "learner_project": "本人run_workers/merge_sources/grade_run/audit_verdict形成一条真实链；按类型、边界、环境分层，critical失败阻止发布，trace定位首个偏差。",
+      "research_urls": [
+        "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+        "https://www.anthropic.com/engineering/multi-agent-research-system",
+        "https://opentelemetry.io/docs/concepts/signals/traces/",
+        "https://www.anthropic.com/engineering/infrastructure-noise"
+      ],
+      "lab_status": "teacher_verified_learner_pending",
+      "learner_status": "not_auto_completed"
+    },
+    {
+      "module": "M07",
+      "project": "版本可控的分馆能力客户端",
+      "handbook": "instructor/blueprints/M07.md",
+      "stages": [
+        "foundation",
+        "development",
+        "production_lab"
+      ],
+      "architecture": [
+        "连接/协商身份",
+        "真实能力目录",
+        "工具/资源/模板",
+        "本地策略与scope",
+        "真实call/read/get",
+        "Skill版本/加载",
+        "观察/断开/重连"
+      ],
+      "production_lab": "modules/07-protocols-and-skills/05-mcp-resources-and-prompts.ipynb",
+      "teacher_experiments": [
+        "enterprise-mcp-source",
+        "enterprise-mcp-sessions"
+      ],
+      "learner_project": "本人MCP客户端真实协商/发现/调用/关闭；重连重建Schema身份，资料与远端prompt不提升权限，Skill加载与版本有真实记录。",
+      "research_urls": [
+        "https://modelcontextprotocol.io/specification/2025-11-25",
+        "https://modelcontextprotocol.io/specification/2025-11-25/basic/security_best_practices",
+        "https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization",
+        "https://agentskills.io/specification",
+        "https://docs.langchain.com/oss/python/deepagents/skills"
+      ],
+      "lab_status": "teacher_verified_learner_pending",
+      "learner_status": "not_auto_completed"
+    },
+    {
+      "module": "M08",
+      "project": "受限并可恢复的代码维修",
+      "handbook": "instructor/blueprints/M08.md",
+      "stages": [
+        "foundation",
+        "development",
+        "production_lab"
+      ],
+      "architecture": [
+        "任务/允许范围",
+        "隔离候选工作区",
+        "模型动作提议",
+        "许可后edit/test",
+        "固定测试与SHA",
+        "恢复/冲突检查",
+        "补丁与回归凭据"
+      ],
+      "production_lab": "modules/08-coding-agent/04-patch-transactions.ipynb",
+      "teacher_experiments": [
+        "enterprise-workspace-identity",
+        "enterprise-real-sandbox"
+      ],
+      "learner_project": "本人repair/resume/patch验证函数控制实际隔离环境；当前测试SHA匹配候选、固定测试不可改、权限与工作区重新确认，资源与失败记录不隐藏。",
+      "research_urls": [
+        "https://github.com/SWE-agent/mini-swe-agent",
+        "https://docs.docker.com/engine/security/",
+        "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+        "https://www.anthropic.com/engineering/infrastructure-noise"
+      ],
+      "lab_status": "teacher_verified_learner_pending",
+      "learner_status": "not_auto_completed"
+    },
+    {
+      "module": "M09",
+      "project": "有deadline与身份边界的应用入口",
+      "handbook": "instructor/blueprints/M09.md",
+      "stages": [
+        "foundation",
+        "development",
+        "production_lab"
+      ],
+      "architecture": [
+        "认证后的请求",
+        "授权/队列",
+        "总deadline/预算",
+        "模型/工具依赖",
+        "真实流/trace",
+        "缓存与版本",
+        "结果/partial/取消"
+      ],
+      "production_lab": "modules/09-runtime-and-service/04-service-boundaries.ipynb",
+      "teacher_experiments": [
+        "enterprise-http-deadline",
+        "enterprise-http-budget"
+      ],
+      "learner_project": "本人authorize_request/interface_request/invoke_with_policy/run_stream实际合作；时间与尝试跨重试累积，缓存含作用域/版本，取消后的partial与远端执行分开。",
+      "research_urls": [
+        "https://docs.langchain.com/oss/python/langchain/streaming",
+        "https://docs.langchain.com/oss/python/langchain/middleware/built-in",
+        "https://docs.python.org/3/library/asyncio-task.html",
+        "https://opentelemetry.io/docs/concepts/signals/traces/"
+      ],
+      "lab_status": "teacher_verified_learner_pending",
+      "learner_status": "not_auto_completed"
+    },
+    {
+      "module": "M10",
+      "project": "机构知识服务的可核对交付",
+      "handbook": "instructor/blueprints/M10.md",
+      "stages": [
+        "foundation",
+        "development",
+        "production_lab"
+      ],
+      "architecture": [
+        "业务目标/约束",
+        "本人组件注册",
+        "允许工作方式",
+        "真实端到端运行",
+        "质量/边界/当前SHA",
+        "发布门禁/回滚",
+        "可接手运行说明"
+      ],
+      "production_lab": "modules/10-opening-capstone/04-release-and-handover.ipynb",
+      "teacher_experiments": [
+        "enterprise-release-gate",
+        "enterprise-version-conflict"
+      ],
+      "learner_project": "本人route_library、回归/留出、独立扩展与release manifest形成当前版本证明链；关键失败阻止放行，运行手册与回滚边界可由新进程验证。",
+      "research_urls": [
+        "https://www.anthropic.com/engineering/building-effective-agents",
+        "https://docs.langchain.com/langsmith/evaluation",
+        "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+        "https://docs.astral.sh/uv/concepts/projects/sync/"
+      ],
+      "lab_status": "teacher_verified_learner_pending",
+      "learner_status": "not_auto_completed"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # 雾岛图书馆的Agent技术依据
 
-核查日期：**2026-09-13**。本文件是教师选材与任务设计依据，学习者仍从根 README 的当前 Notebook 进入。
+原机制调研核查日期：**2026-09-13**；逐模块企业场景的补充核查为**2026-10-03**，见[生产调研](PRODUCTION_RESEARCH.md)。本文件保留原依据和版本边界，学习者仍从根 README 的当前 Notebook 进入。
 
 选材核查包含官方文档、部分实现源码、论文摘要与本地依赖版本。**调研不等于已经实现、安装或运行。** 下文的实验设计是教学建议，不登记本人完成，也不替代各任务的真实结果。
 
@@ -42,7 +42,7 @@
 | `langchain-deepseek` | 1.1.0 | 未另查最新版本 | 已配置模型的提供方适配包；参数与异常行为仍需单独核对 |
 | `langchain-mcp-adapters` | 0.3.2 | 核查了官方客户端实现，未另查最新版本 | 把 MCP 能力转换为 LangChain 工具，会话生命周期仍重要 |
 | `mcp` | 1.30.0 | 核查 1.x 文档和本地支持的协议版本 | 锁定 `mcp<2` 的维护线，不能照抄 2.x API |
-| `deepagents` | **未安装** | [PyPI：0.7.13](https://pypi.org/pypi/deepagents/json)，2026-09-02 上传 | 目前只完成资料核查，不能称为本地集成通过 |
+| `deepagents` | **0.7.13，已安装** | [PyPI：0.7.13](https://pypi.org/pypi/deepagents/json)，2026-09-02 上传 | M07-T04已完成教师真实集成对照；本人比较仍需独立实现 |
 
 ### LangChain、LangGraph 与 Deep Agents 的关系
 
@@ -80,7 +80,7 @@
 
 本轮访问 [MCP latest](https://modelcontextprotocol.io/specification/latest) 重定向到 **[2026-07-28 规范](https://modelcontextprotocol.io/specification/2026-07-28)**。该版本的基础页面强调无状态、自包含请求与逐请求能力协商；变化见[官方变更说明](https://modelcontextprotocol.io/specification/2026-07-28/changelog)。
 
-本地 `mcp==1.30.0` 的 `LATEST_PROTOCOL_VERSION` 是 **2025-11-25**，与2026-07-28最新规范不同。MCP委托编写时必须同时记录SDK、服务端和实际协议版本；连接成功后再检查真实工具请求和错误响应。当前雾岛MCP关卡尚未执行，不能以本地安装版本推断完成了新规范实验。Python接口参照[SDK 1.x客户端文档](https://github.com/modelcontextprotocol/python-sdk/blob/v1.x/docs/client.md)。
+本地 `mcp==1.30.0` 的 `LATEST_PROTOCOL_VERSION` 是 **2025-11-25**，与2026-07-28最新规范不同。MCP委托编写时必须同时记录SDK、服务端和实际协议版本；连接成功后再检查真实工具请求和错误响应。M07-T01已通过教师真实stdio发现、两客户端调用和agent接入，实际协商仍为2025-11-25；这不证明新规范已得到验证。Python接口参照[SDK 1.x客户端文档](https://github.com/modelcontextprotocol/python-sdk/blob/v1.x/docs/client.md)。
 
 [LangChain MCP Adapters 实现](https://github.com/langchain-ai/langchain-mcp-adapters/blob/main/langchain_mcp_adapters/client.py)提供显式 session，并负责把连接转换为可调用工具。教学验收需要分别观察发现、实际工具请求、错误响应和模型取得结果，而非只查看工具名称列表。
 
@@ -114,10 +114,41 @@
 
 在本人已理解工具、状态、记忆、上下文和规划后，用 `create_deep_agent` 重新组装**同一个资料研究助手**，复用 M06 的输入与评估规则，比较完成覆盖、来源支持、错误恢复、调用次数和上下文记录。规划显式启用；需要的 Skills/记忆后端和子 agent 配置都在实验中列明。
 
-本人要回答“框架接手了哪些原有职责、哪些依然由我定义”，而非只看新工厂函数能否运行。当前 Deep Agents 未安装，该集成仍是设计；真正完成需要锁定依赖、执行模型、检查工具轨迹和结果后再登记。
+本人要回答“框架接手了哪些原有职责、哪些依然由我定义”，而非只看新工厂函数能否运行。当前已安装Deep Agents 0.7.13，M07-T04教师路径已经真实对照LangChain与Deep Agents，记录实际工具与待办；本人图的比较留给学习者完成。
 
 ## 记录证据的界限
 
 - 本文件记录技术选材与环境版本；雾岛各关是否实际运行以当前课程validation记录为准。
 - 实验设计由本仓库根据学习目标推导；引用说明机制来自哪里，不代表作者认可本课程或保证学习效果。
 - 开课时再次核对会变化的 API、默认行为和能力边界；正文应保留失败现象、关键数据表示与本人控制点，避免退回“API 名称 + 简单填空”。
+
+
+## 本课程完整教材的实现边界
+
+当前课程运行环境为Python 3.12+，新增`langgraph-checkpoint-sqlite==3.1.1`、`fastembed==0.8.0`与`deepagents==0.7.13`，具体解析版本由uv.lock固定。实际教师验证逐task保存在[验证记录](validation.json)，与本人进度分开。
+
+- M04检查点使用真实SQLite后端和独立进程；长期记忆使用明确的应用SQLite记录。课程不会把内存对象称为跨进程持久化。
+- M05来源发现限定在实时LangChain/LangGraph官方站点索引，并取回原文；这不是已实现任意全网搜索。RAG用真实`BAAI/bge-small-en-v1.5`本地ONNX向量，验证英文资料与查询，不冒称已验证中文语义泛化。
+- M06交付是127.0.0.1上的教学服务，持久队列、取消和恢复可观察；它不是已经完成公网生产部署的承诺。
+- M08生成代码只在受限Docker容器执行，固定测试与候选指纹对应。Pi/DeerFlow选读只读源码，不执行下载内容。
+- 模型可见的馆务输入只保留故事内信息；虚构说明由教材承担。阿灯自然回应读者，保留来源与真实未知，不用公文式免责声明打断情景。
+# 2026-10-03 核心课程补充核查
+
+课程主线继续覆盖工具循环、LangGraph、记忆、RAG、研究、MCP、Skills和隔离代码维修，增加运行与完整交付。多模态按学习者要求暂不进入。
+
+本机实际锁定并执行的版本：LangChain 1.4.0、LangGraph 1.2.11、MCP SDK 1.30.0、Deep Agents 0.7.13、fastembed 0.8.0。官方网页的最新API不自动替换本机版本，升级需要对应回归。
+
+本轮参考并核对的原始资料：
+
+- [Hello-Agents经典范式](https://github.com/datawhalechina/hello-agents/blob/main/docs/chapter4/第四章%20智能体经典范式构建.md)：借鉴原理—实现—反馈的组织，示范与代码独立重写。
+- [Hello-Agents记忆与检索](https://github.com/datawhalechina/hello-agents/blob/main/docs/chapter8/第八章%20记忆与检索.md)：参考按机制拆解记忆/RAG，保留本课匿名作用域与原文身份。
+- [LangChain middleware](https://docs.langchain.com/oss/python/langchain/middleware/overview)：真实工具调用钩子、计数与授权边界。
+- [LangGraph Graph API](https://docs.langchain.com/oss/python/langgraph/graph-api)：实际并行、reducer与子图，不把画图等同Agent行为。
+- [上下文工程](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)：当前信息选择、预算与可取回原文。
+- [Agent评估](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)：规则/语义检查、裁判校准、回归与留出；不只评价最终话术。
+- [MCP Resources](https://modelcontextprotocol.io/specification/2025-11-25/server/resources)与[Prompts](https://modelcontextprotocol.io/specification/2025-11-25/server/prompts)：实际list/read/get与客户端信任选择。
+- [Agent Skills规范](https://agentskills.io/specification)：元数据、按需加载与方法/执行权限的区别。
+
+实际复验发现LangChain的llms.txt已转为`/_llms/agent-development-lifecycle/build/python.md`索引。解析器现在从本次取得的根索引发现旧版或新版Python入口，去重、限制范围并记录index_url；没有入口时明确失败，不伪造候选页面。模型输入依然取真实页面正文。
+
+RAG服务衔接明确启用本人chunk/rank/RRF，再把选中的正文与窗口交给上下文；向量转换是实际本地模型，学生算法缺失时拒绝。当前已验证英文资料/英文查询，跨语言质量需另测。环境缓存可运行`uv run python -m instructor.doctor --prepare-embedding`预取，不以假向量替代。

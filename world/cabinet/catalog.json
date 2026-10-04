@@ -1,0 +1,27 @@
+[
+  {
+    "id": "NOTICE-A",
+    "title": "试营业一般开馆公告",
+    "path": "world/notices/opening.md"
+  },
+  {
+    "id": "NOTICE-B",
+    "title": "本周临时开馆公告（本周优先核对）",
+    "path": "world/notices/temporary.md"
+  },
+  {
+    "id": "NOTICE-C",
+    "title": "东门还书箱说明",
+    "path": "world/notices/return-box.md"
+  },
+  {
+    "id": "VOL-01",
+    "title": "本周志愿者报名手册",
+    "path": "world/cabinet/volunteer.md"
+  },
+  {
+    "id": "RAIN-01",
+    "title": "雨天入口与通行说明",
+    "path": "world/cabinet/rain.md"
+  }
+]

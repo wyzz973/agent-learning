@@ -1,0 +1,31 @@
+name: 教材或运行问题
+description: 提交具体学习障碍、教材错误或可复现的运行故障。
+title: "[问题] "
+body:
+  - type: input
+    id: location
+    attributes:
+      label: 任务与位置
+      description: 填写任务 ID、Notebook 文件及 cell ID，或其他文件位置。
+      placeholder: M02-T02 / 02-tool-dispatch.ipynb / owned-implementation
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤
+      description: 提供最小公开输入和运行顺序；请隐去密钥、请求头与私有资料。
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: 预期与实际结果
+      description: 写明期望的行为、实际输出或错误，以及卡住的概念。
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境与依据
+      description: 按需填写操作系统、Python、依赖版本、内核与官方来源链接。

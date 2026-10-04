@@ -54,6 +54,8 @@ def notebook_issues(path: Path) -> list[str]:
     for index, cell in enumerate(notebook.cells):
         if cell.cell_type != "code":
             continue
+        if not cell.source.strip():
+            continue  # 编辑器自动添加的空白格没有可执行内容，不构成教学分类缺失。
         tags = set(cell.metadata.get("tags", []))
         classification = tags & KINDS
         if len(classification) != 1:
@@ -65,8 +67,8 @@ def notebook_issues(path: Path) -> list[str]:
             )
         except SyntaxError as error:
             issues.append(f"cell {index}: {error.msg}")
-        if len(cell.source.splitlines()) > 40:
-            issues.append(f"cell {index}: 代码超过 40 行，应拆成可理解的小步")
+        if classification & {"setup", "demo"} and len(cell.source.splitlines()) > 40:
+            issues.append(f"cell {index}: 教师代码超过40行，应拆成可理解的小步")
     if not {"demo", "exercise", "exercise-test"} <= kinds:
         issues.append("必须包含独立的示范、本人练习与本人验收")
     return issues
@@ -131,6 +133,61 @@ def material_issues(task: dict[str, Any], root: Path = ROOT) -> list[str]:
     return issues
 
 
+def enrichment_issues(catalog: dict[str, Any], data: dict[str, Any]) -> list[str]:
+    """检查章节、任务原理和复盘题是否覆盖当前目录。
+
+    Args:
+        catalog: 当前课程目录。
+        data: 剧情、原理和题库。
+    Returns:
+        缺项、无效答案或重复题目的问题列表。
+    Raises:
+        无；用于教材维护检查，不登记本人进度。
+    """
+    issues: list[str] = []
+    fields = {"opening", "principle", "arc", "capability_contract", "pitfalls", "game_goal"}
+    for module in catalog["modules"]:
+        chapter = data.get("modules", {}).get(module["id"], {})
+        for field in fields:
+            if not isinstance(chapter.get(field), str) or not chapter[field].strip():
+                issues.append(f"{module['id']}: 缺章节 {field}")
+    seen: set[str] = set()
+    for task in catalog["tasks"]:
+        content = data.get("tasks", {}).get(task["id"], {})
+        if not content.get("principle_markdown"):
+            issues.append(f"{task['id']}: 缺原理解释")
+        for index, step in enumerate(content.get("microsteps", []), 1):
+            required = {"title", "explanation", "predict", "code", "observe", "student_next"}
+            if any(not isinstance(step.get(key), str) or not step[key].strip() for key in required):
+                issues.append(f"{task['id']}: 小步{index}缺讲授、预测、代码或本人衔接")
+                continue
+            try:
+                compile(step["code"], task["id"], "exec", ast.PyCF_ALLOW_TOP_LEVEL_AWAIT)
+            except SyntaxError:
+                issues.append(f"{task['id']}: 小步{index}代码语法不合法")
+            if len(step["code"].splitlines()) > 40:
+                issues.append(f"{task['id']}: 小步{index}教师代码超过40行")
+        quiz = content.get("quiz", [])
+        if len(quiz) < 2:
+            issues.append(f"{task['id']}: 至少需要两张原理判断卡")
+        for question in quiz:
+            qid = question.get("id", "")
+            if not qid.startswith(task["id"] + "-") or qid in seen:
+                issues.append(f"{task['id']}: 题目编号缺失、归属错误或重复")
+            seen.add(qid)
+            options = question.get("options", [])
+            option_ids = [option.get("id") for option in options]
+            if len(options) < 3 or len(set(option_ids)) != len(options):
+                issues.append(f"{qid}: 需要至少三个不同选项")
+            if question.get("correct") not in option_ids:
+                issues.append(f"{qid}: 正确答案不在选项中")
+            if not question.get("prompt") or not question.get("concept"):
+                issues.append(f"{qid}: 缺情景问题或原理标签")
+            if any(not option.get("label") or not option.get("feedback") for option in options):
+                issues.append(f"{qid}: 每个选项都需要内容和解析")
+    return issues
+
+
 def main() -> int:
     catalog = load_catalog()
     state = json.loads((ROOT / "instructor/state.json").read_text(encoding="utf-8"))
@@ -172,7 +229,13 @@ def main() -> int:
     for module in catalog["modules"]:
         if not (ROOT / module["directory"] / "README.md").is_file():
             issues.append(f"{module['id']}: 缺专题索引")
-    from instructor.render_curriculum import render
+        rules = ROOT / module["directory"] / "AGENTS.md"
+        alias = rules.with_name("AGENT.md")
+        if not alias.is_symlink() or alias.resolve() != rules.resolve():
+            issues.append(f"{module['id']}: AGENT.md 没有链接同目录规则")
+    from instructor.render_curriculum import load_enrichment, render
+
+    issues.extend(enrichment_issues(catalog, load_enrichment()))
 
     for path in render(check=True):
         issues.append(f"地图或prompt过期：{path}，运行 instructor.render_curriculum 同步")

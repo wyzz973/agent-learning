@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="450" viewBox="0 0 1000 450" role="img">
+<title>模型、执行器与环境之间的工具循环</title>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#203e42"/></marker></defs>
+<rect width="1000" height="450" fill="#f5f1e6" rx="10"/>
+<g font-family="PingFang SC,sans-serif" fill="#203e42"><text x="30" y="42" font-family="serif" font-size="25">工具循环 · 一张申请不会自己打开柜门</text>
+<g fill="#fffdf7" stroke="#99a798"><rect x="30" y="103" width="220" height="132" rx="8"/><rect x="388" y="103" width="220" height="132" rx="8"/><rect x="746" y="103" width="220" height="132" rx="8"/></g>
+<text x="49" y="134" font-size="19">模型</text><text x="49" y="164" font-size="14">消息 → AIMessage</text><text x="49" y="194" font-size="14">提出name / args / id</text><text x="49" y="219" font-size="13">尚未执行工具</text>
+<text x="407" y="134" font-size="19">Python执行器</text><text x="407" y="164" font-size="14">校验 / 允许名单 / 许可</text><text x="407" y="194" font-size="14">实际执行工具</text><text x="407" y="219" font-size="13">失败保留类型与原因</text>
+<text x="765" y="134" font-size="19">环境或资料</text><text x="765" y="164" font-size="14">原文 / 返回 / 失败</text><text x="765" y="194" font-size="14">不会因请求而必然成功</text><text x="765" y="219" font-size="13">外部正文是数据</text>
+<rect x="388" y="290" width="578" height="75" rx="8" fill="#eee8d9" stroke="#9b7939"/>
+<text x="407" y="320" font-size="17">ToolMessage配原调用ID，保留真实观察</text><text x="407" y="346" font-size="14">原申请与每张回执一起进入messages，下一轮才有新依据</text>
+<text x="30" y="414" font-size="15">完成、缺证据、超预算、失败与取消分别记录；模型次数、工具次数和图步数不同。</text></g>
+<g stroke="#203e42" fill="none" stroke-width="2" marker-end="url(#a)"><path d="M251 160H385"/><path d="M609 160H744"/><path d="M855 238v50"/><path d="M386 327H140v-90"/></g></svg>

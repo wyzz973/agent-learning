@@ -28,10 +28,35 @@ def demo_copy(notebook: Any) -> tuple[Any, list[str]]:
         if cell.cell_type == "code":
             cell.outputs = []
             cell.execution_count = None
-        if set(cell.metadata.get("tags", [])) & {"exercise", "exercise-test"}:
+        classification = set(cell.metadata.get("tags", [])) & {
+            "setup",
+            "demo",
+            "exercise",
+            "exercise-test",
+        }
+        if cell.cell_type == "code" and classification not in ({"setup"}, {"demo"}):
             skipped.append(cell.get("id", "unknown"))
             cell.metadata["tags"] = list(cell.metadata.get("tags", [])) + ["skip-execution"]
     return result, skipped
+
+
+def reusable_outputs(outputs: list[Any]) -> list[Any]:
+    """保存可重读的教师输出，交互控件在学习内核中重新创建。
+
+    Args:
+        outputs: 教师实际执行产生的输出。
+    Returns:
+        普通结果原样保留；临时内核控件引用换成明确的运行提示。
+    Raises:
+        无；不伪造按钮状态、选择结果或模型答复。
+    """
+    result = copy.deepcopy(outputs)
+    for output in result:
+        if "application/vnd.jupyter.widget-view+json" in output.get("data", {}):
+            output["data"] = {
+                "text/plain": "运行本格后显示可操作的选择卡；保存的教师输出不含已提交的选项。"
+            }
+    return result
 
 
 def validate_one(task: dict[str, Any], refresh_demo_outputs: bool = False) -> dict[str, Any]:
@@ -69,11 +94,14 @@ def validate_one(task: dict[str, Any], refresh_demo_outputs: bool = False) -> di
     count = sum(c.cell_type == "code" and c.execution_count is not None for c in executed.cells)
     if not error and refresh_demo_outputs:
         for original, actual in zip(source.cells, executed.cells, strict=True):
-            if original.cell_type == "code" and not set(original.metadata.get("tags", [])) & {
+            classification = set(original.metadata.get("tags", [])) & {
+                "setup",
+                "demo",
                 "exercise",
                 "exercise-test",
-            }:
-                original.outputs = actual.outputs
+            }
+            if original.cell_type == "code" and classification in ({"setup"}, {"demo"}):
+                original.outputs = reusable_outputs(actual.outputs)
                 original.execution_count = actual.execution_count
         nbformat.write(source, path)
     result = {
@@ -82,7 +110,12 @@ def validate_one(task: dict[str, Any], refresh_demo_outputs: bool = False) -> di
         "passed": error is None,
         "scope": "仅 setup/demo；不代表本人完成",
         "executed_cells": count,
-        "skipped_exercise_cells": skipped,
+        "skipped_exercise_cells": [
+            c.id
+            for c in source.cells
+            if set(c.metadata.get("tags", [])) & {"exercise", "exercise-test"}
+        ],
+        "skipped_non_demo_cells": skipped,
         "elapsed_seconds": round(time.monotonic() - started, 2),
         "error": error,
         "executed_notebook": str((directory / "executed.ipynb").relative_to(ROOT)),

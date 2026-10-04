@@ -1,0 +1,141 @@
+{
+  "objective": "按照审查报告全面完善课程，对标优秀课程的机制教学、真实实验、独立迁移与交付",
+  "source_report": "instructor/reviews/2026-10-03-student-goals-audit.md",
+  "created_on": "2026-10-03",
+  "learner_entry": "M01-T02",
+  "learner_progress_policy": "保留原progress；教师材料、设施检查与本人掌握分开",
+  "requirements": [
+    {
+      "id": "F01",
+      "deliverable": "导出运行依赖与新进程接线",
+      "status": "teacher_verified_learner_pending",
+      "verification": [
+        "outputs/improvements/2026-10-04/delivery-audit.json",
+        "instructor/learner_exports.py",
+        "outputs/improvements/2026-10-03/export-runtime-proof.json"
+      ]
+    },
+    {
+      "id": "F02",
+      "deliverable": "安全导出迭代与来源保护",
+      "status": "teacher_verified_learner_pending",
+      "verification": [
+        "outputs/improvements/2026-10-04/delivery-audit.json",
+        "instructor/tests/test_learner_exports.py",
+        "instructor/authoring_contracts.py"
+      ]
+    },
+    {
+      "id": "F03",
+      "deliverable": "教师设施与跨关本人接线验证",
+      "status": "teacher_verified_learner_pending",
+      "verification": [
+        "outputs/improvements/2026-10-04/delivery-audit.json",
+        "instructor/check_export_contracts.py",
+        "outputs/improvements/2026-10-04/final-export-contracts.json"
+      ]
+    },
+    {
+      "id": "F04",
+      "deliverable": "16关具体小步教学与去重",
+      "status": "teacher_verified_learner_pending",
+      "verification": [
+        "outputs/improvements/2026-10-04/delivery-audit.json",
+        "instructor/course_enrichment.json",
+        "outputs/improvements/2026-10-03/phase-one-evidence.json"
+      ]
+    },
+    {
+      "id": "F05",
+      "deliverable": "选择题复盘统一",
+      "status": "teacher_verified_learner_pending",
+      "verification": [
+        "outputs/improvements/2026-10-04/delivery-audit.json",
+        "modules/01-langchain-foundations/02-notice-board.ipynb"
+      ]
+    },
+    {
+      "id": "F06",
+      "deliverable": "模型基础与原生运行时迁移",
+      "status": "teacher_verified_learner_pending",
+      "verification": [
+        "outputs/improvements/2026-10-04/delivery-audit.json",
+        "instructor/native_gateway.py",
+        "outputs/fog-island/M09-T03/teacher-native-tool-comparison.json"
+      ]
+    },
+    {
+      "id": "F07",
+      "deliverable": "中英文检索实验与质量指标",
+      "status": "teacher_verified_learner_pending",
+      "verification": [
+        "outputs/improvements/2026-10-04/delivery-audit.json",
+        "world/acceptance/retrieval-cases.json",
+        "outputs/fog-island/M05-T05/teacher-retrieval-study.json"
+      ]
+    },
+    {
+      "id": "F08",
+      "deliverable": "校准、重复实验与研发优化",
+      "status": "teacher_verified_learner_pending",
+      "verification": [
+        "outputs/improvements/2026-10-04/delivery-audit.json",
+        "instructor/evaluation_facilities.py",
+        "outputs/fog-island/M05-T05/teacher-retrieval-optimization.json",
+        "outputs/fog-island/M06-T05/teacher-judge-calibration.json"
+      ]
+    },
+    {
+      "id": "F09",
+      "deliverable": "工作流程、开放项目与求职作品",
+      "status": "teacher_verified_learner_pending",
+      "verification": [
+        "outputs/improvements/2026-10-04/delivery-audit.json",
+        "instructor/portfolio.py",
+        "modules/10-opening-capstone/03-independent-feature.ipynb",
+        "modules/10-opening-capstone/04-release-and-handover.ipynb"
+      ]
+    },
+    {
+      "id": "F10",
+      "deliverable": "完整教师机制示范与验证范围",
+      "status": "teacher_verified_learner_pending",
+      "verification": [
+        "outputs/improvements/2026-10-04/delivery-audit.json",
+        "outputs/fog-island/M09-T02/teacher-runtime-policy.json",
+        "modules/06-research-system/04-local-research-service.ipynb"
+      ]
+    },
+    {
+      "id": "F11",
+      "deliverable": "Notebook教师格与设施检查统一",
+      "status": "teacher_verified_learner_pending",
+      "verification": [
+        "outputs/improvements/2026-10-04/delivery-audit.json",
+        "outputs/improvements/2026-10-04/final-teacher-lint.json",
+        ".github/workflows/course-check.yml"
+      ]
+    },
+    {
+      "id": "F12",
+      "deliverable": "本人提示级别、能力与迁移证据记录",
+      "status": "teacher_verified_learner_pending",
+      "verification": [
+        "outputs/improvements/2026-10-04/delivery-audit.json",
+        "instructor/learning_evidence.py",
+        "outputs/improvements/2026-10-04/visual-delivery-evidence.json"
+      ]
+    }
+  ],
+  "tracks": [
+    "Agent应用工程主线",
+    "工作与个人项目迁移",
+    "求职作品与现场设计取舍",
+    "应用研发与模型优化选修"
+  ],
+  "completion_policy": "逐项核查真实教材、对应教师运行、集成契约与渲染；不以学生尚未练习登记学生完成",
+  "remaining_work": [],
+  "updated_on": "2026-10-04",
+  "delivery_report": "instructor/reviews/2026-10-04-improvement-delivery.md",
+  "learner_outcomes": "由本人后续实际尝试与迁移记录评价，未新增通关"
+}
